@@ -58,7 +58,7 @@ update_manifest:
     rules:
         - if: $CI_COMMIT_REF_NAME == "main" && $CI_PIPELINE_SOURCE != "schedule"
     variables:
-        CD_CHART_REPO: coreshop4-demo-manifest
+        CD_CHART_REPO: coreshop4-enterprise-demo-manifest
         CD_GIT_REPOSITORY: git.e-conomix.at/coreshop/$CD_CHART_REPO.git
         CD_MANIFEST_FILE: Chart.yaml
         CD_MANIFEST_VALUES_FILE: values.yaml

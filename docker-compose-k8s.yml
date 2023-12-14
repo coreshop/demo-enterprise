@@ -7,7 +7,7 @@ networks:
 services:
   db:
     image: mysql:8
-    container_name: coreshop-datahub-demo
+    container_name: coreshop-enterprise-demo
     networks:
       - cors_dev
     environment:
@@ -21,30 +21,30 @@ services:
       context: ./
       target: cors_php
       args:
-        - COMPOSER_AUTH=${COMPOSER_AUTH}
-    container_name: coreshop-datahub-demo-php
+        COMPOSER_AUTH: '{"http-basic": {"cors.repo.packagist.com": {"username": "token", "password": "REDACTED" }}}'
+    container_name: coreshop-enterprise-demo-php
     networks:
       - cors_dev
     depends_on:
      - db
     environment:
       - DATABASE_DRIVER=pdo_mysql
-      - DATABASE_HOST=coreshop-datahub-demo
+      - DATABASE_HOST=coreshop-enterprise-demo
       - DATABASE_PORT=3306
       - DATABASE_NAME=pimcore
       - DATABASE_USER=pimcore
       - DATABASE_PASSWORD=pimcore
       - DATABASE_VERSION=8.0.26
       - PIMCORE_INSTALL_ADMIN_USERNAME=admin
-      - PIMCORE_INSTALL_ADMIN_PASSWORD=admin
+      - PIMCORE_INSTALL_ADMIN_PASSWORD=coreshop
 
   nginx:
     build:
       context: ./
       target: cors_nginx
       args:
-          - COMPOSER_AUTH=${COMPOSER_AUTH}
-    container_name: coreshop-datahub-nginx
+          COMPOSER_AUTH: '{"http-basic": {"cors.repo.packagist.com": {"username": "token", "password": "REDACTED" }}}'
+    container_name: coreshop-enterprise-nginx
     depends_on:
         - php
     volumes:
@@ -53,8 +53,8 @@ services:
       - cors_dev
     labels:
       - traefik.enable=true
-      - traefik.http.routers.coreshop_datahub_demo.rule=Host(`coreshop-datahub-demo.localhost`)
-      - traefik.http.routers.coreshop_datahub_demo.entrypoints=cors_dev
-      - traefik.http.routers.coreshop_datahub_demo.tls=true
-      - traefik.http.services.coreshop_datahub_demo.loadbalancer.server.port=80
+      - traefik.http.routers.coreshop_enterprise_demo.rule=Host(`coreshop-enterprise-demo.localhost`)
+      - traefik.http.routers.coreshop_enterprise_demo.entrypoints=cors_dev
+      - traefik.http.routers.coreshop_enterprise_demo.tls=true
+      - traefik.http.services.coreshop_enterprise_demo.loadbalancer.server.port=80
       - traefik.docker.network=cors_dev

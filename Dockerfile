@@ -39,6 +39,7 @@ COPY --chown=www-data:www-data translations translations/
 COPY --chown=www-data:www-data var var/
 COPY --chown=www-data:www-data .env .env
 COPY --chown=www-data:www-data dump dump/
+COPY --chown=www-data:www-data public/var/assets public/var/assets/
 
 RUN set -eux; \
     composer dump-autoload; \

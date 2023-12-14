@@ -4,7 +4,9 @@
     <div class="mb-3">
         {% set doc = document_route_document('homepage') %}
 
-        Document Route Demo ({{ '{{ path(\'homepage\') }}' }}): {{ path('homepage') }} (ID: {{ doc.id }})
+        {% if doc %}
+            Document Route Demo ({{ '{{ path(\'homepage\') }}' }}): {{ path('homepage') }} (ID: {{ doc.id }})
+        {% endif %}
     </div>
 
     {{ render(controller('CoreShop\\Bundle\\FrontendBundle\\Controller\\ProductController::latestAction')) }}

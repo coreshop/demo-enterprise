@@ -437,12 +437,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "f6688ff084180af38c34a5446e6f47af96709c0c"
+                "reference": "47b6e3a366792a73a331a44aef6297d4cabf1a52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/f6688ff084180af38c34a5446e6f47af96709c0c",
-                "reference": "f6688ff084180af38c34a5446e6f47af96709c0c",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/47b6e3a366792a73a331a44aef6297d4cabf1a52",
+                "reference": "47b6e3a366792a73a331a44aef6297d4cabf1a52",
                 "shasum": ""
             },
             "require": {
@@ -620,15 +620,15 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-14T07:27:23+00:00"
+            "time": "2023-12-14T18:28:54+00:00"
         },
         {
             "name": "coreshop/document-route-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/document-route-bundle/dev-main/97f31938a67a9e3cc3201cf20a5739ad102913df.zip",
-                "reference": "97f31938a67a9e3cc3201cf20a5739ad102913df",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/document-route-bundle/dev-main/0b19f24012598fc6641ab5d844df2f2604588879.zip",
+                "reference": "0b19f24012598fc6641ab5d844df2f2604588879",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -692,7 +692,7 @@
                 "source": "https://git.e-conomix.at/coreshop/document-route-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/document-route-bundle/-/issues"
             },
-            "time": "2023-12-14T13:46:28+01:00"
+            "time": "2023-12-14T13:53:46+01:00"
         },
         {
             "name": "coreshop/loyality-bundle",
@@ -765,8 +765,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/payum-credit-bundle/dev-main/c4a8dd47d02e0ea54be9165ef8114c585ddb6498.zip",
-                "reference": "c4a8dd47d02e0ea54be9165ef8114c585ddb6498",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/payum-credit-bundle/dev-main/e59e9f6a9c6802b8243431e048fb61bab5b13c8e.zip",
+                "reference": "e59e9f6a9c6802b8243431e048fb61bab5b13c8e",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -824,7 +824,7 @@
                 "source": "https://git.e-conomix.at/coreshop/credit-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/credit-bundle/-/issues"
             },
-            "time": "2023-12-14T10:28:35+01:00"
+            "time": "2023-12-14T16:33:09+01:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",

@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_customer_address_new:
+            name: coreshop_customer_address_new
+            pattern: /(\w+)\/shop\/customer\/address\/new$/
+            reverse: /%_locale/shop/customer/address/new
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\CustomerController::addressAction'
+            variables: _locale
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 3
+            creationDate: 1702546723
+            modificationDate: 1702546723

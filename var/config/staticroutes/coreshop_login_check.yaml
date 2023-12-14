@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_login_check:
+            name: coreshop_login_check
+            pattern: /(\w+)\/shop\/login-check$/
+            reverse: /%_locale/shop/login-check
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\SecurityController::checkAction'
+            variables: _locale
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 3
+            creationDate: 1702546722
+            modificationDate: 1702546722

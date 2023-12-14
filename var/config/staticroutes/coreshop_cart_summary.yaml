@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_cart_summary:
+            name: coreshop_cart_summary
+            pattern: /(\w+)\/shop\/cart$/
+            reverse: /%_locale/shop/cart
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\CartController::summaryAction'
+            variables: _locale
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 2
+            creationDate: 1702546722
+            modificationDate: 1702546722

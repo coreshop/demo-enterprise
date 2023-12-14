@@ -1,0 +1,14 @@
+imports:
+    - { resource: services.yaml }
+    - { resource: 'local/' }
+
+doctrine:
+    dbal:
+        connections:
+            default:
+                user: '%env(DATABASE_USER)%'
+                password: '%env(DATABASE_PASSWORD)%'
+                dbname: '%env(DATABASE_NAME)%'
+                host: '%env(DATABASE_HOST)%'
+                port: '%env(DATABASE_PORT)%'
+                server_version: '%env(DATABASE_VERSION)%'

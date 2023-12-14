@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_customer_address_delete:
+            name: coreshop_customer_address_delete
+            pattern: '/(\w+)\/shop\/customer\/addresses\/delete\/([0-9]+)$/'
+            reverse: /%%_locale/shop/customer/addresses/delete/%%address
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\CustomerController::addressDeleteAction'
+            variables: '_locale,address'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 4
+            creationDate: 1702546723
+            modificationDate: 1702546723

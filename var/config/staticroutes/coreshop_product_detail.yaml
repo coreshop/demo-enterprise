@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_product_detail:
+            name: coreshop_product_detail
+            pattern: '/(\w+)\/shop\/(.*?)\~p([0-9]+)$/'
+            reverse: /%%_locale/shop/%%name~p%product
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\ProductController::detailAction'
+            variables: '_locale,name,product'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 2
+            creationDate: 1702546722
+            modificationDate: 1702546722

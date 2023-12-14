@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_customer_order_detail:
+            name: coreshop_customer_order_detail
+            pattern: '/(\w+)\/shop\/customer\/order\/([0-9]+)$/'
+            reverse: /%%_locale/shop/customer/order/%%order
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\CustomerController::orderDetailAction'
+            variables: '_locale,order'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 2
+            creationDate: 1702546723
+            modificationDate: 1702546723

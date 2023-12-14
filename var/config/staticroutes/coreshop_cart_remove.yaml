@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_cart_remove:
+            name: coreshop_cart_remove
+            pattern: '/(\w+)\/shop\/cart\/remove\/([0-9]+)$/'
+            reverse: /%%_locale/shop/cart/remove/%%cartItem
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\CartController::removeItemAction'
+            variables: '_locale,cartItem'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 3
+            creationDate: 1702546722
+            modificationDate: 1702546722

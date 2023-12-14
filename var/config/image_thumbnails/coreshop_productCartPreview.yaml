@@ -1,0 +1,25 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    coreshop_productCartPreview:
+                        items:
+                            -
+                                method: scaleByWidth
+                                arguments:
+                                    width: 100
+                        medias: {  }
+                        name: coreshop_productCartPreview
+                        description: ''
+                        group: CoreShop
+                        format: SOURCE
+                        quality: 90
+                        highResolution: 0.0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1702546726
+                        creationDate: 1702546726
+                        preserveAnimation: false

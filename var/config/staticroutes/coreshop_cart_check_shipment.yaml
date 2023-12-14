@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_cart_check_shipment:
+            name: coreshop_cart_check_shipment
+            pattern: /(\w+)\/shop\/cart\/shipment-calculation$/
+            reverse: /%_locale/shop/cart/shipment-calculation
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\CartController::shipmentCalculationAction'
+            variables: _locale
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 3
+            creationDate: 1702546722
+            modificationDate: 1702546722

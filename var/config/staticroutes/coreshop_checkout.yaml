@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_checkout:
+            name: coreshop_checkout
+            pattern: '/(\w+)\/shop\/checkout\/(.*)$/'
+            reverse: /%%_locale/shop/checkout/%%stepIdentifier
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\CheckoutController::processAction'
+            variables: '_locale,stepIdentifier'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 2
+            creationDate: 1702546722
+            modificationDate: 1702546722

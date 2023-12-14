@@ -1,0 +1,25 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    coreshop_productDetailFancy:
+                        items:
+                            -
+                                method: scaleByWidth
+                                arguments:
+                                    width: 1000
+                        medias: {  }
+                        name: coreshop_productDetailFancy
+                        description: ''
+                        group: CoreShop
+                        format: SOURCE
+                        quality: 90
+                        highResolution: 0.0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1702546726
+                        creationDate: 1702546726
+                        preserveAnimation: false

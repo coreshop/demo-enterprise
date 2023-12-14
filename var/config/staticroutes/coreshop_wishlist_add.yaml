@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_wishlist_add:
+            name: coreshop_wishlist_add
+            pattern: '/(\w+)\/shop\/wishlist\/add\/([0-9]+)$/'
+            reverse: /%%_locale/shop/wishlist/add/%%product
+            controller: 'coreshop.storage_list.controller.wishlist::addItemAction'
+            variables: '_locale,product,token'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 3
+            creationDate: 1702546723
+            modificationDate: 1702546723

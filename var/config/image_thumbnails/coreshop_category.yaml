@@ -1,0 +1,31 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    coreshop_category:
+                        items:
+                            -
+                                method: contain
+                                arguments:
+                                    width: 250
+                                    height: 150
+                            -
+                                method: frame
+                                arguments:
+                                    width: 250
+                                    height: 150
+                        medias: {  }
+                        name: coreshop_category
+                        description: ''
+                        group: CoreShop
+                        format: SOURCE
+                        quality: 90
+                        highResolution: 0.0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1702546726
+                        creationDate: 1702546726
+                        preserveAnimation: false

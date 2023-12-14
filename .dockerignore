@@ -1,0 +1,9 @@
+.git
+var/log
+var/cache
+public/var/assets/
+public/build
+public/bundles
+vendor/
+.env.local
+node_modules

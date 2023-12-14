@@ -1,0 +1,49 @@
+{
+  "name": "pimcore/skeleton",
+  "type": "project",
+  "license": "GPL-3.0-or-later",
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "process-timeout": 0
+  },
+  "require": {
+    "coreshop/core-shop": "4.0.x-dev",
+    "coreshop/loyality-bundle": "dev-main",
+    "coreshop/payum-credit-bundle": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+    },
+    "classmap": [
+      "src/Kernel.php"
+    ]
+  },
+  "repositories": {
+    "private-packagist": {
+      "type": "composer",
+      "url": "https://cors.repo.packagist.com/cs-enterprise-demo/"
+    }
+  },
+  "scripts": {
+    "post-create-project-cmd": "Pimcore\\Composer::postCreateProject",
+    "post-install-cmd": [
+      "Pimcore\\Composer::postInstall",
+      "@pimcore-scripts"
+    ],
+    "post-update-cmd": [
+      "Pimcore\\Composer::postUpdate",
+      "@pimcore-scripts",
+      "Pimcore\\Composer::executeMigrationsUp",
+      "@pimcore-scripts"
+    ],
+    "pimcore-scripts": [
+      "Pimcore\\Composer::clearCache",
+      "Pimcore\\Composer::installAssets"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

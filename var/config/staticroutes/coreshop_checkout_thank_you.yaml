@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_checkout_thank_you:
+            name: coreshop_checkout_thank_you
+            pattern: '/(\w+)\/shop\/checkout-thank-you\/(.*)$/'
+            reverse: /%%_locale/shop/checkout-thank-you/%%token
+            controller: 'CoreShop\Bundle\FrontendBundle\Controller\CheckoutController::thankYouAction'
+            variables: '_locale,token'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 2
+            creationDate: 1702546722
+            modificationDate: 1702546722

@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_wishlist_remove:
+            name: coreshop_wishlist_remove
+            pattern: '/(\w+)\/shop\/wishlist\/remove\/([0-9]+)$/'
+            reverse: /%%_locale/shop/wishlist/remove/%%item
+            controller: 'coreshop.storage_list.controller.wishlist::removeItemAction'
+            variables: '_locale,item'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 3
+            creationDate: 1702546723
+            modificationDate: 1702546723

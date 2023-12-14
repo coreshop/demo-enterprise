@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_wishlist_summary:
+            name: coreshop_wishlist_summary
+            pattern: '/(\w+)\/shop\/wishlist(?:\/((.*)))?$/'
+            reverse: '/%%_locale/shop/wishlist{/%%identifier}'
+            controller: 'coreshop.storage_list.controller.wishlist::summaryAction'
+            variables: '_locale,identifier'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 2
+            creationDate: 1702546723
+            modificationDate: 1702546723

@@ -1,0 +1,74 @@
+version: '3.4'
+
+networks:
+    cors_dev:
+        external: true
+    coreshop4_enterprise_demo:
+        external: false
+
+services:
+    db:
+        image: mysql
+        container_name: coreshop4-enterprise-demo
+        networks:
+            - cors_dev
+            - coreshop4_enterprise_demo
+        working_dir: /application
+        command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_general_ci]
+        volumes:
+            - coreshop4-enterprise-demo-database:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=ROOT
+            - MYSQL_DATABASE=pimcore
+            - MYSQL_USER=pimcore
+            - MYSQL_PASSWORD=pimcore
+
+    nginx:
+        image: nginx:stable-alpine
+        volumes:
+            - .:/var/www/html:cached
+            -  ./.docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+        depends_on:
+            - php
+            - php-debug
+        networks:
+            - cors_dev
+            - coreshop4_enterprise_demo
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.coreshop4_enterprise_demo.rule=Host(`coreshop4-enterprise-demo.localhost`)
+            - traefik.http.routers.coreshop4_enterprise_demo.entrypoints=cors_dev
+            - traefik.http.routers.coreshop4_enterprise_demo.tls=true
+            - traefik.http.services.coreshop4_enterprise_demo.loadbalancer.server.port=80
+            - traefik.docker.network=cors_dev
+
+    php:
+        image: pimcore/pimcore:PHP8.1-fpm
+        container_name: coreshop4-enterprise-demo-php
+        platform: linux/amd64
+        networks:
+            - coreshop4_enterprise_demo
+        environment:
+            COMPOSER_AUTH: '{"http-basic": {"cors.repo.packagist.com": {"username": "token", "password": "REDACTED" }}}'
+        depends_on:
+            - db
+        volumes:
+            - .:/var/www/html:cached
+
+    php-debug:
+        image: pimcore/pimcore:PHP8.1-fpm-debug
+        container_name: coreshop4-enterprise-demo-php-debug
+        networks:
+            - coreshop4_enterprise_demo
+        depends_on:
+            - db
+        volumes:
+            - .:/var/www/html:cached
+        environment:
+            PHP_IDE_CONFIG: "serverName=localhost"
+            COMPOSER_AUTH: '{"http-basic": {"cors.repo.packagist.com": {"username": "token", "password": "REDACTED" }}}'
+            XDEBUG_HOST: 198.19.248.254
+            XDEBUG_TRIGGER: PHPSTORM
+
+volumes:
+    coreshop4-enterprise-demo-database:

@@ -1,0 +1,11 @@
+{% extends '@CoreShopFrontend/layout-column.html.twig' %}
+
+{% block center %}
+    <div class="mb-3">
+        {% set doc = document_route_document('homepage') %}
+
+        Document Route Demo ({{ '{{ path(\'homepage\') }}' }}): {{ path('homepage') }} (ID: {{ doc.id }})
+    </div>
+
+    {{ render(controller('CoreShop\\Bundle\\FrontendBundle\\Controller\\ProductController::latestAction')) }}
+{% endblock %}

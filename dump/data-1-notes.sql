@@ -1,0 +1,27 @@
+
+SET NAMES utf8mb4;
+
+INSERT INTO notes (`id`,`type`,`cid`,`ctype`,`date`,`user`,`title`,`description`,`locked`) VALUES (1,'history_state_change',123,'object',1702547584,NULL,'coreshop_history_change','State: State changed from Initialized to New',1), 
+(2,'history_state_change',123,'object',1702547584,NULL,'coreshop_history_change','Type: State changed from Cart to Order',1), 
+(3,'history_state_change',123,'object',1702547585,NULL,'coreshop_history_change','State: State changed from New to Confirmed',1), 
+(4,'history_state_change',123,'object',1702547585,NULL,'coreshop_history_change','Payment State: State changed from New to Financial Hold',1), 
+(5,'history_state_change',123,'object',1702547594,2,'coreshop_history_change','Payment State: State changed from Financial Hold to Completed',1), 
+(6,'history_state_change',134,'object',1702548257,NULL,'coreshop_history_change','State: State changed from Initialized to New',1), 
+(7,'history_state_change',134,'object',1702548257,NULL,'coreshop_history_change','Type: State changed from Cart to Order',1), 
+(8,'history_state_change',134,'object',1702548258,NULL,'coreshop_history_change','State: State changed from New to Confirmed',1), 
+(9,'history_state_change',134,'object',1702548258,NULL,'coreshop_history_change','Payment State: State changed from New to Financial Hold',1), 
+(10,'history_state_change',151,'object',1702562448,NULL,'coreshop_history_change','Status: Status aktualisiert von Initialisiert zu Neu',1), 
+(11,'history_state_change',151,'object',1702562448,NULL,'coreshop_history_change','Type: Status aktualisiert von Cart zu Order',1), 
+(12,'history_state_change',151,'object',1702562449,NULL,'coreshop_history_change','State: State changed from New to Confirmed',1), 
+(13,'history_state_change',151,'object',1702562449,NULL,'coreshop_history_change','Payment State: State changed from New to Financial Hold',1), 
+(14,'history_state_change',151,'object',1702562505,2,'coreshop_history_change','Payment State: State changed from Financial Hold to Completed',1), 
+(15,'CORESHOP_WAREHOUSE_STOCK_MOVEMENT',47,'object',1702567925,2,'Stock Added','Added 3 stock to Salzburg/Salzburg/empty/empty/empty qty: 3 (1) with comment ',1), 
+(16,'CORESHOP_WAREHOUSE_STOCK_MOVEMENT',47,'object',1702567937,2,'Stock Added','Added 1 stock to Munich/Munich/empty/empty/empty qty: 1 (2) with comment ',1), 
+(17,'history_state_change',145,'object',1702567959,NULL,'coreshop_history_change','State: State changed from Initialized to New',1), 
+(18,'history_state_change',145,'object',1702567959,NULL,'coreshop_history_change','Type: State changed from Cart to Order',1), 
+(19,'history_state_change',145,'object',1702567960,NULL,'coreshop_history_change','State: State changed from New to Confirmed',1), 
+(20,'history_state_change',145,'object',1702567960,NULL,'coreshop_history_change','Payment State: State changed from New to Financial Hold',1), 
+(21,'history_state_change',145,'object',1702568024,2,'coreshop_history_change','Payment State: State changed from Financial Hold to Completed',1), 
+(22,'CORESHOP_WAREHOUSE_STOCK_MOVEMENT',47,'object',1702568034,2,'Stock Added','Removed -1 stock from Munich/Munich/empty/empty/empty qty: 0 (2) with comment Order Shipment: SH1',1), 
+(23,'history_state_change',145,'object',1702568034,2,'coreshop_history_change','State: State changed from Confirmed to Complete',1), 
+(24,'history_state_change',145,'object',1702568034,2,'coreshop_history_change','Shipping State: State changed from Preparing Shipment to Shipped',1);

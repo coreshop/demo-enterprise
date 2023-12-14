@@ -1,0 +1,7 @@
+
+SET NAMES utf8mb4;
+
+INSERT INTO object_store_cs_order (`oo_id`,`orderNumber`,`quoteNumber`,`saleState`,`token`,`backendCreated`,`orderDate`,`localeCode`,`carrier`,`store`,`paymentProvider`,`paymentSettings`,`comment`,`immutable`,`quoteState`,`orderState`,`paymentState`,`shippingState`,`invoiceState`,`baseCurrency`,`paymentTotal`,`totalNet`,`totalGross`,`subtotalNet`,`subtotalGross`,`shippingTaxRate`,`pimcoreAdjustmentTotalNet`,`pimcoreAdjustmentTotalGross`,`currency`,`convertedPaymentTotal`,`convertedTotalNet`,`convertedTotalGross`,`convertedSubtotalNet`,`convertedSubtotalGross`,`convertedPimcoreAdjustmentTotalNet`,`convertedPimcoreAdjustmentTotalGross`,`weight`,`needsRecalculation`,`loyaltyPoints`) VALUES (123,'O1',NULL,'order','qQzSCwDFJP',0,1702547584,'en',1,1,2,'N;',NULL,1,NULL,'confirmed','paid','new','new',1,40440,33700,40440,32700,39240,20,1000,1200,1,40440,33700,40440,32700,39240,1000,1200,5,0,NULL), 
+(134,'O2',NULL,'order','bvD23Dxipw',0,1702548257,'en',1,1,2,'N;',NULL,1,NULL,'confirmed','financial_hold','new','new',1,34914,29095,34914,28095,33714,20,1000,1200,1,34914,29095,34914,28095,33714,1000,1200,6,0,349), 
+(145,'O4',NULL,'order','vV8jjxzRpk',0,1702567959,'en',1,1,2,'N;',NULL,1,NULL,'complete','paid','shipped','new',1,34914,29095,34914,28095,33714,20,1000,1200,1,34914,29095,34914,28095,33714,1000,1200,6,0,349), 
+(151,'O3',NULL,'order','6dujLlFR8Y',0,1702562447,'de',NULL,1,2,'N;',NULL,1,NULL,'confirmed','paid','new','new',1,100000,100000,100000,100000,100000,NULL,0,0,1,100000,100000,100000,100000,100000,0,0,0,0,1000);

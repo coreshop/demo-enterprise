@@ -1,0 +1,24 @@
+
+SET NAMES utf8mb4;
+
+INSERT INTO documents (`id`,`parentId`,`type`,`key`,`path`,`index`,`published`,`creationDate`,`modificationDate`,`userOwner`,`userModification`,`versionCount`) VALUES (1,0,'page','','/',999999,1,1702546644,1702546644,1,1,0), 
+(2,1,'page','en','/',1,1,1702546725,1702546725,0,0,1), 
+(3,2,'page','shop','/en/',1,1,1702546726,1702558821,0,2,3), 
+(4,1,'page','de','/',2,1,1702546726,1702546726,0,0,1), 
+(5,4,'page','shop','/de/',1,1,1702546726,1702558814,0,2,3), 
+(8,3,'folder','email','/en/shop/',1,1,1702546726,1702546726,0,0,1), 
+(9,5,'folder','email','/de/shop/',1,1,1702546726,1702546726,0,0,1), 
+(11,8,'email','user-registered','/en/shop/email/',1,1,1702546726,1702546726,0,0,1), 
+(12,9,'email','user-registered','/de/shop/email/',1,1,1702546726,1702546726,0,0,1), 
+(14,8,'email','user-reset-password','/en/shop/email/',2,1,1702546726,1702546726,0,0,1), 
+(15,9,'email','user-reset-password','/de/shop/email/',2,1,1702546726,1702546726,0,0,1), 
+(17,8,'email','user-newsletter-confirm','/en/shop/email/',3,1,1702546726,1702546726,0,0,1), 
+(18,9,'email','user-newsletter-confirm','/de/shop/email/',3,1,1702546726,1702546726,0,0,1), 
+(20,8,'email','user-newsletter-confirmed','/en/shop/email/',4,1,1702546726,1702546726,0,0,1), 
+(21,9,'email','user-newsletter-confirmed','/de/shop/email/',4,1,1702546726,1702546726,0,0,1), 
+(23,8,'email','order-confirmation','/en/shop/email/',5,1,1702546726,1702546726,0,0,1), 
+(24,9,'email','order-confirmation','/de/shop/email/',5,1,1702546726,1702546726,0,0,1), 
+(26,8,'email','order-shipped','/en/shop/email/',6,1,1702546726,1702546726,0,0,1), 
+(27,9,'email','order-shipped','/de/shop/email/',6,1,1702546726,1702546726,0,0,1), 
+(29,8,'email','user-order-comment','/en/shop/email/',7,1,1702546726,1702546726,0,0,1), 
+(30,9,'email','user-order-comment','/de/shop/email/',7,1,1702546726,1702546726,0,0,1);

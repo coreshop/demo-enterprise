@@ -1,0 +1,7 @@
+
+SET NAMES utf8mb4;
+
+INSERT INTO coreshop_payment_provider_translation (`id`,`translatable_id`,`title`,`description`,`instructions`,`creationDate`,`modificationDate`,`locale`) VALUES (1,1,'Bankwire','Nesciunt omnis voluptatem dolorem in. Omnis quo earum non expedita quisquam sunt veritatis et. Facilis dolores cupiditate soluta veniam quo non est. Sit illo accusantium ut ullam rerum.\nIpsam placeat nihil nihil animi ut. Autem aut iusto numquam autem quaerat rem. Numquam non minima quas accusantium dolores quo. Tenetur placeat incidunt vel facilis amet adipisci.\nOfficiis ut similique molestiae quaerat dolor architecto minima. Error possimus ex et et. Qui dicta ea voluptatem. Eveniet dolorem ducimus ut voluptatum est laborum.','Unde dicta vitae modi. Inventore nemo est et officia ut et. Omnis molestiae a ut qui sit et. Consequuntur possimus saepe non harum est rerum officia.\nEst sint optio ex consectetur. Commodi omnis quisquam dignissimos consectetur sed corrupti. Aut blanditiis est sequi adipisci odio culpa vitae. Minus consequatur ad dolor qui eaque sit maxime quod.\nPerferendis velit autem illum non aut. Facilis ipsum maiores error placeat nostrum. Delectus libero vel dicta nihil. Voluptas laboriosam voluptates autem hic pariatur incidunt ut.','2023-12-14 09:39:08','2023-12-14 09:39:08','en'), 
+(2,2,'Credit',NULL,NULL,'2023-12-14 09:52:49','2023-12-14 09:52:49','en'), 
+(3,2,'Credit',NULL,NULL,'2023-12-14 15:00:39','2023-12-14 15:00:39','de'), 
+(4,2,'Credit',NULL,NULL,'2023-12-14 15:00:39','2023-12-14 15:00:39','fr');

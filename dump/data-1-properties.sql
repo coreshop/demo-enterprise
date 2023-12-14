@@ -1,0 +1,25 @@
+
+SET NAMES utf8mb4;
+
+INSERT INTO properties (`cid`,`ctype`,`cpath`,`name`,`type`,`data`,`inheritable`) VALUES (2,'document','/en','language','text','en',1), 
+(3,'document','/en/shop','navigation_accesskey','text','',0), 
+(3,'document','/en/shop','navigation_anchor','text','',0), 
+(3,'document','/en/shop','navigation_class','text','',0), 
+(3,'document','/en/shop','navigation_exclude','bool','',0), 
+(3,'document','/en/shop','navigation_name','text','',0), 
+(3,'document','/en/shop','navigation_parameters','text','',0), 
+(3,'document','/en/shop','navigation_relation','text','',0), 
+(3,'document','/en/shop','navigation_tabindex','text','',0), 
+(3,'document','/en/shop','navigation_target','text',NULL,0), 
+(3,'document','/en/shop','navigation_title','text','',0), 
+(4,'document','/de','language','text','de',1), 
+(5,'document','/de/shop','navigation_accesskey','text','',0), 
+(5,'document','/de/shop','navigation_anchor','text','',0), 
+(5,'document','/de/shop','navigation_class','text','',0), 
+(5,'document','/de/shop','navigation_exclude','bool','',0), 
+(5,'document','/de/shop','navigation_name','text','',0), 
+(5,'document','/de/shop','navigation_parameters','text','',0), 
+(5,'document','/de/shop','navigation_relation','text','',0), 
+(5,'document','/de/shop','navigation_tabindex','text','',0), 
+(5,'document','/de/shop','navigation_target','text',NULL,0), 
+(5,'document','/de/shop','navigation_title','text','',0);

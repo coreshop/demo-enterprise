@@ -23,24 +23,29 @@ USER www-data
 
 COPY --chown=www-data:www-data composer.* ./
 COPY --chown=www-data:www-data bin bin/
+
+RUN set -eux; \
+    COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-scripts --no-progress --no-autoloader --no-dev; \
+    mkdir -p var/cache var/log public/bundles; \
+    chmod +x bin/console; \
+    sync;
+
+COPY --chown=www-data:www-data hotfix/LocationAwareConfigRepository.php vendor/pimcore/pimcore/lib/Config/LocationAwareConfigRepository.php
 COPY --chown=www-data:www-data public/index.php public/index.php
-COPY --chown=www-data:www-data public/.htaccess public/.htaccess
 COPY --chown=www-data:www-data config config/
 COPY --chown=www-data:www-data src src/
-COPY --chown=www-data:www-data templates templates/a
+COPY --chown=www-data:www-data templates templates/
 COPY --chown=www-data:www-data translations translations/
 COPY --chown=www-data:www-data var var/
 COPY --chown=www-data:www-data .env .env
+COPY --chown=www-data:www-data dump dump/
 
 RUN set -eux; \
-    COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist --no-scripts --no-progress; \
-    php -d memory_limit=-1 bin/console cache:clear --env=$APP_ENV; \
-    mkdir -p var/cache var/log; \
-    chmod +x bin/console; \
-    sleep 1; \
+    composer dump-autoload; \
+    bin/console cache:clear --env=$APP_ENV; \
     bin/console assets:install; \
     PIMCORE_DISABLE_CACHE=1 bin/console pimcore:build:classes; \
-    COMPOSER_MEMORY_LIMIT=-1 composer dump-autoload --classmap-authoritative --optimize; \
+    COMPOSER_MEMORY_LIMIT=-1 composer dump-autoload --classmap-authoritative; \
     sync;
 
 ENTRYPOINT ["docker-entrypoint"]

@@ -1,0 +1,21 @@
+
+SET NAMES utf8mb4;
+
+INSERT INTO object_localized_data_cs_attribute_value (`ooo_id`,`language`,`name`) VALUES (16,'de','S'), 
+(16,'en','S'), 
+(16,'fr','S'), 
+(17,'de','M'), 
+(17,'en','M'), 
+(17,'fr','M'), 
+(18,'de','L'), 
+(18,'en','L'), 
+(18,'fr','L'), 
+(19,'de','XL'), 
+(19,'en','XL'), 
+(19,'fr','XL'), 
+(21,'de','Winter'), 
+(21,'en','Winter'), 
+(21,'fr','Winter'), 
+(22,'de','Summer'), 
+(22,'en','Summer'), 
+(22,'fr','Summer');

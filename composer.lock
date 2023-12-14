@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab3405e76b70c778bede8c889ed2950a",
+    "content-hash": "79faeb0f2322736efb191b39d26492d0",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -831,8 +831,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/voucher-credit-bundle/dev-main/2e83eae392431ec482652e1ecfea679cb9f1ee37.zip",
-                "reference": "2e83eae392431ec482652e1ecfea679cb9f1ee37",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/voucher-credit-bundle/dev-main/bf31372be346ffc6677f5f5559d846a1c0dfc438.zip",
+                "reference": "bf31372be346ffc6677f5f5559d846a1c0dfc438",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -899,7 +899,72 @@
                 "source": "https://git.e-conomix.at/coreshop/voucher-credit-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/voucher-credit-bundle/-/issues"
             },
-            "time": "2023-12-14T14:55:47+01:00"
+            "time": "2023-12-14T15:13:00+01:00"
+        },
+        {
+            "name": "coreshop/warehouse-bundle",
+            "version": "dev-enterprise",
+            "dist": {
+                "type": "zip",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-enterprise/ca95c6b830b7329586b45ad7e9c925100c127086.zip",
+                "reference": "ca95c6b830b7329586b45ad7e9c925100c127086",
+                "mirrors": [
+                    {
+                        "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "coreshop/core-shop": "4.0.x-dev"
+            },
+            "require-dev": {
+                "friends-of-behat/page-object-extension": "^0.3.2",
+                "friends-of-behat/symfony-extension": "^2.1",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-symfony": "^1.3.2",
+                "symplify/easy-coding-standard": "^11.1",
+                "vimeo/psalm": "^5"
+            },
+            "type": "pimcore-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CoreShop\\Bundle\\WarehouseBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "classmap": [
+                    "Kernel.php"
+                ],
+                "psr-4": {
+                    "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+                }
+            },
+            "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "CoreShop GmbH",
+                    "email": "info@coreshop.org",
+                    "homepage": "https://www.coreshop.org/",
+                    "role": "TEAM"
+                }
+            ],
+            "description": "CoreShop - Warehouse Bundle",
+            "homepage": "https://www.coreshop.org",
+            "keywords": [
+                "coreshop",
+                "ecommerce",
+                "pimcore",
+                "warehouse"
+            ],
+            "support": {
+                "source": "https://git.e-conomix.at/coreshop/WarehouseBundle/-/tree/enterprise",
+                "issues": "https://git.e-conomix.at/coreshop/WarehouseBundle/-/issues"
+            },
+            "time": "2023-12-14T15:52:20+01:00"
         },
         {
             "name": "dachcom-digital/emailizr",
@@ -15354,7 +15419,8 @@
         "coreshop/document-route-bundle": 20,
         "coreshop/loyality-bundle": 20,
         "coreshop/payum-credit-bundle": 20,
-        "coreshop/voucher-credit-bundle": 20
+        "coreshop/voucher-credit-bundle": 20,
+        "coreshop/warehouse-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

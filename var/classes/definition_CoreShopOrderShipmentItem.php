@@ -12,6 +12,7 @@
  * - convertedTotalNet [coreShopMoney]
  * - convertedTotalGross [coreShopMoney]
  * - weight [numeric]
+ * - stockItem [coreShopStockItem]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -21,11 +22,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546719,
+   'modificationDate' => 1702565972,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\OrderShipmentItem',
-   'implementsInterfaces' => NULL,
+   'implementsInterfaces' => '\\CoreShop\\Bundle\\WarehouseBundle\\Model\\StockItemAwareInterface',
    'listingParentClass' => '',
    'useTraits' => '',
    'listingUseTraits' => '',
@@ -284,6 +285,27 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'decimalPrecision' => NULL,
                  'width' => '',
                  'defaultValueGenerator' => '',
+              )),
+              7 => 
+              CoreShop\Bundle\WarehouseBundle\CoreExtension\StockItem::__set_state(array(
+                 'name' => 'stockItem',
+                 'title' => 'Stock Item',
+                 'tooltip' => NULL,
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => NULL,
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopStockItem',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'allowEmpty' => false,
               )),
             ),
              'locked' => false,

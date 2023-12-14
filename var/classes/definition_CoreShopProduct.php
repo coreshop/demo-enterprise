@@ -40,6 +40,7 @@
  * - height [numeric]
  * - width [numeric]
  * - depth [numeric]
+ * - stockItems [coreShopStockItems]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -49,7 +50,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546721,
+   'modificationDate' => 1702565972,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Product',
@@ -861,6 +862,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                   array (
                     'classes' => 'CoreShopProduct',
                   ),
+                  1 => 
+                  array (
+                    'classes' => 'CoreShopVoucherProduct',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -1471,7 +1476,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'blockedVarsForExport' => 
                     array (
                     ),
-                     'width' => NULL,
+                     'width' => 0,
                      'minValue' => 0.0,
                      'maxValue' => 0.0,
                   )),
@@ -1718,6 +1723,27 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'decimalPrecision' => NULL,
                  'width' => '',
                  'defaultValueGenerator' => '',
+              )),
+              4 => 
+              CoreShop\Bundle\WarehouseBundle\CoreExtension\StockItems::__set_state(array(
+                 'name' => 'stockItems',
+                 'title' => 'Stock Items',
+                 'tooltip' => NULL,
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => NULL,
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopStockItems',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'height' => NULL,
               )),
             ),
              'locked' => false,

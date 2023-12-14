@@ -12,7 +12,8 @@
     "coreshop/document-route-bundle": "dev-main",
     "coreshop/loyality-bundle": "dev-main",
     "coreshop/payum-credit-bundle": "dev-main",
-    "coreshop/voucher-credit-bundle": "dev-main"
+    "coreshop/voucher-credit-bundle": "dev-main",
+    "coreshop/warehouse-bundle": "dev-enterprise"
   },
   "autoload": {
     "psr-4": {

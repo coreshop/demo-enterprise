@@ -25,6 +25,7 @@ class Kernel extends PimcoreKernel
     {
         $collection->addBundle(new \CoreShop\Bundle\CreditBundle\CoreShopCreditBundle());
         $collection->addBundle(new \CoreShop\Bundle\DocumentRouteBundle\CoreShopDocumentRouteBundle());
+        $collection->addBundle(new \CoreShop\Bundle\WarehouseBundle\CoreShopWarehouseBundle());
         $collection->addBundle(new \CoreShop\Bundle\LoyaltyBundle\CoreShopLoyaltyBundle(), 900);
         $collection->addBundle(new \CoreShop\Bundle\VoucherCreditBundle\CoreShopVoucherCreditBundle(), 900);
         $collection->addBundle(new \CoreShop\Bundle\CoreBundle\CoreShopCoreBundle(), 1000);

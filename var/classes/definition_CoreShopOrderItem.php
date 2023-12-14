@@ -13,6 +13,7 @@
  * - unit [coreShopProductUnit]
  * - customItemDiscount [numeric]
  * - quantity [numeric]
+ * - allocatedQuantity [numeric]
  * - defaultUnitQuantity [numeric]
  * - product [coreShopRelation]
  * - objectId [numeric]
@@ -70,11 +71,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546718,
+   'modificationDate' => 1702565971,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\OrderItem',
-   'implementsInterfaces' => NULL,
+   'implementsInterfaces' => '\\CoreShop\\Bundle\\WarehouseBundle\\Model\\AllocationAwareInterface',
    'listingParentClass' => '',
    'useTraits' => '',
    'listingUseTraits' => '',
@@ -366,6 +367,36 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                   )),
                   7 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+                     'name' => 'allocatedQuantity',
+                     'title' => 'Allocated Quantity',
+                     'tooltip' => NULL,
+                     'mandatory' => false,
+                     'noteditable' => true,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => NULL,
+                     'permissions' => NULL,
+                     'fieldtype' => '',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'defaultValue' => NULL,
+                     'integer' => false,
+                     'unsigned' => false,
+                     'minValue' => NULL,
+                     'maxValue' => NULL,
+                     'unique' => false,
+                     'decimalSize' => NULL,
+                     'decimalPrecision' => NULL,
+                     'width' => 0,
+                     'defaultValueGenerator' => '',
+                  )),
+                  8 => 
+                  Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                      'name' => 'defaultUnitQuantity',
                      'title' => 'coreshop.order_item.default_unit_quantity',
                      'tooltip' => '',
@@ -394,7 +425,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'width' => '',
                      'defaultValueGenerator' => '',
                   )),
-                  8 => 
+                  9 => 
                   CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                      'name' => 'product',
                      'title' => 'coreshop.order_item.product',
@@ -419,6 +450,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                       array (
                         'classes' => 'CoreShopProduct',
                       ),
+                      1 => 
+                      array (
+                        'classes' => 'CoreShopVoucherProduct',
+                      ),
                     ),
                      'displayMode' => NULL,
                      'pathFormatterClass' => '',
@@ -437,7 +472,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'stack' => 'coreshop.purchasable',
                      'returnConcrete' => false,
                   )),
-                  9 => 
+                  10 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                      'name' => 'objectId',
                      'title' => 'coreshop.order_item.object_id',
@@ -467,7 +502,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'width' => '',
                      'defaultValueGenerator' => '',
                   )),
-                  10 => 
+                  11 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                      'name' => 'mainObjectId',
                      'title' => 'coreshop.order_item.main_object_id',
@@ -497,7 +532,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'width' => '',
                      'defaultValueGenerator' => '',
                   )),
-                  11 => 
+                  12 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                      'name' => 'itemWeight',
                      'title' => 'coreshop.order_item.item_weight',
@@ -527,7 +562,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'width' => '',
                      'defaultValueGenerator' => '',
                   )),
-                  12 => 
+                  13 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                      'name' => 'totalWeight',
                      'title' => 'coreshop.order_item.total_weight',
@@ -557,7 +592,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'width' => '',
                      'defaultValueGenerator' => '',
                   )),
-                  13 => 
+                  14 => 
                   CoreShop\Bundle\ProductBundle\CoreExtension\ProductUnitDefinition::__set_state(array(
                      'name' => 'unitDefinition',
                      'title' => 'coreshop.order_item.unit_definition',
@@ -579,7 +614,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'phpdocType' => '\\CoreShop\\Component\\Product\\Model\\ProductUnitDefinitionInterface',
                      'allowEmpty' => false,
                   )),
-                  14 => 
+                  15 => 
                   CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                      'name' => 'order',
                      'title' => 'coreshop.order_item.order',
@@ -622,7 +657,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'stack' => 'coreshop.order',
                      'returnConcrete' => false,
                   )),
-                  15 => 
+                  16 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
                      'name' => 'immutable',
                      'title' => 'coreshop.order_item.immutable',

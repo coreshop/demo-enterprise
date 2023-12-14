@@ -11,7 +11,8 @@
     "coreshop/core-shop": "4.0.x-dev",
     "coreshop/document-route-bundle": "dev-main",
     "coreshop/loyality-bundle": "dev-main",
-    "coreshop/payum-credit-bundle": "dev-main"
+    "coreshop/payum-credit-bundle": "dev-main",
+    "coreshop/voucher-credit-bundle": "dev-main"
   },
   "autoload": {
     "psr-4": {

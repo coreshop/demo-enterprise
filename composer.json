@@ -9,6 +9,7 @@
   },
   "require": {
     "coreshop/core-shop": "4.0.x-dev",
+    "coreshop/deposit-bundle": "dev-main",
     "coreshop/document-route-bundle": "dev-main",
     "coreshop/loyality-bundle": "dev-main",
     "coreshop/payum-credit-bundle": "dev-main",

@@ -8,9 +8,9 @@
 {% set taxes = cart.taxes %}
 {% set rowspan = 10 + taxes|length %}
 
-{#{% if cart.hasDepositItem %}#}
-{#    {% set rowspan = rowspan + 3 %}#}
-{#{% endif %}#}
+{% if cart.hasDepositItem %}
+    {% set rowspan = rowspan + 3 %}
+{% endif %}
 
 {% if cart.loyaltyPoints %}
     {% set rowspan = rowspan + 1 %}
@@ -106,32 +106,32 @@
         {{ currency.convertAndFormat(cart.total) }}
     </td>
 </tr>
-{#{% if cart.hasDepositItem %}#}
-{#<tr>#}
-{#    <td class="text-right">#}
-{#        <strong>{{ 'coreshop.ui.total_deposit'|trans }}:</strong>#}
-{#    </td>#}
-{#    <td colspan="2" class="text-right cart-total-price">#}
-{#        {{ currency.convertAndFormat(cart.totalDeposit) }}#}
-{#    </td>#}
-{#</tr>#}
-{#<tr>#}
-{#    <td class="text-right">#}
-{#        <strong>{{ 'coreshop.ui.total_payment_now'|trans }}:</strong>#}
-{#    </td>#}
-{#    <td colspan="2" class="text-right cart-total-price">#}
-{#        {{ currency.convertAndFormat(cart.totalPaymentNow) }}#}
-{#    </td>#}
-{#</tr>#}
-{#<tr>#}
-{#    <td class="text-right">#}
-{#        <strong>{{ 'coreshop.ui.total_payment_later'|trans }}:</strong>#}
-{#    </td>#}
-{#    <td colspan="2" class="text-right cart-total-price">#}
-{#        {{ currency.convertAndFormat(cart.totalPaymentLater) }}#}
-{#    </td>#}
-{#</tr>#}
-{#{% endif %}#}
+{% if cart.hasDepositItem %}
+<tr>
+    <td class="text-right">
+        <strong>Total Deposit:</strong>
+    </td>
+    <td colspan="2" class="text-right cart-total-price">
+        {{ currency.convertAndFormat(cart.totalDeposit) }}
+    </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <strong>Payment Now:</strong>
+    </td>
+    <td colspan="2" class="text-right cart-total-price">
+        {{ currency.convertAndFormat(cart.totalPaymentNow) }}
+    </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <strong>Payment Later:</strong>
+    </td>
+    <td colspan="2" class="text-right cart-total-price">
+        {{ currency.convertAndFormat(cart.totalPaymentLater) }}
+    </td>
+</tr>
+{% endif %}
 
 {% if cart.comment is not empty %}
     <tr>

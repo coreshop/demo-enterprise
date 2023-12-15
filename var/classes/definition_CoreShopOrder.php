@@ -18,6 +18,15 @@
  * - paymentSettings [coreShopSerializedData]
  * - comment [textarea]
  * - additionalData [objectbricks]
+ * - totalPaymentLaterNet [coreShopMoney]
+ * - totalPaymentLaterGross [coreShopMoney]
+ * - totalPaymentNowNet [coreShopMoney]
+ * - totalPaymentNowGross [coreShopMoney]
+ * - totalDepositNet [coreShopMoney]
+ * - totalDepositGross [coreShopMoney]
+ * - subtotalDepositNet [coreShopMoney]
+ * - subtotalDepositGross [coreShopMoney]
+ * - hasDepositItem [checkbox]
  * - immutable [booleanSelect]
  * - loyaltyPoints [numeric]
  * - quoteState [input]
@@ -62,13 +71,13 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702580353,
+   'modificationDate' => 1702640521,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Order',
-   'implementsInterfaces' => '\\CoreShop\\Bundle\\LoyaltyBundle\\Model\\LoyaltyPointsAwareInterface',
+   'implementsInterfaces' => '\\CoreShop\\Bundle\\LoyaltyBundle\\Model\\LoyaltyPointsAwareInterface,\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositAwareInterface',
    'listingParentClass' => '',
-   'useTraits' => '',
+   'useTraits' => '\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositAwareTrait',
    'listingUseTraits' => '',
    'encryption' => false,
    'encryptedTables' => 
@@ -454,6 +463,236 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'border' => false,
               )),
               13 => 
+              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                 'name' => 'totalPaymentLaterNet',
+                 'title' => 'Total Payment Later Net',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopMoney',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => NULL,
+                 'defaultValue' => NULL,
+                 'phpdocType' => 'int',
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'nullable' => false,
+              )),
+              14 => 
+              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                 'name' => 'totalPaymentLaterGross',
+                 'title' => 'Total Payment Later Gross',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopMoney',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => NULL,
+                 'defaultValue' => NULL,
+                 'phpdocType' => 'int',
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'nullable' => false,
+              )),
+              15 => 
+              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                 'name' => 'totalPaymentNowNet',
+                 'title' => 'Total Payment Now Net',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopMoney',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => NULL,
+                 'defaultValue' => NULL,
+                 'phpdocType' => 'int',
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'nullable' => false,
+              )),
+              16 => 
+              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                 'name' => 'totalPaymentNowGross',
+                 'title' => 'Total Payment Now Gross',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopMoney',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => NULL,
+                 'defaultValue' => NULL,
+                 'phpdocType' => 'int',
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'nullable' => false,
+              )),
+              17 => 
+              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                 'name' => 'totalDepositNet',
+                 'title' => 'Total Deposit Net',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopMoney',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => NULL,
+                 'defaultValue' => NULL,
+                 'phpdocType' => 'int',
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'nullable' => false,
+              )),
+              18 => 
+              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                 'name' => 'totalDepositGross',
+                 'title' => 'Total Deposit Gross',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopMoney',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => NULL,
+                 'defaultValue' => NULL,
+                 'phpdocType' => 'int',
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'nullable' => false,
+              )),
+              19 => 
+              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                 'name' => 'subtotalDepositNet',
+                 'title' => 'Subtotal Deposit Net',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopMoney',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => NULL,
+                 'defaultValue' => NULL,
+                 'phpdocType' => 'int',
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'nullable' => false,
+              )),
+              20 => 
+              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                 'name' => 'subtotalDepositGross',
+                 'title' => 'Subtotal Deposit Gross',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopMoney',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => NULL,
+                 'defaultValue' => NULL,
+                 'phpdocType' => 'int',
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'nullable' => false,
+              )),
+              21 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
+                 'name' => 'hasDepositItem',
+                 'title' => 'hasDepositItem',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => '',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'defaultValue' => NULL,
+                 'defaultValueGenerator' => '',
+              )),
+              22 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
                  'name' => 'immutable',
                  'title' => 'coreshop.order.immutable',
@@ -495,7 +734,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'width' => '',
               )),
-              14 => 
+              23 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'loyaltyPoints',
                  'title' => 'Loyalty Points',

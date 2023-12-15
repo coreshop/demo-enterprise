@@ -6,4 +6,10 @@ INSERT INTO object_collection_CoreShopTaxItem_cs_order_item (`id`,`index`,`field
 (136,0,'convertedTaxes','20AT',20,5619,1), 
 (136,0,'taxes','20AT',20,5619,1), 
 (162,0,'convertedTaxes','20AT',20,5619,1), 
-(162,0,'taxes','20AT',20,5619,1);
+(162,0,'taxes','20AT',20,5619,1), 
+(174,0,'convertedTaxes','20AT',20,5619,1), 
+(174,0,'taxes','20AT',20,5619,1), 
+(187,0,'convertedTaxes','20AT',20,7100,1), 
+(187,0,'taxes','20AT',20,7100,1), 
+(197,0,'convertedTaxes','20AT',20,7100,1), 
+(197,0,'taxes','20AT',20,7100,1);

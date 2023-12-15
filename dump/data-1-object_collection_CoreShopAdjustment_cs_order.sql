@@ -14,4 +14,16 @@ INSERT INTO object_collection_CoreShopAdjustment_cs_order (`id`,`index`,`fieldna
 (145,1,'adjustmentItems','payment','PaymentProvider fee',0,0,0), 
 (145,1,'convertedAdjustmentItems','payment','PaymentProvider fee',0,0,0), 
 (151,0,'adjustmentItems','payment','PaymentProvider fee',0,0,0), 
-(151,0,'convertedAdjustmentItems','payment','PaymentProvider fee',0,0,0);
+(151,0,'convertedAdjustmentItems','payment','PaymentProvider fee',0,0,0), 
+(172,0,'adjustmentItems','shipping','',1000,1200,0), 
+(172,0,'convertedAdjustmentItems','shipping','',1000,1200,0), 
+(172,1,'adjustmentItems','payment','PaymentProvider fee',0,0,0), 
+(172,1,'convertedAdjustmentItems','payment','PaymentProvider fee',0,0,0), 
+(185,0,'adjustmentItems','shipping','',1000,1200,0), 
+(185,0,'convertedAdjustmentItems','shipping','',1000,1200,0), 
+(185,1,'adjustmentItems','payment','PaymentProvider fee',0,0,0), 
+(185,1,'convertedAdjustmentItems','payment','PaymentProvider fee',0,0,0), 
+(194,0,'adjustmentItems','shipping','',1000,1200,0), 
+(194,0,'convertedAdjustmentItems','shipping','',1000,1200,0), 
+(194,1,'adjustmentItems','payment','PaymentProvider fee',0,0,0), 
+(194,1,'convertedAdjustmentItems','payment','PaymentProvider fee',0,0,0);

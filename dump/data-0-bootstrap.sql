@@ -18,7 +18,7 @@ DROP TABLE IF EXISTS `coreshop_address_identifier`;
 CREATE TABLE `coreshop_address_identifier` (
   `id` int NOT NULL AUTO_INCREMENT,
   `active` tinyint(1) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -29,11 +29,11 @@ CREATE TABLE `coreshop_address_identifier` (
 DROP TABLE IF EXISTS `coreshop_carrier`;
 CREATE TABLE `coreshop_carrier` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `identifier` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `trackingUrl` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `identifier` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `trackingUrl` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `hideFromCheckout` tinyint(1) NOT NULL,
   `logo` int DEFAULT NULL COMMENT '(DC2Type:pimcoreAsset)',
-  `taxCalculationStrategy` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `taxCalculationStrategy` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   `taxRuleGroupId` int DEFAULT NULL,
@@ -61,11 +61,11 @@ DROP TABLE IF EXISTS `coreshop_carrier_translation`;
 CREATE TABLE `coreshop_carrier_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_carrier_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_CE09FC1C2C2AC5D3` (`translatable_id`),
@@ -77,8 +77,8 @@ CREATE TABLE `coreshop_carrier_translation` (
 DROP TABLE IF EXISTS `coreshop_cart_price_rule`;
 CREATE TABLE `coreshop_cart_price_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `isVoucherRule` tinyint(1) NOT NULL,
   `active` tinyint(1) NOT NULL,
   `priority` int NOT NULL DEFAULT '0',
@@ -119,10 +119,10 @@ DROP TABLE IF EXISTS `coreshop_cart_price_rule_translation`;
 CREATE TABLE `coreshop_cart_price_rule_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_cart_price_rule_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_3A3D1D4B2C2AC5D3` (`translatable_id`),
@@ -134,7 +134,7 @@ CREATE TABLE `coreshop_cart_price_rule_translation` (
 DROP TABLE IF EXISTS `coreshop_cart_price_rule_voucher_code`;
 CREATE TABLE `coreshop_cart_price_rule_voucher_code` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `code` varchar(190) COLLATE utf8mb4_general_ci NOT NULL,
+  `code` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `used` tinyint(1) NOT NULL,
   `uses` int NOT NULL,
   `creditUsed` int NOT NULL,
@@ -158,8 +158,8 @@ DROP TABLE IF EXISTS `coreshop_configuration`;
 CREATE TABLE `coreshop_configuration` (
   `id` int NOT NULL AUTO_INCREMENT,
   `store_id` int DEFAULT NULL,
-  `configKey` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `data` longtext COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:object)',
+  `configKey` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:object)',
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -172,10 +172,10 @@ CREATE TABLE `coreshop_configuration` (
 DROP TABLE IF EXISTS `coreshop_country`;
 CREATE TABLE `coreshop_country` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `isoCode` varchar(2) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `isoCode` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `active` tinyint(1) NOT NULL,
-  `addressFormat` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `salutations` longtext COLLATE utf8mb4_general_ci COMMENT '(DC2Type:simple_array)',
+  `addressFormat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `salutations` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:simple_array)',
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   `zoneId` int DEFAULT NULL,
@@ -194,10 +194,10 @@ DROP TABLE IF EXISTS `coreshop_country_translation`;
 CREATE TABLE `coreshop_country_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_country_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_EA69BBC42C2AC5D3` (`translatable_id`),
@@ -209,10 +209,10 @@ CREATE TABLE `coreshop_country_translation` (
 DROP TABLE IF EXISTS `coreshop_currency`;
 CREATE TABLE `coreshop_currency` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `isoCode` varchar(3) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `isoCode` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `numericIsoCode` int DEFAULT NULL,
-  `symbol` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `symbol` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -221,10 +221,25 @@ CREATE TABLE `coreshop_currency` (
 
 
 
+DROP TABLE IF EXISTS `coreshop_deposit_store_values`;
+CREATE TABLE `coreshop_deposit_store_values` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `store` int DEFAULT NULL,
+  `product` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
+  `allowDeposit` tinyint(1) NOT NULL,
+  `depositPercentage` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `product_store` (`product`,`store`),
+  KEY `IDX_30720632FF575877` (`store`),
+  CONSTRAINT `FK_30720632FF575877` FOREIGN KEY (`store`) REFERENCES `coreshop_store` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
 DROP TABLE IF EXISTS `coreshop_document_route`;
 CREATE TABLE `coreshop_document_route` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `route_name` varchar(190) COLLATE utf8mb4_general_ci NOT NULL,
+  `route_name` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `document` int DEFAULT NULL COMMENT '(DC2Type:pimcoreDocument)',
   PRIMARY KEY (`id`),
   UNIQUE KEY `route_name` (`route_name`)
@@ -236,7 +251,7 @@ DROP TABLE IF EXISTS `coreshop_document_site_route`;
 CREATE TABLE `coreshop_document_site_route` (
   `id` int NOT NULL AUTO_INCREMENT,
   `documentRouteId` int DEFAULT NULL,
-  `site` varchar(255) COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:pimcoreSite)',
+  `site` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:pimcoreSite)',
   PRIMARY KEY (`id`),
   KEY `IDX_2CCA8F4A67C2CC38` (`documentRouteId`),
   CONSTRAINT `FK_2CCA8F4A67C2CC38` FOREIGN KEY (`documentRouteId`) REFERENCES `coreshop_document_route` (`id`)
@@ -249,7 +264,7 @@ CREATE TABLE `coreshop_document_site_route_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
   `document` int DEFAULT NULL COMMENT '(DC2Type:pimcoreDocument)',
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_document_site_route_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_DFC186862C2AC5D3` (`translatable_id`),
@@ -279,10 +294,10 @@ CREATE TABLE `coreshop_exchange_rate` (
 DROP TABLE IF EXISTS `coreshop_filter`;
 CREATE TABLE `coreshop_filter` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `resultsPerPage` int DEFAULT NULL,
-  `orderDirection` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `orderKey` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `orderDirection` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `orderKey` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   `indexId` int DEFAULT NULL,
@@ -296,10 +311,10 @@ CREATE TABLE `coreshop_filter` (
 DROP TABLE IF EXISTS `coreshop_filter_condition`;
 CREATE TABLE `coreshop_filter_condition` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `quantityUnit` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `configuration` longtext COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `quantityUnit` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
   `sort` int DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -337,10 +352,10 @@ CREATE TABLE `coreshop_filter_condition_pre_conditions` (
 DROP TABLE IF EXISTS `coreshop_index`;
 CREATE TABLE `coreshop_index` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `class` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `worker` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `configuration` longtext COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:array)',
+  `class` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `worker` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:array)',
   `indexLastVersion` tinyint(1) NOT NULL DEFAULT '0',
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -352,16 +367,16 @@ CREATE TABLE `coreshop_index` (
 DROP TABLE IF EXISTS `coreshop_index_column`;
 CREATE TABLE `coreshop_index_column` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `objectKey` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `objectType` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `dataType` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `getter` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `columnType` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `getterConfig` longtext COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
-  `interpreter` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `interpreterConfig` longtext COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
-  `configuration` longtext COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `objectKey` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `objectType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `dataType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `getter` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `columnType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `getterConfig` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `interpreter` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `interpreterConfig` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   `indexId` int DEFAULT NULL,
@@ -387,8 +402,8 @@ CREATE TABLE `coreshop_loyalty_points_account` (
 DROP TABLE IF EXISTS `coreshop_loyalty_points_rule`;
 CREATE TABLE `coreshop_loyalty_points_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `active` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -427,10 +442,10 @@ DROP TABLE IF EXISTS `coreshop_loyalty_points_rule_translation`;
 CREATE TABLE `coreshop_loyalty_points_rule_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_loyalty_points_rule_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_168BDF962C2AC5D3` (`translatable_id`),
@@ -444,23 +459,23 @@ CREATE TABLE `coreshop_loyalty_points_transaction` (
   `id` int NOT NULL AUTO_INCREMENT,
   `loyalty_account` int DEFAULT NULL,
   `pointsValue` int NOT NULL,
-  `type` enum('income','expense') COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `details` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `type` enum('income','expense') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `details` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `detailParams` json NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_144F7D5D11F7BE17` (`loyalty_account`),
   CONSTRAINT `FK_144F7D5D11F7BE17` FOREIGN KEY (`loyalty_account`) REFERENCES `coreshop_loyalty_points_account` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
 DROP TABLE IF EXISTS `coreshop_notification_rule`;
 CREATE TABLE `coreshop_notification_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `active` tinyint(1) NOT NULL,
   `sort` int NOT NULL,
   `creationDate` datetime NOT NULL,
@@ -501,31 +516,31 @@ CREATE TABLE `coreshop_payment` (
   `id` int NOT NULL AUTO_INCREMENT,
   `payment_provider_id` int DEFAULT NULL,
   `currency_id` int DEFAULT NULL,
-  `state` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `state` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `orderId` int NOT NULL,
   `datePayment` datetime NOT NULL,
   `details` json NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `number` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `total_amount` int DEFAULT NULL,
-  `currency_code` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `currency_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `order` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
   PRIMARY KEY (`id`),
   KEY `IDX_E797E8B3FCDF7870` (`payment_provider_id`),
   KEY `IDX_E797E8B338248176` (`currency_id`),
   CONSTRAINT `FK_E797E8B338248176` FOREIGN KEY (`currency_id`) REFERENCES `coreshop_currency` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_E797E8B3FCDF7870` FOREIGN KEY (`payment_provider_id`) REFERENCES `coreshop_payment_provider` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
 DROP TABLE IF EXISTS `coreshop_payment_gateway_config`;
 CREATE TABLE `coreshop_payment_gateway_config` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `gateway_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `factory_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `gateway_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `factory_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `config` json NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -536,7 +551,7 @@ DROP TABLE IF EXISTS `coreshop_payment_provider`;
 CREATE TABLE `coreshop_payment_provider` (
   `id` int NOT NULL AUTO_INCREMENT,
   `gateway_config_id` int DEFAULT NULL,
-  `identifier` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `identifier` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   `position` int NOT NULL,
   `logo` int DEFAULT NULL COMMENT '(DC2Type:pimcoreAsset)',
@@ -553,7 +568,7 @@ CREATE TABLE `coreshop_payment_provider` (
 DROP TABLE IF EXISTS `coreshop_payment_provider_rule`;
 CREATE TABLE `coreshop_payment_provider_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -623,12 +638,12 @@ DROP TABLE IF EXISTS `coreshop_payment_provider_translation`;
 CREATE TABLE `coreshop_payment_provider_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_general_ci,
-  `instructions` longtext COLLATE utf8mb4_general_ci,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `instructions` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_payment_provider_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_EB7B44FB2C2AC5D3` (`translatable_id`),
@@ -639,11 +654,11 @@ CREATE TABLE `coreshop_payment_provider_translation` (
 
 DROP TABLE IF EXISTS `coreshop_payment_security_token`;
 CREATE TABLE `coreshop_payment_security_token` (
-  `hash` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `details` longtext COLLATE utf8mb4_general_ci COMMENT '(DC2Type:object)',
-  `afterUrl` longtext COLLATE utf8mb4_general_ci,
-  `targetUrl` longtext COLLATE utf8mb4_general_ci,
-  `gatewayName` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `hash` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `details` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:object)',
+  `afterUrl` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `targetUrl` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `gatewayName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`hash`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -652,8 +667,8 @@ CREATE TABLE `coreshop_payment_security_token` (
 DROP TABLE IF EXISTS `coreshop_product_price_rule`;
 CREATE TABLE `coreshop_product_price_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `priority` int NOT NULL,
   `active` tinyint(1) NOT NULL,
   `stopPropagation` tinyint(1) NOT NULL,
@@ -694,10 +709,10 @@ DROP TABLE IF EXISTS `coreshop_product_price_rule_translation`;
 CREATE TABLE `coreshop_product_price_rule_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_product_price_rule_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_C8C39DC12C2AC5D3` (`translatable_id`),
@@ -709,11 +724,11 @@ CREATE TABLE `coreshop_product_price_rule_translation` (
 DROP TABLE IF EXISTS `coreshop_product_quantity_price_rule`;
 CREATE TABLE `coreshop_product_quantity_price_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   `priority` int NOT NULL,
   `product` int NOT NULL,
-  `calculation_behaviour` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `calculation_behaviour` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -740,7 +755,7 @@ CREATE TABLE `coreshop_product_quantity_price_rule_range` (
   `rule_id` int DEFAULT NULL,
   `unit_definition` int DEFAULT NULL,
   `range_starting_from` double NOT NULL,
-  `pricing_behaviour` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `pricing_behaviour` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `percentage` double NOT NULL,
   `highlighted` tinyint(1) NOT NULL,
   `amount` bigint NOT NULL COMMENT '(DC2Type:bigintInteger)',
@@ -760,7 +775,7 @@ CREATE TABLE `coreshop_product_quantity_price_rule_range` (
 DROP TABLE IF EXISTS `coreshop_product_specific_price_rule`;
 CREATE TABLE `coreshop_product_specific_price_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `priority` int NOT NULL,
   `active` tinyint(1) NOT NULL,
   `inherit` tinyint(1) NOT NULL,
@@ -803,10 +818,10 @@ DROP TABLE IF EXISTS `coreshop_product_specific_price_rule_translation`;
 CREATE TABLE `coreshop_product_specific_price_rule_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_product_specific_price_rule_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_30C732842C2AC5D3` (`translatable_id`),
@@ -832,7 +847,7 @@ CREATE TABLE `coreshop_product_store_values` (
 DROP TABLE IF EXISTS `coreshop_product_unit`;
 CREATE TABLE `coreshop_product_unit` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(190) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -890,13 +905,13 @@ DROP TABLE IF EXISTS `coreshop_product_unit_translation`;
 CREATE TABLE `coreshop_product_unit_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `full_label` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `full_plural_label` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `short_label` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `short_plural_label` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `full_label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `full_plural_label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `short_label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `short_plural_label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_product_unit_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_7A572A8D2C2AC5D3` (`translatable_id`),
@@ -908,9 +923,9 @@ CREATE TABLE `coreshop_product_unit_translation` (
 DROP TABLE IF EXISTS `coreshop_rule_action`;
 CREATE TABLE `coreshop_rule_action` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `sort` int DEFAULT NULL,
-  `configuration` longtext COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -919,9 +934,9 @@ CREATE TABLE `coreshop_rule_action` (
 DROP TABLE IF EXISTS `coreshop_rule_condition`;
 CREATE TABLE `coreshop_rule_condition` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `sort` int DEFAULT NULL,
-  `configuration` longtext COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -930,7 +945,7 @@ CREATE TABLE `coreshop_rule_condition` (
 DROP TABLE IF EXISTS `coreshop_sequence`;
 CREATE TABLE `coreshop_sequence` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `idx` int NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_7ED5F6CC5E237E06` (`name`)
@@ -941,7 +956,7 @@ CREATE TABLE `coreshop_sequence` (
 DROP TABLE IF EXISTS `coreshop_shipping_rule`;
 CREATE TABLE `coreshop_shipping_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -998,7 +1013,7 @@ DROP TABLE IF EXISTS `coreshop_state`;
 CREATE TABLE `coreshop_state` (
   `id` int NOT NULL AUTO_INCREMENT,
   `active` tinyint(1) NOT NULL,
-  `isoCode` varchar(4) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `isoCode` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   `countryId` int DEFAULT NULL,
@@ -1013,10 +1028,10 @@ DROP TABLE IF EXISTS `coreshop_state_translation`;
 CREATE TABLE `coreshop_state_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_state_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_7695D9BF2C2AC5D3` (`translatable_id`),
@@ -1028,8 +1043,8 @@ CREATE TABLE `coreshop_state_translation` (
 DROP TABLE IF EXISTS `coreshop_store`;
 CREATE TABLE `coreshop_store` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `template` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `template` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `isDefault` tinyint(1) NOT NULL,
   `siteId` int NOT NULL,
   `creationDate` datetime NOT NULL,
@@ -1075,10 +1090,10 @@ DROP TABLE IF EXISTS `coreshop_tax_rate_translation`;
 CREATE TABLE `coreshop_tax_rate_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `coreshop_tax_rate_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_FFDC5E802C2AC5D3` (`translatable_id`),
@@ -1113,7 +1128,7 @@ CREATE TABLE `coreshop_tax_rule` (
 DROP TABLE IF EXISTS `coreshop_tax_rule_group`;
 CREATE TABLE `coreshop_tax_rule_group` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -1125,7 +1140,7 @@ CREATE TABLE `coreshop_tax_rule_group` (
 DROP TABLE IF EXISTS `coreshop_warehouse`;
 CREATE TABLE `coreshop_warehouse` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -1136,7 +1151,7 @@ CREATE TABLE `coreshop_warehouse` (
 DROP TABLE IF EXISTS `coreshop_warehouse_location`;
 CREATE TABLE `coreshop_warehouse_location` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   `warehouseId` int DEFAULT NULL,
@@ -1152,9 +1167,9 @@ CREATE TABLE `coreshop_warehouse_stock_item` (
   `id` int NOT NULL AUTO_INCREMENT,
   `stockable` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
   `quantity` int NOT NULL,
-  `rack` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `shelf` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `bin` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `rack` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `shelf` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `bin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   `warehouseLocationId` int NOT NULL,
@@ -1170,7 +1185,7 @@ CREATE TABLE `coreshop_warehouse_stock_movement` (
   `id` int NOT NULL AUTO_INCREMENT,
   `stockable` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
   `quantity` int NOT NULL,
-  `comment` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `comment` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `ingoing` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -1181,7 +1196,7 @@ CREATE TABLE `coreshop_warehouse_stock_movement` (
   KEY `IDX_2A944061AB83C41F` (`warehouseLocationId`),
   CONSTRAINT `FK_2A944061A47C422A` FOREIGN KEY (`stockItemId`) REFERENCES `coreshop_warehouse_stock_item` (`id`),
   CONSTRAINT `FK_2A944061AB83C41F` FOREIGN KEY (`warehouseLocationId`) REFERENCES `coreshop_warehouse_location` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1189,7 +1204,7 @@ DROP TABLE IF EXISTS `coreshop_zone`;
 CREATE TABLE `coreshop_zone` (
   `id` int NOT NULL AUTO_INCREMENT,
   `active` tinyint(1) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -1220,9 +1235,9 @@ CREATE TABLE `documents_newsletter` (
 DROP TABLE IF EXISTS `messenger_messages`;
 CREATE TABLE `messenger_messages` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `body` longtext COLLATE utf8mb4_general_ci NOT NULL,
-  `headers` longtext COLLATE utf8mb4_general_ci NOT NULL,
-  `queue_name` varchar(190) COLLATE utf8mb4_general_ci NOT NULL,
+  `body` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `headers` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `queue_name` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `available_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `delivered_at` datetime DEFAULT NULL COMMENT '(DC2Type:datetime_immutable)',
@@ -1230,13 +1245,13 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=789 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=962 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
 DROP TABLE IF EXISTS `migration_versions`;
 CREATE TABLE `migration_versions` (
-  `version` varchar(1024) COLLATE utf8mb3_unicode_ci NOT NULL,
+  `version` varchar(1024) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `executed_at` datetime DEFAULT NULL,
   `execution_time` int DEFAULT NULL,
   PRIMARY KEY (`version`)
@@ -2034,6 +2049,15 @@ CREATE TABLE `object_query_cs_order` (
   `invoiceAddress__id` int DEFAULT NULL,
   `invoiceAddress__type` enum('document','asset','object') DEFAULT NULL,
   `loyaltyPoints` bigint DEFAULT NULL,
+  `totalPaymentLaterNet` bigint DEFAULT NULL,
+  `totalPaymentLaterGross` bigint DEFAULT NULL,
+  `totalPaymentNowNet` bigint DEFAULT NULL,
+  `totalPaymentNowGross` bigint DEFAULT NULL,
+  `totalDepositNet` bigint DEFAULT NULL,
+  `totalDepositGross` bigint DEFAULT NULL,
+  `subtotalDepositNet` bigint DEFAULT NULL,
+  `subtotalDepositGross` bigint DEFAULT NULL,
+  `hasDepositItem` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2144,6 +2168,10 @@ CREATE TABLE `object_query_cs_order_item` (
   `convertedPimcoreAdjustmentTotalNet` bigint DEFAULT NULL,
   `convertedPimcoreAdjustmentTotalGross` bigint DEFAULT NULL,
   `allocatedQuantity` double DEFAULT NULL,
+  `totalDepositNet` bigint DEFAULT NULL,
+  `totalDepositGross` bigint DEFAULT NULL,
+  `depositPercentage` double DEFAULT NULL,
+  `deposit` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_order_item__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2532,7 +2560,7 @@ CREATE TABLE `object_relations_cs_order` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_order__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=235 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2592,7 +2620,7 @@ CREATE TABLE `object_relations_cs_order_item` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_order_item__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=137 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=233 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2612,7 +2640,7 @@ CREATE TABLE `object_relations_cs_order_shipment` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_order_shipment__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2632,7 +2660,7 @@ CREATE TABLE `object_relations_cs_order_shipment_item` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_order_shipment_item__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2652,7 +2680,7 @@ CREATE TABLE `object_relations_cs_product` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_product__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=457 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=465 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2915,6 +2943,15 @@ CREATE TABLE `object_store_cs_order` (
   `weight` double DEFAULT NULL,
   `needsRecalculation` tinyint(1) DEFAULT NULL,
   `loyaltyPoints` bigint DEFAULT NULL,
+  `totalPaymentLaterNet` bigint DEFAULT NULL,
+  `totalPaymentLaterGross` bigint DEFAULT NULL,
+  `totalPaymentNowNet` bigint DEFAULT NULL,
+  `totalPaymentNowGross` bigint DEFAULT NULL,
+  `totalDepositNet` bigint DEFAULT NULL,
+  `totalDepositGross` bigint DEFAULT NULL,
+  `subtotalDepositNet` bigint DEFAULT NULL,
+  `subtotalDepositGross` bigint DEFAULT NULL,
+  `hasDepositItem` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3010,6 +3047,10 @@ CREATE TABLE `object_store_cs_order_item` (
   `convertedPimcoreAdjustmentTotalNet` bigint DEFAULT NULL,
   `convertedPimcoreAdjustmentTotalGross` bigint DEFAULT NULL,
   `allocatedQuantity` double DEFAULT NULL,
+  `totalDepositNet` bigint DEFAULT NULL,
+  `totalDepositGross` bigint DEFAULT NULL,
+  `depositPercentage` double DEFAULT NULL,
+  `deposit` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_order_item__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

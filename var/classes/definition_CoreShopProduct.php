@@ -30,6 +30,7 @@
  * - maximumQuantityToOrder [numeric]
  * - unitDefinitions [coreShopProductUnitDefinitions]
  * - storeValues [coreShopStoreValues]
+ * - depositStoreValues [coreShopDepositStoreValues]
  * - itemQuantityFactor [numeric]
  * - wholesalePrice [coreShopMoney]
  * - wholesaleBuyingPrice [coreShopMoneyCurrency]
@@ -50,11 +51,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702580354,
+   'modificationDate' => 1702640523,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Product',
-   'implementsInterfaces' => NULL,
+   'implementsInterfaces' => '\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositStoreValuesAwareInterface',
    'listingParentClass' => '',
    'useTraits' => '',
    'listingUseTraits' => '',
@@ -1402,6 +1403,30 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'maxValue' => NULL,
                   )),
                   2 => 
+                  CoreShop\Bundle\DepositBundle\CoreExtension\DepositStoreValues::__set_state(array(
+                     'name' => 'depositStoreValues',
+                     'title' => 'Deposit Store Values',
+                     'tooltip' => '',
+                     'mandatory' => false,
+                     'noteditable' => false,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => '',
+                     'permissions' => NULL,
+                     'fieldtype' => 'coreShopDepositStoreValues',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'width' => NULL,
+                     'phpdocType' => 'array',
+                     'minValue' => NULL,
+                     'maxValue' => NULL,
+                  )),
+                  3 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                      'name' => 'itemQuantityFactor',
                      'title' => 'coreshop.product.item_quantity_factor',
@@ -1431,7 +1456,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'width' => '',
                      'defaultValueGenerator' => '',
                   )),
-                  3 => 
+                  4 => 
                   CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                      'name' => 'wholesalePrice',
                      'title' => 'coreshop.product.wholesale_price',
@@ -1457,7 +1482,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'maxValue' => NULL,
                      'nullable' => false,
                   )),
-                  4 => 
+                  5 => 
                   CoreShop\Bundle\CurrencyBundle\CoreExtension\MoneyCurrency::__set_state(array(
                      'name' => 'wholesaleBuyingPrice',
                      'title' => 'coreshop.product.wholesale_buying_price',
@@ -1480,7 +1505,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'minValue' => 0.0,
                      'maxValue' => 0.0,
                   )),
-                  5 => 
+                  6 => 
                   CoreShop\Bundle\TaxationBundle\CoreExtension\TaxRuleGroup::__set_state(array(
                      'name' => 'taxRule',
                      'title' => 'coreshop.product.tax_rule',

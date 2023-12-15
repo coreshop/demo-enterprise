@@ -22,6 +22,10 @@
  * - totalWeight [numeric]
  * - unitDefinition [coreShopProductUnitDefinition]
  * - order [coreShopRelation]
+ * - totalDepositNet [coreShopMoney]
+ * - totalDepositGross [coreShopMoney]
+ * - depositPercentage [numeric]
+ * - deposit [checkbox]
  * - immutable [booleanSelect]
  * - itemWholesalePrice [coreShopMoney]
  * - customItemPrice [coreShopMoney]
@@ -71,13 +75,13 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702580353,
+   'modificationDate' => 1702640521,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\OrderItem',
-   'implementsInterfaces' => '\\CoreShop\\Bundle\\WarehouseBundle\\Model\\AllocationAwareInterface',
+   'implementsInterfaces' => '\\CoreShop\\Bundle\\WarehouseBundle\\Model\\AllocationAwareInterface,\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositItemAwareInterface',
    'listingParentClass' => '',
-   'useTraits' => '',
+   'useTraits' => '\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositItemAwareTrait',
    'listingUseTraits' => '',
    'encryption' => false,
    'encryptedTables' => 
@@ -658,6 +662,110 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'returnConcrete' => false,
                   )),
                   16 => 
+                  CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                     'name' => 'totalDepositNet',
+                     'title' => 'Total Deposit Net',
+                     'tooltip' => '',
+                     'mandatory' => false,
+                     'noteditable' => false,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => '',
+                     'permissions' => NULL,
+                     'fieldtype' => 'coreShopMoney',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'width' => NULL,
+                     'defaultValue' => NULL,
+                     'phpdocType' => 'int',
+                     'minValue' => NULL,
+                     'maxValue' => NULL,
+                     'nullable' => false,
+                  )),
+                  17 => 
+                  CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                     'name' => 'totalDepositGross',
+                     'title' => 'Total Deposit Gross',
+                     'tooltip' => '',
+                     'mandatory' => false,
+                     'noteditable' => false,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => '',
+                     'permissions' => NULL,
+                     'fieldtype' => 'coreShopMoney',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'width' => NULL,
+                     'defaultValue' => NULL,
+                     'phpdocType' => 'int',
+                     'minValue' => NULL,
+                     'maxValue' => NULL,
+                     'nullable' => false,
+                  )),
+                  18 => 
+                  Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+                     'name' => 'depositPercentage',
+                     'title' => 'Deposit Percentage',
+                     'tooltip' => '',
+                     'mandatory' => false,
+                     'noteditable' => false,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => '',
+                     'permissions' => NULL,
+                     'fieldtype' => '',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'defaultValue' => NULL,
+                     'integer' => false,
+                     'unsigned' => false,
+                     'minValue' => NULL,
+                     'maxValue' => NULL,
+                     'unique' => false,
+                     'decimalSize' => NULL,
+                     'decimalPrecision' => NULL,
+                     'width' => NULL,
+                     'defaultValueGenerator' => '',
+                  )),
+                  19 => 
+                  Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
+                     'name' => 'deposit',
+                     'title' => 'Deposit',
+                     'tooltip' => '',
+                     'mandatory' => false,
+                     'noteditable' => true,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => '',
+                     'permissions' => NULL,
+                     'fieldtype' => '',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'defaultValue' => 0,
+                     'defaultValueGenerator' => '',
+                  )),
+                  20 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
                      'name' => 'immutable',
                      'title' => 'coreshop.order_item.immutable',

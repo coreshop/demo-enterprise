@@ -8,4 +8,10 @@ INSERT INTO object_relations_cs_order_item (`id`,`src_id`,`dest_id`,`type`,`fiel
 (87,153,150,'object','product',0,'object','','0'), 
 (88,153,151,'object','order',0,'object','','0'), 
 (135,162,47,'object','product',0,'object','','0'), 
-(136,162,145,'object','order',0,'object','','0');
+(136,162,145,'object','order',0,'object','','0'), 
+(163,174,47,'object','product',0,'object','','0'), 
+(164,174,172,'object','order',0,'object','','0'), 
+(195,187,46,'object','product',0,'object','','0'), 
+(196,187,185,'object','order',0,'object','','0'), 
+(231,197,46,'object','product',0,'object','','0'), 
+(232,197,194,'object','order',0,'object','','0');

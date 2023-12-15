@@ -16,4 +16,16 @@ INSERT INTO object_relations_cs_order (`id`,`src_id`,`dest_id`,`type`,`fieldname
 (141,145,162,'object','items',1,'object','','0'), 
 (142,145,115,'object','customer',0,'object','','0'), 
 (143,145,166,'object','shippingAddress',0,'object','','0'), 
-(144,145,167,'object','invoiceAddress',0,'object','','0');
+(144,145,167,'object','invoiceAddress',0,'object','','0'), 
+(166,172,174,'object','items',1,'object','','0'), 
+(167,172,115,'object','customer',0,'object','','0'), 
+(168,172,178,'object','shippingAddress',0,'object','','0'), 
+(169,172,179,'object','invoiceAddress',0,'object','','0'), 
+(195,185,187,'object','items',1,'object','','0'), 
+(196,185,115,'object','customer',0,'object','','0'), 
+(197,185,192,'object','shippingAddress',0,'object','','0'), 
+(198,185,193,'object','invoiceAddress',0,'object','','0'), 
+(231,194,197,'object','items',1,'object','','0'), 
+(232,194,115,'object','customer',0,'object','','0'), 
+(233,194,201,'object','shippingAddress',0,'object','','0'), 
+(234,194,202,'object','invoiceAddress',0,'object','','0');

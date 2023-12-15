@@ -12,4 +12,13 @@ INSERT INTO object_localized_data_cs_order_item (`ooo_id`,`language`,`name`) VAL
 (153,'fr',NULL), 
 (162,'de','Aerodynamisch Aluminium Uhr'), 
 (162,'en','Aerodynamic Aluminum Clock'), 
-(162,'fr','Aerodynamic Aluminum Clock');
+(162,'fr','Aerodynamic Aluminum Clock'), 
+(174,'de','Aerodynamisch Aluminium Uhr'), 
+(174,'en','Aerodynamic Aluminum Clock'), 
+(174,'fr','Aerodynamic Aluminum Clock'), 
+(187,'de','Aerodynamisch Leinen Brieftasche'), 
+(187,'en','Aerodynamic Linen Wallet'), 
+(187,'fr','Aerodynamic Linen Wallet'), 
+(197,'de','Aerodynamisch Leinen Brieftasche'), 
+(197,'en','Aerodynamic Linen Wallet'), 
+(197,'fr','Aerodynamic Linen Wallet');

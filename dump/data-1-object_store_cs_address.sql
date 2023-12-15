@@ -9,4 +9,10 @@ INSERT INTO object_store_cs_address (`oo_id`,`salutation`,`firstname`,`lastname`
 (157,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
 (158,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
 (166,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
-(167,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL);
+(167,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
+(178,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
+(179,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
+(192,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
+(193,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
+(201,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
+(202,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL);

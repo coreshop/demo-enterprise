@@ -60,6 +60,12 @@
         {% if item.discount < 0 %}
             <span>({{ currency.convertAndFormat(item.discount) }})</span>
         {% endif %}
+
+        {% if item.deposit %}
+            <small>(Deposit:&nbsp;{{ currency.convertAndFormat(item.totalDeposit) }})</small>
+            <br/>
+        {% endif %}
+
         {{ currency.convertAndFormat(item.total) }}
     </td>
     <td class="text-center">

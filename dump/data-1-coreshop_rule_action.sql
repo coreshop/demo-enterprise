@@ -13,4 +13,5 @@ INSERT INTO coreshop_rule_action (`id`,`type`,`sort`,`configuration`) VALUES (1,
 (10,'price',NULL,'a:2:{s:5:\"price\";i:2000;s:8:\"currency\";i:1;}'), 
 (11,'pointsPerAmount',1,'a:2:{s:15:\"pointsPerAmount\";d:1;s:8:\"currency\";i:1;}'), 
 (12,'discountAmount',1,'a:4:{s:6:\"amount\";i:1000;s:5:\"gross\";b:0;s:7:\"applyOn\";s:5:\"total\";s:8:\"currency\";i:1;}'), 
-(13,'voucherCredit',1,'N;');
+(13,'voucherCredit',1,'N;'), 
+(14,'saveAttachmentToAsset',1,'N;');

@@ -349,6 +349,57 @@ CREATE TABLE `coreshop_filter_condition_pre_conditions` (
 
 
 
+DROP TABLE IF EXISTS `coreshop_inbound_email`;
+CREATE TABLE `coreshop_inbound_email` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `imap_path` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `login` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `server_encoding` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+DROP TABLE IF EXISTS `coreshop_inbound_email_rule`;
+CREATE TABLE `coreshop_inbound_email_rule` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `inbound_email_id` int DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `active` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_11EA28BBE540AEA2` (`inbound_email_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+DROP TABLE IF EXISTS `coreshop_inbound_email_rule_action`;
+CREATE TABLE `coreshop_inbound_email_rule_action` (
+  `inbound_email_rule_id` int NOT NULL,
+  `action_id` int NOT NULL,
+  PRIMARY KEY (`inbound_email_rule_id`,`action_id`),
+  KEY `IDX_FDB31894568B47E1` (`inbound_email_rule_id`),
+  KEY `IDX_FDB318949D32F035` (`action_id`),
+  CONSTRAINT `FK_FDB31894568B47E1` FOREIGN KEY (`inbound_email_rule_id`) REFERENCES `coreshop_inbound_email_rule` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_FDB318949D32F035` FOREIGN KEY (`action_id`) REFERENCES `coreshop_rule_action` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+DROP TABLE IF EXISTS `coreshop_inbound_email_rule_conditions`;
+CREATE TABLE `coreshop_inbound_email_rule_conditions` (
+  `inbound_email_rule_id` int NOT NULL,
+  `action_id` int NOT NULL,
+  PRIMARY KEY (`inbound_email_rule_id`,`action_id`),
+  KEY `IDX_A80479F2568B47E1` (`inbound_email_rule_id`),
+  KEY `IDX_A80479F29D32F035` (`action_id`),
+  CONSTRAINT `FK_A80479F2568B47E1` FOREIGN KEY (`inbound_email_rule_id`) REFERENCES `coreshop_inbound_email_rule` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_A80479F29D32F035` FOREIGN KEY (`action_id`) REFERENCES `coreshop_rule_condition` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
 DROP TABLE IF EXISTS `coreshop_index`;
 CREATE TABLE `coreshop_index` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -927,7 +978,7 @@ CREATE TABLE `coreshop_rule_action` (
   `sort` int DEFAULT NULL,
   `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -938,7 +989,7 @@ CREATE TABLE `coreshop_rule_condition` (
   `sort` int DEFAULT NULL,
   `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 

@@ -11,6 +11,7 @@
     "coreshop/core-shop": "4.0.x-dev",
     "coreshop/deposit-bundle": "dev-main",
     "coreshop/document-route-bundle": "dev-main",
+    "coreshop/inbound-email-rules-bundle": "3.0.x-dev",
     "coreshop/loyality-bundle": "dev-main",
     "coreshop/payum-credit-bundle": "dev-main",
     "coreshop/voucher-credit-bundle": "dev-main",

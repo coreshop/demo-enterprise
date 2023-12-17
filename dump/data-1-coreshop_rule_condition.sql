@@ -11,4 +11,5 @@ INSERT INTO coreshop_rule_condition (`id`,`type`,`sort`,`configuration`) VALUES 
 (8,'amount',NULL,'a:2:{s:9:\"minAmount\";i:0;s:9:\"maxAmount\";i:15000;}'), 
 (9,'amount',NULL,'a:2:{s:9:\"minAmount\";i:15000;s:9:\"maxAmount\";i:200000;}'), 
 (10,'amount',NULL,'a:2:{s:9:\"minAmount\";i:200000;s:9:\"maxAmount\";i:300000;}'), 
-(11,'voucher',1,'a:3:{s:15:\"maxUsagePerCode\";d:1;s:15:\"maxUsagePerUser\";N;s:14:\"onlyOnePerCart\";b:1;}');
+(11,'voucher',1,'a:3:{s:15:\"maxUsagePerCode\";d:1;s:15:\"maxUsagePerUser\";N;s:14:\"onlyOnePerCart\";b:1;}'), 
+(12,'to',1,'a:1:{s:2:\"to\";s:20:\"service@coreshop.org\";}');

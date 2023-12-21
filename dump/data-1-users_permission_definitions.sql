@@ -26,6 +26,7 @@ INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('asset_metad
 ('coreshop_permission_customer_list','coreshop_permission_group_coreshop'), 
 ('coreshop_permission_exchange_rate','coreshop_permission_group_coreshop'), 
 ('coreshop_permission_filter','coreshop_permission_group_coreshop'), 
+('coreshop_permission_inbound_email_rule','coreshop_permission_group_coreshop'), 
 ('coreshop_permission_index','coreshop_permission_group_coreshop'), 
 ('coreshop_permission_notification','coreshop_permission_group_coreshop'), 
 ('coreshop_permission_order_create','coreshop_permission_group_coreshop'), 

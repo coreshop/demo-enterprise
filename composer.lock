@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c82727fcb693e6b6f1fd94c148fb394",
+    "content-hash": "f031a9b179dca5a75d3871bc49883f94",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -430,6 +430,76 @@
                 }
             ],
             "time": "2023-08-30T09:31:38+00:00"
+        },
+        {
+            "name": "coreshop/batch-messenger-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "zip",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/batch-messenger-bundle/dev-main/ca0108fbc4dea602e5e1e2e909d7435cfda18f23.zip",
+                "reference": "ca0108fbc4dea602e5e1e2e909d7435cfda18f23",
+                "mirrors": [
+                    {
+                        "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "coreshop/menu-bundle": "^3.0 | ^4.0",
+                "coreshop/registry": "^3.0 | ^4.0",
+                "coreshop/resource-bundle": "^3.0 | ^4.0",
+                "ext-zip": "*"
+            },
+            "require-dev": {
+                "friends-of-behat/page-object-extension": "^0.3.2",
+                "friends-of-behat/symfony-extension": "^2.1",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-symfony": "^1.3.2",
+                "symfony/dotenv": "^6.4",
+                "symplify/easy-coding-standard": "^11.1",
+                "vimeo/psalm": "^5"
+            },
+            "default-branch": true,
+            "type": "pimcore-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CoreShop\\Bundle\\BatchMessengerBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "classmap": [
+                    "Kernel.php"
+                ],
+                "psr-4": {
+                    "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+                }
+            },
+            "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "CoreShop GmbH",
+                    "email": "info@coreshop.org",
+                    "homepage": "https://www.coreshop.org/",
+                    "role": "TEAM"
+                }
+            ],
+            "description": "CoreShop - Batch Messenger Bundle",
+            "homepage": "https://www.coreshop.org",
+            "keywords": [
+                "coreshop",
+                "ecommerce",
+                "pimcore",
+                "warehouse"
+            ],
+            "support": {
+                "source": "https://git.e-conomix.at/coreshop/batch-messenger-bundle/-/tree/main",
+                "issues": "https://git.e-conomix.at/coreshop/batch-messenger-bundle/-/issues"
+            },
+            "time": "2023-12-21T13:31:19+01:00"
         },
         {
             "name": "coreshop/core-shop",
@@ -15622,6 +15692,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "coreshop/batch-messenger-bundle": 20,
         "coreshop/core-shop": 20,
         "coreshop/deposit-bundle": 20,
         "coreshop/document-route-bundle": 20,

@@ -26,6 +26,36 @@ CREATE TABLE `coreshop_address_identifier` (
 
 
 
+DROP TABLE IF EXISTS `coreshop_batch_messenger_task`;
+CREATE TABLE `coreshop_batch_messenger_task` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `userId` int DEFAULT NULL,
+  `taskData` json NOT NULL,
+  `batchSize` int NOT NULL,
+  `status` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `creationDate` datetime NOT NULL,
+  `modificationDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+DROP TABLE IF EXISTS `coreshop_batch_messenger_task_item`;
+CREATE TABLE `coreshop_batch_messenger_task_item` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `task` int DEFAULT NULL,
+  `taskData` longtext COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:object)',
+  `status` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `error` longtext COLLATE utf8mb4_general_ci,
+  `creationDate` datetime NOT NULL,
+  `modificationDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_9EE681D5527EDB25` (`task`),
+  CONSTRAINT `FK_9EE681D5527EDB25` FOREIGN KEY (`task`) REFERENCES `coreshop_batch_messenger_task` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
 DROP TABLE IF EXISTS `coreshop_carrier`;
 CREATE TABLE `coreshop_carrier` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -1296,7 +1326,7 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=962 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=981 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 

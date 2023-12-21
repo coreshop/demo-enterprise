@@ -8,6 +8,7 @@
     "process-timeout": 0
   },
   "require": {
+    "coreshop/batch-messenger-bundle": "dev-main",
     "coreshop/core-shop": "4.0.x-dev",
     "coreshop/deposit-bundle": "dev-main",
     "coreshop/document-route-bundle": "dev-main",

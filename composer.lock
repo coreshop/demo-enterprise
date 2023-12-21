@@ -627,8 +627,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/1a5da59d6b5885ac5d068eac493fc01d261cca17.zip",
-                "reference": "1a5da59d6b5885ac5d068eac493fc01d261cca17",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/419bc95704b4d3dfb352376563e950b947280cfb.zip",
+                "reference": "419bc95704b4d3dfb352376563e950b947280cfb",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -686,7 +686,7 @@
                 "source": "https://git.e-conomix.at/coreshop/deposit-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/deposit-bundle/-/issues"
             },
-            "time": "2023-12-15T12:40:44+01:00"
+            "time": "2023-12-21T11:17:41+01:00"
         },
         {
             "name": "coreshop/document-route-bundle",

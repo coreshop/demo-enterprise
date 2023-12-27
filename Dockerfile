@@ -14,7 +14,8 @@ RUN apk update && apk add --no-cache supervisor
 
 COPY .docker/supervisord/supervisord.conf /etc/supervisord.conf
 COPY .docker/supervisord/pimcore.conf /etc/supervisor/conf.d/pimcore.conf
-COPY .docker/php/docker-healthcheck.sh /usr/local/bin/health
+COPY .docker/php/docker-healthcheck.sh /usr/local/bin/docker-entrypoint
+COPY .docker/php/docker-entrypoint.sh /usr/local/bin/health
 COPY .docker/php/docker-install.sh /usr/local/bin/install
 
 RUN set -eux; \

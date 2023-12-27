@@ -14,8 +14,8 @@ RUN apk update && apk add --no-cache supervisor
 
 COPY .docker/supervisord/supervisord.conf /etc/supervisord.conf
 COPY .docker/supervisord/pimcore.conf /etc/supervisor/conf.d/pimcore.conf
-COPY .docker/php/docker-healthcheck.sh /usr/local/bin/docker-entrypoint
-COPY .docker/php/docker-entrypoint.sh /usr/local/bin/health
+COPY .docker/php/docker-healthcheck.sh /usr/local/bin/health
+COPY .docker/php/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 COPY .docker/php/docker-install.sh /usr/local/bin/install
 
 RUN set -eux; \
@@ -54,7 +54,7 @@ RUN set -eux; \
     sync;
 
 ENTRYPOINT ["docker-entrypoint"]
-CMD ["supervisord"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
 
 
 FROM europe-west3-docker.pkg.dev/cors-wolke/cors/docker/nginx:${NGINX_VERSION}-${DOCKER_BASE_VERSION} AS cors_nginx

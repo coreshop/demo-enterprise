@@ -291,23 +291,23 @@
         },
         {
             "name": "clue/stream-filter",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clue/stream-filter.git",
-                "reference": "d6169430c7731d8509da7aecd0af756a5747b78e"
+                "reference": "049509fef80032cb3f051595029ab75b49a3c2f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clue/stream-filter/zipball/d6169430c7731d8509da7aecd0af756a5747b78e",
-                "reference": "d6169430c7731d8509da7aecd0af756a5747b78e",
+                "url": "https://api.github.com/repos/clue/stream-filter/zipball/049509fef80032cb3f051595029ab75b49a3c2f7",
+                "reference": "049509fef80032cb3f051595029ab75b49a3c2f7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.36"
+                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36"
             },
             "type": "library",
             "autoload": {
@@ -329,7 +329,7 @@
                 }
             ],
             "description": "A simple and modern approach to stream filtering in PHP",
-            "homepage": "https://github.com/clue/php-stream-filter",
+            "homepage": "https://github.com/clue/stream-filter",
             "keywords": [
                 "bucket brigade",
                 "callback",
@@ -341,7 +341,7 @@
             ],
             "support": {
                 "issues": "https://github.com/clue/stream-filter/issues",
-                "source": "https://github.com/clue/stream-filter/tree/v1.6.0"
+                "source": "https://github.com/clue/stream-filter/tree/v1.7.0"
             },
             "funding": [
                 {
@@ -353,20 +353,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-21T13:15:14+00:00"
+            "time": "2023-12-20T15:40:13+00:00"
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.3.7",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "76e46335014860eec1aa5a724799a00a2e47cc85"
+                "reference": "b66d11b7479109ab547f9405b97205640b17d385"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/76e46335014860eec1aa5a724799a00a2e47cc85",
-                "reference": "76e46335014860eec1aa5a724799a00a2e47cc85",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/b66d11b7479109ab547f9405b97205640b17d385",
+                "reference": "b66d11b7479109ab547f9405b97205640b17d385",
                 "shasum": ""
             },
             "require": {
@@ -378,7 +378,7 @@
                 "phpstan/phpstan": "^0.12.55",
                 "psr/log": "^1.0",
                 "symfony/phpunit-bridge": "^4.2 || ^5",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0 || ^6.0"
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0"
             },
             "type": "library",
             "extra": {
@@ -413,7 +413,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.3.7"
+                "source": "https://github.com/composer/ca-bundle/tree/1.4.0"
             },
             "funding": [
                 {
@@ -429,15 +429,15 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-30T09:31:38+00:00"
+            "time": "2023-12-18T12:05:55+00:00"
         },
         {
             "name": "coreshop/batch-messenger-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/batch-messenger-bundle/dev-main/ca0108fbc4dea602e5e1e2e909d7435cfda18f23.zip",
-                "reference": "ca0108fbc4dea602e5e1e2e909d7435cfda18f23",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/batch-messenger-bundle/dev-main/fefcb48202a42dad065855d0ca02b3f1334316e9.zip",
+                "reference": "fefcb48202a42dad065855d0ca02b3f1334316e9",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -472,7 +472,8 @@
                     "Kernel.php"
                 ],
                 "psr-4": {
-                    "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+                    "Pimcore\\Model\\DataObject\\": "var/classes/DataObject",
+                    "App\\": "app"
                 }
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
@@ -499,7 +500,7 @@
                 "source": "https://git.e-conomix.at/coreshop/batch-messenger-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/batch-messenger-bundle/-/issues"
             },
-            "time": "2023-12-21T13:31:19+01:00"
+            "time": "2023-12-27T13:59:28+01:00"
         },
         {
             "name": "coreshop/core-shop",
@@ -507,12 +508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "47b6e3a366792a73a331a44aef6297d4cabf1a52"
+                "reference": "a5baa41d3669e41752a0f8d42fb42dfa53cea4ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/47b6e3a366792a73a331a44aef6297d4cabf1a52",
-                "reference": "47b6e3a366792a73a331a44aef6297d4cabf1a52",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/a5baa41d3669e41752a0f8d42fb42dfa53cea4ab",
+                "reference": "a5baa41d3669e41752a0f8d42fb42dfa53cea4ab",
                 "shasum": ""
             },
             "require": {
@@ -690,7 +691,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-14T18:28:54+00:00"
+            "time": "2023-12-26T07:13:45+00:00"
         },
         {
             "name": "coreshop/deposit-bundle",
@@ -913,8 +914,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/50863dc6e6375b0ba61a20556121c6e48c46dcc0.zip",
-                "reference": "50863dc6e6375b0ba61a20556121c6e48c46dcc0",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/ded6598650d0d422a2bd92fb68822654e3aa3564.zip",
+                "reference": "ded6598650d0d422a2bd92fb68822654e3aa3564",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -923,7 +924,7 @@
                 ]
             },
             "require": {
-                "coreshop/core-shop": "4.0.x-dev"
+                "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
                 "friends-of-behat/page-object-extension": "^0.3.2",
@@ -972,15 +973,15 @@
                 "source": "https://git.e-conomix.at/coreshop/loyalty-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/loyalty-bundle/-/issues"
             },
-            "time": "2023-12-14T11:00:41+01:00"
+            "time": "2023-12-15T11:27:06+01:00"
         },
         {
             "name": "coreshop/payum-credit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/payum-credit-bundle/dev-main/e59e9f6a9c6802b8243431e048fb61bab5b13c8e.zip",
-                "reference": "e59e9f6a9c6802b8243431e048fb61bab5b13c8e",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/payum-credit-bundle/dev-main/6e6eb549b0a9085bc80b5d9d2470fb7459e537a5.zip",
+                "reference": "6e6eb549b0a9085bc80b5d9d2470fb7459e537a5",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -989,7 +990,7 @@
                 ]
             },
             "require": {
-                "coreshop/core-shop": "4.0.x-dev"
+                "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
                 "friends-of-behat/page-object-extension": "^0.3.2",
@@ -1038,15 +1039,15 @@
                 "source": "https://git.e-conomix.at/coreshop/credit-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/credit-bundle/-/issues"
             },
-            "time": "2023-12-14T16:33:09+01:00"
+            "time": "2023-12-15T11:26:25+01:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/voucher-credit-bundle/dev-main/bf31372be346ffc6677f5f5559d846a1c0dfc438.zip",
-                "reference": "bf31372be346ffc6677f5f5559d846a1c0dfc438",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/voucher-credit-bundle/dev-main/ba233e460dec10c9d42fbb4d2189d95fecf792c4.zip",
+                "reference": "ba233e460dec10c9d42fbb4d2189d95fecf792c4",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1055,7 +1056,7 @@
                 ]
             },
             "require": {
-                "coreshop/core-shop": "4.0.x-dev"
+                "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
                 "friends-of-behat/page-object-extension": "^0.3.2",
@@ -1113,15 +1114,15 @@
                 "source": "https://git.e-conomix.at/coreshop/voucher-credit-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/voucher-credit-bundle/-/issues"
             },
-            "time": "2023-12-14T15:13:00+01:00"
+            "time": "2023-12-15T11:26:46+01:00"
         },
         {
             "name": "coreshop/warehouse-bundle",
             "version": "dev-enterprise",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-enterprise/ca95c6b830b7329586b45ad7e9c925100c127086.zip",
-                "reference": "ca95c6b830b7329586b45ad7e9c925100c127086",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-enterprise/64872df826e4d9407e420ae5fd1c26675e13050f.zip",
+                "reference": "64872df826e4d9407e420ae5fd1c26675e13050f",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1130,7 +1131,7 @@
                 ]
             },
             "require": {
-                "coreshop/core-shop": "4.0.x-dev"
+                "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
                 "friends-of-behat/page-object-extension": "^0.3.2",
@@ -1178,7 +1179,7 @@
                 "source": "https://git.e-conomix.at/coreshop/WarehouseBundle/-/tree/enterprise",
                 "issues": "https://git.e-conomix.at/coreshop/WarehouseBundle/-/issues"
             },
-            "time": "2023-12-14T15:52:20+01:00"
+            "time": "2023-12-15T11:26:58+01:00"
         },
         {
             "name": "dachcom-digital/emailizr",
@@ -2667,16 +2668,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.17.1",
+            "version": "2.17.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "1a4fe6e0bb67762370937a7e6cee3da40a9122d1"
+                "reference": "393679a4795e49b0b3ac317dce84d0f8888f2b77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/1a4fe6e0bb67762370937a7e6cee3da40a9122d1",
-                "reference": "1a4fe6e0bb67762370937a7e6cee3da40a9122d1",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/393679a4795e49b0b3ac317dce84d0f8888f2b77",
+                "reference": "393679a4795e49b0b3ac317dce84d0f8888f2b77",
                 "shasum": ""
             },
             "require": {
@@ -2709,10 +2710,10 @@
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6",
                 "psr/log": "^1 || ^2 || ^3",
                 "squizlabs/php_codesniffer": "3.7.2",
-                "symfony/cache": "^4.4 || ^5.4 || ^6.0",
-                "symfony/var-exporter": "^4.4 || ^5.4 || ^6.2",
-                "symfony/yaml": "^3.4 || ^4.0 || ^5.0 || ^6.0",
-                "vimeo/psalm": "4.30.0 || 5.15.0"
+                "symfony/cache": "^4.4 || ^5.4 || ^6.4 || ^7.0",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6.2 || ^7.0",
+                "symfony/yaml": "^3.4 || ^4.0 || ^5.0 || ^6.0 || ^7.0",
+                "vimeo/psalm": "4.30.0 || 5.16.0"
             },
             "suggest": {
                 "ext-dom": "Provides support for XSD validation for XML mapping files",
@@ -2762,9 +2763,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.17.1"
+                "source": "https://github.com/doctrine/orm/tree/2.17.2"
             },
-            "time": "2023-11-17T06:25:40+00:00"
+            "time": "2023-12-20T21:47:52+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -3252,16 +3253,16 @@
         },
         {
             "name": "friendsofsymfony/jsrouting-bundle",
-            "version": "3.4.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
-                "reference": "80835feb9caa57b23cb3d1ef405440098d57dca0"
+                "reference": "2b88ce924741614d2716a9fec5f06a2c27972ab2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/80835feb9caa57b23cb3d1ef405440098d57dca0",
-                "reference": "80835feb9caa57b23cb3d1ef405440098d57dca0",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/2b88ce924741614d2716a9fec5f06a2c27972ab2",
+                "reference": "2b88ce924741614d2716a9fec5f06a2c27972ab2",
                 "shasum": ""
             },
             "require": {
@@ -3312,9 +3313,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/issues",
-                "source": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/tree/3.4.0"
+                "source": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/tree/3.4.1"
             },
-            "time": "2023-12-12T13:19:40+00:00"
+            "time": "2023-12-15T23:00:48+00:00"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -3514,16 +3515,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.327.0",
+            "version": "v0.329.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "51a11d4ff70dd9f60334525e71bf4cf592e6d282"
+                "reference": "3216fd1b6ba33c5f6658c3581e9723ff21d9acb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/51a11d4ff70dd9f60334525e71bf4cf592e6d282",
-                "reference": "51a11d4ff70dd9f60334525e71bf4cf592e6d282",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/3216fd1b6ba33c5f6658c3581e9723ff21d9acb7",
+                "reference": "3216fd1b6ba33c5f6658c3581e9723ff21d9acb7",
                 "shasum": ""
             },
             "require": {
@@ -3552,9 +3553,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.327.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.329.0"
             },
-            "time": "2023-12-11T00:52:16+00:00"
+            "time": "2023-12-24T01:02:15+00:00"
         },
         {
             "name": "google/auth",
@@ -4063,16 +4064,16 @@
         },
         {
             "name": "jms/serializer",
-            "version": "3.29.0",
+            "version": "3.29.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "c586bf6061deb4109330c2c90f3a315b7e2dbc4a"
+                "reference": "111451f43abb448ce297361a8ab96a9591e848cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/c586bf6061deb4109330c2c90f3a315b7e2dbc4a",
-                "reference": "c586bf6061deb4109330c2c90f3a315b7e2dbc4a",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/111451f43abb448ce297361a8ab96a9591e848cd",
+                "reference": "111451f43abb448ce297361a8ab96a9591e848cd",
                 "shasum": ""
             },
             "require": {
@@ -4147,7 +4148,7 @@
             ],
             "support": {
                 "issues": "https://github.com/schmittjoh/serializer/issues",
-                "source": "https://github.com/schmittjoh/serializer/tree/3.29.0"
+                "source": "https://github.com/schmittjoh/serializer/tree/3.29.1"
             },
             "funding": [
                 {
@@ -4155,7 +4156,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-09T11:57:15+00:00"
+            "time": "2023-12-14T15:25:09+00:00"
         },
         {
             "name": "jms/serializer-bundle",
@@ -4667,16 +4668,16 @@
         },
         {
             "name": "league/csv",
-            "version": "9.12.0",
+            "version": "9.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "c1dc31e23eb3cd0f7b537ee1a669d5f58d5cfe21"
+                "reference": "3690cc71bfe8dc3b6daeef356939fac95348f0a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/c1dc31e23eb3cd0f7b537ee1a669d5f58d5cfe21",
-                "reference": "c1dc31e23eb3cd0f7b537ee1a669d5f58d5cfe21",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/3690cc71bfe8dc3b6daeef356939fac95348f0a8",
+                "reference": "3690cc71bfe8dc3b6daeef356939fac95348f0a8",
                 "shasum": ""
             },
             "require": {
@@ -4691,11 +4692,11 @@
                 "ext-xdebug": "*",
                 "friendsofphp/php-cs-fixer": "^v3.22.0",
                 "phpbench/phpbench": "^1.2.15",
-                "phpstan/phpstan": "^1.10.46",
+                "phpstan/phpstan": "^1.10.50",
                 "phpstan/phpstan-deprecation-rules": "^1.1.4",
                 "phpstan/phpstan-phpunit": "^1.3.15",
                 "phpstan/phpstan-strict-rules": "^1.5.2",
-                "phpunit/phpunit": "^10.4.2",
+                "phpunit/phpunit": "^10.5.3",
                 "symfony/var-dumper": "^6.4.0"
             },
             "suggest": {
@@ -4752,7 +4753,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-01T17:54:07+00:00"
+            "time": "2023-12-16T11:03:20+00:00"
         },
         {
             "name": "league/flysystem",
@@ -7392,16 +7393,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.4",
+            "version": "1.24.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496"
+                "reference": "fedf211ff14ec8381c9bf5714e33a7a552dd1acc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6bd0c26f3786cd9b7c359675cb789e35a8e07496",
-                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fedf211ff14ec8381c9bf5714e33a7a552dd1acc",
+                "reference": "fedf211ff14ec8381c9bf5714e33a7a552dd1acc",
                 "shasum": ""
             },
             "require": {
@@ -7433,27 +7434,27 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.4"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.5"
             },
-            "time": "2023-11-26T18:29:22+00:00"
+            "time": "2023-12-16T09:33:33+00:00"
         },
         {
             "name": "pimcore/admin-ui-classic-bundle",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/admin-ui-classic-bundle.git",
-                "reference": "d39a6ed477ef2f825f7bcad0704a6176f4100912"
+                "reference": "1eeb2536ebb3f8e7f596743ef9a214f582d8cd4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/d39a6ed477ef2f825f7bcad0704a6176f4100912",
-                "reference": "d39a6ed477ef2f825f7bcad0704a6176f4100912",
+                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/1eeb2536ebb3f8e7f596743ef9a214f582d8cd4a",
+                "reference": "1eeb2536ebb3f8e7f596743ef9a214f582d8cd4a",
                 "shasum": ""
             },
             "require": {
                 "cbschuld/browser.php": "^1.9.6",
-                "pimcore/pimcore": "^11.1",
+                "pimcore/pimcore": "^11.1.3",
                 "symfony/webpack-encore-bundle": "^1.13.2"
             },
             "require-dev": {
@@ -7484,9 +7485,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pimcore/admin-ui-classic-bundle/issues",
-                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.3.0"
+                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.3.1"
             },
-            "time": "2023-12-06T11:37:49+00:00"
+            "time": "2023-12-14T14:35:10+00:00"
         },
         {
             "name": "pimcore/google-marketing-bundle",
@@ -7588,16 +7589,16 @@
         },
         {
             "name": "pimcore/pimcore",
-            "version": "v11.1.3",
+            "version": "v11.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/pimcore.git",
-                "reference": "0ccaab712fe0f018b5e544b9e25cab7f417841b5"
+                "reference": "28c211230f8c649575a035aaae83bd57c6f232f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/0ccaab712fe0f018b5e544b9e25cab7f417841b5",
-                "reference": "0ccaab712fe0f018b5e544b9e25cab7f417841b5",
+                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/28c211230f8c649575a035aaae83bd57c6f232f3",
+                "reference": "28c211230f8c649575a035aaae83bd57c6f232f3",
                 "shasum": ""
             },
             "require": {
@@ -7792,7 +7793,7 @@
                 "source": "https://github.com/pimcore/pimcore",
                 "wiki": "https://pimcore.com/docs/latest/"
             },
-            "time": "2023-12-06T12:58:13+00:00"
+            "time": "2023-12-20T22:51:34+00:00"
         },
         {
             "name": "presta/sitemap-bundle",
@@ -9127,16 +9128,16 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "5.0.3",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "912dc2fbe3e3c1e7873313cc801b100b6c68c87b"
+                "reference": "fbf413a49e54f6b9b17e12d900ac7f6101591b7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/912dc2fbe3e3c1e7873313cc801b100b6c68c87b",
-                "reference": "912dc2fbe3e3c1e7873313cc801b100b6c68c87b",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/fbf413a49e54f6b9b17e12d900ac7f6101591b7f",
+                "reference": "fbf413a49e54f6b9b17e12d900ac7f6101591b7f",
                 "shasum": ""
             },
             "require": {
@@ -9149,7 +9150,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "5.0-dev"
+                    "dev-main": "5.1-dev"
                 }
             },
             "autoload": {
@@ -9182,7 +9183,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/diff/issues",
                 "security": "https://github.com/sebastianbergmann/diff/security/policy",
-                "source": "https://github.com/sebastianbergmann/diff/tree/5.0.3"
+                "source": "https://github.com/sebastianbergmann/diff/tree/5.1.0"
             },
             "funding": [
                 {
@@ -9190,7 +9191,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-01T07:48:21+00:00"
+            "time": "2023-12-22T10:55:06+00:00"
         },
         {
             "name": "spatie/image-optimizer",

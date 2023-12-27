@@ -1,0 +1,70 @@
+{% extends '@CoreShopFrontend/layout-full.html.twig' %}
+
+{% block center %}
+<script src="/bundles/coreshopbatchmessenger/js/downloader.js"></script>
+<style type="text/css">
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.55;
+        color: #2A2A2A;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 2px solid transparent;
+        padding: 0.65rem 2rem;
+        font-size: 1rem;
+        border-radius: 0;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .btn[data-download] {
+        position: relative;
+    }
+
+    .btn[data-download][data-in-progress] {
+        cursor: default;
+    }
+
+    .btn[data-download][data-in-progress] .spinner-border {
+        display: inline-block !important;
+    }
+
+    .btn[data-download][data-in-progress]:after {
+        content: '';
+        position: absolute;
+        left: -2px;
+        bottom: -2px;
+        height: 6px;
+        width: 100%;
+        transition: all 0.2s cubic-bezier(0.3, 0.09, 0, 0.99);
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scaleX(calc(var(--sz-progress, 0) * 100%));
+        transform: scaleX(calc(var(--sz-progress, 0) * 100%));
+        background-color: #56dd76;
+    }
+
+
+    .btn-primary {
+        color: #fff;
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+    }
+</style>
+<div class="my-items-container">
+    <button data-prepare-url="{{ path('coreshop_batch_messenger_prepare_download') }}"
+            data-assets-ids='{{ files|json_encode }}'
+            data-check="{{ path('coreshop_batch_messenger_check_download') }}"
+            data-download="{{ path('coreshop_batch_messenger_download') }}"
+            class="btn btn-primary downloader__download">
+        <div role="status"></div>
+        {{ 'Download' | trans }}
+    </button>
+</div>
+{% endblock %}

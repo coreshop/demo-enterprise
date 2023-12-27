@@ -43,10 +43,12 @@ build_and_push:
         #- docker build . --tag $CI_REGISTRY_IMAGE/php:$TAG --target=cors_php --build-arg COMPOSER_AUTH="$COMPOSER_AUTH"
         - docker build . --tag $GCP_REGISTRY_IMAGE/nginx:$TAG --target=cors_nginx --build-arg COMPOSER_AUTH="$COMPOSER_AUTH"
         - docker build . --tag $GCP_REGISTRY_IMAGE/php-alpine-fpm:$TAG --target=cors_php --build-arg COMPOSER_AUTH="$COMPOSER_AUTH"
+        - docker build . --tag $GCP_REGISTRY_IMAGE/php-supervisord:$TAG --target=cors_php --build-arg COMPOSER_AUTH="$COMPOSER_AUTH"
 
         #- docker push $CI_REGISTRY_IMAGE/php:$TAG
         - docker push $GCP_REGISTRY_IMAGE/nginx:$TAG
         - docker push $GCP_REGISTRY_IMAGE/php-alpine-fpm:$TAG
+        - docker push $GCP_REGISTRY_IMAGE/php-supervisord:$TAG
     tags:
         - cors
 
@@ -72,6 +74,7 @@ update_manifest:
 
         - yq -i eval ".appVersion = \"$TAG\"" $CD_MANIFEST_FILE
         - yq -i eval ".php.image.tag = \"$TAG\"" $CD_MANIFEST_VALUES_FILE
+        - yq -i eval ".supervisord.image.tag = \"$TAG\"" $CD_MANIFEST_VALUES_FILE
         - yq -i eval ".nginx.image.tag = \"$TAG\"" $CD_MANIFEST_VALUES_FILE
 
         - cat $CD_MANIFEST_FILE

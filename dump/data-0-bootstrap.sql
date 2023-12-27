@@ -36,7 +36,7 @@ CREATE TABLE `coreshop_batch_messenger_task` (
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -52,7 +52,7 @@ CREATE TABLE `coreshop_batch_messenger_task_item` (
   PRIMARY KEY (`id`),
   KEY `IDX_9EE681D5527EDB25` (`task`),
   CONSTRAINT `FK_9EE681D5527EDB25` FOREIGN KEY (`task`) REFERENCES `coreshop_batch_messenger_task` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -184,6 +184,21 @@ CREATE TABLE `coreshop_cart_price_rule_voucher_code` (
 
 
 
+DROP TABLE IF EXISTS `coreshop_cart_price_rule_voucher_code_customer`;
+CREATE TABLE `coreshop_cart_price_rule_voucher_code_customer` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `customerId` int NOT NULL,
+  `uses` int NOT NULL,
+  `voucherCodeId` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `voucherCodeId_customerId` (`voucherCodeId`,`customerId`),
+  KEY `IDX_7F7BC3AAFDD3BBCD` (`voucherCodeId`),
+  KEY `customerId_idx` (`customerId`),
+  CONSTRAINT `FK_7F7BC3AAFDD3BBCD` FOREIGN KEY (`voucherCodeId`) REFERENCES `coreshop_cart_price_rule_voucher_code` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
 DROP TABLE IF EXISTS `coreshop_configuration`;
 CREATE TABLE `coreshop_configuration` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -251,6 +266,18 @@ CREATE TABLE `coreshop_currency` (
 
 
 
+DROP TABLE IF EXISTS `coreshop_customer_cluster`;
+CREATE TABLE `coreshop_customer_cluster` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `label` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `creationDate` datetime NOT NULL,
+  `modificationDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
 DROP TABLE IF EXISTS `coreshop_deposit_store_values`;
 CREATE TABLE `coreshop_deposit_store_values` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -262,17 +289,16 @@ CREATE TABLE `coreshop_deposit_store_values` (
   UNIQUE KEY `product_store` (`product`,`store`),
   KEY `IDX_30720632FF575877` (`store`),
   CONSTRAINT `FK_30720632FF575877` FOREIGN KEY (`store`) REFERENCES `coreshop_store` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
 DROP TABLE IF EXISTS `coreshop_document_route`;
 CREATE TABLE `coreshop_document_route` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `route_name` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `route_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `document` int DEFAULT NULL COMMENT '(DC2Type:pimcoreDocument)',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `route_name` (`route_name`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
@@ -281,7 +307,7 @@ DROP TABLE IF EXISTS `coreshop_document_site_route`;
 CREATE TABLE `coreshop_document_site_route` (
   `id` int NOT NULL AUTO_INCREMENT,
   `documentRouteId` int DEFAULT NULL,
-  `site` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:pimcoreSite)',
+  `site` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_2CCA8F4A67C2CC38` (`documentRouteId`),
   CONSTRAINT `FK_2CCA8F4A67C2CC38` FOREIGN KEY (`documentRouteId`) REFERENCES `coreshop_document_route` (`id`)
@@ -399,7 +425,8 @@ CREATE TABLE `coreshop_inbound_email_rule` (
   `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IDX_11EA28BBE540AEA2` (`inbound_email_id`)
+  KEY `IDX_11EA28BBE540AEA2` (`inbound_email_id`),
+  CONSTRAINT `FK_11EA28BBE540AEA2` FOREIGN KEY (`inbound_email_id`) REFERENCES `coreshop_inbound_email` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
@@ -540,7 +567,7 @@ CREATE TABLE `coreshop_loyalty_points_transaction` (
   `id` int NOT NULL AUTO_INCREMENT,
   `loyalty_account` int DEFAULT NULL,
   `pointsValue` int NOT NULL,
-  `type` enum('income','expense') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `type` enum('income','expense') COLLATE utf8mb4_general_ci DEFAULT NULL,
   `details` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `detailParams` json NOT NULL,
   `creationDate` datetime NOT NULL,
@@ -921,7 +948,7 @@ CREATE TABLE `coreshop_product_store_values` (
   UNIQUE KEY `product_store` (`product`,`store`),
   KEY `IDX_9EED0E97FF575877` (`store`),
   CONSTRAINT `FK_9EED0E97FF575877` FOREIGN KEY (`store`) REFERENCES `coreshop_store` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1133,12 +1160,15 @@ CREATE TABLE `coreshop_store` (
   `useGrossPrice` tinyint(1) NOT NULL,
   `currencyId` int DEFAULT NULL,
   `baseCountryId` int DEFAULT NULL,
+  `customer_cluster` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_3ABD931C91000B8A` (`currencyId`),
   KEY `IDX_3ABD931C1D78C28F` (`baseCountryId`),
+  KEY `IDX_3ABD931CF918CD2A` (`customer_cluster`),
   CONSTRAINT `FK_3ABD931C1D78C28F` FOREIGN KEY (`baseCountryId`) REFERENCES `coreshop_country` (`id`),
-  CONSTRAINT `FK_3ABD931C91000B8A` FOREIGN KEY (`currencyId`) REFERENCES `coreshop_currency` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  CONSTRAINT `FK_3ABD931C91000B8A` FOREIGN KEY (`currencyId`) REFERENCES `coreshop_currency` (`id`),
+  CONSTRAINT `FK_3ABD931CF918CD2A` FOREIGN KEY (`customer_cluster`) REFERENCES `coreshop_customer_cluster` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1326,7 +1356,7 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=981 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1366 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -2035,6 +2065,7 @@ CREATE TABLE `object_query_cs_customer` (
   `customerGroups` text,
   `creditAmount__value` bigint DEFAULT NULL,
   `creditAmount__currency` int DEFAULT NULL,
+  `customerCluster` int DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_customer__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2561,7 +2592,7 @@ CREATE TABLE `object_relations_cs_customer` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_customer__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2761,7 +2792,7 @@ CREATE TABLE `object_relations_cs_product` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_product__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=465 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=565 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2781,7 +2812,7 @@ CREATE TABLE `object_relations_cs_user` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_user__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2943,6 +2974,7 @@ CREATE TABLE `object_store_cs_customer` (
   `addressAccessType` varchar(190) DEFAULT NULL,
   `creditAmount__value` bigint DEFAULT NULL,
   `creditAmount__currency` int DEFAULT NULL,
+  `customerCluster` int DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_customer__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3204,7 +3236,6 @@ CREATE TABLE `object_store_cs_user` (
   `password` varchar(255) DEFAULT NULL,
   `passwordResetHash` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
-  UNIQUE KEY `u_index_loginIdentifier` (`loginIdentifier`),
   CONSTRAINT `fk_object_store_cs_user__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

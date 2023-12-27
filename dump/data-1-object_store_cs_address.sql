@@ -15,4 +15,5 @@ INSERT INTO object_store_cs_address (`oo_id`,`salutation`,`firstname`,`lastname`
 (192,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
 (193,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
 (201,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
-(202,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL);
+(202,'mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
+(207,'mr','B2B','CoreShop','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL);

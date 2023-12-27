@@ -8,6 +8,7 @@ INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('asset_metad
 ('clear_cache',''), 
 ('clear_fullpage_cache',''), 
 ('clear_temp_files',''), 
+('coreshop_customer_cluster_permission_customer_clus','coreshop_permission_group_coreshop_customer_cluste'), 
 ('coreshop_deposit_permission_ctc_assign_to_existing','coreshop_permission_group_coreshop_deposit'), 
 ('coreshop_deposit_permission_ctc_assign_to_new','coreshop_permission_group_coreshop_deposit'), 
 ('coreshop_deposit_permission_settings','coreshop_permission_group_coreshop_deposit'), 

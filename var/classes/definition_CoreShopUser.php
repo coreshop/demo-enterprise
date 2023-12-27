@@ -18,7 +18,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546720,
+   'modificationDate' => 1703691529,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\User',
@@ -100,9 +100,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'regexFlags' => 
                 array (
                 ),
-                 'unique' => true,
+                 'unique' => false,
                  'showCharCount' => false,
-                 'width' => NULL,
+                 'width' => '',
                  'defaultValueGenerator' => '',
               )),
               1 => 

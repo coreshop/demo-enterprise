@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f031a9b179dca5a75d3871bc49883f94",
+    "content-hash": "ec5d237d76fdea19b6f02486b633ef12",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -694,12 +694,79 @@
             "time": "2023-12-26T07:13:45+00:00"
         },
         {
+            "name": "coreshop/customer-cluster-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "zip",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/customer-cluster-bundle/dev-main/6422ec9e8687b1900535e48ffd780c1b424c8c1d.zip",
+                "reference": "6422ec9e8687b1900535e48ffd780c1b424c8c1d",
+                "mirrors": [
+                    {
+                        "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "coreshop/core-shop": "^4.0.0"
+            },
+            "require-dev": {
+                "friends-of-behat/page-object-extension": "^0.3.2",
+                "friends-of-behat/symfony-extension": "^2.1",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-symfony": "^1.3.2",
+                "symplify/easy-coding-standard": "^11.1",
+                "vimeo/psalm": "^5"
+            },
+            "default-branch": true,
+            "type": "pimcore-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CoreShop\\Bundle\\CustomerClusterBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "classmap": [
+                    "Kernel.php"
+                ],
+                "psr-4": {
+                    "App\\": "app",
+                    "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+                }
+            },
+            "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "CoreShop GmbH",
+                    "email": "info@coreshop.org",
+                    "homepage": "https://www.coreshop.org/",
+                    "role": "TEAM"
+                }
+            ],
+            "description": "CoreShop - Customer Cluster Bundle",
+            "homepage": "https://www.coreshop.org",
+            "keywords": [
+                "coreshop",
+                "ecommerce",
+                "pimcore",
+                "warehouse"
+            ],
+            "support": {
+                "source": "https://git.e-conomix.at/coreshop/customer-cluster-bundle/-/tree/main",
+                "issues": "https://git.e-conomix.at/coreshop/customer-cluster-bundle/-/issues"
+            },
+            "time": "2023-12-22T11:22:37+01:00"
+        },
+        {
             "name": "coreshop/deposit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/419bc95704b4d3dfb352376563e950b947280cfb.zip",
-                "reference": "419bc95704b4d3dfb352376563e950b947280cfb",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/2106bb7edf66dd4308f9005c3be4135ae670dd75.zip",
+                "reference": "2106bb7edf66dd4308f9005c3be4135ae670dd75",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -757,7 +824,7 @@
                 "source": "https://git.e-conomix.at/coreshop/deposit-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/deposit-bundle/-/issues"
             },
-            "time": "2023-12-21T11:17:41+01:00"
+            "time": "2023-12-27T17:06:04+01:00"
         },
         {
             "name": "coreshop/document-route-bundle",
@@ -15695,6 +15762,7 @@
     "stability-flags": {
         "coreshop/batch-messenger-bundle": 20,
         "coreshop/core-shop": 20,
+        "coreshop/customer-cluster-bundle": 20,
         "coreshop/deposit-bundle": 20,
         "coreshop/document-route-bundle": 20,
         "coreshop/inbound-email-rules-bundle": 20,

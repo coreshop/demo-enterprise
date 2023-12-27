@@ -15,4 +15,5 @@ INSERT INTO object_query_cs_address (`oo_id`,`oo_classId`,`oo_className`,`saluta
 (192,'cs_address','CoreShopAddress','mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
 (193,'cs_address','CoreShopAddress','mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
 (201,'cs_address','CoreShopAddress','mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
-(202,'cs_address','CoreShopAddress','mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL);
+(202,'cs_address','CoreShopAddress','mr','CoreShop','Demo','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL), 
+(207,'cs_address','CoreShopAddress','mr','B2B','CoreShop','CoreShop GmbH','Zeileisstraße','6','4600','Wels',11,NULL,NULL,NULL);

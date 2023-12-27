@@ -2,7 +2,21 @@ imports:
     - { resource: services.yaml }
     - { resource: 'local/' }
 
+core_shop_store:
+    resources:
+        store:
+            classes:
+                model: App\Entity\Store
+
 doctrine:
+    orm:
+        mappings:
+            app:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Entity'
+                prefix: 'App\Entity'
+                alias: App
     dbal:
         connections:
             default:
@@ -12,3 +26,8 @@ doctrine:
                 host: '%env(DATABASE_HOST)%'
                 port: '%env(DATABASE_PORT)%'
                 server_version: '%env(DATABASE_VERSION)%'
+
+core_shop_customer_cluster:
+    pimcore_admin:
+        js:
+            store_extension: '/bundles/coreshopcustomercluster/pimcore/static/js/store/item.js'

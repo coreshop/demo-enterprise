@@ -13,7 +13,7 @@ security:
         pimcore_admin:
             id: Pimcore\Security\User\UserProvider
         coreshop_user:
-            id: CoreShop\Bundle\CoreBundle\Security\ObjectUserProvider
+            id: CoreShop\Bundle\CustomerClusterBundle\Security\UserProvider
 
     firewalls:
         dev:

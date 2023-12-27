@@ -21,4 +21,9 @@ INSERT INTO documents (`id`,`parentId`,`type`,`key`,`path`,`index`,`published`,`
 (26,8,'email','order-shipped','/en/shop/email/',6,1,1702546726,1702546726,0,0,1), 
 (27,9,'email','order-shipped','/de/shop/email/',6,1,1702546726,1702546726,0,0,1), 
 (29,8,'email','user-order-comment','/en/shop/email/',7,1,1702546726,1702546726,0,0,1), 
-(30,9,'email','user-order-comment','/de/shop/email/',7,1,1702546726,1702546726,0,0,1);
+(30,9,'email','user-order-comment','/de/shop/email/',7,1,1702546726,1702546726,0,0,1), 
+(41,1,'page','b2b','/',3,1,1703692279,1703692323,2,2,2), 
+(42,41,'page','en','/b2b/',1,1,1703692331,1703692333,2,2,2), 
+(43,42,'page','shop','/b2b/en/',1,1,1703692331,1703692333,2,2,2), 
+(52,41,'page','de','/b2b/',2,1,1703692341,1703692343,2,2,2), 
+(53,52,'page','shop','/b2b/de/',1,1,1703692341,1703692343,2,2,2);

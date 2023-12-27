@@ -10,6 +10,7 @@
  * - lastname [lastname]
  * - company [coreShopRelation]
  * - email [email]
+ * - customerCluster [coreShopCustomerCluster]
  * - newsletterActive [newsletterActive]
  * - newsletterConfirmed [newsletterConfirmed]
  * - newsletterToken [input]
@@ -30,11 +31,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702640521,
+   'modificationDate' => 1703691527,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Customer',
-   'implementsInterfaces' => '\\CoreShop\\Bundle\\CreditBundle\\Model\\CreditAwareInterface',
+   'implementsInterfaces' => '\\CoreShop\\Bundle\\CreditBundle\\Model\\CreditAwareInterface,\\CoreShop\\Bundle\\CustomerClusterBundle\\Model\\CustomerClusterAwareInterface',
    'listingParentClass' => '',
    'useTraits' => '',
    'listingUseTraits' => '',
@@ -251,6 +252,27 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               5 => 
+              CoreShop\Bundle\CustomerClusterBundle\CoreExtension\CustomerCluster::__set_state(array(
+                 'name' => 'customerCluster',
+                 'title' => 'Customer Cluster',
+                 'tooltip' => NULL,
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => NULL,
+                 'permissions' => NULL,
+                 'fieldtype' => 'coreShopCustomerCluster',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'allowEmpty' => false,
+              )),
+              6 => 
               Pimcore\Bundle\NewsletterBundle\Model\DataObject\ClassDefinition\Data\NewsletterActive::__set_state(array(
                  'name' => 'newsletterActive',
                  'title' => 'coreshop.customer.newsletter_active',
@@ -272,7 +294,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValue' => NULL,
                  'defaultValueGenerator' => '',
               )),
-              6 => 
+              7 => 
               Pimcore\Bundle\NewsletterBundle\Model\DataObject\ClassDefinition\Data\NewsletterConfirmed::__set_state(array(
                  'name' => 'newsletterConfirmed',
                  'title' => 'coreshop.customer.newsletter_confirmed',
@@ -294,7 +316,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValue' => 0,
                  'defaultValueGenerator' => '',
               )),
-              7 => 
+              8 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'newsletterToken',
                  'title' => 'Newsletter Token',
@@ -324,7 +346,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => NULL,
                  'defaultValueGenerator' => '',
               )),
-              8 => 
+              9 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Gender::__set_state(array(
                  'name' => 'gender',
                  'title' => 'coreshop.customer.gender',
@@ -353,7 +375,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderClass' => NULL,
                  'optionsProviderData' => NULL,
               )),
-              9 => 
+              10 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'localeCode',
                  'title' => 'coreshop.customer.locale',
@@ -383,7 +405,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => NULL,
                  'defaultValueGenerator' => '',
               )),
-              10 => 
+              11 => 
               CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'user',
                  'title' => 'coreshop.customer.user',

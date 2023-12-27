@@ -32,11 +32,11 @@ CREATE TABLE `coreshop_batch_messenger_task` (
   `userId` int DEFAULT NULL,
   `taskData` json NOT NULL,
   `batchSize` int NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -44,15 +44,15 @@ DROP TABLE IF EXISTS `coreshop_batch_messenger_task_item`;
 CREATE TABLE `coreshop_batch_messenger_task_item` (
   `id` int NOT NULL AUTO_INCREMENT,
   `task` int DEFAULT NULL,
-  `taskData` longtext COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:object)',
-  `status` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `error` longtext COLLATE utf8mb4_general_ci,
+  `taskData` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:object)',
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `error` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_9EE681D5527EDB25` (`task`),
   CONSTRAINT `FK_9EE681D5527EDB25` FOREIGN KEY (`task`) REFERENCES `coreshop_batch_messenger_task` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=367 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -269,8 +269,8 @@ CREATE TABLE `coreshop_currency` (
 DROP TABLE IF EXISTS `coreshop_customer_cluster`;
 CREATE TABLE `coreshop_customer_cluster` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -296,7 +296,7 @@ CREATE TABLE `coreshop_deposit_store_values` (
 DROP TABLE IF EXISTS `coreshop_document_route`;
 CREATE TABLE `coreshop_document_route` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `route_name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `route_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `document` int DEFAULT NULL COMMENT '(DC2Type:pimcoreDocument)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -307,7 +307,7 @@ DROP TABLE IF EXISTS `coreshop_document_site_route`;
 CREATE TABLE `coreshop_document_site_route` (
   `id` int NOT NULL AUTO_INCREMENT,
   `documentRouteId` int DEFAULT NULL,
-  `site` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `site` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_2CCA8F4A67C2CC38` (`documentRouteId`),
   CONSTRAINT `FK_2CCA8F4A67C2CC38` FOREIGN KEY (`documentRouteId`) REFERENCES `coreshop_document_route` (`id`)
@@ -408,11 +408,11 @@ CREATE TABLE `coreshop_filter_condition_pre_conditions` (
 DROP TABLE IF EXISTS `coreshop_inbound_email`;
 CREATE TABLE `coreshop_inbound_email` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `imap_path` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `login` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `server_encoding` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `imap_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `login` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `server_encoding` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -422,7 +422,7 @@ DROP TABLE IF EXISTS `coreshop_inbound_email_rule`;
 CREATE TABLE `coreshop_inbound_email_rule` (
   `id` int NOT NULL AUTO_INCREMENT,
   `inbound_email_id` int DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_11EA28BBE540AEA2` (`inbound_email_id`),
@@ -567,7 +567,7 @@ CREATE TABLE `coreshop_loyalty_points_transaction` (
   `id` int NOT NULL AUTO_INCREMENT,
   `loyalty_account` int DEFAULT NULL,
   `pointsValue` int NOT NULL,
-  `type` enum('income','expense') COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `type` enum('income','expense') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `details` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `detailParams` json NOT NULL,
   `creationDate` datetime NOT NULL,
@@ -1356,7 +1356,7 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=1366 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1488 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 

@@ -53,7 +53,7 @@ services:
       - cors_dev
     labels:
       - traefik.enable=true
-      - traefik.http.routers.coreshop_enterprise_demo.rule=Host(`coreshop-enterprise-demo.localhost`)
+      - traefik.http.routers.coreshop_enterprise_demo.rule=Host(`coreshop-enterprise-demo.localhost`, `coreshop-enterprise-b2b-demo.localhost`)
       - traefik.http.routers.coreshop_enterprise_demo.entrypoints=cors_dev
       - traefik.http.routers.coreshop_enterprise_demo.tls=true
       - traefik.http.services.coreshop_enterprise_demo.loadbalancer.server.port=80

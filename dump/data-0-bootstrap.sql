@@ -3262,6 +3262,48 @@ CREATE TABLE `object_store_cs_wishlist_item` (
 
 
 
+DROP TABLE IF EXISTS `plugin_datahub_workspaces_asset`;
+CREATE TABLE `plugin_datahub_workspaces_asset` (
+  `cid` int unsigned NOT NULL DEFAULT '0',
+  `cpath` varchar(765) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `configuration` varchar(80) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
+  `create` tinyint unsigned DEFAULT '0',
+  `read` tinyint unsigned DEFAULT '0',
+  `update` tinyint unsigned DEFAULT '0',
+  `delete` tinyint unsigned DEFAULT '0',
+  PRIMARY KEY (`cid`,`configuration`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+DROP TABLE IF EXISTS `plugin_datahub_workspaces_document`;
+CREATE TABLE `plugin_datahub_workspaces_document` (
+  `cid` int unsigned NOT NULL DEFAULT '0',
+  `cpath` varchar(765) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `configuration` varchar(80) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
+  `create` tinyint unsigned DEFAULT '0',
+  `read` tinyint unsigned DEFAULT '0',
+  `update` tinyint unsigned DEFAULT '0',
+  `delete` tinyint unsigned DEFAULT '0',
+  PRIMARY KEY (`cid`,`configuration`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+DROP TABLE IF EXISTS `plugin_datahub_workspaces_object`;
+CREATE TABLE `plugin_datahub_workspaces_object` (
+  `cid` int unsigned NOT NULL DEFAULT '0',
+  `cpath` varchar(765) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `configuration` varchar(80) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
+  `create` tinyint unsigned DEFAULT '0',
+  `read` tinyint unsigned DEFAULT '0',
+  `update` tinyint unsigned DEFAULT '0',
+  `delete` tinyint unsigned DEFAULT '0',
+  PRIMARY KEY (`cid`,`configuration`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
 DROP TABLE IF EXISTS `translations_admin`;
 CREATE TABLE `translations_admin` (
   `key` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',

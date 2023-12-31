@@ -13,11 +13,13 @@
     "coreshop/customer-cluster-bundle": "dev-main",
     "coreshop/deposit-bundle": "dev-main",
     "coreshop/document-route-bundle": "dev-main",
+    "coreshop/headless-bundle": "dev-main",
     "coreshop/inbound-email-rules-bundle": "3.0.x-dev",
     "coreshop/loyality-bundle": "dev-main",
     "coreshop/payum-credit-bundle": "dev-main",
     "coreshop/voucher-credit-bundle": "dev-main",
-    "coreshop/warehouse-bundle": "dev-enterprise"
+    "coreshop/warehouse-bundle": "dev-enterprise",
+    "pimcore/data-hub": "^1.6"
   },
   "autoload": {
     "psr-4": {

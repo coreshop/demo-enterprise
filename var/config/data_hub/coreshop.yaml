@@ -1,0 +1,895 @@
+pimcore_data_hub:
+    configurations:
+        coreshop:
+            general:
+                active: true
+                type: coreshop_graphql
+                name: coreshop
+                description: ''
+                group: ''
+                sqlObjectCondition: ''
+                modificationDate: 1704015965
+                path: null
+                createDate: 1688116542
+            schema:
+                queryEntities:
+                    CoreShopOrder:
+                        id: CoreShopOrder
+                        name: CoreShopOrder
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: token
+                                        label: Token
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: store
+                                        label: Store
+                                        dataType: coreShopStore
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: items
+                                        label: Items
+                                        dataType: coreShopRelations
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: customer
+                                        label: Customer
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: baseCurrency
+                                        label: coreshop.order.base_currency
+                                        dataType: coreShopCurrency
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: paymentTotal
+                                        label: coreshop.order.payment_total
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: totalNet
+                                        label: coreshop.order.total_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: totalGross
+                                        label: coreshop.order.total_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: subtotalNet
+                                        label: coreshop.order.subtotal_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: subtotalGross
+                                        label: coreshop.order.subtotal_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: shippingTaxRate
+                                        label: coreshop.order.shipping_tax_rate
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: taxes
+                                        label: coreshop.order.taxes
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: pimcoreAdjustmentTotalNet
+                                        label: coreshop.order.adjustments_total_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: pimcoreAdjustmentTotalGross
+                                        label: coreshop.order.adjustments_total_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: adjustmentItems
+                                        label: coreshop.order.adjustments
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: currency
+                                        label: coreshop.order.converted_currency
+                                        dataType: coreShopCurrency
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedPaymentTotal
+                                        label: coreshop.order.converted_payment_total
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedTotalNet
+                                        label: coreshop.order.converted_total_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedTotalGross
+                                        label: coreshop.order.converted_total_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedSubtotalNet
+                                        label: coreshop.order.converted_subtotal_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedSubtotalGross
+                                        label: coreshop.order.converted_subtotal_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedTaxes
+                                        label: coreshop.order.converted_taxes
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedPimcoreAdjustmentTotalNet
+                                        label: coreshop.order.converted_adjustments_total_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedPimcoreAdjustmentTotalGross
+                                        label: coreshop.order.converted_adjustments_total_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedAdjustmentItems
+                                        label: coreshop.order.converted_adjustments
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: weight
+                                        label: coreshop.order.weight
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: priceRuleItems
+                                        label: coreshop.order.price_rules
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: needsRecalculation
+                                        label: coreshop.order.needs_recalculation
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: shippingAddress
+                                        label: coreshop.order.shipping_address
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: invoiceAddress
+                                        label: coreshop.order.invoice_address
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                    CoreShopOrderItem:
+                        id: CoreShopOrderItem
+                        name: CoreShopOrderItem
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: quantity
+                                        label: Quantity
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: product
+                                        label: Product
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: isGiftItem
+                                        label: coreshop.order_item.is_gift_item
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: digitalProduct
+                                        label: coreshop.order_item.digital_product
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: unitIdentifier
+                                        label: coreshop.order_item.unit_identifier
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: unit
+                                        label: coreshop.order_item.unit
+                                        dataType: coreShopProductUnit
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: customItemDiscount
+                                        label: coreshop.order_item.custom_item_discount
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: defaultUnitQuantity
+                                        label: coreshop.order_item.default_unit_quantity
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: objectId
+                                        label: coreshop.order_item.object_id
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: mainObjectId
+                                        label: coreshop.order_item.main_object_id
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemWeight
+                                        label: coreshop.order_item.item_weight
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: totalWeight
+                                        label: coreshop.order_item.total_weight
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: unitDefinition
+                                        label: coreshop.order_item.unit_definition
+                                        dataType: coreShopProductUnitDefinition
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: order
+                                        label: Order
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemWholesalePrice
+                                        label: coreshop.order_item.item_wholesale_price
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: customItemPrice
+                                        label: coreshop.order_item.custom_item_price
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemDiscountNet
+                                        label: coreshop.order_item.item_discount_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemDiscountGross
+                                        label: coreshop.order_item.item_discount_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemDiscountPriceNet
+                                        label: coreshop.order_item.item_discount_price_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemDiscountPriceGross
+                                        label: coreshop.order_item.item_discount_price_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemPriceNet
+                                        label: coreshop.order_item.item_price_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemPriceGross
+                                        label: coreshop.order_item.item_price_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemRetailPriceNet
+                                        label: coreshop.order_item.item_retail_price_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemRetailPriceGross
+                                        label: coreshop.order_item.item_retail_price_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: subtotalNet
+                                        label: coreshop.order_item.subtotal_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: subtotalGross
+                                        label: coreshop.order_item.subtotal_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: totalNet
+                                        label: coreshop.order_item.total_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: totalGross
+                                        label: coreshop.order_item.total_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemTax
+                                        label: coreshop.order_item.item_tax
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: taxes
+                                        label: coreshop.order_item.taxes
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: pimcoreAdjustmentTotalNet
+                                        label: coreshop.order_item.adjustments_total_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: pimcoreAdjustmentTotalGross
+                                        label: coreshop.order_item.adjustments_total_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: adjustmentItems
+                                        label: coreshop.order_item.adjustments
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemWholesalePrice
+                                        label: coreshop.order_item.converted_item_wholesale_price
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedCustomItemPrice
+                                        label: coreshop.order_item.converted_custom_item_price
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemDiscountNet
+                                        label: coreshop.order_item.converted_item_discount_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemDiscountGross
+                                        label: coreshop.order_item.converted_item_discount_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemDiscountPriceNet
+                                        label: coreshop.order_item.converted_item_discount_price_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemDiscountPriceGross
+                                        label: coreshop.order_item.converted_item_discount_price_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemPriceNet
+                                        label: coreshop.order_item.converted_item_price_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemPriceGross
+                                        label: coreshop.order_item.converted_item_price_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemRetailPriceNet
+                                        label: coreshop.order_item.converted_item_retail_price_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemRetailPriceGross
+                                        label: coreshop.order_item.converted_item_retail_price_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedTotalNet
+                                        label: coreshop.order_item.converted_total_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedTotalGross
+                                        label: coreshop.order_item.converted_total_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedSubtotalNet
+                                        label: coreshop.order_item.converted_subtotal_net
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedSubtotalGross
+                                        label: coreshop.order_item.converted_subtotal_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedItemTax
+                                        label: coreshop.order_item.converted_item_tax
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedTaxes
+                                        label: coreshop.order_item.converted_taxes
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedPimcoreAdjustmentTotalNet
+                                        label: coreshop.order_item.converted_adjustments
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedPimcoreAdjustmentTotalGross
+                                        label: coreshop.order_item.converted_adjustments_total_gross
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: convertedAdjustmentItems
+                                        label: coreshop.order_item.converted_adjustments_total_net
+                                        dataType: fieldcollections
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: priceRuleItems
+                                        label: coreshop.order.price_rules
+                                        dataType: fieldcollections
+                                    isOperator: false
+                    CoreShopProduct:
+                        id: CoreShopProduct
+                        name: CoreShopProduct
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: name
+                                        label: Name
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: shortDescription
+                                        label: 'Short Description'
+                                        dataType: textarea
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: slug
+                                        label: Slug
+                                        dataType: urlSlug
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: sku
+                                        label: SKU
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: ean
+                                        label: EAN13
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: active
+                                        label: Active
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: digitalProduct
+                                        label: 'Digital Product'
+                                        dataType: booleanSelect
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: manufacturer
+                                        label: Manufacturer
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: pimcoreMetaTitle
+                                        label: 'Meta Title'
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: pimcoreMetaDescription
+                                        label: 'Meta Description'
+                                        dataType: textarea
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: description
+                                        label: Description
+                                        dataType: wysiwyg
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: mainVariant
+                                        label: 'Main Variant'
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: allowedAttributeGroups
+                                        label: 'Allowed attribute groups'
+                                        dataType: coreShopRelations
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: attributes
+                                        label: Attributes
+                                        dataType: coreShopRelations
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: categories
+                                        label: Category
+                                        dataType: coreShopRelations
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: images
+                                        label: Images
+                                        dataType: manyToManyRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: onHold
+                                        label: 'On Hold'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: onHand
+                                        label: 'On Hand'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: isTracked
+                                        label: 'Is Tracked'
+                                        dataType: booleanSelect
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: minimumQuantityToOrder
+                                        label: 'Min to Order'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: maximumQuantityToOrder
+                                        label: coreshop.product.maximal_quantity_to_order
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: unitDefinitions
+                                        label: 'Unit Definitions'
+                                        dataType: coreShopProductUnitDefinitions
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: storeValues
+                                        label: coreshop.product.store_values
+                                        dataType: coreShopStoreValues
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: itemQuantityFactor
+                                        label: 'Quantity Factor'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: wholesalePrice
+                                        label: 'Wholesale Price'
+                                        dataType: coreShopMoney
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: weight
+                                        label: Weight
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: height
+                                        label: Height
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: width
+                                        label: Width
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: depth
+                                        label: Depth
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: stores
+                                        label: Stores
+                                        dataType: coreShopStoreMultiselect
+                                    isOperator: false
+                                -
+                                    isOperator: true
+                                    attributes:
+                                        label: stockAvailability
+                                        type: operator
+                                        class: coreshop_stock_availability
+                                        children: {  }
+                                    key: '#659132062eb8d'
+                    CoreShopUser:
+                        id: CoreShopUser
+                        name: CoreShopUser
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: loginIdentifier
+                                        label: 'Login Identifier'
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: customer
+                                        label: Customer
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                    CoreShopCustomer:
+                        id: CoreShopCustomer
+                        name: CoreShopCustomer
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: firstname
+                                        label: coreshop.customer.firstname
+                                        dataType: firstname
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: lastname
+                                        label: coreshop.customer.lastname
+                                        dataType: lastname
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: email
+                                        label: coreshop.customer.email
+                                        dataType: email
+                                    isOperator: false
+                    CoreShopCategory:
+                        id: CoreShopCategory
+                        name: CoreShopCategory
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: name
+                                        label: Name
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: description
+                                        label: Description
+                                        dataType: textarea
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: slug
+                                        label: Slug
+                                        dataType: urlSlug
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: parentCategory
+                                        label: 'Parent Category'
+                                        dataType: coreShopRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: filter
+                                        label: coreshop.category.filter
+                                        dataType: coreShopFilter
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: stores
+                                        label: coreshop.category.stores
+                                        dataType: coreShopStoreMultiselect
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: pimcoreMetaTitle
+                                        label: coreshop.category.seo_meta_title
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: pimcoreMetaDescription
+                                        label: coreshop.category.seo_meta_description
+                                        dataType: textarea
+                                    isOperator: false
+                mutationEntities:
+                    CoreShopOrder:
+                        id: CoreShopOrder
+                        name: CoreShopOrder
+                        update: false
+                    CoreShopUser:
+                        id: CoreShopUser
+                        name: CoreShopUser
+                        update: false
+                    CoreShopCustomer:
+                        id: CoreShopCustomer
+                        name: CoreShopCustomer
+                        update: false
+                specialEntities:
+                    document:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    document_folder:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    asset:
+                        read: true
+                        create: false
+                        update: false
+                        delete: false
+                    asset_folder:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    asset_listing:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    object_folder:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    translation:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    translation_listing:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    coreshop_frontend:
+                        read: true
+                        create: false
+                        update: false
+                        delete: false
+            security:
+                method: datahub_apikey
+                apikey:
+                    - cccffae4fb6834f6a3d7eef35e890777
+                skipPermissionCheck: false
+                disableIntrospection: false
+            workspaces:
+                asset:
+                    -
+                        read: true
+                        cpath: /
+                        create: false
+                        update: false
+                        delete: false
+                        id: extModel519-1
+                document: {  }
+                object:
+                    -
+                        read: true
+                        cpath: /
+                        create: true
+                        update: true
+                        delete: false
+                        id: extModel535-1
+            permissions:
+                user: {  }
+                role: {  }

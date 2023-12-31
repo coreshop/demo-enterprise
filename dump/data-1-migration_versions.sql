@@ -111,4 +111,9 @@ INSERT INTO migration_versions (`version`,`executed_at`,`execution_time`) VALUES
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230525131748',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230606112233',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230616085142',NULL,NULL), 
-('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230913173812',NULL,NULL);
+('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230913173812',NULL,NULL), 
+('Pimcore\\Bundle\\DataHubBundle\\Migrations\\PimcoreX\\Version20210305134111',NULL,NULL), 
+('Pimcore\\Bundle\\DataHubBundle\\Migrations\\PimcoreX\\Version20211108160248',NULL,NULL), 
+('Pimcore\\Bundle\\DataHubBundle\\Migrations\\PimcoreX\\Version20221212152145',NULL,NULL), 
+('Pimcore\\Bundle\\DataHubBundle\\Migrations\\PimcoreX\\Version20230329133119',NULL,NULL), 
+('Pimcore\\Bundle\\DataHubBundle\\Migrations\\PimcoreX\\Version20230503165847',NULL,NULL);

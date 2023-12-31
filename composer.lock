@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec5d237d76fdea19b6f02486b633ef12",
+    "content-hash": "68c3632840a5e2996a2ddfd60efba3d2",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -897,6 +897,85 @@
                 "issues": "https://git.e-conomix.at/coreshop/document-route-bundle/-/issues"
             },
             "time": "2023-12-14T13:53:46+01:00"
+        },
+        {
+            "name": "coreshop/headless-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "zip",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/a745bf3bec3fb42ed685d757289453ffc27b2966.zip",
+                "reference": "a745bf3bec3fb42ed685d757289453ffc27b2966",
+                "mirrors": [
+                    {
+                        "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "coreshop/core-shop": "^4.0",
+                "lexik/jwt-authentication-bundle": "^2.19",
+                "nelmio/cors-bundle": "^2.3",
+                "pimcore/data-hub": "^1.6"
+            },
+            "require-dev": {
+                "friends-of-behat/page-object-extension": "^0.3.2",
+                "friends-of-behat/symfony-extension": "^2.1",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-symfony": "^1.3.2",
+                "symplify/easy-coding-standard": "^11.1",
+                "vimeo/psalm": "^5.0"
+            },
+            "default-branch": true,
+            "type": "pimcore-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "pimcore": {
+                    "bundles": [
+                        "CoreShop\\Bundle\\DataHubBundle\\CoreShopDataHubBundle"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CoreShop\\Bundle\\HeadlessBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "classmap": [
+                    "Kernel.php"
+                ],
+                "psr-4": {
+                    "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+                }
+            },
+            "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
+            "license": [
+                "CCL"
+            ],
+            "authors": [
+                {
+                    "name": "CoreShop GmbH",
+                    "email": "info@coreshop.org",
+                    "homepage": "https://www.coreshop.org/",
+                    "role": "TEAM"
+                }
+            ],
+            "description": "CoreShop - Headless Bundle",
+            "homepage": "https://www.coreshop.org",
+            "keywords": [
+                "coreshop",
+                "credit",
+                "ecommerce",
+                "pimcore"
+            ],
+            "support": {
+                "source": "https://git.e-conomix.at/coreshop/headless-bundle/-/tree/main",
+                "issues": "https://git.e-conomix.at/coreshop/headless-bundle/-/issues"
+            },
+            "time": "2023-12-31T10:29:46+01:00"
         },
         {
             "name": "coreshop/inbound-email-rules-bundle",
@@ -4734,6 +4813,143 @@
             "time": "2023-11-24T13:56:19+00:00"
         },
         {
+            "name": "lcobucci/clock",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lcobucci/clock.git",
+                "reference": "039ef98c6b57b101d10bd11d8fdfda12cbd996dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lcobucci/clock/zipball/039ef98c6b57b101d10bd11d8fdfda12cbd996dc",
+                "reference": "039ef98c6b57b101d10bd11d8fdfda12cbd996dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~8.1.0 || ~8.2.0",
+                "psr/clock": "^1.0"
+            },
+            "provide": {
+                "psr/clock-implementation": "1.0"
+            },
+            "require-dev": {
+                "infection/infection": "^0.26",
+                "lcobucci/coding-standard": "^9.0",
+                "phpstan/extension-installer": "^1.2",
+                "phpstan/phpstan": "^1.9.4",
+                "phpstan/phpstan-deprecation-rules": "^1.1.1",
+                "phpstan/phpstan-phpunit": "^1.3.2",
+                "phpstan/phpstan-strict-rules": "^1.4.4",
+                "phpunit/phpunit": "^9.5.27"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lcobucci\\Clock\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luís Cobucci",
+                    "email": "lcobucci@gmail.com"
+                }
+            ],
+            "description": "Yet another clock abstraction",
+            "support": {
+                "issues": "https://github.com/lcobucci/clock/issues",
+                "source": "https://github.com/lcobucci/clock/tree/3.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/lcobucci",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/lcobucci",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-12-19T15:00:24+00:00"
+        },
+        {
+            "name": "lcobucci/jwt",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lcobucci/jwt.git",
+                "reference": "0ba88aed12c04bd2ed9924f500673f32b67a6211"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/0ba88aed12c04bd2ed9924f500673f32b67a6211",
+                "reference": "0ba88aed12c04bd2ed9924f500673f32b67a6211",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-sodium": "*",
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+                "psr/clock": "^1.0"
+            },
+            "require-dev": {
+                "infection/infection": "^0.27.0",
+                "lcobucci/clock": "^3.0",
+                "lcobucci/coding-standard": "^11.0",
+                "phpbench/phpbench": "^1.2.9",
+                "phpstan/extension-installer": "^1.2",
+                "phpstan/phpstan": "^1.10.7",
+                "phpstan/phpstan-deprecation-rules": "^1.1.3",
+                "phpstan/phpstan-phpunit": "^1.3.10",
+                "phpstan/phpstan-strict-rules": "^1.5.0",
+                "phpunit/phpunit": "^10.2.6"
+            },
+            "suggest": {
+                "lcobucci/clock": ">= 3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lcobucci\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Luís Cobucci",
+                    "email": "lcobucci@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+            "keywords": [
+                "JWS",
+                "jwt"
+            ],
+            "support": {
+                "issues": "https://github.com/lcobucci/jwt/issues",
+                "source": "https://github.com/lcobucci/jwt/tree/5.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/lcobucci",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/lcobucci",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2023-11-20T21:17:42+00:00"
+        },
+        {
             "name": "league/csv",
             "version": "9.13.0",
             "source": {
@@ -5439,6 +5655,125 @@
             "time": "2021-06-28T04:27:21+00:00"
         },
         {
+            "name": "lexik/jwt-authentication-bundle",
+            "version": "v2.20.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lexik/LexikJWTAuthenticationBundle.git",
+                "reference": "a196d68d07dd5486a523cc3415620badbb5d25c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/a196d68d07dd5486a523cc3415620badbb5d25c2",
+                "reference": "a196d68d07dd5486a523cc3415620badbb5d25c2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "lcobucci/clock": "^1.2|^2.0|^3.0",
+                "lcobucci/jwt": "^3.4|^4.1|^5.0",
+                "namshi/jose": "^7.2",
+                "php": ">=7.1",
+                "symfony/config": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/dependency-injection": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/deprecation-contracts": "^2.4|^3.0",
+                "symfony/event-dispatcher": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/http-foundation": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/http-kernel": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/property-access": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/security-bundle": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/translation-contracts": "^1.0|^2.0|^3.0"
+            },
+            "conflict": {
+                "symfony/console": "<4.4"
+            },
+            "require-dev": {
+                "symfony/browser-kit": "^5.4|^6.0|^7.0",
+                "symfony/console": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/dom-crawler": "^5.4|^6.0|^7.0",
+                "symfony/filesystem": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/framework-bundle": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/phpunit-bridge": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/security-guard": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/var-dumper": "^4.4|^5.4|^6.0|^7.0",
+                "symfony/yaml": "^4.4|^5.4|^6.0|^7.0"
+            },
+            "suggest": {
+                "gesdinet/jwt-refresh-token-bundle": "Implements a refresh token system over Json Web Tokens in Symfony",
+                "spomky-labs/lexik-jose-bridge": "Provides a JWT Token encoder with encryption support"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Lexik\\Bundle\\JWTAuthenticationBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Barthe",
+                    "email": "j.barthe@lexik.fr",
+                    "homepage": "https://github.com/jeremyb"
+                },
+                {
+                    "name": "Nicolas Cabot",
+                    "email": "n.cabot@lexik.fr",
+                    "homepage": "https://github.com/slashfan"
+                },
+                {
+                    "name": "Cedric Girard",
+                    "email": "c.girard@lexik.fr",
+                    "homepage": "https://github.com/cedric-g"
+                },
+                {
+                    "name": "Dev Lexik",
+                    "email": "dev@lexik.fr",
+                    "homepage": "https://github.com/lexik"
+                },
+                {
+                    "name": "Robin Chalas",
+                    "email": "robin.chalas@gmail.com",
+                    "homepage": "https://github.com/chalasr"
+                },
+                {
+                    "name": "Lexik Community",
+                    "homepage": "https://github.com/lexik/LexikJWTAuthenticationBundle/graphs/contributors"
+                }
+            ],
+            "description": "This bundle provides JWT authentication for your Symfony REST API",
+            "homepage": "https://github.com/lexik/LexikJWTAuthenticationBundle",
+            "keywords": [
+                "Authentication",
+                "JWS",
+                "api",
+                "bundle",
+                "jwt",
+                "rest",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/lexik/LexikJWTAuthenticationBundle/issues",
+                "source": "https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.20.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/chalasr",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/lexik/jwt-authentication-bundle",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-12-14T15:58:11+00:00"
+        },
+        {
             "name": "lorenzo/pinky",
             "version": "1.1.0",
             "source": {
@@ -6101,6 +6436,73 @@
             "time": "2023-03-08T13:26:56+00:00"
         },
         {
+            "name": "namshi/jose",
+            "version": "7.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/namshi/jose.git",
+                "reference": "89a24d7eb3040e285dd5925fcad992378b82bcff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/namshi/jose/zipball/89a24d7eb3040e285dd5925fcad992378b82bcff",
+                "reference": "89a24d7eb3040e285dd5925fcad992378b82bcff",
+                "shasum": ""
+            },
+            "require": {
+                "ext-date": "*",
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-spl": "*",
+                "php": ">=5.5",
+                "symfony/polyfill-php56": "^1.0"
+            },
+            "require-dev": {
+                "phpseclib/phpseclib": "^2.0",
+                "phpunit/phpunit": "^4.5|^5.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "suggest": {
+                "ext-openssl": "Allows to use OpenSSL as crypto engine.",
+                "phpseclib/phpseclib": "Allows to use Phpseclib as crypto engine, use version ^2.0."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Namshi\\JOSE\\": "src/Namshi/JOSE/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alessandro Nadalin",
+                    "email": "alessandro.nadalin@gmail.com"
+                },
+                {
+                    "name": "Alessandro Cinelli (cirpo)",
+                    "email": "alessandro.cinelli@gmail.com"
+                }
+            ],
+            "description": "JSON Object Signing and Encryption library for PHP.",
+            "keywords": [
+                "JSON Web Signature",
+                "JSON Web Token",
+                "JWS",
+                "json",
+                "jwt",
+                "token"
+            ],
+            "support": {
+                "issues": "https://github.com/namshi/jose/issues",
+                "source": "https://github.com/namshi/jose/tree/master"
+            },
+            "time": "2016-12-05T07:27:31+00:00"
+        },
+        {
             "name": "neitanod/forceutf8",
             "version": "v2.0.4",
             "source": {
@@ -6140,6 +6542,68 @@
                 "source": "https://github.com/neitanod/forceutf8/tree/master"
             },
             "time": "2019-12-10T14:09:14+00:00"
+        },
+        {
+            "name": "nelmio/cors-bundle",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nelmio/NelmioCorsBundle.git",
+                "reference": "78fcdb91f76b080a1008133def9c7f613833933d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nelmio/NelmioCorsBundle/zipball/78fcdb91f76b080a1008133def9c7f613833933d",
+                "reference": "78fcdb91f76b080a1008133def9c7f613833933d",
+                "shasum": ""
+            },
+            "require": {
+                "psr/log": "^1.0 || ^2.0 || ^3.0",
+                "symfony/framework-bundle": "^5.4 || ^6.0 || ^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.6",
+                "symfony/phpunit-bridge": "^5.4 || ^6.0 || ^7.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nelmio\\CorsBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nelmio",
+                    "homepage": "http://nelm.io"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/nelmio/NelmioCorsBundle/contributors"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Symfony application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain"
+            ],
+            "support": {
+                "issues": "https://github.com/nelmio/NelmioCorsBundle/issues",
+                "source": "https://github.com/nelmio/NelmioCorsBundle/tree/2.4.0"
+            },
+            "time": "2023-11-30T16:41:19+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -7555,6 +8019,98 @@
                 "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.3.1"
             },
             "time": "2023-12-14T14:35:10+00:00"
+        },
+        {
+            "name": "pimcore/compatibility-bridge-v10",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pimcore/compatibility-bridge-v10.git",
+                "reference": "598c018fc74f56e6580904db8c7b2ac17375a9af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pimcore/compatibility-bridge-v10/zipball/598c018fc74f56e6580904db8c7b2ac17375a9af",
+                "reference": "598c018fc74f56e6580904db8c7b2ac17375a9af",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+            },
+            "type": "pimcore-bundle",
+            "autoload": {
+                "files": [
+                    "src/autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "description": "Pimcore Compatibility Bridge provides class aliases for the classes which were moved/updated and are necessary for backwards compatibility.",
+            "support": {
+                "issues": "https://github.com/pimcore/compatibility-bridge-v10/issues",
+                "source": "https://github.com/pimcore/compatibility-bridge-v10/tree/v1.0.0"
+            },
+            "time": "2023-04-12T07:23:40+00:00"
+        },
+        {
+            "name": "pimcore/data-hub",
+            "version": "v1.6.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pimcore/data-hub.git",
+                "reference": "2530a31aa3b0a867e44c60915dca2e2d9b58bffa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/2530a31aa3b0a867e44c60915dca2e2d9b58bffa",
+                "reference": "2530a31aa3b0a867e44c60915dca2e2d9b58bffa",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
+                "pimcore/compatibility-bridge-v10": "^1.0",
+                "pimcore/pimcore": "^10.6.8 || ^11.0.7",
+                "webonyx/graphql-php": "^15.2.3"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.1.12 || ^5.0.3",
+                "codeception/module-asserts": "^2",
+                "codeception/module-symfony": "^1.6.0 || ^3.1.0",
+                "codeception/phpunit-wrapper": "^9",
+                "phpstan/phpstan": "^1.9",
+                "phpunit/phpunit": "^9.6",
+                "symfony/dotenv": "^6.2 || ^5.4.21",
+                "symfony/phpunit-bridge": "^6"
+            },
+            "suggest": {
+                "pimcore/admin-ui-classic-bundle": "Required for Pimcore 11"
+            },
+            "type": "pimcore-bundle",
+            "extra": {
+                "pimcore": {
+                    "bundles": [
+                        "Pimcore\\Bundle\\DataHubBundle\\PimcoreDataHubBundle"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pimcore\\": "core-extension/Pimcore/",
+                    "Pimcore\\Bundle\\DataHubBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "description": "Pimcore Datahub",
+            "support": {
+                "issues": "https://github.com/pimcore/data-hub/issues",
+                "source": "https://github.com/pimcore/data-hub/tree/v1.6.5"
+            },
+            "time": "2023-11-13T12:20:59+00:00"
         },
         {
             "name": "pimcore/google-marketing-bundle",
@@ -12983,6 +13539,74 @@
             "time": "2023-07-28T09:04:16+00:00"
         },
         {
+            "name": "symfony/polyfill-php56",
+            "version": "v1.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php56.git",
+                "reference": "54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675",
+                "reference": "54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.20-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 5.6+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php56/tree/v1.20.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-23T14:02:19+00:00"
+        },
+        {
             "name": "symfony/polyfill-php72",
             "version": "v1.28.0",
             "source": {
@@ -15713,6 +16337,80 @@
             "time": "2022-06-03T18:03:27+00:00"
         },
         {
+            "name": "webonyx/graphql-php",
+            "version": "v15.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webonyx/graphql-php.git",
+                "reference": "575ac95f13adfb38219a748572355385c101fdf7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/575ac95f13adfb38219a748572355385c101fdf7",
+                "reference": "575ac95f13adfb38219a748572355385c101fdf7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.4 || ^8"
+            },
+            "require-dev": {
+                "amphp/amp": "^2.6",
+                "amphp/http-server": "^2.1",
+                "dms/phpunit-arraysubset-asserts": "dev-master",
+                "ergebnis/composer-normalize": "^2.28",
+                "friendsofphp/php-cs-fixer": "3.30.0",
+                "mll-lab/php-cs-fixer-config": "^5",
+                "nyholm/psr7": "^1.5",
+                "phpbench/phpbench": "^1.2",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "1.10.47",
+                "phpstan/phpstan-phpunit": "1.3.15",
+                "phpstan/phpstan-strict-rules": "1.5.2",
+                "phpunit/phpunit": "^9.5 || ^10",
+                "psr/http-message": "^1 || ^2",
+                "react/http": "^1.6",
+                "react/promise": "^2.9",
+                "rector/rector": "^0.18",
+                "symfony/polyfill-php81": "^1.23",
+                "symfony/var-exporter": "^5 || ^6 || ^7",
+                "thecodingmachine/safe": "^1.3 || ^2"
+            },
+            "suggest": {
+                "amphp/http-server": "To leverage async resolving with webserver on AMPHP platform",
+                "psr/http-message": "To use standard GraphQL server",
+                "react/promise": "To leverage async resolving on React PHP platform"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GraphQL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP port of GraphQL reference implementation",
+            "homepage": "https://github.com/webonyx/graphql-php",
+            "keywords": [
+                "api",
+                "graphql"
+            ],
+            "support": {
+                "issues": "https://github.com/webonyx/graphql-php/issues",
+                "source": "https://github.com/webonyx/graphql-php/tree/v15.8.1"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/webonyx-graphql-php",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-12-05T17:23:35+00:00"
+        },
+        {
             "name": "willdurand/jsonp-callback-validator",
             "version": "v2.0.0",
             "source": {
@@ -15765,6 +16463,7 @@
         "coreshop/customer-cluster-bundle": 20,
         "coreshop/deposit-bundle": 20,
         "coreshop/document-route-bundle": 20,
+        "coreshop/headless-bundle": 20,
         "coreshop/inbound-email-rules-bundle": 20,
         "coreshop/loyality-bundle": 20,
         "coreshop/payum-credit-bundle": 20,

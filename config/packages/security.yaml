@@ -29,6 +29,12 @@ security:
         # Pimcore Admin Bundle firewall
         pimcore_admin: '%pimcore_admin_bundle.firewall_settings%'
 
+        coreshop_headless:
+            pattern: ^/pimcore-graphql-webservices/coreshop
+            provider: coreshop_user
+            stateless: true
+            jwt: ~
+
         coreshop_frontend:
             provider: coreshop_user
             pattern: '%coreshop.security.frontend_regex%'

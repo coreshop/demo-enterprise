@@ -59,5 +59,5 @@ CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
 
 FROM europe-west3-docker.pkg.dev/cors-wolke/cors/docker/nginx:${NGINX_VERSION}-${DOCKER_BASE_VERSION} AS cors_nginx
 
-COPY .docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+COPY .docker/nginx/nginx-default.conf /etc/nginx/conf.d/default.conf
 COPY --from=cors_php /var/www/html/public public/

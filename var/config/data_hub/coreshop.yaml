@@ -7,6 +7,7 @@ pimcore_data_hub:
                 name: coreshop
                 description: ''
                 group: ''
+                store: 1
                 sqlObjectCondition: ''
                 modificationDate: 1704015965
                 path: null

@@ -903,8 +903,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/558888f5efae6d34e0219c63b6f300119e5d8276.zip",
-                "reference": "558888f5efae6d34e0219c63b6f300119e5d8276",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/ab23fa36e21f1a7f0952192f7ea3af32d727ff0d.zip",
+                "reference": "ab23fa36e21f1a7f0952192f7ea3af32d727ff0d",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -975,7 +975,7 @@
                 "source": "https://git.e-conomix.at/coreshop/headless-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/headless-bundle/-/issues"
             },
-            "time": "2024-01-04T22:07:49+01:00"
+            "time": "2024-01-08T21:18:11+01:00"
         },
         {
             "name": "coreshop/inbound-email-rules-bundle",

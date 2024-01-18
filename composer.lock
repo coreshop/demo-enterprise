@@ -508,12 +508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "a5baa41d3669e41752a0f8d42fb42dfa53cea4ab"
+                "reference": "44016dea677457accb0d305421632e4ac4395214"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/a5baa41d3669e41752a0f8d42fb42dfa53cea4ab",
-                "reference": "a5baa41d3669e41752a0f8d42fb42dfa53cea4ab",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/44016dea677457accb0d305421632e4ac4395214",
+                "reference": "44016dea677457accb0d305421632e4ac4395214",
                 "shasum": ""
             },
             "require": {
@@ -691,7 +691,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-26T07:13:45+00:00"
+            "time": "2024-01-17T09:45:02+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -765,8 +765,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/2106bb7edf66dd4308f9005c3be4135ae670dd75.zip",
-                "reference": "2106bb7edf66dd4308f9005c3be4135ae670dd75",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/8789f6e8264bbedbdc155952ba20321607fc8a86.zip",
+                "reference": "8789f6e8264bbedbdc155952ba20321607fc8a86",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -806,10 +806,10 @@
             ],
             "authors": [
                 {
-                    "name": "Dominik Pfaffenbauer",
-                    "email": "dominik@pfaffenbauer.at",
-                    "homepage": "https://www.pfaffenbauer.at/",
-                    "role": "Developer"
+                    "name": "CoreShop GmbH",
+                    "email": "info@coreshop.org",
+                    "homepage": "https://www.coreshop.org/",
+                    "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Deposit Bundle",
@@ -824,15 +824,15 @@
                 "source": "https://git.e-conomix.at/coreshop/deposit-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/deposit-bundle/-/issues"
             },
-            "time": "2023-12-27T17:06:04+01:00"
+            "time": "2023-12-28T15:21:49+01:00"
         },
         {
             "name": "coreshop/document-route-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/document-route-bundle/dev-main/0b19f24012598fc6641ab5d844df2f2604588879.zip",
-                "reference": "0b19f24012598fc6641ab5d844df2f2604588879",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/document-route-bundle/dev-main/df3eca6053b29c0d34ff817ba891d7790be9e18b.zip",
+                "reference": "df3eca6053b29c0d34ff817ba891d7790be9e18b",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -896,15 +896,15 @@
                 "source": "https://git.e-conomix.at/coreshop/document-route-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/document-route-bundle/-/issues"
             },
-            "time": "2023-12-14T13:53:46+01:00"
+            "time": "2023-12-28T21:34:23+01:00"
         },
         {
             "name": "coreshop/headless-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/ab23fa36e21f1a7f0952192f7ea3af32d727ff0d.zip",
-                "reference": "ab23fa36e21f1a7f0952192f7ea3af32d727ff0d",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/ca614d473bae31d4bbd1af74b15a552087f270dc.zip",
+                "reference": "ca614d473bae31d4bbd1af74b15a552087f270dc",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -975,15 +975,15 @@
                 "source": "https://git.e-conomix.at/coreshop/headless-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/headless-bundle/-/issues"
             },
-            "time": "2024-01-08T21:18:11+01:00"
+            "time": "2024-01-18T16:24:10+01:00"
         },
         {
             "name": "coreshop/inbound-email-rules-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/inbound-email-rules-bundle/dev-main/1784362372e566fa439b08b593522e8077992f80.zip",
-                "reference": "1784362372e566fa439b08b593522e8077992f80",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/inbound-email-rules-bundle/dev-main/3dbe7faf47d8cf84ba1dd26dc18511f59266d70a.zip",
+                "reference": "3dbe7faf47d8cf84ba1dd26dc18511f59266d70a",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1032,7 +1032,7 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "GPL-3.0-or-later"
+                "proprietary"
             ],
             "authors": [
                 {
@@ -1053,15 +1053,15 @@
                 "source": "https://git.e-conomix.at/coreshop/inbound-email-rules-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/inbound-email-rules-bundle/-/issues"
             },
-            "time": "2023-12-17T15:46:26+01:00"
+            "time": "2023-12-28T21:34:32+01:00"
         },
         {
             "name": "coreshop/loyality-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/ded6598650d0d422a2bd92fb68822654e3aa3564.zip",
-                "reference": "ded6598650d0d422a2bd92fb68822654e3aa3564",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/d276b93424fbf2ccc14de966f6ee9a70ec6c028c.zip",
+                "reference": "d276b93424fbf2ccc14de966f6ee9a70ec6c028c",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1097,7 +1097,7 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "GPL-3.0-or-later"
+                "proprietary"
             ],
             "authors": [
                 {
@@ -1119,7 +1119,7 @@
                 "source": "https://git.e-conomix.at/coreshop/loyalty-bundle/-/tree/main",
                 "issues": "https://git.e-conomix.at/coreshop/loyalty-bundle/-/issues"
             },
-            "time": "2023-12-15T11:27:06+01:00"
+            "time": "2023-12-28T15:25:03+01:00"
         },
         {
             "name": "coreshop/payum-credit-bundle",
@@ -1267,8 +1267,8 @@
             "version": "dev-enterprise",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-enterprise/64872df826e4d9407e420ae5fd1c26675e13050f.zip",
-                "reference": "64872df826e4d9407e420ae5fd1c26675e13050f",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-enterprise/7c2b8106c69d33c3f15349dcf141ea94ed8353e4.zip",
+                "reference": "7c2b8106c69d33c3f15349dcf141ea94ed8353e4",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1325,7 +1325,7 @@
                 "source": "https://git.e-conomix.at/coreshop/WarehouseBundle/-/tree/enterprise",
                 "issues": "https://git.e-conomix.at/coreshop/WarehouseBundle/-/issues"
             },
-            "time": "2023-12-15T11:26:58+01:00"
+            "time": "2023-12-31T12:45:28+01:00"
         },
         {
             "name": "dachcom-digital/emailizr",

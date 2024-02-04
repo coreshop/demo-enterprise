@@ -19,3 +19,5 @@ services:
         resource: '../src/Command/*'
         tags: [ 'console.command' ]
 
+    App\EventListener\:
+        resource: '../src/EventListener/'

@@ -43,7 +43,7 @@ services:
             - traefik.docker.network=cors_dev
 
     php:
-        image: git.e-conomix.at:5050/cors/docker/php-alpine-3.17-fpm:8.1-LATEST
+        image: git.e-conomix.at:5050/cors/docker/php-alpine-3.19-fpm:8.1-5.1.5
         container_name: coreshop4-enterprise-demo-php
         command: 'php-fpm'
         networks:
@@ -56,7 +56,7 @@ services:
             - .:/var/www/html:cached
 
     php-debug:
-        image: git.e-conomix.at:5050/cors/docker/php-alpine-3.17-fpm-debug:8.1-LATEST
+        image: git.e-conomix.at:5050/cors/docker/php-alpine-3.19-fpm-debug:8.1-5.1.5
         command: 'php-fpm'
         entrypoint: xdebug-entrypoint
         container_name: coreshop4-enterprise-demo-php-debug

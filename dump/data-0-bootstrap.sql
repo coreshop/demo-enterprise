@@ -1356,7 +1356,7 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=1514 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1580 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 

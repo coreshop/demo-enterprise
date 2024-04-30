@@ -18,7 +18,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546721,
+   'modificationDate' => 1714508311,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Wishlist',
@@ -86,7 +86,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'regexFlags' => 
             array (
             ),
-             'unique' => false,
+             'unique' => true,
              'showCharCount' => false,
              'width' => '',
              'defaultValueGenerator' => '',

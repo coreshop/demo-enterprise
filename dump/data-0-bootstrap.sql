@@ -3066,6 +3066,7 @@ CREATE TABLE `object_store_cs_order` (
   `subtotalDepositGross` bigint DEFAULT NULL,
   `hasDepositItem` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
+  UNIQUE KEY `u_index_token` (`token`),
   CONSTRAINT `fk_object_store_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -3247,6 +3248,7 @@ CREATE TABLE `object_store_cs_wishlist` (
   `token` varchar(190) DEFAULT NULL,
   `store` int DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
+  UNIQUE KEY `u_index_token` (`token`),
   CONSTRAINT `fk_object_store_cs_wishlist__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

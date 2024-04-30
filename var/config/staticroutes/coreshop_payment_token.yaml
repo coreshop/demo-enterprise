@@ -1,0 +1,14 @@
+pimcore_static_routes:
+    definitions:
+        coreshop_payment_token:
+            name: coreshop_payment_token
+            pattern: '/(\w+)\/shop\/pay\/(.*)$/'
+            reverse: /%%_locale/shop/pay/%%token
+            controller: 'CoreShop\Bundle\PayumBundle\Controller\PaymentController::prepareCaptureAction'
+            variables: '_locale,token'
+            defaults: null
+            siteId: {  }
+            methods: {  }
+            priority: 3
+            creationDate: 1714508310
+            modificationDate: 1714508310

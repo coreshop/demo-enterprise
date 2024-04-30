@@ -10,7 +10,7 @@ variables:
 daily_update:on-schedule:
     stage: build
     image:
-        name: pimcore/pimcore:PHP8.0-cli
+        name: pimcore/pimcore:PHP8.1-cli
         entrypoint: [""]
     rules:
         -   if: $CI_PIPELINE_SOURCE == "schedule"

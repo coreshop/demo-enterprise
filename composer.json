@@ -19,7 +19,8 @@
     "coreshop/payum-credit-bundle": "dev-main",
     "coreshop/voucher-credit-bundle": "dev-main",
     "coreshop/warehouse-bundle": "dev-main",
-    "pimcore/data-hub": "^1.6"
+    "pimcore/data-hub": "^1.6",
+    "symfony/validator": "6.4.6"
   },
   "autoload": {
     "psr-4": {

@@ -18,7 +18,7 @@
     "coreshop/loyality-bundle": "dev-main",
     "coreshop/payum-credit-bundle": "dev-main",
     "coreshop/voucher-credit-bundle": "dev-main",
-    "coreshop/warehouse-bundle": "dev-enterprise",
+    "coreshop/warehouse-bundle": "dev-main",
     "pimcore/data-hub": "^1.6"
   },
   "autoload": {

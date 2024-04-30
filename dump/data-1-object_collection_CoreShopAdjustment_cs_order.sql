@@ -26,4 +26,12 @@ INSERT INTO object_collection_CoreShopAdjustment_cs_order (`id`,`index`,`fieldna
 (194,0,'adjustmentItems','shipping','',1000,1200,0), 
 (194,0,'convertedAdjustmentItems','shipping','',1000,1200,0), 
 (194,1,'adjustmentItems','payment','PaymentProvider fee',0,0,0), 
-(194,1,'convertedAdjustmentItems','payment','PaymentProvider fee',0,0,0);
+(194,1,'convertedAdjustmentItems','payment','PaymentProvider fee',0,0,0), 
+(215,0,'adjustmentItems','shipping','',1000,1200,0), 
+(215,0,'convertedAdjustmentItems','shipping','',1000,1200,0), 
+(218,0,'adjustmentItems','shipping','',1000,1200,0), 
+(218,0,'convertedAdjustmentItems','shipping','',1000,1200,0), 
+(221,0,'adjustmentItems','shipping','',1000,1200,0), 
+(221,0,'convertedAdjustmentItems','shipping','',1000,1200,0), 
+(224,0,'adjustmentItems','shipping','',1000,1200,0), 
+(224,0,'convertedAdjustmentItems','shipping','',1000,1200,0);

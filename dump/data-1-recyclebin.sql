@@ -5,4 +5,5 @@ INSERT INTO recyclebin (`id`,`type`,`subtype`,`path`,`amount`,`date`,`deletedby`
 (2,'document','page','/fr',10,1703162549,'admin'), 
 (3,'document','folder','/b2b/en/shop/email',8,1703692347,'admin'), 
 (4,'document','folder','/b2b/de/shop/email',8,1703692351,'admin'), 
-(5,'object','folder','/coreshop/customers/C',1,1703692827,'admin');
+(5,'object','folder','/coreshop/customers/C',1,1703692827,'admin'), 
+(6,'object','folder','/coreshop/carts/2023',18,1704227256,'admin');

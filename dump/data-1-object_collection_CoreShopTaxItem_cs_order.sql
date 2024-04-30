@@ -12,4 +12,12 @@ INSERT INTO object_collection_CoreShopTaxItem_cs_order (`id`,`index`,`fieldname`
 (185,0,'convertedTaxes','20AT',20,7300,1), 
 (185,0,'taxes','20AT',20,7300,1), 
 (194,0,'convertedTaxes','20AT',20,7300,1), 
-(194,0,'taxes','20AT',20,7300,1);
+(194,0,'taxes','20AT',20,7300,1), 
+(215,0,'convertedTaxes','20AT',20,7432,1), 
+(215,0,'taxes','20AT',20,7432,1), 
+(218,0,'convertedTaxes','20AT',20,7432,1), 
+(218,0,'taxes','20AT',20,7432,1), 
+(221,0,'convertedTaxes','20AT',20,7432,1), 
+(221,0,'taxes','20AT',20,7432,1), 
+(224,0,'convertedTaxes','20AT',20,7432,1), 
+(224,0,'taxes','20AT',20,7432,1);

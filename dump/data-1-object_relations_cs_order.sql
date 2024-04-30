@@ -28,4 +28,8 @@ INSERT INTO object_relations_cs_order (`id`,`src_id`,`dest_id`,`type`,`fieldname
 (231,194,197,'object','items',1,'object','','0'), 
 (232,194,115,'object','customer',0,'object','','0'), 
 (233,194,201,'object','shippingAddress',0,'object','','0'), 
-(234,194,202,'object','invoiceAddress',0,'object','','0');
+(234,194,202,'object','invoiceAddress',0,'object','','0'), 
+(235,215,217,'object','items',1,'object','','0'), 
+(236,218,220,'object','items',1,'object','','0'), 
+(237,221,223,'object','items',1,'object','','0'), 
+(238,224,226,'object','items',1,'object','','0');

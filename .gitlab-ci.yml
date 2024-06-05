@@ -10,12 +10,12 @@ variables:
 daily_update:on-schedule:
     stage: build
     image:
-        name: pimcore/pimcore:PHP8.1-cli
-        entrypoint: [""]
+        name: git.e-conomix.at:5050/cors/docker/php-alpine-3.19-fpm:8.1-5.1.7
+        entrypoint: [ "" ]
     rules:
         -   if: $CI_PIPELINE_SOURCE == "schedule"
     before_script:
-        - apt-get update && apt-get install -y git
+        - apk add git
         # Clone the repository via HTTPS inside a new directory
         - git remote set-url origin "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
 

@@ -8018,20 +8018,20 @@
         },
         {
             "name": "pimcore/compatibility-bridge-v10",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/compatibility-bridge-v10.git",
-                "reference": "598c018fc74f56e6580904db8c7b2ac17375a9af"
+                "reference": "bb14d4d12b3c54a8836d2813cedd3ef8b38ea04c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/compatibility-bridge-v10/zipball/598c018fc74f56e6580904db8c7b2ac17375a9af",
-                "reference": "598c018fc74f56e6580904db8c7b2ac17375a9af",
+                "url": "https://api.github.com/repos/pimcore/compatibility-bridge-v10/zipball/bb14d4d12b3c54a8836d2813cedd3ef8b38ea04c",
+                "reference": "bb14d4d12b3c54a8836d2813cedd3ef8b38ea04c",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
             },
             "type": "pimcore-bundle",
             "autoload": {
@@ -8046,9 +8046,9 @@
             "description": "Pimcore Compatibility Bridge provides class aliases for the classes which were moved/updated and are necessary for backwards compatibility.",
             "support": {
                 "issues": "https://github.com/pimcore/compatibility-bridge-v10/issues",
-                "source": "https://github.com/pimcore/compatibility-bridge-v10/tree/v1.0.0"
+                "source": "https://github.com/pimcore/compatibility-bridge-v10/tree/v1.1.0"
             },
-            "time": "2023-04-12T07:23:40+00:00"
+            "time": "2024-04-26T10:07:17+00:00"
         },
         {
             "name": "pimcore/data-hub",
@@ -16332,16 +16332,16 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "v15.12.0",
+            "version": "v15.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "06720d48bfa436bfe68285e4588c6f15f99f893b"
+                "reference": "d8ea59bb02af10fd58a1192f7a781ae8aedac2d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/06720d48bfa436bfe68285e4588c6f15f99f893b",
-                "reference": "06720d48bfa436bfe68285e4588c6f15f99f893b",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/d8ea59bb02af10fd58a1192f7a781ae8aedac2d6",
+                "reference": "d8ea59bb02af10fd58a1192f7a781ae8aedac2d6",
                 "shasum": ""
             },
             "require": {
@@ -16354,7 +16354,7 @@
                 "amphp/http-server": "^2.1",
                 "dms/phpunit-arraysubset-asserts": "dev-master",
                 "ergebnis/composer-normalize": "^2.28",
-                "friendsofphp/php-cs-fixer": "3.57.1",
+                "friendsofphp/php-cs-fixer": "3.58.1",
                 "mll-lab/php-cs-fixer-config": "^5",
                 "nyholm/psr7": "^1.5",
                 "phpbench/phpbench": "^1.2",
@@ -16394,7 +16394,7 @@
             ],
             "support": {
                 "issues": "https://github.com/webonyx/graphql-php/issues",
-                "source": "https://github.com/webonyx/graphql-php/tree/v15.12.0"
+                "source": "https://github.com/webonyx/graphql-php/tree/v15.12.1"
             },
             "funding": [
                 {
@@ -16402,7 +16402,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-06-10T09:55:16+00:00"
+            "time": "2024-06-11T12:48:47+00:00"
         },
         {
             "name": "willdurand/jsonp-callback-validator",

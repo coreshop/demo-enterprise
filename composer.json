@@ -23,7 +23,7 @@
     "coreshop/voucher-credit-bundle": "dev-main",
     "coreshop/warehouse-bundle": "dev-main",
     "pimcore/data-hub": "^1.6",
-    "rybakit/twig-deferred-extension": "*",
+    "rybakit/twig-deferred-extension": "^3.0",
     "symfony/validator": "6.4.6"
   },
   "autoload": {

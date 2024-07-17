@@ -21,3 +21,5 @@ services:
 
     App\EventListener\:
         resource: '../src/EventListener/'
+
+    Twig\DeferredExtension\DeferredExtension: ~

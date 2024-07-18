@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef951f3fd7c4c56e791cdfe65e9aa84c",
+    "content-hash": "d1009cf3bfec29ce5b3007a5c3631e6c",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -510,16 +510,16 @@
         },
         {
             "name": "coreshop/core-shop",
-            "version": "4.0.x-dev",
+            "version": "4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "abfef1477749843b09cc7e09badcf2be451d935c"
+                "reference": "c285dfae35cb91dd46ec632c4cd95aaedea20caf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/abfef1477749843b09cc7e09badcf2be451d935c",
-                "reference": "abfef1477749843b09cc7e09badcf2be451d935c",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/c285dfae35cb91dd46ec632c4cd95aaedea20caf",
+                "reference": "c285dfae35cb91dd46ec632c4cd95aaedea20caf",
                 "shasum": ""
             },
             "require": {
@@ -558,6 +558,7 @@
             },
             "conflict": {
                 "jms/serializer-bundle": "4.1.0",
+                "pimcore/pimcore": "11.3.1",
                 "twig/twig": "^3.9.0"
             },
             "replace": {
@@ -641,7 +642,6 @@
             "suggest": {
                 "dpfaffenbauer/process-manager": "Allows to start Processes from within Pimcore UI and also tracks the status."
             },
-            "default-branch": true,
             "type": "pimcore-bundle",
             "extra": {
                 "symfony-bin-dir": "bin",
@@ -691,7 +691,7 @@
             ],
             "support": {
                 "issues": "https://github.com/coreshop/CoreShop/issues",
-                "source": "https://github.com/coreshop/CoreShop/tree/4.0"
+                "source": "https://github.com/coreshop/CoreShop/tree/4.0.8"
             },
             "funding": [
                 {
@@ -699,7 +699,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-15T12:42:14+00:00"
+            "time": "2024-07-18T14:37:20+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -3229,6 +3229,67 @@
             "time": "2023-09-29T14:03:20+00:00"
         },
         {
+            "name": "ezyang/htmlpurifier",
+            "version": "v4.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "bbc513d79acf6691fa9cf10f192c90dd2957f18c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/bbc513d79acf6691fa9cf10f192c90dd2957f18c",
+                "reference": "bbc513d79acf6691fa9cf10f192c90dd2957f18c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
+            },
+            "require-dev": {
+                "cerdic/css-tidy": "^1.7 || ^2.0",
+                "simpletest/simpletest": "dev-master"
+            },
+            "suggest": {
+                "cerdic/css-tidy": "If you want to use the filter 'Filter.ExtractStyleBlocks'.",
+                "ext-bcmath": "Used for unit conversion and imagecrash protection",
+                "ext-iconv": "Converts text to and from non-UTF-8 encodings",
+                "ext-tidy": "Used for pretty-printing HTML"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "library/HTMLPurifier.composer.php"
+                ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
+                "exclude-from-classmap": [
+                    "/library/HTMLPurifier/Language/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Edward Z. Yang",
+                    "email": "admin@htmlpurifier.org",
+                    "homepage": "http://ezyang.com"
+                }
+            ],
+            "description": "Standards compliant HTML filter written in PHP",
+            "homepage": "http://htmlpurifier.org/",
+            "keywords": [
+                "html"
+            ],
+            "support": {
+                "issues": "https://github.com/ezyang/htmlpurifier/issues",
+                "source": "https://github.com/ezyang/htmlpurifier/tree/v4.17.0"
+            },
+            "time": "2023-11-17T15:01:25+00:00"
+        },
+        {
             "name": "fakerphp/faker",
             "version": "v1.23.1",
             "source": {
@@ -3725,22 +3786,22 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.8.1",
+            "version": "7.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "41042bc7ab002487b876a0683fc8dce04ddce104"
+                "reference": "84ac2b2afc44e40d3e8e658a45d68d6d20437612"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/41042bc7ab002487b876a0683fc8dce04ddce104",
-                "reference": "41042bc7ab002487b876a0683fc8dce04ddce104",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/84ac2b2afc44e40d3e8e658a45d68d6d20437612",
+                "reference": "84ac2b2afc44e40d3e8e658a45d68d6d20437612",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^1.5.3 || ^2.0.1",
-                "guzzlehttp/psr7": "^1.9.1 || ^2.5.1",
+                "guzzlehttp/promises": "^1.5.3 || ^2.0.3",
+                "guzzlehttp/psr7": "^2.7.0",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0",
                 "symfony/deprecation-contracts": "^2.2 || ^3.0"
@@ -3751,9 +3812,9 @@
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
                 "ext-curl": "*",
-                "php-http/client-integration-tests": "dev-master#2c025848417c1135031fdf9c728ee53d0a7ceaee as 3.0.999",
+                "guzzle/client-integration-tests": "3.0.2",
                 "php-http/message-factory": "^1.1",
-                "phpunit/phpunit": "^8.5.36 || ^9.6.15",
+                "phpunit/phpunit": "^8.5.39 || ^9.6.20",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
@@ -3831,7 +3892,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.8.1"
+                "source": "https://github.com/guzzle/guzzle/tree/7.9.0"
             },
             "funding": [
                 {
@@ -3847,20 +3908,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-03T20:35:24+00:00"
+            "time": "2024-07-18T11:52:56+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223"
+                "reference": "6ea8dd08867a2a42619d65c3deb2c0fcbf81c8f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/bbff78d96034045e58e13dedd6ad91b5d1253223",
-                "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/6ea8dd08867a2a42619d65c3deb2c0fcbf81c8f8",
+                "reference": "6ea8dd08867a2a42619d65c3deb2c0fcbf81c8f8",
                 "shasum": ""
             },
             "require": {
@@ -3868,7 +3929,7 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
-                "phpunit/phpunit": "^8.5.36 || ^9.6.15"
+                "phpunit/phpunit": "^8.5.39 || ^9.6.20"
             },
             "type": "library",
             "extra": {
@@ -3914,7 +3975,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.0.2"
+                "source": "https://github.com/guzzle/promises/tree/2.0.3"
             },
             "funding": [
                 {
@@ -3930,20 +3991,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-03T20:19:20+00:00"
+            "time": "2024-07-18T10:29:17+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.6.2",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221"
+                "reference": "a70f5c95fb43bc83f07c9c948baa0dc1829bf201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/45b30f99ac27b5ca93cb4831afe16285f57b8221",
-                "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/a70f5c95fb43bc83f07c9c948baa0dc1829bf201",
+                "reference": "a70f5c95fb43bc83f07c9c948baa0dc1829bf201",
                 "shasum": ""
             },
             "require": {
@@ -3958,8 +4019,8 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
-                "http-interop/http-factory-tests": "^0.9",
-                "phpunit/phpunit": "^8.5.36 || ^9.6.15"
+                "http-interop/http-factory-tests": "0.9.0",
+                "phpunit/phpunit": "^8.5.39 || ^9.6.20"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
@@ -4030,7 +4091,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.6.2"
+                "source": "https://github.com/guzzle/psr7/tree/2.7.0"
             },
             "funding": [
                 {
@@ -4046,7 +4107,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-03T20:05:35+00:00"
+            "time": "2024-07-18T11:15:46+00:00"
         },
         {
             "name": "http-interop/http-factory-guzzle",
@@ -7657,16 +7718,16 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "2.1.0",
+            "version": "1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "dbed77bd3a0f68f96c0dd68ad4499d5674fecc3e"
+                "reference": "fde2ccf55eaef7e86021ff1acce26479160a0fa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/dbed77bd3a0f68f96c0dd68ad4499d5674fecc3e",
-                "reference": "dbed77bd3a0f68f96c0dd68ad4499d5674fecc3e",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/fde2ccf55eaef7e86021ff1acce26479160a0fa0",
+                "reference": "fde2ccf55eaef7e86021ff1acce26479160a0fa0",
                 "shasum": ""
             },
             "require": {
@@ -7683,24 +7744,25 @@
                 "ext-xmlwriter": "*",
                 "ext-zip": "*",
                 "ext-zlib": "*",
+                "ezyang/htmlpurifier": "^4.15",
                 "maennchen/zipstream-php": "^2.1 || ^3.0",
                 "markbaker/complex": "^3.0",
                 "markbaker/matrix": "^3.0",
-                "php": "^8.0",
+                "php": "^7.4 || ^8.0",
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
                 "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "dev-main",
-                "dompdf/dompdf": "^2.0",
+                "dompdf/dompdf": "^1.0 || ^2.0",
                 "friendsofphp/php-cs-fixer": "^3.2",
                 "mitoteam/jpgraph": "^10.3",
                 "mpdf/mpdf": "^8.1.1",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
-                "phpunit/phpunit": "^9.6",
+                "phpunit/phpunit": "^8.5 || ^9.0 || ^10.0",
                 "squizlabs/php_codesniffer": "^3.7",
                 "tecnickcom/tcpdf": "^6.5"
             },
@@ -7755,9 +7817,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
-                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/2.1.0"
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/1.29.0"
             },
-            "time": "2024-05-11T04:17:56+00:00"
+            "time": "2023-06-14T22:48:31+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -7918,27 +7980,22 @@
         },
         {
             "name": "pimcore/admin-ui-classic-bundle",
-            "version": "v1.5.1",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/admin-ui-classic-bundle.git",
-                "reference": "ff4817e9645fd84d88c50670af2cce94826ff577"
+                "reference": "f80424fd38f3ceafa01a06c4b1be54076602986c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/ff4817e9645fd84d88c50670af2cce94826ff577",
-                "reference": "ff4817e9645fd84d88c50670af2cce94826ff577",
+                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/f80424fd38f3ceafa01a06c4b1be54076602986c",
+                "reference": "f80424fd38f3ceafa01a06c4b1be54076602986c",
                 "shasum": ""
             },
             "require": {
                 "cbschuld/browser.php": "^1.9.6",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
-                "phpoffice/phpspreadsheet": "^1.24 || ^2.1",
-                "pimcore/pimcore": "~11.3.0",
+                "pimcore/pimcore": "~11.2.0",
                 "symfony/webpack-encore-bundle": "^1.13.2"
-            },
-            "conflict": {
-                "symfony/string": "<6.0"
             },
             "require-dev": {
                 "codeception/codeception": "^5.0.11",
@@ -7951,9 +8008,6 @@
             },
             "type": "pimcore-bundle",
             "extra": {
-                "branch-alias": {
-                    "1.x-dev": "1.5.x-dev"
-                },
                 "pimcore": {
                     "bundles": [
                         "Pimcore\\Bundle\\AdminBundle\\PimcoreAdminBundle"
@@ -7971,9 +8025,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pimcore/admin-ui-classic-bundle/issues",
-                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.5.1"
+                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.4.5"
             },
-            "time": "2024-07-15T12:09:58+00:00"
+            "time": "2024-07-02T10:14:27+00:00"
         },
         {
             "name": "pimcore/compatibility-bridge-v10",
@@ -8168,16 +8222,16 @@
         },
         {
             "name": "pimcore/pimcore",
-            "version": "v11.3.1",
+            "version": "v11.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/pimcore.git",
-                "reference": "3ecd39f21dbdd25ffdf4bec6e2c860eccfd3d008"
+                "reference": "f8b92d4e74b9d93039069572ec5ae238a3031fb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/3ecd39f21dbdd25ffdf4bec6e2c860eccfd3d008",
-                "reference": "3ecd39f21dbdd25ffdf4bec6e2c860eccfd3d008",
+                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/f8b92d4e74b9d93039069572ec5ae238a3031fb3",
+                "reference": "f8b92d4e74b9d93039069572ec5ae238a3031fb3",
                 "shasum": ""
             },
             "require": {
@@ -8186,11 +8240,10 @@
                 "defuse/php-encryption": "^2.2.0",
                 "doctrine/annotations": "^1.13.1 || ^2.0",
                 "doctrine/collections": "^1.6.8",
-                "doctrine/dbal": "^3.8",
+                "doctrine/dbal": "^3.6",
                 "doctrine/doctrine-bundle": "^2.6.3",
                 "doctrine/doctrine-migrations-bundle": "^3.2.2",
                 "doctrine/inflector": "^2.0.2",
-                "doctrine/orm": "^2.15",
                 "doctrine/persistence": "^3.0.3",
                 "egulias/email-validator": "^3.0.0",
                 "endroid/qr-code": "^4",
@@ -8225,6 +8278,7 @@
                 "onnov/detect-encoding": "^2.0",
                 "pear/net_url2": "^2.2",
                 "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+                "phpoffice/phpspreadsheet": "^1.24",
                 "presta/sitemap-bundle": "^3.3",
                 "rybakit/twig-deferred-extension": "^3.0",
                 "sabre/dav": "^4.1.2",
@@ -8265,7 +8319,6 @@
                 "symfony/security-core": "^6.4",
                 "symfony/security-http": "^6.4",
                 "symfony/serializer": "^6.4",
-                "symfony/string": "^6.4",
                 "symfony/templating": "^6.4",
                 "symfony/translation": "^6.4",
                 "symfony/twig-bridge": "^6.4",
@@ -8284,7 +8337,6 @@
                 "umpirsky/country-list": "^2.0.6"
             },
             "conflict": {
-                "pimcore/admin-ui-classic-bundle": "<1.5",
                 "sabre/dav": "4.2.2",
                 "symfony/symfony": "*",
                 "thecodingmachine/safe": "<2.0",
@@ -8296,7 +8348,7 @@
                 "codeception/module-symfony": "^3.1.0",
                 "composer/composer": "*",
                 "ergebnis/phpstan-rules": "^2.0",
-                "gotenberg/gotenberg-php": "^1.1 || ^2.4",
+                "gotenberg/gotenberg-php": "^1.1 || ^2.0",
                 "phpstan/phpstan": "1.11.5",
                 "phpstan/phpstan-symfony": "^1.3.5",
                 "phpunit/phpunit": "^9.3",
@@ -8311,7 +8363,7 @@
                 "ext-redis": "*",
                 "ext-sockets": "*",
                 "gotenberg/gotenberg-php": "^2.0 - Required for generating pdf via Gotenberg in assets preview (LibreOffice), page preview, version diff and web2print",
-                "pimcore/admin-ui-classic-bundle": "^1.5.0",
+                "pimcore/admin-ui-classic-bundle": "^1.4.0",
                 "symfony/dotenv": "Required for loading environment vars from .env files",
                 "webmozarts/console-parallelization": "Required for parallelization of console commands"
             },
@@ -8338,8 +8390,7 @@
                     "Pimcore\\Bundle\\StaticRoutesBundle\\": "bundles/StaticRoutesBundle/src/",
                     "Pimcore\\Bundle\\CustomReportsBundle\\": "bundles/CustomReportsBundle/src/",
                     "Pimcore\\Bundle\\ApplicationLoggerBundle\\": "bundles/ApplicationLoggerBundle/src/",
-                    "Pimcore\\Bundle\\SimpleBackendSearchBundle\\": "bundles/SimpleBackendSearchBundle/src/",
-                    "Pimcore\\Bundle\\GenericExecutionEngineBundle\\": "bundles/GenericExecutionEngineBundle/src/"
+                    "Pimcore\\Bundle\\SimpleBackendSearchBundle\\": "bundles/SimpleBackendSearchBundle/src/"
                 },
                 "classmap": [
                     "lib/Pimcore.php"
@@ -8377,7 +8428,7 @@
                 "source": "https://github.com/pimcore/pimcore",
                 "wiki": "https://pimcore.com/docs/latest/"
             },
-            "time": "2024-07-16T10:02:16+00:00"
+            "time": "2024-07-02T07:52:52+00:00"
         },
         {
             "name": "presta/sitemap-bundle",
@@ -16495,7 +16546,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "coreshop/batch-messenger-bundle": 20,
-        "coreshop/core-shop": 20,
         "coreshop/customer-cluster-bundle": 20,
         "coreshop/deposit-bundle": 20,
         "coreshop/document-route-bundle": 20,

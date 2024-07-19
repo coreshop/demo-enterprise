@@ -1210,8 +1210,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/2a1591cb73b24d035598678b1103592c48cea13e.zip",
-                "reference": "2a1591cb73b24d035598678b1103592c48cea13e",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/d30b3e8bf44628544871a6fc302e0317852ae237.zip",
+                "reference": "d30b3e8bf44628544871a6fc302e0317852ae237",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1272,7 +1272,7 @@
                 "source": "https://github.com/coreshop/quick-order-bundle/tree/main",
                 "issues": "https://github.com/coreshop/quick-order-bundle/issues"
             },
-            "time": "2024-07-19T07:32:31+00:00"
+            "time": "2024-07-19T10:23:27+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",

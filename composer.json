@@ -20,6 +20,7 @@
     "coreshop/inbound-email-rules-bundle": "3.0.x-dev",
     "coreshop/loyality-bundle": "dev-main",
     "coreshop/payum-credit-bundle": "dev-main",
+    "coreshop/quick-order-bundle": "dev-main",
     "coreshop/voucher-credit-bundle": "dev-main",
     "coreshop/warehouse-bundle": "dev-main",
     "pimcore/data-hub": "^1.6",

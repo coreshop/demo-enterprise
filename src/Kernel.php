@@ -34,6 +34,7 @@ class Kernel extends PimcoreKernel
         $collection->addBundle(new \CoreShop\Bundle\CoreBundle\CoreShopCoreBundle(), 1000);
         $collection->addBundle(new \Pimcore\Bundle\DataHubBundle\PimcoreDataHubBundle());
         $collection->addBundle(new \CoreShop\Bundle\HeadlessBundle\CoreShopHeadlessBundle());
+        $collection->addBundle(new \CoreShop\Bundle\QuickOrderBundle\CoreShopQuickOrderBundle());
         $collection->addBundle(new \Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle());
     }
 }

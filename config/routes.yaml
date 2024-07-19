@@ -1,6 +1,9 @@
 _pimcore:
     resource: "@PimcoreCoreBundle/config/routing.yaml"
 
+_coreshop_quick_order:
+    resource: "@CoreShopQuickOrderBundle/Resources/config/routing.yml"
+
 app:
     resource: "../src/Controller/"
     type: annotation

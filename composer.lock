@@ -911,8 +911,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/f0de22a467868bf37bf1900c706f4704c1664104.zip",
-                "reference": "f0de22a467868bf37bf1900c706f4704c1664104",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/8929502eb9130f60f4765a13148b8c05dcea23a8.zip",
+                "reference": "8929502eb9130f60f4765a13148b8c05dcea23a8",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -993,7 +993,7 @@
                 "source": "https://github.com/coreshop/headless-bundle/tree/main",
                 "issues": "https://github.com/coreshop/headless-bundle/issues"
             },
-            "time": "2024-07-12T08:49:22+00:00"
+            "time": "2024-07-29T12:02:23+00:00"
         },
         {
             "name": "coreshop/inbound-email-rules-bundle",
@@ -3751,7 +3751,7 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.365.0",
+            "version": "v0.366.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
@@ -3789,7 +3789,7 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.365.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.366.0"
             },
             "time": "2024-07-11T01:08:44+00:00"
         },

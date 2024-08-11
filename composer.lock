@@ -7892,16 +7892,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.39",
+            "version": "3.0.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "211ebc399c6e73c225a018435fe5ae209d1d1485"
+                "reference": "3dd2561d14ed48c03fc30322df1ad46dbac85ea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/211ebc399c6e73c225a018435fe5ae209d1d1485",
-                "reference": "211ebc399c6e73c225a018435fe5ae209d1d1485",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/3dd2561d14ed48c03fc30322df1ad46dbac85ea6",
+                "reference": "3dd2561d14ed48c03fc30322df1ad46dbac85ea6",
                 "shasum": ""
             },
             "require": {
@@ -7982,7 +7982,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.39"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.40"
             },
             "funding": [
                 {
@@ -7998,7 +7998,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-24T06:27:33+00:00"
+            "time": "2024-08-11T16:34:00+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",

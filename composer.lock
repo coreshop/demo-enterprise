@@ -510,16 +510,16 @@
         },
         {
             "name": "coreshop/core-shop",
-            "version": "4.0.8",
+            "version": "4.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "c285dfae35cb91dd46ec632c4cd95aaedea20caf"
+                "reference": "ba055f0824f40a9e200ca35f9d64922df22609e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/c285dfae35cb91dd46ec632c4cd95aaedea20caf",
-                "reference": "c285dfae35cb91dd46ec632c4cd95aaedea20caf",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/ba055f0824f40a9e200ca35f9d64922df22609e2",
+                "reference": "ba055f0824f40a9e200ca35f9d64922df22609e2",
                 "shasum": ""
             },
             "require": {
@@ -549,6 +549,7 @@
                 "stof/doctrine-extensions-bundle": "^1.6",
                 "sylius/theme-bundle": "^2.2",
                 "symfony/dotenv": "^6.3",
+                "symfony/form": "^6.3",
                 "symfony/http-client": "^6.3",
                 "symfony/intl": "^6.3",
                 "symfony/notifier": "^6.3",
@@ -691,7 +692,7 @@
             ],
             "support": {
                 "issues": "https://github.com/coreshop/CoreShop/issues",
-                "source": "https://github.com/coreshop/CoreShop/tree/4.0.8"
+                "source": "https://github.com/coreshop/CoreShop/tree/4.0.9"
             },
             "funding": [
                 {
@@ -699,7 +700,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-18T14:37:20+00:00"
+            "time": "2024-08-12T11:10:16+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -3751,7 +3752,7 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.367.0",
+            "version": "v0.368.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
@@ -3789,7 +3790,7 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.367.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.368.0"
             },
             "time": "2024-07-11T01:08:44+00:00"
         },
@@ -7892,16 +7893,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.40",
+            "version": "3.0.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "3dd2561d14ed48c03fc30322df1ad46dbac85ea6"
+                "reference": "621c73f7dcb310b61de34d1da4c4204e8ace6ceb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/3dd2561d14ed48c03fc30322df1ad46dbac85ea6",
-                "reference": "3dd2561d14ed48c03fc30322df1ad46dbac85ea6",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/621c73f7dcb310b61de34d1da4c4204e8ace6ceb",
+                "reference": "621c73f7dcb310b61de34d1da4c4204e8ace6ceb",
                 "shasum": ""
             },
             "require": {
@@ -7982,7 +7983,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.40"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.41"
             },
             "funding": [
                 {
@@ -7998,7 +7999,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-11T16:34:00+00:00"
+            "time": "2024-08-12T00:13:54+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",

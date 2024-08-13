@@ -23,8 +23,6 @@ use CoreShop\Component\Index\Filter\FilterProcessorInterface;
 use CoreShop\Component\Index\Listing\ListingInterface;
 use CoreShop\Component\Index\Listing\OrderAwareListingInterface;
 use CoreShop\Component\Index\Model\FilterInterface;
-use GeoIp2\Database\Reader;
-use GeoIp2\Exception\AddressNotFoundException;
 use Pimcore\Extension\Document\Areabrick\AbstractTemplateAreabrick;
 use Pimcore\Extension\Document\Areabrick\EditableDialogBoxConfiguration;
 use Pimcore\Extension\Document\Areabrick\EditableDialogBoxInterface;
@@ -164,8 +162,6 @@ final class LocationMap extends AbstractTemplateAreabrick implements EditableDia
             if (array_key_exists('coordinates__coordinates', $currentFilter)) {
                 $coordinates = $currentFilter['coordinates__coordinates'];
             } else {
-                $coordinates = $this->getGeoLocationFromIP($request);
-
                 if ($request->request->get('longitude') && $request->request->get('latitude')) {
                     /**
                      * @var float $latitude
@@ -340,61 +336,6 @@ final class LocationMap extends AbstractTemplateAreabrick implements EditableDia
         }
 
         return $viewResult;
-    }
-
-    protected function getGeoLocationFromIP(Request $request): Coordinate|null
-    {
-        // TODO: where to get the GeoListe2-City.mmdb from?
-        $geoDbFile = PIMCORE_CONFIGURATION_DIRECTORY.'/GeoLite2-City.mmdb';
-        $clientIp = $request->getClientIp();
-
-        if (!$clientIp) {
-            return null;
-        }
-
-        if (!$this->checkIfIpIsPrivate($clientIp)) {
-            $reader = new Reader($geoDbFile);
-
-            try {
-                $record = $reader->city($clientIp);
-
-                if (!$record->location->latitude || !$record->location->longitude) {
-                    return null;
-                }
-
-                return new Coordinate($record->location->latitude, $record->location->longitude);
-            } catch (AddressNotFoundException) {
-                return null;
-            }
-        }
-
-        return null;
-    }
-
-    private function checkIfIpIsPrivate(string $clientIp): bool
-    {
-        $priAddrs = [
-            '10.0.0.0|10.255.255.255', // single class A network
-            '172.16.0.0|172.31.255.255', // 16 contiguous class B network
-            '192.168.0.0|192.168.255.255', // 256 contiguous class C network
-            '169.254.0.0|169.254.255.255', // Link-local address also refered to as Automatic Private IP Addressing
-            '127.0.0.0|127.255.255.255', // localhost
-        ];
-
-        $longIp = ip2long($clientIp);
-
-        if (-1 != $longIp) {
-            foreach ($priAddrs as $priAddr) {
-                [$start, $end] = explode('|', $priAddr);
-
-                // IF IS PRIVATE
-                if ($longIp >= ip2long($start) && $longIp <= ip2long($end)) {
-                    return true;
-                }
-            }
-        }
-
-        return false;
     }
 
     public function getEditableDialogBoxConfiguration(

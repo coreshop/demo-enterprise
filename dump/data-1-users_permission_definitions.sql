@@ -1,7 +1,8 @@
 
 SET NAMES utf8mb4;
 
-INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('asset_metadata',''), 
+INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('application_logging','Pimcore Application Logger Bundle'), 
+('asset_metadata',''), 
 ('assets',''), 
 ('classes',''), 
 ('classificationstore',''), 
@@ -54,6 +55,7 @@ INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('asset_metad
 ('documents',''), 
 ('emails',''), 
 ('fieldcollections',''), 
+('http_errors','Pimcore Seo Bundle'), 
 ('newsletters','Pimcore Newsletter Bundle'), 
 ('notes_events',''), 
 ('notifications',''), 
@@ -70,8 +72,11 @@ INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('asset_metad
 ('redirects',''), 
 ('reports','Pimcore Custom Reports Bundle'), 
 ('reports_config','Pimcore Custom Reports Bundle'), 
+('robots.txt','Pimcore Seo Bundle'), 
+('routes','Pimcore Static Routes Bundle'), 
 ('seemode',''), 
 ('selectoptions',''), 
+('seo_document_editor','Pimcore Seo Bundle'), 
 ('share_configurations',''), 
 ('sites',''), 
 ('system_settings',''), 
@@ -82,4 +87,5 @@ INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('asset_metad
 ('translations',''), 
 ('users',''), 
 ('website_settings',''), 
-('workflow_details','');
+('workflow_details',''), 
+('xliff_import_export','Pimcore Xliff Bundle');

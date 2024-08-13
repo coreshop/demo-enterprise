@@ -1,0 +1,25 @@
+{% if values|length > 0 %}
+    {% set id_prefix = id_prefix is defined ? id_prefix ~ '-' : '' %}
+
+    <div class="filter-group filter-group-geo-country">
+        {% if values %}
+            <div class="mb-3">
+                <label class="form-check-label" for="{{ id_prefix ~ fieldName }}">
+                    {{ (label)|trans }}
+                </label>
+                <select required class="form-control" id="{{ id_prefix ~ fieldName }}" name="{{ fieldName }}" aria-label="{{ (label)|trans }}">
+                    <option disabled{% if not currentValue %} selected{% endif %} value="">{{ (label ~ '_choose')|trans }}</option>
+                    {% for value in values %}
+                        {% if value.value %}
+                            {% set country_value = value.value|split(':') %}
+                            <option value="{{ value.value }}" {% if currentValue == value.value %}selected{% endif %}>{{ country_value.1 }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
+
+
+

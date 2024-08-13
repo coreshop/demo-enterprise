@@ -1,0 +1,9 @@
+demo:
+    bricks:
+        location_map:
+            country: "Country"
+            radius:
+                radius: "Radius"
+                post_code: "Post code"
+            country_choose: "Choose country"
+

@@ -1,0 +1,10 @@
+{% if locations|length %}
+    {% for location in locations %}
+        {% include 'areas/location-map/include/list_entry.html.twig' with {
+            location: location,
+            coordinates: coordinates,
+        } %}
+    {% endfor %}
+{% else %}
+    {% include 'areas/location-map/include/no_result.html.twig' %}
+{% endif %}

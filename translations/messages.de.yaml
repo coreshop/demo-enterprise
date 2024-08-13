@@ -1,0 +1,8 @@
+demo:
+    bricks:
+        location_map:
+            country: "Land"
+            radius:
+                radius: "Radius"
+                post_code: "PLZ"
+            country_choose: "Land auswählen"

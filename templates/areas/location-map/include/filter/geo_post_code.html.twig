@@ -1,0 +1,10 @@
+{% set id_prefix = id_prefix is defined ? id_prefix ~ '-' : '' %}
+
+<div class="filter-group filter-group-geo-post-code">
+    <div class="form-floating mb-3">
+        <input class="form-control" id="{{ id_prefix ~ fieldName }}" name="{{ fieldName }}" placeholder="{{ (label)|trans }}" value="{{ value }}" aria-label="{{ (label)|trans }}" />
+        <label class="form-check-label" for="{{ id_prefix ~ fieldName }}">
+            {{ (label)|trans }}
+        </label>
+    </div>
+</div>

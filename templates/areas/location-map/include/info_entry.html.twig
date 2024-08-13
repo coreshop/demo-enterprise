@@ -1,0 +1,42 @@
+<div class="info-entry">
+    {% if location.name %}
+        <div class="info-entry__name">
+            <h3 class="h6">
+                {{ location.name }}
+            </h3>
+        </div>
+    {% endif %}
+    {% if location.address %}
+        <div class="info-entry__address-container">
+            <span class="info-entry__address">{{ location.address }}</span>
+        </div>
+        <div class="info-entry__route-container">
+            <a class="info-entry__route" target="_blank" href="http://maps.google.com/maps?daddr={{ location.address|url_encode }}&sll={{ location.coordinatesText }}">
+                {{ 'Route'|trans }}
+            </a>
+        </div>
+    {% endif %}
+    {% if location.phone %}
+        <div class="info-entry__phone-container">
+            <span class="info-entry__phone">
+                <a class="text-decoration-none" href="tel:{{ location.phone|replace({' ': ''}) }}">{{ location.phone }}</a>
+            </span>
+        </div>
+    {% endif %}
+    {% if location.email %}
+        <div class="info-entry__email-container">
+            <span class="info-entry__email">
+                <a class="text-decoration-none" href="mailto:{{ location.email }}">{{ location.email }}</a>
+            </span>
+        </div>
+    {% endif %}
+    {% if location.website %}
+        <div class="info-entry__website-container">
+            <span class="info-entry__website">
+                {% set website_name = location.website|replace({'http://': '', 'https://': ''}) %}
+                {% set website_url = 'https://' ~ website_name %}
+                <a class="text-decoration-none" href="{{ website_url }}" target="_blank">{{ website_name }}</a>
+            </span>
+        </div>
+    {% endif %}
+</div>

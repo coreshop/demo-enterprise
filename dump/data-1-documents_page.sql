@@ -10,4 +10,6 @@ INSERT INTO documents_page (`id`,`controller`,`template`,`title`,`description`,`
 (42,'App\\Controller\\DefaultController::defaultAction',NULL,'','',NULL,NULL,'',NULL,NULL,NULL), 
 (43,'CoreShop\\Bundle\\FrontendBundle\\Controller\\IndexController::indexAction',NULL,'','',NULL,NULL,'',0,NULL,NULL), 
 (52,'App\\Controller\\DefaultController::defaultAction',NULL,'','',NULL,NULL,'',NULL,NULL,NULL), 
-(53,'CoreShop\\Bundle\\FrontendBundle\\Controller\\IndexController::indexAction',NULL,'','',NULL,NULL,'',0,NULL,NULL);
+(53,'CoreShop\\Bundle\\FrontendBundle\\Controller\\IndexController::indexAction',NULL,'','',NULL,NULL,'',0,NULL,NULL), 
+(54,'App\\Controller\\DefaultController::bricksAction',NULL,'locations','',NULL,NULL,'',NULL,0,NULL), 
+(55,'App\\Controller\\DefaultController::bricksAction',NULL,'locations','',NULL,NULL,'',NULL,0,NULL);

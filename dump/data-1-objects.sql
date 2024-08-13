@@ -133,4 +133,8 @@ INSERT INTO objects (`id`,`parentId`,`type`,`key`,`path`,`index`,`published`,`cr
 (208,205,'folder','user','/coreshop/customers/B2B/C/b2b-coreshop.org/',0,1,1703692808,1703692808,1,0,NULL,NULL,NULL,NULL,1), 
 (209,208,'object','b2b-coreshop.org','/coreshop/customers/B2B/C/b2b-coreshop.org/user/',0,1,1703692808,1703692808,0,0,'cs_user','CoreShopUser',NULL,NULL,1), 
 (210,5,'folder','B2B','/coreshop/customers/',0,1,1703692808,1703692808,1,0,NULL,NULL,NULL,NULL,1), 
-(211,210,'folder','C','/coreshop/customers/B2B/',0,1,1703692808,1703692808,1,0,NULL,NULL,NULL,NULL,1);
+(211,210,'folder','C','/coreshop/customers/B2B/',0,1,1703692808,1703692808,1,0,NULL,NULL,NULL,NULL,1), 
+(212,9,'folder','locations','/demo/',0,1,1723441053,1723441053,2,2,NULL,NULL,NULL,NULL,2), 
+(213,212,'object','CORS','/demo/locations/',0,1,1723441143,1723469155,2,2,'location','Location',NULL,NULL,10), 
+(214,212,'object','Apple','/demo/locations/',0,1,1723441504,1723469482,2,2,'location','Location',NULL,NULL,7), 
+(215,212,'object','Google','/demo/locations/',0,1,1723469033,1723469324,2,2,'location','Location',NULL,NULL,5);

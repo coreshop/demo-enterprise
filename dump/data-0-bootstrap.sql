@@ -3,6 +3,30 @@ SET NAMES utf8mb4;
 
 
 
+DROP TABLE IF EXISTS `application_logs`;
+CREATE TABLE `application_logs` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `pid` int DEFAULT NULL,
+  `timestamp` datetime NOT NULL,
+  `message` text,
+  `priority` enum('emergency','alert','critical','error','warning','notice','info','debug') DEFAULT NULL,
+  `fileobject` varchar(1024) DEFAULT NULL,
+  `info` varchar(1024) DEFAULT NULL,
+  `component` varchar(190) DEFAULT NULL,
+  `source` varchar(190) DEFAULT NULL,
+  `relatedobject` int unsigned DEFAULT NULL,
+  `relatedobjecttype` enum('object','document','asset') DEFAULT NULL,
+  `maintenanceChecked` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `component` (`component`),
+  KEY `timestamp` (`timestamp`),
+  KEY `relatedobject` (`relatedobject`),
+  KEY `priority` (`priority`),
+  KEY `maintenanceChecked` (`maintenanceChecked`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
 DROP TABLE IF EXISTS `cache_items`;
 CREATE TABLE `cache_items` (
   `item_id` varbinary(255) NOT NULL,
@@ -360,7 +384,7 @@ CREATE TABLE `coreshop_filter` (
   PRIMARY KEY (`id`),
   KEY `IDX_A5610D06E070063B` (`indexId`),
   CONSTRAINT `FK_A5610D06E070063B` FOREIGN KEY (`indexId`) REFERENCES `coreshop_index` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -375,7 +399,7 @@ CREATE TABLE `coreshop_filter_condition` (
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -468,7 +492,7 @@ CREATE TABLE `coreshop_index` (
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -491,7 +515,49 @@ CREATE TABLE `coreshop_index_column` (
   PRIMARY KEY (`id`),
   KEY `IDX_B5A44FADE070063B` (`indexId`),
   CONSTRAINT `FK_B5A44FADE070063B` FOREIGN KEY (`indexId`) REFERENCES `coreshop_index` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+DROP TABLE IF EXISTS `coreshop_index_mysql_localized_locations`;
+CREATE TABLE `coreshop_index_mysql_localized_locations` (
+  `oo_id` int NOT NULL,
+  `language` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `country` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`oo_id`,`language`),
+  KEY `IDX_EF4DDACE2705ECF6` (`oo_id`),
+  KEY `IDX_EF4DDACED4DB71B5` (`language`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+
+
+
+DROP TABLE IF EXISTS `coreshop_index_mysql_locations`;
+CREATE TABLE `coreshop_index_mysql_locations` (
+  `o_id` int NOT NULL,
+  `o_key` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `o_virtualObjectId` int NOT NULL,
+  `o_virtualObjectActive` tinyint(1) NOT NULL,
+  `o_classId` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `o_className` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `o_type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `active` tinyint(1) NOT NULL,
+  `coordinates` point DEFAULT NULL COMMENT '(DC2Type:point)',
+  `locationName` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`o_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+
+
+
+DROP TABLE IF EXISTS `coreshop_index_mysql_relations_locations`;
+CREATE TABLE `coreshop_index_mysql_relations_locations` (
+  `src` int NOT NULL,
+  `dest` int NOT NULL,
+  `fieldname` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `src_virtualObjectId` int NOT NULL,
+  PRIMARY KEY (`src`,`dest`,`fieldname`,`type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 
 
@@ -1343,6 +1409,26 @@ CREATE TABLE `documents_newsletter` (
 
 
 
+DROP TABLE IF EXISTS `http_error_log`;
+CREATE TABLE `http_error_log` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `uri` varchar(1024) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
+  `code` int DEFAULT NULL,
+  `parametersGet` longtext,
+  `parametersPost` longtext,
+  `cookies` longtext,
+  `serverVars` longtext,
+  `date` int unsigned DEFAULT NULL,
+  `count` bigint unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `uri` (`uri`),
+  KEY `code` (`code`),
+  KEY `date` (`date`),
+  KEY `count` (`count`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+
+
 DROP TABLE IF EXISTS `messenger_messages`;
 CREATE TABLE `messenger_messages` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -1356,7 +1442,7 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=1580 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1646 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -2416,6 +2502,27 @@ CREATE TABLE `object_query_cs_wishlist_item` (
 
 
 
+DROP TABLE IF EXISTS `object_query_location`;
+CREATE TABLE `object_query_location` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `oo_classId` varchar(50) DEFAULT 'location',
+  `oo_className` varchar(255) DEFAULT 'Location',
+  `locationName` varchar(190) DEFAULT NULL,
+  `address` varchar(190) DEFAULT NULL,
+  `postCode` varchar(190) DEFAULT NULL,
+  `city` varchar(190) DEFAULT NULL,
+  `country` varchar(190) DEFAULT NULL,
+  `coordinates__longitude` double DEFAULT NULL,
+  `coordinates__latitude` double DEFAULT NULL,
+  `phone` varchar(190) DEFAULT NULL,
+  `email` varchar(190) DEFAULT NULL,
+  `website` varchar(190) DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_query_location__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
 DROP TABLE IF EXISTS `object_relations_1`;
 CREATE TABLE `object_relations_1` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -2856,6 +2963,26 @@ CREATE TABLE `object_relations_cs_wishlist_item` (
 
 
 
+DROP TABLE IF EXISTS `object_relations_location`;
+CREATE TABLE `object_relations_location` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `src_id` int unsigned NOT NULL DEFAULT '0',
+  `dest_id` int unsigned NOT NULL DEFAULT '0',
+  `type` enum('object','asset','document') NOT NULL,
+  `fieldname` varchar(70) NOT NULL DEFAULT '0',
+  `index` int unsigned NOT NULL DEFAULT '0',
+  `ownertype` enum('object','fieldcollection','localizedfield','objectbrick') NOT NULL DEFAULT 'object',
+  `ownername` varchar(70) NOT NULL DEFAULT '',
+  `position` varchar(70) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `forward_lookup` (`src_id`,`ownertype`,`ownername`,`position`),
+  KEY `reverse_lookup` (`dest_id`,`type`),
+  KEY `fieldname` (`fieldname`),
+  CONSTRAINT `fk_object_relations_location__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
 DROP TABLE IF EXISTS `object_store_1`;
 CREATE TABLE `object_store_1` (
   `oo_id` int unsigned NOT NULL DEFAULT '0',
@@ -3264,11 +3391,30 @@ CREATE TABLE `object_store_cs_wishlist_item` (
 
 
 
+DROP TABLE IF EXISTS `object_store_location`;
+CREATE TABLE `object_store_location` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `locationName` varchar(190) DEFAULT NULL,
+  `address` varchar(190) DEFAULT NULL,
+  `postCode` varchar(190) DEFAULT NULL,
+  `city` varchar(190) DEFAULT NULL,
+  `country` varchar(190) DEFAULT NULL,
+  `coordinates__longitude` double DEFAULT NULL,
+  `coordinates__latitude` double DEFAULT NULL,
+  `phone` varchar(190) DEFAULT NULL,
+  `email` varchar(190) DEFAULT NULL,
+  `website` varchar(190) DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_store_location__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
 DROP TABLE IF EXISTS `plugin_datahub_workspaces_asset`;
 CREATE TABLE `plugin_datahub_workspaces_asset` (
   `cid` int unsigned NOT NULL DEFAULT '0',
   `cpath` varchar(765) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
-  `configuration` varchar(80) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
+  `configuration` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
   `create` tinyint unsigned DEFAULT '0',
   `read` tinyint unsigned DEFAULT '0',
   `update` tinyint unsigned DEFAULT '0',
@@ -3282,7 +3428,7 @@ DROP TABLE IF EXISTS `plugin_datahub_workspaces_document`;
 CREATE TABLE `plugin_datahub_workspaces_document` (
   `cid` int unsigned NOT NULL DEFAULT '0',
   `cpath` varchar(765) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
-  `configuration` varchar(80) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
+  `configuration` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
   `create` tinyint unsigned DEFAULT '0',
   `read` tinyint unsigned DEFAULT '0',
   `update` tinyint unsigned DEFAULT '0',
@@ -3296,13 +3442,38 @@ DROP TABLE IF EXISTS `plugin_datahub_workspaces_object`;
 CREATE TABLE `plugin_datahub_workspaces_object` (
   `cid` int unsigned NOT NULL DEFAULT '0',
   `cpath` varchar(765) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
-  `configuration` varchar(80) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
+  `configuration` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0',
   `create` tinyint unsigned DEFAULT '0',
   `read` tinyint unsigned DEFAULT '0',
   `update` tinyint unsigned DEFAULT '0',
   `delete` tinyint unsigned DEFAULT '0',
   PRIMARY KEY (`cid`,`configuration`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+DROP TABLE IF EXISTS `redirects`;
+CREATE TABLE `redirects` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `type` enum('entire_uri','path_query','path','auto_create') NOT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `sourceSite` int DEFAULT NULL,
+  `target` varchar(255) DEFAULT NULL,
+  `targetSite` int DEFAULT NULL,
+  `statusCode` varchar(3) DEFAULT NULL,
+  `priority` int DEFAULT '0',
+  `regex` tinyint(1) DEFAULT NULL,
+  `passThroughParameters` tinyint(1) DEFAULT NULL,
+  `active` tinyint(1) DEFAULT NULL,
+  `expiry` int unsigned DEFAULT NULL,
+  `creationDate` int unsigned DEFAULT '0',
+  `modificationDate` int unsigned DEFAULT '0',
+  `userOwner` int unsigned DEFAULT NULL,
+  `userModification` int unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `priority` (`priority`),
+  KEY `routing_lookup` (`active`,`regex`,`sourceSite`,`source`,`type`,`expiry`,`priority`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
 
 

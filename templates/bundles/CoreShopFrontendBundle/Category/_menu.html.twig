@@ -38,6 +38,14 @@
                         Quick Order
                     </a>
                 </li>
+                {% set index_geo_page = document_route_document('index_geo') %}
+                {% if index_geo_page %}
+                    <li class="nav-item">
+                        <a href="{{ index_geo_page }}" class="nav-link">
+                            Index Geo
+                        </a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>

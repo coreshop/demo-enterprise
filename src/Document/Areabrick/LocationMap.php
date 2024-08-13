@@ -139,6 +139,7 @@ final class LocationMap extends AbstractTemplateAreabrick implements EditableDia
         $filter = $filterSelection->getResourceObject();
 
         if ($filter instanceof FilterInterface) {
+            $coordinates = null;
             $locations = [];
             $filteredList = $this->filterListFactory->createList($filter, $request->request);
             $filteredList->setLocale($request->getLocale());

@@ -323,7 +323,7 @@ CREATE TABLE `coreshop_document_route` (
   `route_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `document` int DEFAULT NULL COMMENT '(DC2Type:pimcoreDocument)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -335,7 +335,7 @@ CREATE TABLE `coreshop_document_site_route` (
   PRIMARY KEY (`id`),
   KEY `IDX_2CCA8F4A67C2CC38` (`documentRouteId`),
   CONSTRAINT `FK_2CCA8F4A67C2CC38` FOREIGN KEY (`documentRouteId`) REFERENCES `coreshop_document_route` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -349,7 +349,7 @@ CREATE TABLE `coreshop_document_site_route_translation` (
   UNIQUE KEY `coreshop_document_site_route_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_DFC186862C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_DFC186862C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `coreshop_document_site_route` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 

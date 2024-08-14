@@ -258,8 +258,8 @@ final class LocationMap extends AbstractTemplateAreabrick implements EditableDia
                         'show_as_list' => $showAsList,
                         'locations' => $viewResult,
                         'coordinates' => $coordinates ? [
-                            'lat' => $coordinates->latitude,
-                            'lng' => $coordinates->longitude,
+                            'latitude' => $coordinates->latitude,
+                            'longitude' => $coordinates->longitude,
                         ] : null,
                     ];
                 } else {
@@ -311,8 +311,8 @@ final class LocationMap extends AbstractTemplateAreabrick implements EditableDia
                     $location->getCoordinates() ? $location->getCoordinates()->getLatitude() : '0.0',
                 ),
                 'coordinates' => [
-                    'lat' => $location->getCoordinates() ? $location->getCoordinates()->getLatitude() : 0.0,
-                    'lng' => $location->getCoordinates() ? $location->getCoordinates()->getLongitude() : 0.0,
+                    'latitude' => $location->getCoordinates() ? $location->getCoordinates()->getLatitude() : 0.0,
+                    'longitude' => $location->getCoordinates() ? $location->getCoordinates()->getLongitude() : 0.0,
                 ],
             ];
 

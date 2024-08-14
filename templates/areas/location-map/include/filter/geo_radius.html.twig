@@ -12,7 +12,7 @@
                 {{ (label ~ '.radius')|trans }}
             </label>
             <select id="{{ id_prefix ~ fieldName }}_radius" name="{{ fieldName }}-radius" class="form-control" aria-label="{{ (label ~ '.radius')|trans }}">
-                <option{% if not currentValue %} selected{% endif %} value="">{{ (label ~ '.radius')|trans }}</option>
+                <option disabled{% if not currentValue %} selected{% endif %} value="">{{ (label ~ '.radius')|trans }}</option>
                 {% for radius in radii %}
                     <option value="{{ radius.key }}" {% if currentValueRadius and currentValueRadius == radius.key %}selected="selected"{% endif %}>
                         {{ radius.value }} km

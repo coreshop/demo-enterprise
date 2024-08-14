@@ -18,10 +18,9 @@
 {% if filter is defined %}
     {% if show_map or editmode %}
         {% if show_map %}
-            <div class="map-wrapper">
+            <div class="map-wrapper" id="{{ id }}">
                 <div class="map-container">
-                    <div id="{{ id }}-map"
-                         style="height: 500px"
+                    <div style="height: 500px"
                          class="map"
                          data-geo="{{ disable_geo is defined and disable_geo ? 0 : 1 }}"
                          data-markers="{{ locations|json_encode }}"
@@ -58,9 +57,40 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const callback = () => {
-                const mapContainer = document.getElementById('{{ id }}-map');
+            const mapWrapper = document.querySelector('#{{ id }}');
 
+            if(!mapWrapper) {
+                return;
+            }
+
+            const form = mapWrapper.querySelector('form');
+
+            if(!form) {
+                return;
+            }
+
+            const reset = form.querySelector('.btn-secondary');
+
+            if(!reset) {
+                return;
+            }
+
+            reset.onclick = (e) => {
+                e.preventDefault;
+
+                form.querySelectorAll('input').forEach((input) => {
+                    input.value = "";
+                });
+
+                form.querySelectorAll('select option').forEach((option) => {
+                    option.selected = option.matches(':first-child');
+                });
+
+                form.submit();
+            }
+
+            const mapContainer = mapWrapper.querySelector('#{{ id }} .map');
+            const callback = () => {
                 if(!mapContainer) {
                     return;
                 }
@@ -68,16 +98,17 @@
                 const map = L.map(mapContainer);
 
                 const markers = mapContainer.dataset.markers ? JSON.parse(mapContainer.dataset.markers) : [];
-                const bounds = markers.map((m) => [m.coordinates.lat, m.coordinates.lng]);
+                const bounds = markers.map((m) => [m.coordinates.latitude, m.coordinates.longitude]);
                 const myPosition = mapContainer.dataset.myPosition ? JSON.parse(mapContainer.dataset.myPosition) : null;
 
                 if(myPosition) {
-                    map.setView([myPosition.lat, myPosition.lng], 13);
-                    bounds.push([myPosition.lat, myPosition.lng]);
+                    map.setView([myPosition.latitude, myPosition.longitude], 13);
+                    bounds.push([myPosition.latitude, myPosition.longitude]);
+                    L.marker([myPosition.latitude, myPosition.longitude]).addTo(map);
                 }
 
                 markers.forEach((markerData) => {
-                    const marker = L.marker([markerData.coordinates.lat, markerData.coordinates.lng]).addTo(map);
+                    const marker = L.marker([markerData.coordinates.latitude, markerData.coordinates.longitude]).addTo(map);
                     marker.bindPopup(markerData.infoHtml);
                 });
 

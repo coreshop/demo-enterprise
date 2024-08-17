@@ -6872,16 +6872,16 @@
         },
         {
             "name": "mpratt/embera",
-            "version": "2.0.40",
+            "version": "2.0.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpratt/Embera.git",
-                "reference": "6fc913ddd6510337dc15f8124bd7de46d891e7d5"
+                "reference": "069305b9252a428ba4ae6eb58d3dc8c6d9be5cd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpratt/Embera/zipball/6fc913ddd6510337dc15f8124bd7de46d891e7d5",
-                "reference": "6fc913ddd6510337dc15f8124bd7de46d891e7d5",
+                "url": "https://api.github.com/repos/mpratt/Embera/zipball/069305b9252a428ba4ae6eb58d3dc8c6d9be5cd0",
+                "reference": "069305b9252a428ba4ae6eb58d3dc8c6d9be5cd0",
                 "shasum": ""
             },
             "require": {
@@ -6930,7 +6930,7 @@
             ],
             "support": {
                 "issues": "https://github.com/mpratt/Embera/issues",
-                "source": "https://github.com/mpratt/Embera/tree/2.0.40"
+                "source": "https://github.com/mpratt/Embera/tree/2.0.41"
             },
             "funding": [
                 {
@@ -6938,7 +6938,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2024-06-13T20:18:59+00:00"
+            "time": "2024-08-17T04:27:29+00:00"
         },
         {
             "name": "myclabs/deep-copy",

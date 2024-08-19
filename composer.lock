@@ -972,8 +972,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/8929502eb9130f60f4765a13148b8c05dcea23a8.zip",
-                "reference": "8929502eb9130f60f4765a13148b8c05dcea23a8",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/c7824a4a240daa5c8dc8a36b3a3af2b9ed40f227.zip",
+                "reference": "c7824a4a240daa5c8dc8a36b3a3af2b9ed40f227",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1054,7 +1054,7 @@
                 "source": "https://github.com/coreshop/headless-bundle/tree/main",
                 "issues": "https://github.com/coreshop/headless-bundle/issues"
             },
-            "time": "2024-07-29T12:02:23+00:00"
+            "time": "2024-08-19T10:17:12+00:00"
         },
         {
             "name": "coreshop/inbound-email-rules-bundle",
@@ -1347,8 +1347,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/d30b3e8bf44628544871a6fc302e0317852ae237.zip",
-                "reference": "d30b3e8bf44628544871a6fc302e0317852ae237",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/57b1fa7281bb770fba4359c918a5eb11b38eaca4.zip",
+                "reference": "57b1fa7281bb770fba4359c918a5eb11b38eaca4",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1409,7 +1409,7 @@
                 "source": "https://github.com/coreshop/quick-order-bundle/tree/main",
                 "issues": "https://github.com/coreshop/quick-order-bundle/issues"
             },
-            "time": "2024-07-19T10:23:27+00:00"
+            "time": "2024-08-19T07:33:53+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",
@@ -4238,16 +4238,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.368.0",
+            "version": "v0.369.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "edc08087aa3ca63d3b74f24d59f1d2caab39b5d9"
+                "reference": "002f610e4c3acf0636b4fb1f46314a2097e1c8b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/edc08087aa3ca63d3b74f24d59f1d2caab39b5d9",
-                "reference": "edc08087aa3ca63d3b74f24d59f1d2caab39b5d9",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/002f610e4c3acf0636b4fb1f46314a2097e1c8b4",
+                "reference": "002f610e4c3acf0636b4fb1f46314a2097e1c8b4",
                 "shasum": ""
             },
             "require": {
@@ -4276,9 +4276,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.368.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.369.0"
             },
-            "time": "2024-07-11T01:08:44+00:00"
+            "time": "2024-08-14T20:31:16+00:00"
         },
         {
             "name": "google/auth",

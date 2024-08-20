@@ -1139,8 +1139,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/index-geo-bundle/dev-main/4a9a66a04101ee7e3b0de6e2fd1d2499c9228a5f.zip",
-                "reference": "4a9a66a04101ee7e3b0de6e2fd1d2499c9228a5f",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/index-geo-bundle/dev-main/4b73bb22c386fc8f7b4b53328f43d0a5814eb602.zip",
+                "reference": "4b73bb22c386fc8f7b4b53328f43d0a5814eb602",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1208,7 +1208,7 @@
                 "source": "https://github.com/coreshop/index-geo-bundle/tree/main",
                 "issues": "https://github.com/coreshop/index-geo-bundle/issues"
             },
-            "time": "2024-08-13T10:38:04+00:00"
+            "time": "2024-08-20T10:52:24+00:00"
         },
         {
             "name": "coreshop/loyality-bundle",

@@ -23,4 +23,7 @@ INSERT INTO properties (`cid`,`ctype`,`cpath`,`name`,`type`,`data`,`inheritable`
 (5,'document','/de/shop','navigation_tabindex','text','',0), 
 (5,'document','/de/shop','navigation_target','text',NULL,0), 
 (5,'document','/de/shop','navigation_title','text','',0), 
-(41,'document','/b2b','navigation_name','text','b2b',0);
+(41,'document','/b2b','navigation_name','text','b2b',0), 
+(54,'document','/en/locations','navigation_name','text','locations',0), 
+(55,'document','/de/standorte','language','text','de',1), 
+(55,'document','/de/standorte','navigation_name','text','locations',0);

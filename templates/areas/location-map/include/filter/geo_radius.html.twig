@@ -1,0 +1,24 @@
+{% set id_prefix = id_prefix is defined ? id_prefix ~ '-' : '' %}
+<div class="filter-group filter-group-geo-radius">
+    <div class="row">
+        <div class="col-12 col-md-6 mb-3 pr-md-1">
+            <label class="form-check-label" for="{{ id_prefix ~ fieldName ~ '_address' }}">
+                {{ (label ~ '.post_code')|trans }}
+            </label>
+            <input id="{{ id_prefix ~ fieldName }}_address" type="text" class="form-control" name="{{ fieldName }}-address" placeholder="{{ (label ~ '.post_code')|trans }}" aria-label="{{ (label ~ 'post_code')|trans }}" value="{{ currentValueAddress }}">
+        </div>
+        <div class="col-12 col-md-6 mb-3 pl-md-1">
+            <label class="form-check-label" for="{{ id_prefix ~ fieldName ~ '_radius' }}">
+                {{ (label ~ '.radius')|trans }}
+            </label>
+            <select id="{{ id_prefix ~ fieldName }}_radius" name="{{ fieldName }}-radius" class="form-control" aria-label="{{ (label ~ '.radius')|trans }}">
+                <option disabled{% if not currentValue %} selected{% endif %} value="">{{ (label ~ '.radius')|trans }}</option>
+                {% for radius in radii %}
+                    <option value="{{ radius.key }}" {% if currentValueRadius and currentValueRadius == radius.key %}selected="selected"{% endif %}>
+                        {{ radius.value }} km
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+</div>

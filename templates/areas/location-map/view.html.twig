@@ -1,0 +1,159 @@
+{% set disable_geo = pimcore_checkbox('disable_geo').checked %}
+{% set show_map = pimcore_checkbox('show_map').checked %}
+{% set show_as_list = pimcore_checkbox('show_as_list').checked %}
+{% set id = 'c-' ~ document.id ~ '-' ~ brick.id ~ '-' ~ brick.index %}
+
+{% if editmode %}
+    <div class="col-12">
+        <div class="alert alert-info">
+            {% if not (filter is defined and filter) %}
+                {{ 'Filter auswählen'|trans({}, 'admin') }}
+            {% else %}
+                {{ 'Filter'|trans({}, 'admin') }}: {{ filter.name }}
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+{% if filter is defined %}
+    {% if show_map or editmode %}
+        {% if show_map %}
+            <div class="map-wrapper" id="{{ id }}">
+                <div class="map-container">
+                    <div style="height: 500px"
+                         class="map"
+                         data-geo="{{ disable_geo is defined and disable_geo ? 0 : 1 }}"
+                         data-markers="{{ locations|json_encode }}"
+                         data-theme="light"
+                            {% if coordinates %}
+                                data-my-position="{{ coordinates|json_encode }}"
+                            {% endif %}
+                    >
+                    </div>
+                    <div class="map-list">
+                        {% block list %}
+                            <div class="map-form">
+                                {% include 'areas/location-map/include/form.html.twig' %}
+                            </div>
+                            <div class="map-entries list-group">
+                                {% if show_as_list %}
+                                    {% include 'areas/location-map/include/list.html.twig' with {
+                                        locations: locations,
+                                        coordinates: coordinates,
+                                    } only %}
+                                {% endif %}
+                            </div>
+                        {% endblock %}
+                    </div>
+                    {% block loader %}
+                        <div class="spinner-border d-block mx-auto" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    {% endblock %}
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mapWrapper = document.querySelector('#{{ id }}');
+
+            if(!mapWrapper) {
+                return;
+            }
+
+            const form = mapWrapper.querySelector('form');
+
+            if(!form) {
+                return;
+            }
+
+            const reset = form.querySelector('.btn-secondary');
+
+            if(!reset) {
+                return;
+            }
+
+            reset.onclick = (e) => {
+                e.preventDefault;
+
+                form.querySelectorAll('input').forEach((input) => {
+                    input.value = "";
+                });
+
+                form.querySelectorAll('select option').forEach((option) => {
+                    option.selected = option.matches(':first-child');
+                });
+
+                form.submit();
+            }
+
+            const mapContainer = mapWrapper.querySelector('#{{ id }} .map');
+            const callback = () => {
+                if(!mapContainer) {
+                    return;
+                }
+
+                const map = L.map(mapContainer);
+
+                const markers = mapContainer.dataset.markers ? JSON.parse(mapContainer.dataset.markers) : [];
+                const bounds = markers.map((m) => [m.coordinates.latitude, m.coordinates.longitude]);
+                const myPosition = mapContainer.dataset.myPosition ? JSON.parse(mapContainer.dataset.myPosition) : null;
+
+                if(myPosition) {
+                    map.setView([myPosition.latitude, myPosition.longitude], 13);
+                    bounds.push([myPosition.latitude, myPosition.longitude]);
+                    L.marker([myPosition.latitude, myPosition.longitude]).addTo(map);
+                }
+
+                markers.forEach((markerData) => {
+                    const marker = L.marker([markerData.coordinates.latitude, markerData.coordinates.longitude]).addTo(map);
+                    marker.bindPopup(markerData.infoHtml);
+                });
+
+                map.fitBounds(bounds);
+
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 14,
+                    attribution: '&copy; CoreShop GmbH'
+                }).addTo(map);
+            }
+
+            const loadLeaflet = (scriptSrc, styleSrc) => {
+                return new Promise(function (resolve, reject) {
+                    const style = document.createElement('link');
+                    style.id = 'leaflet-style';
+                    style.rel = 'stylesheet';
+                    style.href = styleSrc;
+
+                    style.onerror = () => reject(new Error(`Leaflet style load error for ${styleSrc}`));
+
+                    document.head.appendChild(style);
+
+                    const script = document.createElement('script');
+                    script.id = 'leaflet-script';
+                    script.src = scriptSrc;
+
+                    script.onload = () => resolve(script);
+                    script.onerror = () => reject(new Error(`Leaflet script load error for ${scriptSrc}`));
+
+                    document.head.appendChild(script);
+                });
+            }
+
+            if (!document.getElementById('leaflet-script')) {
+                loadLeaflet(
+                    'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+                    'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'
+                )
+                .then(callback)
+                .catch(err => {
+                    console.error(err);
+                });
+            } else {
+                callback();
+            }
+        });
+    </script>
+{% endif %}

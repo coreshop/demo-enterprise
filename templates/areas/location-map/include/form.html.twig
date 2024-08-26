@@ -1,0 +1,22 @@
+<form method="post" class="location-map__form" data-text-route-plan="{{ 'Route'|trans }}">
+    {%  for condition in conditions %}
+        <div class="row">
+            <div class="col-12">
+                {% include 'areas/location-map/include/filter/'~condition.type~'.html.twig' with condition|merge({ dropdown: false }) only %}
+            </div>
+        </div>
+    {% endfor %}
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-secondary">
+                    {{ 'Reset'|trans }}
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    {{ 'Search'|trans }}
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

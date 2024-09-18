@@ -8767,37 +8767,35 @@
         },
         {
             "name": "pimcore/data-hub",
-            "version": "v1.7.3",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/data-hub.git",
-                "reference": "d79d72d3198ad85bccf39b62114be8ba96651b19"
+                "reference": "f78112706afa25a590f3519d9ee9364df742ea2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/d79d72d3198ad85bccf39b62114be8ba96651b19",
-                "reference": "d79d72d3198ad85bccf39b62114be8ba96651b19",
+                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/f78112706afa25a590f3519d9ee9364df742ea2f",
+                "reference": "f78112706afa25a590f3519d9ee9364df742ea2f",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+                "pimcore/admin-ui-classic-bundle": "^1.0",
                 "pimcore/compatibility-bridge-v10": "^1.0",
-                "pimcore/pimcore": "^10.6.8 || ^11.0.7",
+                "pimcore/pimcore": "^11.2",
                 "webonyx/graphql-php": "^15.2.3"
             },
             "require-dev": {
-                "codeception/codeception": "^4.1.12 || ^5.0.3",
+                "codeception/codeception": "^5.0.3",
                 "codeception/module-asserts": "^2",
-                "codeception/module-symfony": "^1.6.0 || ^3.1.0",
+                "codeception/module-symfony": "^3.1.0",
                 "codeception/phpunit-wrapper": "^9",
                 "phpstan/phpstan": "^1.9",
                 "phpunit/phpunit": "^9.6",
-                "symfony/dotenv": "^6.2 || ^5.4.21",
+                "symfony/dotenv": "^6.2",
                 "symfony/phpunit-bridge": "^6",
-                "symfony/runtime": "^6.4 || ^5.4"
-            },
-            "suggest": {
-                "pimcore/admin-ui-classic-bundle": "Required for Pimcore 11"
+                "symfony/runtime": "^6.4"
             },
             "type": "pimcore-bundle",
             "extra": {
@@ -8820,9 +8818,9 @@
             "description": "Pimcore Datahub",
             "support": {
                 "issues": "https://github.com/pimcore/data-hub/issues",
-                "source": "https://github.com/pimcore/data-hub/tree/v1.7.3"
+                "source": "https://github.com/pimcore/data-hub/tree/v1.8.0"
             },
-            "time": "2024-08-22T09:36:23+00:00"
+            "time": "2024-09-18T10:15:23+00:00"
         },
         {
             "name": "pimcore/google-marketing-bundle",

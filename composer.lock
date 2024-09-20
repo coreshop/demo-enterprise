@@ -502,8 +502,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/batch-messenger-bundle/dev-main/634cda83ea275380bff0f950133fcefad0a482ce.zip",
-                "reference": "634cda83ea275380bff0f950133fcefad0a482ce",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/batch-messenger-bundle/dev-main/c19215df04958a974c2ac40fcf241f304f77b358.zip",
+                "reference": "c19215df04958a974c2ac40fcf241f304f77b358",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -566,7 +566,7 @@
                 "source": "https://github.com/coreshop/batch-messenger-bundle/tree/main",
                 "issues": "https://github.com/coreshop/batch-messenger-bundle/issues"
             },
-            "time": "2024-02-29T19:29:13+00:00"
+            "time": "2024-09-20T07:01:14+00:00"
         },
         {
             "name": "coreshop/core-shop",
@@ -766,8 +766,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/customer-cluster-bundle/dev-main/1369f8f079ffa4da0ea8e52425adc2366cb52cda.zip",
-                "reference": "1369f8f079ffa4da0ea8e52425adc2366cb52cda",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/customer-cluster-bundle/dev-main/71034ac57d085d65bf080d8ac1a166102ec0cfba.zip",
+                "reference": "71034ac57d085d65bf080d8ac1a166102ec0cfba",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -826,15 +826,15 @@
                 "source": "https://github.com/coreshop/customer-cluster-bundle/tree/main",
                 "issues": "https://github.com/coreshop/customer-cluster-bundle/issues"
             },
-            "time": "2024-02-11T17:16:53+00:00"
+            "time": "2024-09-20T07:08:41+00:00"
         },
         {
             "name": "coreshop/deposit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/7d08131c4b8c7f0146e01e03591e7ba3ea973a00.zip",
-                "reference": "7d08131c4b8c7f0146e01e03591e7ba3ea973a00",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/65610b581a4d1d79ef9f3ad95c4337f407461c2b.zip",
+                "reference": "65610b581a4d1d79ef9f3ad95c4337f407461c2b",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -892,15 +892,15 @@
                 "source": "https://github.com/coreshop/deposit-bundle/tree/main",
                 "issues": "https://github.com/coreshop/deposit-bundle/issues"
             },
-            "time": "2024-02-11T17:16:55+00:00"
+            "time": "2024-09-20T07:08:34+00:00"
         },
         {
             "name": "coreshop/document-route-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/document-route-bundle/dev-main/c7b1d0f338687a6bfc6d9ab7e491db2b8b3eccc9.zip",
-                "reference": "c7b1d0f338687a6bfc6d9ab7e491db2b8b3eccc9",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/document-route-bundle/dev-main/0842e247a389504458206b5f781200933f7bbf01.zip",
+                "reference": "0842e247a389504458206b5f781200933f7bbf01",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -964,15 +964,15 @@
                 "source": "https://github.com/coreshop/document-route-bundle/tree/main",
                 "issues": "https://github.com/coreshop/document-route-bundle/issues"
             },
-            "time": "2024-03-01T07:30:19+00:00"
+            "time": "2024-09-20T07:09:15+00:00"
         },
         {
             "name": "coreshop/headless-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/c7824a4a240daa5c8dc8a36b3a3af2b9ed40f227.zip",
-                "reference": "c7824a4a240daa5c8dc8a36b3a3af2b9ed40f227",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/9037c4662e3f5a025aa173bc6d8ae3eee04d97f2.zip",
+                "reference": "9037c4662e3f5a025aa173bc6d8ae3eee04d97f2",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1053,15 +1053,15 @@
                 "source": "https://github.com/coreshop/headless-bundle/tree/main",
                 "issues": "https://github.com/coreshop/headless-bundle/issues"
             },
-            "time": "2024-08-19T10:17:12+00:00"
+            "time": "2024-09-20T07:08:29+00:00"
         },
         {
             "name": "coreshop/inbound-email-rules-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/inbound-email-rules-bundle/dev-main/3abada17c212be32c8c8028bc46486d52f38ba45.zip",
-                "reference": "3abada17c212be32c8c8028bc46486d52f38ba45",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/inbound-email-rules-bundle/dev-main/de57c44cdecd59966d485546332f9b0af500896f.zip",
+                "reference": "de57c44cdecd59966d485546332f9b0af500896f",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1131,15 +1131,15 @@
                 "source": "https://github.com/coreshop/inbound-email-rules-bundle/tree/main",
                 "issues": "https://github.com/coreshop/inbound-email-rules-bundle/issues"
             },
-            "time": "2024-02-11T17:17:02+00:00"
+            "time": "2024-09-20T07:08:55+00:00"
         },
         {
             "name": "coreshop/index-geo-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/index-geo-bundle/dev-main/4b73bb22c386fc8f7b4b53328f43d0a5814eb602.zip",
-                "reference": "4b73bb22c386fc8f7b4b53328f43d0a5814eb602",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/index-geo-bundle/dev-main/2f689c1c11d27afcc10570b1669e41dbbbfc9e91.zip",
+                "reference": "2f689c1c11d27afcc10570b1669e41dbbbfc9e91",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1207,15 +1207,15 @@
                 "source": "https://github.com/coreshop/index-geo-bundle/tree/main",
                 "issues": "https://github.com/coreshop/index-geo-bundle/issues"
             },
-            "time": "2024-08-20T10:52:24+00:00"
+            "time": "2024-09-20T07:09:04+00:00"
         },
         {
             "name": "coreshop/loyality-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/c2dde978bd5c23fe678aa0b1ee4013f4ec5dab7e.zip",
-                "reference": "c2dde978bd5c23fe678aa0b1ee4013f4ec5dab7e",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/abf06222932e62d9452893b124acc85ab71d6ed5.zip",
+                "reference": "abf06222932e62d9452893b124acc85ab71d6ed5",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1273,15 +1273,15 @@
                 "source": "https://github.com/coreshop/loyalty-bundle/tree/main",
                 "issues": "https://github.com/coreshop/loyalty-bundle/issues"
             },
-            "time": "2024-02-11T17:17:06+00:00"
+            "time": "2024-09-20T07:08:45+00:00"
         },
         {
             "name": "coreshop/payum-credit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/payum-credit-bundle/dev-main/39d9083e27c0ea4bab2772fb0631b989c39ee809.zip",
-                "reference": "39d9083e27c0ea4bab2772fb0631b989c39ee809",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/payum-credit-bundle/dev-main/195f33b7b04f9591268db378740062ce704e0a5d.zip",
+                "reference": "195f33b7b04f9591268db378740062ce704e0a5d",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1339,15 +1339,15 @@
                 "source": "https://github.com/coreshop/credit-bundle/tree/main",
                 "issues": "https://github.com/coreshop/credit-bundle/issues"
             },
-            "time": "2024-02-11T17:16:50+00:00"
+            "time": "2024-09-20T07:09:25+00:00"
         },
         {
             "name": "coreshop/quick-order-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/57b1fa7281bb770fba4359c918a5eb11b38eaca4.zip",
-                "reference": "57b1fa7281bb770fba4359c918a5eb11b38eaca4",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/ad797d093d176cda67d46554fdc5743f818881d0.zip",
+                "reference": "ad797d093d176cda67d46554fdc5743f818881d0",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1408,15 +1408,15 @@
                 "source": "https://github.com/coreshop/quick-order-bundle/tree/main",
                 "issues": "https://github.com/coreshop/quick-order-bundle/issues"
             },
-            "time": "2024-08-19T07:33:53+00:00"
+            "time": "2024-09-20T07:08:17+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/voucher-credit-bundle/dev-main/a2f035339c277ac32da7c28d8ed8242b4118432a.zip",
-                "reference": "a2f035339c277ac32da7c28d8ed8242b4118432a",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/voucher-credit-bundle/dev-main/2c4f476b6c5864f4f685ee569a4579730dc6f31b.zip",
+                "reference": "2c4f476b6c5864f4f685ee569a4579730dc6f31b",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1483,15 +1483,15 @@
                 "source": "https://github.com/coreshop/voucher-credit-bundle/tree/main",
                 "issues": "https://github.com/coreshop/voucher-credit-bundle/issues"
             },
-            "time": "2024-02-11T17:17:08+00:00"
+            "time": "2024-09-20T07:09:09+00:00"
         },
         {
             "name": "coreshop/warehouse-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-main/9f18472ea69dc6ecaf69c90339a2daf54aad47ba.zip",
-                "reference": "9f18472ea69dc6ecaf69c90339a2daf54aad47ba",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-main/c4b407fafc8a0d22fa7cfa45b7c4bc29e2e8fb05.zip",
+                "reference": "c4b407fafc8a0d22fa7cfa45b7c4bc29e2e8fb05",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1549,7 +1549,7 @@
                 "source": "https://github.com/coreshop/warehouse-bundle/tree/main",
                 "issues": "https://github.com/coreshop/warehouse-bundle/issues"
             },
-            "time": "2024-02-11T17:17:10+00:00"
+            "time": "2024-09-20T07:08:51+00:00"
         },
         {
             "name": "creof/geo-parser",
@@ -4974,16 +4974,16 @@
         },
         {
             "name": "knplabs/knp-components",
-            "version": "v5.0.0",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/knp-components.git",
-                "reference": "1dbd333b8f1915b6825f692f2831bf81b27e22a2"
+                "reference": "a1ccc001fd243670ca1e970356027a53d6fca2af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/1dbd333b8f1915b6825f692f2831bf81b27e22a2",
-                "reference": "1dbd333b8f1915b6825f692f2831bf81b27e22a2",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/a1ccc001fd243670ca1e970356027a53d6fca2af",
+                "reference": "a1ccc001fd243670ca1e970356027a53d6fca2af",
                 "shasum": ""
             },
             "require": {
@@ -5055,9 +5055,9 @@
             ],
             "support": {
                 "issues": "https://github.com/KnpLabs/knp-components/issues",
-                "source": "https://github.com/KnpLabs/knp-components/tree/v5.0.0"
+                "source": "https://github.com/KnpLabs/knp-components/tree/v5.1.0"
             },
-            "time": "2024-08-22T12:34:41+00:00"
+            "time": "2024-09-20T12:03:01+00:00"
         },
         {
             "name": "knplabs/knp-menu",

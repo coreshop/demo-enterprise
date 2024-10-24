@@ -522,9 +522,9 @@ CREATE TABLE `coreshop_index_column` (
 DROP TABLE IF EXISTS `coreshop_index_mysql_localized_locations`;
 CREATE TABLE `coreshop_index_mysql_localized_locations` (
   `oo_id` int NOT NULL,
-  `language` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `country` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `language` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `country` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`oo_id`,`language`),
   KEY `IDX_EF4DDACE2705ECF6` (`oo_id`),
   KEY `IDX_EF4DDACED4DB71B5` (`language`)
@@ -535,15 +535,15 @@ CREATE TABLE `coreshop_index_mysql_localized_locations` (
 DROP TABLE IF EXISTS `coreshop_index_mysql_locations`;
 CREATE TABLE `coreshop_index_mysql_locations` (
   `o_id` int NOT NULL,
-  `o_key` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `o_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `o_virtualObjectId` int NOT NULL,
   `o_virtualObjectActive` tinyint(1) NOT NULL,
-  `o_classId` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `o_className` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `o_type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `o_classId` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `o_className` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `o_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `active` tinyint(1) NOT NULL,
   `coordinates` point DEFAULT NULL COMMENT '(DC2Type:point)',
-  `locationName` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `locationName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`o_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
@@ -553,8 +553,8 @@ DROP TABLE IF EXISTS `coreshop_index_mysql_relations_locations`;
 CREATE TABLE `coreshop_index_mysql_relations_locations` (
   `src` int NOT NULL,
   `dest` int NOT NULL,
-  `fieldname` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `fieldname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `src_virtualObjectId` int NOT NULL,
   PRIMARY KEY (`src`,`dest`,`fieldname`,`type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
@@ -795,6 +795,22 @@ CREATE TABLE `coreshop_payment_provider_rule_group` (
 
 
 
+DROP TABLE IF EXISTS `coreshop_payment_provider_rule_translation`;
+CREATE TABLE `coreshop_payment_provider_rule_translation` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `translatable_id` int NOT NULL,
+  `label` varchar(256) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `creationDate` datetime NOT NULL,
+  `modificationDate` datetime DEFAULT NULL,
+  `locale` varchar(5) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `translatable_id_locale` (`translatable_id`,`locale`),
+  KEY `translatable_id` (`translatable_id`),
+  CONSTRAINT `FK_9A9D1D4B2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `coreshop_payment_provider_rule` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
 DROP TABLE IF EXISTS `coreshop_payment_provider_stores`;
 CREATE TABLE `coreshop_payment_provider_stores` (
   `payment_method_id` int NOT NULL,
@@ -1010,9 +1026,12 @@ CREATE TABLE `coreshop_product_store_values` (
   `store` int DEFAULT NULL,
   `product` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
   `price` bigint NOT NULL COMMENT '(DC2Type:bigintInteger)',
+  `taxRuleId` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `product_store` (`product`,`store`),
   KEY `IDX_9EED0E97FF575877` (`store`),
+  KEY `IDX_9EED0E97AC7C6E20` (`taxRuleId`),
+  CONSTRAINT `FK_9EED0E97AC7C6E20` FOREIGN KEY (`taxRuleId`) REFERENCES `coreshop_tax_rule_group` (`id`),
   CONSTRAINT `FK_9EED0E97FF575877` FOREIGN KEY (`store`) REFERENCES `coreshop_store` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -1405,6 +1424,21 @@ CREATE TABLE `documents_newsletter` (
   `missingRequiredEditable` tinyint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_documents_newsletter_documents` FOREIGN KEY (`id`) REFERENCES `documents` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `documents_printpage`;
+CREATE TABLE `documents_printpage` (
+  `id` int unsigned NOT NULL DEFAULT '0',
+  `controller` varchar(500) DEFAULT NULL,
+  `template` varchar(255) DEFAULT NULL,
+  `lastGenerated` int DEFAULT NULL,
+  `lastGenerateMessage` text,
+  `contentMainDocumentId` int DEFAULT NULL,
+  `missingRequiredEditable` tinyint unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_documents_printpage_documents` FOREIGN KEY (`id`) REFERENCES `documents` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
@@ -2256,6 +2290,7 @@ CREATE TABLE `object_query_cs_order` (
   `subtotalDepositNet` bigint DEFAULT NULL,
   `subtotalDepositGross` bigint DEFAULT NULL,
   `hasDepositItem` tinyint(1) DEFAULT NULL,
+  `name` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2480,6 +2515,7 @@ CREATE TABLE `object_query_cs_wishlist` (
   `customer__id` int DEFAULT NULL,
   `customer__type` enum('document','asset','object') DEFAULT NULL,
   `store` int DEFAULT NULL,
+  `name` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_wishlist__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3192,6 +3228,7 @@ CREATE TABLE `object_store_cs_order` (
   `subtotalDepositNet` bigint DEFAULT NULL,
   `subtotalDepositGross` bigint DEFAULT NULL,
   `hasDepositItem` tinyint(1) DEFAULT NULL,
+  `name` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   UNIQUE KEY `u_index_token` (`token`),
   CONSTRAINT `fk_object_store_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
@@ -3374,6 +3411,7 @@ CREATE TABLE `object_store_cs_wishlist` (
   `oo_id` int unsigned NOT NULL DEFAULT '0',
   `token` varchar(190) DEFAULT NULL,
   `store` int DEFAULT NULL,
+  `name` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   UNIQUE KEY `u_index_token` (`token`),
   CONSTRAINT `fk_object_store_cs_wishlist__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE

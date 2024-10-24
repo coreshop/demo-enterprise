@@ -26,14 +26,14 @@
  * - items [coreShopRelations]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_order_invoice',
    'name' => 'CoreShopOrderInvoice',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546719,
+   'modificationDate' => 1729769576,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Order\\Model\\OrderInvoice',
@@ -49,7 +49,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -63,7 +63,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -77,7 +77,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Invoice',
              'type' => NULL,
              'region' => NULL,
@@ -91,7 +91,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'order',
                  'title' => 'coreshop.order_invoice.order',
                  'tooltip' => '',
@@ -134,7 +134,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'returnConcrete' => false,
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
                  'name' => 'invoiceDate',
                  'title' => 'coreshop.order_invoice.date',
                  'tooltip' => '',
@@ -158,7 +158,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'invoiceNumber',
                  'title' => 'coreshop.order_invoice.number',
                  'tooltip' => '',
@@ -188,7 +188,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               3 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'state',
                  'title' => 'coreshop.order_invoice.state',
                  'tooltip' => '',
@@ -230,7 +230,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelAlign' => 'left',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Numbers',
              'type' => NULL,
              'region' => NULL,
@@ -244,7 +244,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
                  'name' => 'Layout',
                  'type' => NULL,
                  'region' => NULL,
@@ -258,7 +258,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'children' => 
                 array (
                   0 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+                  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
                      'name' => 'numbers_store',
                      'type' => NULL,
                      'region' => NULL,
@@ -272,7 +272,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'children' => 
                     array (
                       0 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'totalNet',
                          'title' => 'coreshop.order_invoice.total_net',
                          'tooltip' => '',
@@ -298,7 +298,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       1 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'totalGross',
                          'title' => 'coreshop.order_invoice.total_gross',
                          'tooltip' => '',
@@ -324,7 +324,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       2 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'subtotalNet',
                          'title' => 'coreshop.order_invoice.subtotal_net',
                          'tooltip' => '',
@@ -350,7 +350,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       3 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'subtotalGross',
                          'title' => 'coreshop.order_invoice.subtotal_gross',
                          'tooltip' => '',
@@ -376,7 +376,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       4 => 
-                      Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
+                      \Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
                          'name' => 'adjustmentItems',
                          'title' => 'coreshop.order_invoice.adjustments',
                          'tooltip' => '',
@@ -407,7 +407,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'border' => false,
                       )),
                       5 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'pimcoreAdjustmentTotalGross',
                          'title' => 'coreshop.order_invoice.adjustments_total_gross',
                          'tooltip' => '',
@@ -433,7 +433,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       6 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'pimcoreAdjustmentTotalNet',
                          'title' => 'coreshop.order_invoice.adjustments_total_net',
                          'tooltip' => '',
@@ -471,7 +471,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'labelAlign' => 'left',
                   )),
                   1 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+                  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
                      'name' => 'numbers_converted',
                      'type' => NULL,
                      'region' => NULL,
@@ -485,7 +485,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'children' => 
                     array (
                       0 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'convertedTotalNet',
                          'title' => 'coreshop.order_invoice.converted_total_net',
                          'tooltip' => '',
@@ -511,7 +511,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       1 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'convertedTotalGross',
                          'title' => 'coreshop.order_invoice.converted_total_gross',
                          'tooltip' => '',
@@ -537,7 +537,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       2 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'convertedSubtotalNet',
                          'title' => 'coreshop.order_invoice.converted_subtotal_net',
                          'tooltip' => '',
@@ -563,7 +563,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       3 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'convertedSubtotalGross',
                          'title' => 'coreshop.order_invoice.converted_subtotal_gross',
                          'tooltip' => '',
@@ -589,7 +589,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       4 => 
-                      Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
+                      \Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
                          'name' => 'convertedAdjustmentItems',
                          'title' => 'coreshop.order_invoice.converted_adjustments',
                          'tooltip' => '',
@@ -620,7 +620,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'border' => false,
                       )),
                       5 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'convertedPimcoreAdjustmentTotalGross',
                          'title' => 'coreshop.order_invoice.converted_adjustments_total_gross',
                          'tooltip' => '',
@@ -646,7 +646,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'nullable' => false,
                       )),
                       6 => 
-                      CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+                      \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                          'name' => 'convertedPimcoreAdjustmentTotalNet',
                          'title' => 'coreshop.order_invoice.converted_adjustments_total_net',
                          'tooltip' => '',
@@ -705,7 +705,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelAlign' => 'left',
           )),
           2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Items',
              'type' => NULL,
              'region' => NULL,
@@ -719,7 +719,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
                  'name' => 'items',
                  'title' => 'coreshop.order_invoice.items',
                  'tooltip' => '',
@@ -739,6 +739,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
+                  0 => 
+                  array (
+                    'classes' => 'CoreShopOrderInvoiceItem',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',

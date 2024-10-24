@@ -13,7 +13,7 @@
   },
   "require": {
     "coreshop/batch-messenger-bundle": "dev-main",
-    "coreshop/core-shop": "^4.0",
+    "coreshop/core-shop": "^4.1",
     "coreshop/customer-cluster-bundle": "dev-main",
     "coreshop/deposit-bundle": "dev-main",
     "coreshop/document-route-bundle": "dev-main",
@@ -25,8 +25,8 @@
     "coreshop/quick-order-bundle": "dev-main",
     "coreshop/voucher-credit-bundle": "dev-main",
     "coreshop/warehouse-bundle": "dev-main",
-    "pimcore/data-hub": "^1.6",
-    "pimcore/pimcore": "~11.2.0",
+    "pimcore/data-hub": "^1.8",
+    "pimcore/pimcore": "^11.4",
     "rybakit/twig-deferred-extension": "^3.0",
     "symfony/validator": "6.4.6"
   },

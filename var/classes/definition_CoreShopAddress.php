@@ -19,14 +19,14 @@
  * - addressIdentifier [coreShopAddressIdentifier]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_address',
    'name' => 'CoreShopAddress',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546721,
+   'modificationDate' => 1729769575,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Address\\Model\\Address',
@@ -42,7 +42,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -56,7 +56,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -70,7 +70,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
              'name' => 'Layout',
              'type' => NULL,
              'region' => NULL,
@@ -84,7 +84,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'salutation',
                  'title' => 'coreshop.address.salutation',
                  'tooltip' => '',
@@ -114,7 +114,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'firstname',
                  'title' => 'coreshop.address.firstname',
                  'tooltip' => '',
@@ -144,7 +144,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'lastname',
                  'title' => 'coreshop.address.lastname',
                  'tooltip' => '',
@@ -174,7 +174,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               3 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'company',
                  'title' => 'coreshop.address.company',
                  'tooltip' => '',
@@ -204,7 +204,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               4 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'street',
                  'title' => 'coreshop.address.street',
                  'tooltip' => '',
@@ -234,7 +234,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               5 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'number',
                  'title' => 'coreshop.address.number',
                  'tooltip' => '',
@@ -264,7 +264,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               6 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'postcode',
                  'title' => 'coreshop.address.post_code',
                  'tooltip' => '',
@@ -294,7 +294,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               7 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'city',
                  'title' => 'coreshop.address.city',
                  'tooltip' => '',
@@ -324,7 +324,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               8 => 
-              CoreShop\Bundle\AddressBundle\CoreExtension\Country::__set_state(array(
+              \CoreShop\Bundle\AddressBundle\CoreExtension\Country::__set_state(array(
                  'name' => 'country',
                  'title' => 'coreshop.address.country',
                  'tooltip' => '',
@@ -345,7 +345,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'allowEmpty' => false,
               )),
               9 => 
-              CoreShop\Bundle\AddressBundle\CoreExtension\State::__set_state(array(
+              \CoreShop\Bundle\AddressBundle\CoreExtension\State::__set_state(array(
                  'name' => 'state',
                  'title' => 'coreshop.address.state',
                  'tooltip' => '',
@@ -366,7 +366,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'allowEmpty' => true,
               )),
               10 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'phoneNumber',
                  'title' => 'coreshop.address.phone_number',
                  'tooltip' => '',
@@ -396,7 +396,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               11 => 
-              CoreShop\Bundle\AddressBundle\CoreExtension\AddressIdentifier::__set_state(array(
+              \CoreShop\Bundle\AddressBundle\CoreExtension\AddressIdentifier::__set_state(array(
                  'name' => 'addressIdentifier',
                  'title' => 'coreshop.address.address_identifier',
                  'tooltip' => '',

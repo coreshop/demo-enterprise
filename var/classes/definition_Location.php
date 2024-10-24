@@ -16,14 +16,14 @@
  * - website [input]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'location',
    'name' => 'Location',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1723441238,
+   'modificationDate' => 1729769580,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => 'App\\Model\\Location',
@@ -39,7 +39,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -53,7 +53,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -67,7 +67,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Location',
              'type' => NULL,
              'region' => NULL,
@@ -81,7 +81,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'locationName',
                  'title' => 'app.cors.object.location.location_name',
                  'tooltip' => '',
@@ -111,7 +111,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'address',
                  'title' => 'app.cors.object.location.address',
                  'tooltip' => '',
@@ -141,7 +141,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'postCode',
                  'title' => 'app.cors.object.location.post_code',
                  'tooltip' => '',
@@ -171,7 +171,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               3 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'city',
                  'title' => 'app.cors.object.location.city',
                  'tooltip' => '',
@@ -201,7 +201,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               4 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Country::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Country::__set_state(array(
                  'name' => 'country',
                  'title' => 'app.cors.object.location.country',
                  'tooltip' => '',
@@ -219,6 +219,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
+                 'options' => NULL,
                  'defaultValue' => NULL,
                  'columnLength' => 190,
                  'dynamicOptions' => false,
@@ -230,7 +231,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'restrictTo' => '',
               )),
               5 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Geopoint::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Geopoint::__set_state(array(
                  'name' => 'coordinates',
                  'title' => 'Geo Koordinaten',
                  'tooltip' => '',
@@ -256,7 +257,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => '',
               )),
               6 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'phone',
                  'title' => 'app.cors.object.location.phone',
                  'tooltip' => '',
@@ -286,7 +287,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               7 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'email',
                  'title' => 'app.cors.object.location.email',
                  'tooltip' => '',
@@ -316,7 +317,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               8 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'website',
                  'title' => 'app.cors.object.location.website',
                  'tooltip' => '',
@@ -412,7 +413,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'deletedDataComponents' => 
   array (
     0 => 
-    Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+    \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
        'name' => 'state',
        'title' => 'app.cors.object.location.state',
        'tooltip' => '',

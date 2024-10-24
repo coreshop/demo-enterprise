@@ -24,14 +24,14 @@
  * - creditAmount [coreShopMoneyCurrency]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_customer',
    'name' => 'CoreShopCustomer',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1703691527,
+   'modificationDate' => 1729769576,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Customer',
@@ -47,7 +47,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -61,7 +61,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -75,7 +75,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
              'name' => 'information',
              'type' => NULL,
              'region' => NULL,
@@ -89,7 +89,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'salutation',
                  'title' => 'coreshop.customer.salutation',
                  'tooltip' => '',
@@ -119,7 +119,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Firstname::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Firstname::__set_state(array(
                  'name' => 'firstname',
                  'title' => 'coreshop.customer.firstname',
                  'tooltip' => '',
@@ -149,7 +149,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Lastname::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Lastname::__set_state(array(
                  'name' => 'lastname',
                  'title' => 'coreshop.customer.lastname',
                  'tooltip' => '',
@@ -179,7 +179,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               3 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'company',
                  'title' => 'coreshop.customer.company',
                  'tooltip' => NULL,
@@ -222,7 +222,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'returnConcrete' => false,
               )),
               4 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Email::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Email::__set_state(array(
                  'name' => 'email',
                  'title' => 'coreshop.customer.email',
                  'tooltip' => '',
@@ -252,7 +252,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               5 => 
-              CoreShop\Bundle\CustomerClusterBundle\CoreExtension\CustomerCluster::__set_state(array(
+              \CoreShop\Bundle\CustomerClusterBundle\CoreExtension\CustomerCluster::__set_state(array(
                  'name' => 'customerCluster',
                  'title' => 'Customer Cluster',
                  'tooltip' => NULL,
@@ -273,7 +273,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'allowEmpty' => false,
               )),
               6 => 
-              Pimcore\Bundle\NewsletterBundle\Model\DataObject\ClassDefinition\Data\NewsletterActive::__set_state(array(
+              \Pimcore\Bundle\NewsletterBundle\Model\DataObject\ClassDefinition\Data\NewsletterActive::__set_state(array(
                  'name' => 'newsletterActive',
                  'title' => 'coreshop.customer.newsletter_active',
                  'tooltip' => '',
@@ -295,7 +295,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               7 => 
-              Pimcore\Bundle\NewsletterBundle\Model\DataObject\ClassDefinition\Data\NewsletterConfirmed::__set_state(array(
+              \Pimcore\Bundle\NewsletterBundle\Model\DataObject\ClassDefinition\Data\NewsletterConfirmed::__set_state(array(
                  'name' => 'newsletterConfirmed',
                  'title' => 'coreshop.customer.newsletter_confirmed',
                  'tooltip' => '',
@@ -317,7 +317,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               8 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'newsletterToken',
                  'title' => 'Newsletter Token',
                  'tooltip' => '',
@@ -347,7 +347,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               9 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Gender::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Gender::__set_state(array(
                  'name' => 'gender',
                  'title' => 'coreshop.customer.gender',
                  'tooltip' => '',
@@ -365,7 +365,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'options' => NULL,
                  'defaultValue' => NULL,
                  'columnLength' => 190,
                  'dynamicOptions' => false,
@@ -376,7 +375,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderData' => NULL,
               )),
               10 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'localeCode',
                  'title' => 'coreshop.customer.locale',
                  'tooltip' => '',
@@ -406,7 +405,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               11 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'user',
                  'title' => 'coreshop.customer.user',
                  'tooltip' => '',
@@ -458,7 +457,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelAlign' => 'left',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'addresses',
              'type' => NULL,
              'region' => NULL,
@@ -472,7 +471,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                  'name' => 'addressAccessType',
                  'title' => 'coreshop.customer.address_access_type',
                  'tooltip' => '',
@@ -501,7 +500,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderData' => '',
               )),
               1 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
                  'name' => 'addresses',
                  'title' => 'coreshop.customer.addresses',
                  'tooltip' => NULL,
@@ -521,6 +520,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
+                  0 => 
+                  array (
+                    'classes' => 'CoreShopAddress',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -542,7 +545,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'stack' => 'coreshop.address',
               )),
               2 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'defaultAddress',
                  'title' => 'coreshop.customer.default_address',
                  'tooltip' => NULL,
@@ -597,7 +600,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelAlign' => 'left',
           )),
           2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'groups',
              'type' => NULL,
              'region' => NULL,
@@ -611,7 +614,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
                  'name' => 'customerGroups',
                  'title' => 'coreshop.customer.groups',
                  'tooltip' => NULL,
@@ -631,6 +634,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
+                  0 => 
+                  array (
+                    'classes' => 'CoreShopCustomerGroup',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -664,7 +671,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelAlign' => 'left',
           )),
           3 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'credit',
              'type' => NULL,
              'region' => NULL,
@@ -678,7 +685,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              CoreShop\Bundle\CurrencyBundle\CoreExtension\MoneyCurrency::__set_state(array(
+              \CoreShop\Bundle\CurrencyBundle\CoreExtension\MoneyCurrency::__set_state(array(
                  'name' => 'creditAmount',
                  'title' => 'Credit Amount',
                  'tooltip' => NULL,

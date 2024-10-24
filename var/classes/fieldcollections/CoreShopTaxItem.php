@@ -8,7 +8,7 @@
  * - taxRate [coreShopTaxRate]
  */
 
-return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
+return \Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
    'dao' => NULL,
    'key' => 'CoreShopTaxItem',
    'parentClass' => 'CoreShop\\Component\\Taxation\\Model\\TaxItem',
@@ -16,7 +16,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
    'title' => NULL,
    'group' => 'CoreShop',
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => NULL,
      'type' => NULL,
      'region' => NULL,
@@ -30,7 +30,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -44,7 +44,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'name',
              'title' => 'Name',
              'tooltip' => '',
@@ -74,7 +74,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
              'name' => 'rate',
              'title' => 'Rate',
              'tooltip' => '',
@@ -104,7 +104,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+          \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
              'name' => 'amount',
              'title' => 'Amount',
              'tooltip' => '',
@@ -130,7 +130,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
              'nullable' => false,
           )),
           3 => 
-          CoreShop\Bundle\TaxationBundle\CoreExtension\TaxRate::__set_state(array(
+          \CoreShop\Bundle\TaxationBundle\CoreExtension\TaxRate::__set_state(array(
              'name' => 'taxRate',
              'title' => 'Tax Rate',
              'tooltip' => '',
@@ -176,6 +176,9 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
   )),
    'fieldDefinitionsCache' => NULL,
    'blockedVarsForExport' => 
+  array (
+  ),
+   'activeDispatchingEvents' => 
   array (
   ),
 ));

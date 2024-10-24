@@ -9,14 +9,14 @@
  * - roles [multiselect]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_customer_group',
    'name' => 'CoreShopCustomerGroup',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546720,
+   'modificationDate' => 1729769576,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Customer\\Model\\CustomerGroup',
@@ -32,7 +32,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -46,7 +46,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -60,7 +60,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'name',
              'title' => 'coreshop.customer_group.name',
              'tooltip' => '',
@@ -90,7 +90,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
              'name' => 'roles',
              'title' => 'coreshop.customer_group.roles',
              'tooltip' => '',
@@ -108,11 +108,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
+             'options' => NULL,
              'maxItems' => NULL,
              'renderType' => NULL,
              'dynamicOptions' => false,
+             'defaultValue' => NULL,
              'height' => '',
              'width' => '',
+             'defaultValueGenerator' => '',
              'optionsProviderType' => NULL,
              'optionsProviderClass' => 'CoreShop\\Bundle\\CustomerBundle\\CoreExtension\\Provider\\RoleOptionsProvider',
              'optionsProviderData' => '',

@@ -8,7 +8,7 @@
  * - discountGross [coreShopMoney]
  */
 
-return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
+return \Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
    'dao' => NULL,
    'key' => 'CoreShopPriceRuleItem',
    'parentClass' => 'CoreShop\\Component\\Order\\Model\\PriceRuleItem',
@@ -16,7 +16,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
    'title' => NULL,
    'group' => 'CoreShop',
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => NULL,
      'type' => NULL,
      'region' => NULL,
@@ -30,7 +30,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -44,7 +44,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
          'children' => 
         array (
           0 => 
-          CoreShop\Bundle\OrderBundle\CoreExtension\CartPriceRule::__set_state(array(
+          \CoreShop\Bundle\OrderBundle\CoreExtension\CartPriceRule::__set_state(array(
              'name' => 'cartPriceRule',
              'title' => 'coreshop.cart_price_rule_item.price_rule',
              'tooltip' => '',
@@ -66,7 +66,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
              'phpdocType' => 'CoreShop\\Component\\Order\\Model\\CartPriceRule',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'voucherCode',
              'title' => 'coreshop.cart_price_rule_item.voucher_code',
              'tooltip' => '',
@@ -96,7 +96,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+          \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
              'name' => 'discountNet',
              'title' => 'coreshop.cart_price_rule_item.discount_net',
              'tooltip' => '',
@@ -122,7 +122,7 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
              'nullable' => false,
           )),
           3 => 
-          CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+          \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
              'name' => 'discountGross',
              'title' => 'coreshop.cart_price_rule_item.discount_gross',
              'tooltip' => '',
@@ -173,6 +173,9 @@ return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
   )),
    'fieldDefinitionsCache' => NULL,
    'blockedVarsForExport' => 
+  array (
+  ),
+   'activeDispatchingEvents' => 
   array (
   ),
 ));

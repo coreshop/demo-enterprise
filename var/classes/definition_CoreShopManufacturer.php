@@ -9,14 +9,14 @@
  * - image [image]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_manufacturer',
    'name' => 'CoreShopManufacturer',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546721,
+   'modificationDate' => 1729769576,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => '\\CoreShop\\Component\\Product\\Model\\Manufacturer',
@@ -32,7 +32,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -46,7 +46,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -60,7 +60,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
              'name' => 'Layout',
              'type' => NULL,
              'region' => NULL,
@@ -74,7 +74,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'name',
                  'title' => 'coreshop.manufacturer.name',
                  'tooltip' => '',
@@ -104,7 +104,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
                  'name' => 'image',
                  'title' => 'coreshop.manufacturer.image',
                  'tooltip' => '',

@@ -86,6 +86,7 @@ INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('application
 ('thumbnails',''), 
 ('translations',''), 
 ('users',''), 
+('web2print_settings','Pimcore Web2Print Bundle'), 
 ('website_settings',''), 
 ('workflow_details',''), 
 ('xliff_import_export','Pimcore Xliff Bundle');

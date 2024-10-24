@@ -10,14 +10,14 @@
  * - price [coreShopMoneyCurrency]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => '1',
    'name' => 'CoreShopVoucherProduct',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702562374,
+   'modificationDate' => 1729769580,
    'userOwner' => 0,
    'userModification' => 2,
    'parentClass' => 'CoreShop\\Bundle\\VoucherCreditBundle\\Model\\VoucherProduct',
@@ -33,7 +33,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -47,7 +47,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -61,7 +61,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
              'name' => 'localizedfields',
              'title' => '',
              'tooltip' => '',
@@ -82,7 +82,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'name',
                  'title' => 'Name',
                  'tooltip' => '',
@@ -126,10 +126,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'permissionEdit' => NULL,
              'labelWidth' => 100,
              'labelAlign' => 'left',
+             'width' => NULL,
+             'height' => NULL,
              'fieldDefinitionsCache' => NULL,
           )),
           1 => 
-          CoreShop\Bundle\CurrencyBundle\CoreExtension\MoneyCurrency::__set_state(array(
+          \CoreShop\Bundle\CurrencyBundle\CoreExtension\MoneyCurrency::__set_state(array(
              'name' => 'price',
              'title' => 'Preis',
              'tooltip' => '',

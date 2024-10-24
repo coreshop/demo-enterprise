@@ -13,14 +13,14 @@
  * - total [coreShopMoney]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => '2',
    'name' => 'CoreShopOrderItemVoucher',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702562477,
+   'modificationDate' => 1729769579,
    'userOwner' => 0,
    'userModification' => 2,
    'parentClass' => 'CoreShop\\Bundle\\VoucherCreditBundle\\Model\\OrderItemVoucher',
@@ -36,7 +36,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -50,7 +50,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -64,7 +64,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'number',
              'title' => 'number',
              'tooltip' => '',
@@ -94,7 +94,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'code',
              'title' => 'Code',
              'tooltip' => '',
@@ -124,7 +124,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+          \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
              'name' => 'orderItem',
              'title' => 'Order Item',
              'tooltip' => '',
@@ -167,7 +167,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'returnConcrete' => false,
           )),
           3 => 
-          CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+          \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
              'name' => 'order',
              'title' => 'Order',
              'tooltip' => '',
@@ -210,7 +210,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'returnConcrete' => false,
           )),
           4 => 
-          CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+          \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
              'name' => 'product',
              'title' => 'Product',
              'tooltip' => '',
@@ -257,7 +257,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'returnConcrete' => false,
           )),
           5 => 
-          CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+          \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
              'name' => 'total',
              'title' => 'Total',
              'tooltip' => '',

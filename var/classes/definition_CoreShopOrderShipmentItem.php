@@ -15,14 +15,14 @@
  * - stockItem [coreShopStockItem]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_order_shipment_item',
    'name' => 'CoreShopOrderShipmentItem',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1703691529,
+   'modificationDate' => 1729769579,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\OrderShipmentItem',
@@ -38,7 +38,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -52,7 +52,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -66,7 +66,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'item',
              'type' => NULL,
              'region' => NULL,
@@ -80,7 +80,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'orderItem',
                  'title' => 'coreshop.order_shipment_item.order_item',
                  'tooltip' => NULL,
@@ -123,7 +123,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'returnConcrete' => false,
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'quantity',
                  'title' => 'coreshop.order_shipment_item.quantity',
                  'tooltip' => '',
@@ -153,7 +153,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               2 => 
-              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+              \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'totalNet',
                  'title' => 'coreshop.order_shipment_item.total_net',
                  'tooltip' => '',
@@ -179,7 +179,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'nullable' => false,
               )),
               3 => 
-              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+              \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'totalGross',
                  'title' => 'coreshop.order_shipment_item.total_gross',
                  'tooltip' => '',
@@ -205,7 +205,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'nullable' => false,
               )),
               4 => 
-              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+              \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'convertedTotalNet',
                  'title' => 'coreshop.order_shipment_item.converted_total_net',
                  'tooltip' => '',
@@ -231,7 +231,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'nullable' => false,
               )),
               5 => 
-              CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
+              \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'convertedTotalGross',
                  'title' => 'coreshop.order_shipment_item.converted_total_gross',
                  'tooltip' => '',
@@ -257,7 +257,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'nullable' => false,
               )),
               6 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'weight',
                  'title' => 'coreshop.order_shipment_item.weight',
                  'tooltip' => '',
@@ -287,7 +287,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               7 => 
-              CoreShop\Bundle\WarehouseBundle\CoreExtension\StockItem::__set_state(array(
+              \CoreShop\Bundle\WarehouseBundle\CoreExtension\StockItem::__set_state(array(
                  'name' => 'stockItem',
                  'title' => 'Stock Item',
                  'tooltip' => NULL,

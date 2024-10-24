@@ -10,14 +10,14 @@
  * - wishlist [coreShopRelation]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_wishlist_item',
    'name' => 'CoreShopWishlistItem',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546721,
+   'modificationDate' => 1729769580,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Wishlist\\Model\\WishlistItem',
@@ -33,7 +33,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -47,7 +47,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'General',
          'type' => NULL,
          'region' => NULL,
@@ -61,7 +61,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+          \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
              'name' => 'product',
              'title' => 'Product',
              'tooltip' => '',
@@ -104,7 +104,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'returnConcrete' => false,
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
              'name' => 'quantity',
              'title' => 'coreshop.wishlist_item.quantity',
              'tooltip' => '',
@@ -134,7 +134,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+          \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
              'name' => 'wishlist',
              'title' => 'coreshop.wishlist_item.wishlist',
              'tooltip' => '',

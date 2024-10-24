@@ -11,14 +11,14 @@
  * - customer [coreShopRelation]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_user',
    'name' => 'CoreShopUser',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1703691529,
+   'modificationDate' => 1729769580,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\User',
@@ -34,7 +34,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -48,7 +48,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -62,7 +62,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
              'name' => 'information',
              'type' => NULL,
              'region' => NULL,
@@ -76,7 +76,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'loginIdentifier',
                  'title' => 'Login Identifier',
                  'tooltip' => '',
@@ -106,7 +106,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Password::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Password::__set_state(array(
                  'name' => 'password',
                  'title' => 'Password',
                  'tooltip' => '',
@@ -131,7 +131,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => '',
               )),
               2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'passwordResetHash',
                  'title' => 'Reset Password Hash',
                  'tooltip' => '',
@@ -161,7 +161,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               3 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'customer',
                  'title' => 'Customer',
                  'tooltip' => '',

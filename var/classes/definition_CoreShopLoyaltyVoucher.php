@@ -13,14 +13,14 @@
  * - active [checkbox]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_loyalty_voucher',
    'name' => 'CoreShopLoyaltyVoucher',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702205140,
+   'modificationDate' => 1729769576,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => 'CoreShop\\Bundle\\LoyaltyBundle\\Model\\LoyaltyVoucher',
@@ -36,7 +36,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -50,7 +50,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -64,7 +64,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
              'name' => 'localizedfields',
              'title' => '',
              'tooltip' => NULL,
@@ -85,7 +85,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'name',
                  'title' => 'Name',
                  'tooltip' => '',
@@ -115,7 +115,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
                  'name' => 'description',
                  'title' => 'Description',
                  'tooltip' => '',
@@ -154,10 +154,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'permissionEdit' => NULL,
              'labelWidth' => 100,
              'labelAlign' => 'left',
+             'width' => NULL,
+             'height' => NULL,
              'fieldDefinitionsCache' => NULL,
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
              'name' => 'points',
              'title' => 'Points',
              'tooltip' => '',
@@ -187,7 +189,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          CoreShop\Bundle\OrderBundle\CoreExtension\CartPriceRule::__set_state(array(
+          \CoreShop\Bundle\OrderBundle\CoreExtension\CartPriceRule::__set_state(array(
              'name' => 'cartPriceRule',
              'title' => 'Cart Price Rule',
              'tooltip' => '',
@@ -209,7 +211,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'phpdocType' => 'CoreShop\\Component\\Order\\Model\\CartPriceRule',
           )),
           3 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
              'name' => 'active',
              'title' => 'Active',
              'tooltip' => '',

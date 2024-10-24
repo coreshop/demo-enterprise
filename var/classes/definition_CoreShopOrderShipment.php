@@ -15,14 +15,14 @@
  * - items [coreShopRelations]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_order_shipment',
    'name' => 'CoreShopOrderShipment',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546719,
+   'modificationDate' => 1729769579,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\OrderShipment',
@@ -38,7 +38,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -52,7 +52,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -66,7 +66,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'shipment',
              'type' => NULL,
              'region' => NULL,
@@ -80,7 +80,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'order',
                  'title' => 'coreshop.order_shipment.order',
                  'tooltip' => '',
@@ -123,7 +123,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'returnConcrete' => false,
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
                  'name' => 'shipmentDate',
                  'title' => 'coreshop.order_shipment.date',
                  'tooltip' => '',
@@ -147,7 +147,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'shipmentNumber',
                  'title' => 'coreshop.order_shipment.number',
                  'tooltip' => '',
@@ -177,7 +177,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               3 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'state',
                  'title' => 'coreshop.order_shipment.state',
                  'tooltip' => '',
@@ -207,7 +207,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               4 => 
-              CoreShop\Bundle\ShippingBundle\CoreExtension\Carrier::__set_state(array(
+              \CoreShop\Bundle\ShippingBundle\CoreExtension\Carrier::__set_state(array(
                  'name' => 'carrier',
                  'title' => 'coreshop.order_shipment.carrier',
                  'tooltip' => '',
@@ -228,7 +228,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'allowEmpty' => false,
               )),
               5 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'trackingCode',
                  'title' => 'coreshop.order_shipment.tracking_code',
                  'tooltip' => '',
@@ -258,7 +258,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               6 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'weight',
                  'title' => 'coreshop.order_shipment.weight',
                  'tooltip' => '',
@@ -300,7 +300,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelAlign' => 'left',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'items',
              'type' => NULL,
              'region' => NULL,
@@ -314,7 +314,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
                  'name' => 'items',
                  'title' => 'coreshop.order_shipment.items',
                  'tooltip' => '',
@@ -334,6 +334,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
+                  0 => 
+                  array (
+                    'classes' => 'CoreShopOrderShipmentItem',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',

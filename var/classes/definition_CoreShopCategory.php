@@ -16,14 +16,14 @@
  * - parentCategory [coreShopRelation]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_category',
    'name' => 'CoreShopCategory',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546720,
+   'modificationDate' => 1729769575,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Category',
@@ -39,7 +39,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -53,7 +53,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -67,7 +67,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'informations',
              'type' => NULL,
              'region' => NULL,
@@ -81,7 +81,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
                  'name' => 'localizedfields',
                  'title' => NULL,
                  'tooltip' => '',
@@ -102,7 +102,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'children' => 
                 array (
                   0 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                      'name' => 'name',
                      'title' => 'coreshop.category.name',
                      'tooltip' => '',
@@ -132,7 +132,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'defaultValueGenerator' => '',
                   )),
                   1 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
                      'name' => 'description',
                      'title' => 'coreshop.category.description',
                      'tooltip' => '',
@@ -157,7 +157,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'width' => '',
                   )),
                   2 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\UrlSlug::__set_state(array(
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\UrlSlug::__set_state(array(
                      'name' => 'slug',
                      'title' => 'coreshop.category.slug',
                      'tooltip' => '',
@@ -196,7 +196,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'referencedFields' => 
                 array (
                   0 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
                      'name' => 'localizedfields',
                      'title' => '',
                      'tooltip' => '',
@@ -217,7 +217,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'children' => 
                     array (
                       0 => 
-                      Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                      \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                          'name' => 'pimcoreMetaTitle',
                          'title' => 'coreshop.category.seo_meta_title',
                          'tooltip' => '',
@@ -247,7 +247,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                          'defaultValueGenerator' => '',
                       )),
                       1 => 
-                      Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+                      \Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
                          'name' => 'pimcoreMetaDescription',
                          'title' => 'coreshop.category.seo_meta_description',
                          'tooltip' => '',
@@ -286,6 +286,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'permissionEdit' => NULL,
                      'labelWidth' => 100,
                      'labelAlign' => 'left',
+                     'width' => NULL,
+                     'height' => NULL,
                      'fieldDefinitionsCache' => NULL,
                   )),
                 ),
@@ -293,10 +295,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'permissionEdit' => NULL,
                  'labelWidth' => 100,
                  'labelAlign' => 'left',
+                 'width' => NULL,
+                 'height' => NULL,
                  'fieldDefinitionsCache' => NULL,
               )),
               1 => 
-              CoreShop\Bundle\IndexBundle\CoreExtension\Filter::__set_state(array(
+              \CoreShop\Bundle\IndexBundle\CoreExtension\Filter::__set_state(array(
                  'name' => 'filter',
                  'title' => 'coreshop.category.filter',
                  'tooltip' => '',
@@ -317,7 +321,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'allowEmpty' => true,
               )),
               2 => 
-              CoreShop\Bundle\StoreBundle\CoreExtension\StoreMultiselect::__set_state(array(
+              \CoreShop\Bundle\StoreBundle\CoreExtension\StoreMultiselect::__set_state(array(
                  'name' => 'stores',
                  'title' => 'coreshop.category.stores',
                  'tooltip' => '',
@@ -339,14 +343,16 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'renderType' => NULL,
                  'dynamicOptions' => false,
+                 'defaultValue' => NULL,
                  'height' => '',
                  'width' => '',
+                 'defaultValueGenerator' => '',
                  'optionsProviderType' => NULL,
                  'optionsProviderClass' => NULL,
                  'optionsProviderData' => NULL,
               )),
               3 => 
-              CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+              \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'parentCategory',
                  'title' => 'coreshop.category.parent_category',
                  'tooltip' => NULL,
@@ -401,7 +407,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelAlign' => 'left',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'seo',
              'type' => NULL,
              'region' => NULL,
@@ -415,7 +421,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
                  'name' => 'localizedfields',
                  'title' => '',
                  'tooltip' => '',
@@ -436,7 +442,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'children' => 
                 array (
                   0 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                      'name' => 'pimcoreMetaTitle',
                      'title' => 'coreshop.category.seo_meta_title',
                      'tooltip' => '',
@@ -466,7 +472,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'defaultValueGenerator' => '',
                   )),
                   1 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
                      'name' => 'pimcoreMetaDescription',
                      'title' => 'coreshop.category.seo_meta_description',
                      'tooltip' => '',
@@ -505,6 +511,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'permissionEdit' => NULL,
                  'labelWidth' => 100,
                  'labelAlign' => 'left',
+                 'width' => NULL,
+                 'height' => NULL,
                  'fieldDefinitionsCache' => NULL,
               )),
             ),

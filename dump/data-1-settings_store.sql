@@ -12,4 +12,5 @@ INSERT INTO settings_store (`id`,`scope`,`data`,`type`) VALUES ('BUNDLE_INSTALLE
 ('BUNDLE_INSTALLED__Pimcore\\Bundle\\SimpleBackendSearchBundle\\PimcoreSimpleBackendSearchBundle','pimcore','1','bool'), 
 ('BUNDLE_INSTALLED__Pimcore\\Bundle\\StaticRoutesBundle\\PimcoreStaticRoutesBundle','pimcore','1','bool'), 
 ('BUNDLE_INSTALLED__Pimcore\\Bundle\\TinymceBundle\\PimcoreTinymceBundle','pimcore','1','bool'), 
+('BUNDLE_INSTALLED__Pimcore\\Bundle\\WebToPrintBundle\\PimcoreWebToPrintBundle','pimcore','1','bool'), 
 ('BUNDLE_INSTALLED__Pimcore\\Bundle\\XliffBundle\\PimcoreXliffBundle','pimcore','1','bool');

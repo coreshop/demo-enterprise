@@ -11,14 +11,14 @@
  * - creditAmount [coreShopMoneyCurrency]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_company',
    'name' => 'CoreShopCompany',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1703691527,
+   'modificationDate' => 1729769576,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Company',
@@ -34,7 +34,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -48,7 +48,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -62,7 +62,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'name',
              'title' => 'coreshop.company.name',
              'tooltip' => '',
@@ -92,7 +92,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'vatIdentificationNumber',
              'title' => 'coreshop.company.vat_identification_number',
              'tooltip' => '',
@@ -122,7 +122,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
+          \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelations::__set_state(array(
              'name' => 'addresses',
              'title' => 'coreshop.company.addresses',
              'tooltip' => NULL,
@@ -142,6 +142,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             ),
              'classes' => 
             array (
+              0 => 
+              array (
+                'classes' => 'CoreShopAddress',
+              ),
             ),
              'displayMode' => NULL,
              'pathFormatterClass' => '',
@@ -163,7 +167,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'stack' => 'coreshop.address',
           )),
           3 => 
-          CoreShop\Bundle\CurrencyBundle\CoreExtension\MoneyCurrency::__set_state(array(
+          \CoreShop\Bundle\CurrencyBundle\CoreExtension\MoneyCurrency::__set_state(array(
              'name' => 'creditAmount',
              'title' => 'Credit Amount',
              'tooltip' => NULL,

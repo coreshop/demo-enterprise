@@ -13,14 +13,14 @@
  * - sorting [numeric]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
    'id' => 'cs_attribute_color',
    'name' => 'CoreShopAttributeColor',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1702546720,
+   'modificationDate' => 1729769575,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Variant\\Model\\AttributeColor',
@@ -36,7 +36,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'allowVariants' => false,
    'showVariants' => false,
    'layoutDefinitions' => 
-  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+  \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
      'region' => NULL,
@@ -50,7 +50,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
@@ -64,7 +64,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
              'name' => 'localizedfields',
              'title' => '',
              'tooltip' => '',
@@ -85,7 +85,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'name',
                  'title' => 'coreshop.attribute.name',
                  'tooltip' => '',
@@ -129,10 +129,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'permissionEdit' => NULL,
              'labelWidth' => 0,
              'labelAlign' => 'left',
+             'width' => NULL,
+             'height' => NULL,
              'fieldDefinitionsCache' => NULL,
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'valueText',
              'title' => 'coreshop.attribute.value_text',
              'tooltip' => '',
@@ -162,7 +164,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\RgbaColor::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\RgbaColor::__set_state(array(
              'name' => 'valueColor',
              'title' => 'coreshop.attribute.value_color',
              'tooltip' => '',
@@ -183,7 +185,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'width' => '',
           )),
           3 => 
-          CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
+          \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
              'name' => 'attributeGroup',
              'title' => 'coreshop.attribute.attribute_group',
              'tooltip' => '',
@@ -226,7 +228,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'returnConcrete' => false,
           )),
           4 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
              'name' => 'sorting',
              'title' => 'Sorting',
              'tooltip' => '',

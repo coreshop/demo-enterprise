@@ -35,6 +35,7 @@
  * - paymentState [input]
  * - shippingState [input]
  * - invoiceState [input]
+ * - ticketingState [input]
  * - baseCurrency [coreShopCurrency]
  * - paymentTotal [numeric]
  * - totalNet [coreShopMoney]
@@ -72,11 +73,11 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769576,
+   'modificationDate' => 1729769900,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Order',
-   'implementsInterfaces' => '\\CoreShop\\Bundle\\LoyaltyBundle\\Model\\LoyaltyPointsAwareInterface,\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositAwareInterface',
+   'implementsInterfaces' => '\\CoreShop\\Bundle\\LoyaltyBundle\\Model\\LoyaltyPointsAwareInterface,\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositAwareInterface,\\CoreShop\\Bundle\\TicketingBundle\\Model\\OrderTicketingAwareInterface',
    'listingParentClass' => '',
    'useTraits' => '\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositAwareTrait',
    'listingUseTraits' => '',
@@ -952,6 +953,36 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'index' => false,
                  'locked' => false,
                  'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => '',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'width' => NULL,
+                 'defaultValueGenerator' => '',
+              )),
+              5 => 
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'ticketingState',
+                 'title' => 'coreshop_ticketing.order.ticketing_state',
+                 'tooltip' => NULL,
+                 'mandatory' => false,
+                 'noteditable' => true,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => NULL,
                  'permissions' => NULL,
                  'fieldtype' => '',
                  'relationType' => false,
@@ -1968,10 +1999,6 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
-                  0 => 
-                  array (
-                    'classes' => 'CoreShopOrderItem',
-                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',

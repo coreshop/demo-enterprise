@@ -18,4 +18,10 @@ INSERT INTO object_localized_data_cs_attribute_value (`ooo_id`,`language`,`name`
 (21,'fr','Winter'), 
 (22,'de','Summer'), 
 (22,'en','Summer'), 
-(22,'fr','Summer');
+(22,'fr','Summer'), 
+(224,'de','VIP'), 
+(224,'en','VIP'), 
+(224,'fr','VIP'), 
+(225,'de','Regular'), 
+(225,'en','Regular'), 
+(225,'fr','Regular');

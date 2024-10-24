@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "649233bbf090c10fb709faa24c2da3fa",
+    "content-hash": "8eb01c33e513fbadbf33f5e5e3f1c7e3",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -564,7 +564,7 @@
         },
         {
             "name": "coreshop/core-shop",
-            "version": "4.1.0-RC2",
+            "version": "4.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
@@ -746,7 +746,7 @@
             ],
             "support": {
                 "issues": "https://github.com/coreshop/CoreShop/issues",
-                "source": "https://github.com/coreshop/CoreShop/tree/4.1.0-RC2"
+                "source": "https://github.com/coreshop/CoreShop/tree/4.1"
             },
             "funding": [
                 {
@@ -1352,6 +1352,74 @@
                 "issues": "https://github.com/coreshop/quick-order-bundle/issues"
             },
             "time": "2024-10-24T11:15:28+00:00"
+        },
+        {
+            "name": "coreshop/ticketing-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "zip",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/92a3de74fded90fb0c0e2957df186fa704ba4f38.zip",
+                "reference": "92a3de74fded90fb0c0e2957df186fa704ba4f38",
+                "mirrors": [
+                    {
+                        "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "coreshop/core-shop": "4.1.x-dev",
+                "endroid/qr-code": "^4.8",
+                "rybakit/twig-deferred-extension": "^3.0"
+            },
+            "require-dev": {
+                "coreshop/test-setup": "1.0.x-dev"
+            },
+            "suggest": {
+                "pkpass/pkpass": "To generate Apple Wallet passes"
+            },
+            "default-branch": true,
+            "type": "pimcore-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CoreShop\\Bundle\\TicketingBundle\\": "src/Bundle",
+                    "CoreShop\\Behat\\TicketingBundle\\": "src/Behat"
+                }
+            },
+            "autoload-dev": {
+                "classmap": [
+                    "Kernel.php"
+                ],
+                "psr-4": {
+                    "Pimcore\\Model\\DataObject\\": "var/classes/DataObject",
+                    "App\\": "app"
+                }
+            },
+            "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "CoreShop GmbH",
+                    "email": "info@coreshop.org",
+                    "homepage": "https://www.coreshop.org/",
+                    "role": "TEAM"
+                }
+            ],
+            "description": "CoreShop - Ticketing Bundle",
+            "homepage": "https://www.coreshop.org",
+            "keywords": [
+                "coreshop",
+                "ecommerce",
+                "pimcore",
+                "warehouse"
+            ],
+            "support": {
+                "source": "https://github.com/coreshop/ticketing-bundle/tree/main",
+                "issues": "https://github.com/coreshop/ticketing-bundle/issues"
+            },
+            "time": "2024-10-24T12:44:30+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",
@@ -4149,6 +4217,87 @@
                 "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.42.0"
             },
             "time": "2024-08-26T18:33:48+00:00"
+        },
+        {
+            "name": "gotenberg/gotenberg-php",
+            "version": "v2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gotenberg/gotenberg-php.git",
+                "reference": "e8bc519812349f7bd57b294b4ea41dce53693b7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gotenberg/gotenberg-php/zipball/e8bc519812349f7bd57b294b4ea41dce53693b7c",
+                "reference": "e8bc519812349f7bd57b294b4ea41dce53693b7c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/psr7": "^1 || ^2.1",
+                "php": "^8.1|^8.2|^8.3",
+                "php-http/discovery": "^1.14",
+                "psr/http-client": "^1.0",
+                "psr/http-message": "^1.0|^2.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^12.0",
+                "pestphp/pest": "^2.28",
+                "phpstan/phpstan": "^1.12",
+                "squizlabs/php_codesniffer": "^3.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gotenberg\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julien Neuhart",
+                    "email": "neuhart.julien@gmail.com",
+                    "homepage": "https://github.com/gulien",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP client for interacting with Gotenberg, a developer-friendly API for converting numerous document formats into PDF files, and more!",
+            "homepage": "https://github.com/gotenberg/gotenberg-php",
+            "keywords": [
+                "Gotenberg",
+                "LibreOffice",
+                "chrome",
+                "chromium",
+                "convert",
+                "csv",
+                "docx",
+                "excel",
+                "html",
+                "markdown",
+                "pdf",
+                "pdftk",
+                "pptx",
+                "puppeteer",
+                "unoconv",
+                "wkhtmltopdf",
+                "word",
+                "xlsx"
+            ],
+            "support": {
+                "issues": "https://github.com/gotenberg/gotenberg-php/issues",
+                "source": "https://github.com/gotenberg/gotenberg-php/tree/v2.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/gulien",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-09-29T17:23:42+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -17195,6 +17344,7 @@
         "coreshop/loyality-bundle": 20,
         "coreshop/payum-credit-bundle": 20,
         "coreshop/quick-order-bundle": 20,
+        "coreshop/ticketing-bundle": 20,
         "coreshop/voucher-credit-bundle": 20,
         "coreshop/warehouse-bundle": 20
     },

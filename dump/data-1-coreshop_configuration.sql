@@ -18,4 +18,4 @@ INSERT INTO coreshop_configuration (`id`,`store_id`,`configKey`,`data`,`creation
 (15,NULL,'system.shipment.prefix','s:2:\"SH\";','2023-12-14 09:38:49','2023-12-14 09:38:49'), 
 (16,NULL,'system.shipment.suffix','s:0:\"\";','2023-12-14 09:38:49','2023-12-14 09:38:49'), 
 (17,NULL,'system.shipment.wkhtml','s:69:\"-T 40mm -B 15mm -L 10mm -R 10mm --header-spacing 5 --footer-spacing 5\";','2023-12-14 09:38:49','2023-12-14 09:38:49'), 
-(18,NULL,'SYSTEM.PRICE_RULE.UPDATE','i:1703692679;','2023-12-14 09:39:11','2023-12-27 16:57:59');
+(18,NULL,'SYSTEM.PRICE_RULE.UPDATE','i:1729771687;','2023-12-14 09:39:11','2024-10-24 14:08:07');

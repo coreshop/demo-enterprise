@@ -1,0 +1,40 @@
+{% extends '@CoreShopFrontend/layout.html.twig' %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('coreshop_index') }}">{{ 'coreshop.ui.home'|trans }}</a></li>
+            <li class="breadcrumb-item active"><a href="{{ app.request.uri }}">Ticketing Bundle</a></li>
+        </ol>
+    </nav>
+
+    <p>
+        We also have a Scanner app for the ticketing bundle. You can view it <a href="{{ path('coreshop_ticketing_scanner_events_list') }}" target="_blank">here</a>
+    </p>
+
+    <h2 class="main-heading2">
+        Events
+    </h2>
+
+    <div class="row">
+        {% for product in events %}
+            {% include '@CoreShopFrontend/Category/_grid.html.twig' with {
+                product: product,
+            } only %}
+        {% endfor %}
+    </div>
+
+    <h2 class="main-heading2">
+        Events Passes
+    </h2>
+
+    <div class="row">
+        {% for product in event_passes %}
+            {% include '@CoreShopFrontend/Category/_grid.html.twig' with {
+                product: product,
+            } only %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
+

@@ -26,4 +26,14 @@ INSERT INTO properties (`cid`,`ctype`,`cpath`,`name`,`type`,`data`,`inheritable`
 (41,'document','/b2b','navigation_name','text','b2b',0), 
 (54,'document','/en/locations','navigation_name','text','locations',0), 
 (55,'document','/de/standorte','language','text','de',1), 
-(55,'document','/de/standorte','navigation_name','text','locations',0);
+(55,'document','/de/standorte','navigation_name','text','locations',0), 
+(56,'document','/en/shop/ticketing','navigation_accesskey','text','',0), 
+(56,'document','/en/shop/ticketing','navigation_anchor','text','',0), 
+(56,'document','/en/shop/ticketing','navigation_class','text','',0), 
+(56,'document','/en/shop/ticketing','navigation_exclude','bool','',0), 
+(56,'document','/en/shop/ticketing','navigation_name','text','Ticketing',0), 
+(56,'document','/en/shop/ticketing','navigation_parameters','text','',0), 
+(56,'document','/en/shop/ticketing','navigation_relation','text','',0), 
+(56,'document','/en/shop/ticketing','navigation_tabindex','text','',0), 
+(56,'document','/en/shop/ticketing','navigation_target','text',NULL,0), 
+(56,'document','/en/shop/ticketing','navigation_title','text','',0);

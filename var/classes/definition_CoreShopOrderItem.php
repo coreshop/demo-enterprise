@@ -76,7 +76,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769577,
+   'modificationDate' => 1729769901,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\OrderItem',
@@ -460,6 +460,14 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                       1 => 
                       array (
                         'classes' => 'CoreShopVoucherProduct',
+                      ),
+                      2 => 
+                      array (
+                        'classes' => 'CoreShopEvent',
+                      ),
+                      3 => 
+                      array (
+                        'classes' => 'CoreShopEventPass',
                       ),
                     ),
                      'displayMode' => NULL,

@@ -6,4 +6,6 @@ INSERT INTO coreshop_document_site_route_translation (`id`,`translatable_id`,`do
 (3,2,42,'en'), 
 (4,2,52,'de'), 
 (5,3,54,'en'), 
-(6,3,55,'de');
+(6,3,55,'de'), 
+(7,4,56,'en'), 
+(8,4,57,'de');

@@ -51,7 +51,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769579,
+   'modificationDate' => 1729769903,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Product',
@@ -879,6 +879,14 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                   array (
                     'classes' => 'CoreShopVoucherProduct',
                   ),
+                  2 => 
+                  array (
+                    'classes' => 'CoreShopEvent',
+                  ),
+                  3 => 
+                  array (
+                    'classes' => 'CoreShopEventPass',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -918,10 +926,6 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
-                  0 => 
-                  array (
-                    'classes' => 'CoreShopAttributeGroup',
-                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -963,14 +967,6 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
-                  0 => 
-                  array (
-                    'classes' => 'CoreShopAttributeValue',
-                  ),
-                  1 => 
-                  array (
-                    'classes' => 'CoreShopAttributeColor',
-                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -1038,10 +1034,6 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
-                  0 => 
-                  array (
-                    'classes' => 'CoreShopCategory',
-                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',

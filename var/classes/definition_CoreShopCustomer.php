@@ -31,7 +31,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769576,
+   'modificationDate' => 1729769901,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Customer',
@@ -365,6 +365,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
+                 'options' => NULL,
                  'defaultValue' => NULL,
                  'columnLength' => 190,
                  'dynamicOptions' => false,
@@ -520,10 +521,6 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
-                  0 => 
-                  array (
-                    'classes' => 'CoreShopAddress',
-                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -634,10 +631,6 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
-                  0 => 
-                  array (
-                    'classes' => 'CoreShopCustomerGroup',
-                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',

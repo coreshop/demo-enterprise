@@ -18,7 +18,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769576,
+   'modificationDate' => 1729769901,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Company',
@@ -142,10 +142,6 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             ),
              'classes' => 
             array (
-              0 => 
-              array (
-                'classes' => 'CoreShopAddress',
-              ),
             ),
              'displayMode' => NULL,
              'pathFormatterClass' => '',

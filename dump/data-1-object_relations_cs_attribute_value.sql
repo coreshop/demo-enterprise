@@ -6,4 +6,6 @@ INSERT INTO object_relations_cs_attribute_value (`id`,`src_id`,`dest_id`,`type`,
 (3,18,15,'object','attributeGroup',0,'object','','0'), 
 (4,19,15,'object','attributeGroup',0,'object','','0'), 
 (5,21,20,'object','attributeGroup',0,'object','','0'), 
-(6,22,20,'object','attributeGroup',0,'object','','0');
+(6,22,20,'object','attributeGroup',0,'object','','0'), 
+(7,224,223,'object','attributeGroup',0,'object','','0'), 
+(8,225,223,'object','attributeGroup',0,'object','','0');

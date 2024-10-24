@@ -323,7 +323,7 @@ CREATE TABLE `coreshop_document_route` (
   `route_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `document` int DEFAULT NULL COMMENT '(DC2Type:pimcoreDocument)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -335,7 +335,7 @@ CREATE TABLE `coreshop_document_site_route` (
   PRIMARY KEY (`id`),
   KEY `IDX_2CCA8F4A67C2CC38` (`documentRouteId`),
   CONSTRAINT `FK_2CCA8F4A67C2CC38` FOREIGN KEY (`documentRouteId`) REFERENCES `coreshop_document_route` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -349,7 +349,7 @@ CREATE TABLE `coreshop_document_site_route_translation` (
   UNIQUE KEY `coreshop_document_site_route_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_DFC186862C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_DFC186862C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `coreshop_document_site_route` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -641,7 +641,7 @@ CREATE TABLE `coreshop_loyalty_points_transaction` (
   PRIMARY KEY (`id`),
   KEY `IDX_144F7D5D11F7BE17` (`loyalty_account`),
   CONSTRAINT `FK_144F7D5D11F7BE17` FOREIGN KEY (`loyalty_account`) REFERENCES `coreshop_loyalty_points_account` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -706,7 +706,7 @@ CREATE TABLE `coreshop_payment` (
   KEY `IDX_E797E8B338248176` (`currency_id`),
   CONSTRAINT `FK_E797E8B338248176` FOREIGN KEY (`currency_id`) REFERENCES `coreshop_currency` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_E797E8B3FCDF7870` FOREIGN KEY (`payment_provider_id`) REFERENCES `coreshop_payment_provider` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1033,7 +1033,7 @@ CREATE TABLE `coreshop_product_store_values` (
   KEY `IDX_9EED0E97AC7C6E20` (`taxRuleId`),
   CONSTRAINT `FK_9EED0E97AC7C6E20` FOREIGN KEY (`taxRuleId`) REFERENCES `coreshop_tax_rule_group` (`id`),
   CONSTRAINT `FK_9EED0E97FF575877` FOREIGN KEY (`store`) REFERENCES `coreshop_store` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1476,7 +1476,7 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=1646 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1891 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1671,6 +1671,38 @@ CREATE TABLE `object_localized_data_cs_category` (
   PRIMARY KEY (`ooo_id`,`language`),
   KEY `language` (`language`),
   CONSTRAINT `fk_object_localized_data_cs_category__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_localized_data_cs_event`;
+CREATE TABLE `object_localized_data_cs_event` (
+  `ooo_id` int unsigned NOT NULL DEFAULT '0',
+  `language` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(190) DEFAULT NULL,
+  `shortDescription` longtext,
+  `pimcoreMetaTitle` varchar(190) DEFAULT NULL,
+  `pimcoreMetaDescription` longtext,
+  `description` longtext,
+  PRIMARY KEY (`ooo_id`,`language`),
+  KEY `language` (`language`),
+  CONSTRAINT `fk_object_localized_data_cs_event__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_localized_data_cs_event_pass`;
+CREATE TABLE `object_localized_data_cs_event_pass` (
+  `ooo_id` int unsigned NOT NULL DEFAULT '0',
+  `language` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(190) DEFAULT NULL,
+  `shortDescription` longtext,
+  `pimcoreMetaTitle` varchar(190) DEFAULT NULL,
+  `pimcoreMetaDescription` longtext,
+  `description` longtext,
+  PRIMARY KEY (`ooo_id`,`language`),
+  KEY `language` (`language`),
+  CONSTRAINT `fk_object_localized_data_cs_event_pass__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
@@ -1901,6 +1933,102 @@ CREATE TABLE `object_localized_query_cs_category_fr` (
   PRIMARY KEY (`ooo_id`,`language`),
   KEY `language` (`language`),
   CONSTRAINT `fk_object_localized_query_cs_category_fr__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_localized_query_cs_event_de`;
+CREATE TABLE `object_localized_query_cs_event_de` (
+  `ooo_id` int unsigned NOT NULL DEFAULT '0',
+  `language` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(190) DEFAULT NULL,
+  `shortDescription` longtext,
+  `pimcoreMetaTitle` varchar(190) DEFAULT NULL,
+  `pimcoreMetaDescription` longtext,
+  `description` longtext,
+  PRIMARY KEY (`ooo_id`,`language`),
+  KEY `language` (`language`),
+  CONSTRAINT `fk_object_localized_query_cs_event_de__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_localized_query_cs_event_en`;
+CREATE TABLE `object_localized_query_cs_event_en` (
+  `ooo_id` int unsigned NOT NULL DEFAULT '0',
+  `language` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(190) DEFAULT NULL,
+  `shortDescription` longtext,
+  `pimcoreMetaTitle` varchar(190) DEFAULT NULL,
+  `pimcoreMetaDescription` longtext,
+  `description` longtext,
+  PRIMARY KEY (`ooo_id`,`language`),
+  KEY `language` (`language`),
+  CONSTRAINT `fk_object_localized_query_cs_event_en__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_localized_query_cs_event_fr`;
+CREATE TABLE `object_localized_query_cs_event_fr` (
+  `ooo_id` int unsigned NOT NULL DEFAULT '0',
+  `language` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(190) DEFAULT NULL,
+  `shortDescription` longtext,
+  `pimcoreMetaTitle` varchar(190) DEFAULT NULL,
+  `pimcoreMetaDescription` longtext,
+  `description` longtext,
+  PRIMARY KEY (`ooo_id`,`language`),
+  KEY `language` (`language`),
+  CONSTRAINT `fk_object_localized_query_cs_event_fr__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_localized_query_cs_event_pass_de`;
+CREATE TABLE `object_localized_query_cs_event_pass_de` (
+  `ooo_id` int unsigned NOT NULL DEFAULT '0',
+  `language` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(190) DEFAULT NULL,
+  `shortDescription` longtext,
+  `pimcoreMetaTitle` varchar(190) DEFAULT NULL,
+  `pimcoreMetaDescription` longtext,
+  `description` longtext,
+  PRIMARY KEY (`ooo_id`,`language`),
+  KEY `language` (`language`),
+  CONSTRAINT `fk_object_localized_query_cs_event_pass_de__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_localized_query_cs_event_pass_en`;
+CREATE TABLE `object_localized_query_cs_event_pass_en` (
+  `ooo_id` int unsigned NOT NULL DEFAULT '0',
+  `language` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(190) DEFAULT NULL,
+  `shortDescription` longtext,
+  `pimcoreMetaTitle` varchar(190) DEFAULT NULL,
+  `pimcoreMetaDescription` longtext,
+  `description` longtext,
+  PRIMARY KEY (`ooo_id`,`language`),
+  KEY `language` (`language`),
+  CONSTRAINT `fk_object_localized_query_cs_event_pass_en__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_localized_query_cs_event_pass_fr`;
+CREATE TABLE `object_localized_query_cs_event_pass_fr` (
+  `ooo_id` int unsigned NOT NULL DEFAULT '0',
+  `language` varchar(10) NOT NULL DEFAULT '',
+  `name` varchar(190) DEFAULT NULL,
+  `shortDescription` longtext,
+  `pimcoreMetaTitle` varchar(190) DEFAULT NULL,
+  `pimcoreMetaDescription` longtext,
+  `description` longtext,
+  PRIMARY KEY (`ooo_id`,`language`),
+  KEY `language` (`language`),
+  CONSTRAINT `fk_object_localized_query_cs_event_pass_fr__ooo_id` FOREIGN KEY (`ooo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
@@ -2205,6 +2333,101 @@ CREATE TABLE `object_query_cs_customer_group` (
 
 
 
+DROP TABLE IF EXISTS `object_query_cs_event`;
+CREATE TABLE `object_query_cs_event` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `oo_classId` varchar(50) DEFAULT 'cs_event',
+  `oo_className` varchar(255) DEFAULT 'CoreShopEvent',
+  `active` tinyint(1) DEFAULT NULL,
+  `manufacturer__id` int DEFAULT NULL,
+  `manufacturer__type` enum('document','asset','object') DEFAULT NULL,
+  `stores` text,
+  `mainVariant__id` int DEFAULT NULL,
+  `mainVariant__type` enum('document','asset','object') DEFAULT NULL,
+  `allowedAttributeGroups` text,
+  `attributes` text,
+  `categories` text,
+  `images` text,
+  `onHold` bigint DEFAULT NULL,
+  `onHand` bigint DEFAULT NULL,
+  `isTracked` tinyint(1) DEFAULT NULL,
+  `minimumQuantityToOrder` bigint DEFAULT NULL,
+  `maximumQuantityToOrder` bigint DEFAULT NULL,
+  `taxRule` int DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_query_cs_event__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_query_cs_event_pass`;
+CREATE TABLE `object_query_cs_event_pass` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `oo_classId` varchar(50) DEFAULT 'cs_event_pass',
+  `oo_className` varchar(255) DEFAULT 'CoreShopEventPass',
+  `active` tinyint(1) DEFAULT NULL,
+  `manufacturer__id` int DEFAULT NULL,
+  `manufacturer__type` enum('document','asset','object') DEFAULT NULL,
+  `stores` text,
+  `validForEvents` text,
+  `mainVariant__id` int DEFAULT NULL,
+  `mainVariant__type` enum('document','asset','object') DEFAULT NULL,
+  `allowedAttributeGroups` text,
+  `attributes` text,
+  `categories` text,
+  `images` text,
+  `onHold` bigint DEFAULT NULL,
+  `onHand` bigint DEFAULT NULL,
+  `isTracked` tinyint(1) DEFAULT NULL,
+  `minimumQuantityToOrder` bigint DEFAULT NULL,
+  `maximumQuantityToOrder` bigint DEFAULT NULL,
+  `taxRule` int DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_query_cs_event_pass__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_query_cs_event_ticket`;
+CREATE TABLE `object_query_cs_event_ticket` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `oo_classId` varchar(50) DEFAULT 'cs_event_ticket',
+  `oo_className` varchar(255) DEFAULT 'CoreShopEventTicket',
+  `documentDate` date DEFAULT NULL,
+  `documentNumber` varchar(190) DEFAULT NULL,
+  `order__id` int DEFAULT NULL,
+  `order__type` enum('document','asset','object') DEFAULT NULL,
+  `orderItem__id` int DEFAULT NULL,
+  `orderItem__type` enum('document','asset','object') DEFAULT NULL,
+  `ticketable__id` int DEFAULT NULL,
+  `ticketable__type` enum('document','asset','object') DEFAULT NULL,
+  `ticketableVariant__id` int DEFAULT NULL,
+  `ticketableVariant__type` enum('document','asset','object') DEFAULT NULL,
+  `state` varchar(190) DEFAULT NULL,
+  `token` varchar(190) DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_query_cs_event_ticket__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_query_cs_event_ticket_scan`;
+CREATE TABLE `object_query_cs_event_ticket_scan` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `oo_classId` varchar(50) DEFAULT 'cs_event_ticket_scan',
+  `oo_className` varchar(255) DEFAULT 'CoreShopEventTicketScan',
+  `scanTime` datetime DEFAULT NULL,
+  `event__id` int DEFAULT NULL,
+  `event__type` enum('document','asset','object') DEFAULT NULL,
+  `state` varchar(190) DEFAULT NULL,
+  `eventTicket__id` int DEFAULT NULL,
+  `eventTicket__type` enum('document','asset','object') DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_query_cs_event_ticket_scan__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
 DROP TABLE IF EXISTS `object_query_cs_loyalty_voucher`;
 CREATE TABLE `object_query_cs_loyalty_voucher` (
   `oo_id` int unsigned NOT NULL DEFAULT '0',
@@ -2291,6 +2514,7 @@ CREATE TABLE `object_query_cs_order` (
   `subtotalDepositGross` bigint DEFAULT NULL,
   `hasDepositItem` tinyint(1) DEFAULT NULL,
   `name` varchar(190) DEFAULT NULL,
+  `ticketingState` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2675,7 +2899,7 @@ CREATE TABLE `object_relations_cs_attribute_value` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_attribute_value__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2759,6 +2983,86 @@ CREATE TABLE `object_relations_cs_customer_group` (
 
 
 
+DROP TABLE IF EXISTS `object_relations_cs_event`;
+CREATE TABLE `object_relations_cs_event` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `src_id` int unsigned NOT NULL DEFAULT '0',
+  `dest_id` int unsigned NOT NULL DEFAULT '0',
+  `type` enum('object','asset','document') NOT NULL,
+  `fieldname` varchar(70) NOT NULL DEFAULT '0',
+  `index` int unsigned NOT NULL DEFAULT '0',
+  `ownertype` enum('object','fieldcollection','localizedfield','objectbrick') NOT NULL DEFAULT 'object',
+  `ownername` varchar(70) NOT NULL DEFAULT '',
+  `position` varchar(70) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `forward_lookup` (`src_id`,`ownertype`,`ownername`,`position`),
+  KEY `reverse_lookup` (`dest_id`,`type`),
+  KEY `fieldname` (`fieldname`),
+  CONSTRAINT `fk_object_relations_cs_event__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_relations_cs_event_pass`;
+CREATE TABLE `object_relations_cs_event_pass` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `src_id` int unsigned NOT NULL DEFAULT '0',
+  `dest_id` int unsigned NOT NULL DEFAULT '0',
+  `type` enum('object','asset','document') NOT NULL,
+  `fieldname` varchar(70) NOT NULL DEFAULT '0',
+  `index` int unsigned NOT NULL DEFAULT '0',
+  `ownertype` enum('object','fieldcollection','localizedfield','objectbrick') NOT NULL DEFAULT 'object',
+  `ownername` varchar(70) NOT NULL DEFAULT '',
+  `position` varchar(70) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `forward_lookup` (`src_id`,`ownertype`,`ownername`,`position`),
+  KEY `reverse_lookup` (`dest_id`,`type`),
+  KEY `fieldname` (`fieldname`),
+  CONSTRAINT `fk_object_relations_cs_event_pass__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_relations_cs_event_ticket`;
+CREATE TABLE `object_relations_cs_event_ticket` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `src_id` int unsigned NOT NULL DEFAULT '0',
+  `dest_id` int unsigned NOT NULL DEFAULT '0',
+  `type` enum('object','asset','document') NOT NULL,
+  `fieldname` varchar(70) NOT NULL DEFAULT '0',
+  `index` int unsigned NOT NULL DEFAULT '0',
+  `ownertype` enum('object','fieldcollection','localizedfield','objectbrick') NOT NULL DEFAULT 'object',
+  `ownername` varchar(70) NOT NULL DEFAULT '',
+  `position` varchar(70) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `forward_lookup` (`src_id`,`ownertype`,`ownername`,`position`),
+  KEY `reverse_lookup` (`dest_id`,`type`),
+  KEY `fieldname` (`fieldname`),
+  CONSTRAINT `fk_object_relations_cs_event_ticket__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_relations_cs_event_ticket_scan`;
+CREATE TABLE `object_relations_cs_event_ticket_scan` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `src_id` int unsigned NOT NULL DEFAULT '0',
+  `dest_id` int unsigned NOT NULL DEFAULT '0',
+  `type` enum('object','asset','document') NOT NULL,
+  `fieldname` varchar(70) NOT NULL DEFAULT '0',
+  `index` int unsigned NOT NULL DEFAULT '0',
+  `ownertype` enum('object','fieldcollection','localizedfield','objectbrick') NOT NULL DEFAULT 'object',
+  `ownername` varchar(70) NOT NULL DEFAULT '',
+  `position` varchar(70) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `forward_lookup` (`src_id`,`ownertype`,`ownername`,`position`),
+  KEY `reverse_lookup` (`dest_id`,`type`),
+  KEY `fieldname` (`fieldname`),
+  CONSTRAINT `fk_object_relations_cs_event_ticket_scan__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
 DROP TABLE IF EXISTS `object_relations_cs_loyalty_voucher`;
 CREATE TABLE `object_relations_cs_loyalty_voucher` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -2815,7 +3119,7 @@ CREATE TABLE `object_relations_cs_order` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_order__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=239 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -2875,7 +3179,7 @@ CREATE TABLE `object_relations_cs_order_item` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_order_item__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=249 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=255 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -3155,6 +3459,65 @@ CREATE TABLE `object_store_cs_customer_group` (
 
 
 
+DROP TABLE IF EXISTS `object_store_cs_event`;
+CREATE TABLE `object_store_cs_event` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `active` tinyint(1) DEFAULT NULL,
+  `stores` text,
+  `onHold` bigint DEFAULT NULL,
+  `onHand` bigint DEFAULT NULL,
+  `isTracked` tinyint(1) DEFAULT NULL,
+  `minimumQuantityToOrder` bigint DEFAULT NULL,
+  `maximumQuantityToOrder` bigint DEFAULT NULL,
+  `taxRule` int DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_store_cs_event__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_store_cs_event_pass`;
+CREATE TABLE `object_store_cs_event_pass` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `active` tinyint(1) DEFAULT NULL,
+  `stores` text,
+  `onHold` bigint DEFAULT NULL,
+  `onHand` bigint DEFAULT NULL,
+  `isTracked` tinyint(1) DEFAULT NULL,
+  `minimumQuantityToOrder` bigint DEFAULT NULL,
+  `maximumQuantityToOrder` bigint DEFAULT NULL,
+  `taxRule` int DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_store_cs_event_pass__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_store_cs_event_ticket`;
+CREATE TABLE `object_store_cs_event_ticket` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `documentDate` date DEFAULT NULL,
+  `documentNumber` varchar(190) DEFAULT NULL,
+  `state` varchar(190) DEFAULT NULL,
+  `token` varchar(190) DEFAULT NULL,
+  `passKey` longblob,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_store_cs_event_ticket__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `object_store_cs_event_ticket_scan`;
+CREATE TABLE `object_store_cs_event_ticket_scan` (
+  `oo_id` int unsigned NOT NULL DEFAULT '0',
+  `scanTime` datetime DEFAULT NULL,
+  `state` varchar(190) DEFAULT NULL,
+  PRIMARY KEY (`oo_id`),
+  CONSTRAINT `fk_object_store_cs_event_ticket_scan__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
 DROP TABLE IF EXISTS `object_store_cs_loyalty_voucher`;
 CREATE TABLE `object_store_cs_loyalty_voucher` (
   `oo_id` int unsigned NOT NULL DEFAULT '0',
@@ -3229,6 +3592,7 @@ CREATE TABLE `object_store_cs_order` (
   `subtotalDepositGross` bigint DEFAULT NULL,
   `hasDepositItem` tinyint(1) DEFAULT NULL,
   `name` varchar(190) DEFAULT NULL,
+  `ticketingState` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   UNIQUE KEY `u_index_token` (`token`),
   CONSTRAINT `fk_object_store_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE

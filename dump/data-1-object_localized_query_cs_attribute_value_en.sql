@@ -6,4 +6,6 @@ INSERT INTO object_localized_query_cs_attribute_value_en (`ooo_id`,`language`,`n
 (18,'en','L'), 
 (19,'en','XL'), 
 (21,'en','Winter'), 
-(22,'en','Summer');
+(22,'en','Summer'), 
+(224,'en','VIP'), 
+(225,'en','Regular');

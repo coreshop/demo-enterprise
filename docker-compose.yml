@@ -72,5 +72,10 @@ services:
             XDEBUG_HOST: 198.29.248.254
             XDEBUG_TRIGGER: PHPSTORM
 
+    gotenberg:
+        image: gotenberg/gotenberg:8
+        networks:
+            - coreshop4_enterprise_demo
+
 volumes:
     coreshop4-enterprise-demo-database:

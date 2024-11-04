@@ -10,7 +10,7 @@ variables:
 daily_update:on-schedule:
     stage: build
     image:
-        name: git.e-conomix.at:5050/cors/docker/php-alpine-3.19-fpm:8.1-5.1.7
+        name: git.e-conomix.at:5050/cors/docker/php-alpine-3.20-fpm:8.2-5.2.4
         entrypoint: [ "" ]
     rules:
         -   if: $CI_PIPELINE_SOURCE == "schedule"
@@ -26,7 +26,7 @@ daily_update:on-schedule:
         - composer update
         - git add .
         - git status
-        - git commit -m "Update composer.lock"
+        - git commit -m "Update composer.lock" || true
         - git push origin HEAD:main || true
     tags:
         - cors

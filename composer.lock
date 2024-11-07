@@ -5420,16 +5420,16 @@
         },
         {
             "name": "lcobucci/jwt",
-            "version": "5.4.1",
+            "version": "5.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "848815d2287abd5d3c285482f8e1f501b289a2e7"
+                "reference": "ea1ce71cbf9741e445a5914e2f67cdbb484ff712"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/848815d2287abd5d3c285482f8e1f501b289a2e7",
-                "reference": "848815d2287abd5d3c285482f8e1f501b289a2e7",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/ea1ce71cbf9741e445a5914e2f67cdbb484ff712",
+                "reference": "ea1ce71cbf9741e445a5914e2f67cdbb484ff712",
                 "shasum": ""
             },
             "require": {
@@ -5477,7 +5477,7 @@
             ],
             "support": {
                 "issues": "https://github.com/lcobucci/jwt/issues",
-                "source": "https://github.com/lcobucci/jwt/tree/5.4.1"
+                "source": "https://github.com/lcobucci/jwt/tree/5.4.2"
             },
             "funding": [
                 {
@@ -5489,7 +5489,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-11-06T06:16:04+00:00"
+            "time": "2024-11-07T12:54:35+00:00"
         },
         {
             "name": "league/csv",
@@ -8685,16 +8685,16 @@
         },
         {
             "name": "pimcore/data-hub",
-            "version": "v1.8.2",
+            "version": "v1.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/data-hub.git",
-                "reference": "90cca98feb97aeee74f5c76894d8ca4eacb70559"
+                "reference": "5195a8cdce705a51e1d25efb9e695c4e7f695ddc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/90cca98feb97aeee74f5c76894d8ca4eacb70559",
-                "reference": "90cca98feb97aeee74f5c76894d8ca4eacb70559",
+                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/5195a8cdce705a51e1d25efb9e695c4e7f695ddc",
+                "reference": "5195a8cdce705a51e1d25efb9e695c4e7f695ddc",
                 "shasum": ""
             },
             "require": {
@@ -8736,9 +8736,9 @@
             "description": "Pimcore Datahub",
             "support": {
                 "issues": "https://github.com/pimcore/data-hub/issues",
-                "source": "https://github.com/pimcore/data-hub/tree/v1.8.2"
+                "source": "https://github.com/pimcore/data-hub/tree/v1.8.3"
             },
-            "time": "2024-09-27T07:07:56+00:00"
+            "time": "2024-11-07T12:58:23+00:00"
         },
         {
             "name": "pimcore/google-marketing-bundle",

@@ -698,14 +698,14 @@
             },
             "type": "pimcore-bundle",
             "extra": {
+                "branch-alias": {
+                    "dev-4.1": "4.1-dev",
+                    "dev-next": "4.1-dev"
+                },
                 "symfony-bin-dir": "bin",
                 "symfony-var-dir": "var",
                 "symfony-tests-dir": "tests",
-                "symfony-assets-install": "relative",
-                "branch-alias": {
-                    "dev-next": "4.1-dev",
-                    "dev-4.1": "4.1-dev"
-                }
+                "symfony-assets-install": "relative"
             },
             "autoload": {
                 "psr-4": {
@@ -2537,20 +2537,20 @@
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
-            "version": "3.6.2",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "f44a224e27573b79140197a44e68484c45fb24da"
+                "reference": "3004c9b3ac3d2a8f484597416ae1882040b3ef3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/f44a224e27573b79140197a44e68484c45fb24da",
-                "reference": "f44a224e27573b79140197a44e68484c45fb24da",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/3004c9b3ac3d2a8f484597416ae1882040b3ef3b",
+                "reference": "3004c9b3ac3d2a8f484597416ae1882040b3ef3b",
                 "shasum": ""
             },
             "require": {
-                "doctrine/data-fixtures": "^1.3",
+                "doctrine/data-fixtures": "^1.5|^2.0",
                 "doctrine/doctrine-bundle": "^2.2",
                 "doctrine/orm": "^2.14.0 || ^3.0",
                 "doctrine/persistence": "^2.4|^3.0",
@@ -2559,7 +2559,7 @@
                 "symfony/console": "^5.4|^6.0|^7.0",
                 "symfony/dependency-injection": "^5.4|^6.0|^7.0",
                 "symfony/deprecation-contracts": "^2.1|^3",
-                "symfony/doctrine-bridge": "^5.4|^6.0|^7.0",
+                "symfony/doctrine-bridge": "^5.4.48|^6.4.16|^7.1.9",
                 "symfony/http-kernel": "^5.4|^6.0|^7.0"
             },
             "conflict": {
@@ -2604,7 +2604,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/DoctrineFixturesBundle/issues",
-                "source": "https://github.com/doctrine/DoctrineFixturesBundle/tree/3.6.2"
+                "source": "https://github.com/doctrine/DoctrineFixturesBundle/tree/3.7.0"
             },
             "funding": [
                 {
@@ -2620,7 +2620,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-13T07:41:29+00:00"
+            "time": "2024-11-28T07:19:21+00:00"
         },
         {
             "name": "doctrine/doctrine-migrations-bundle",
@@ -8624,13 +8624,13 @@
             },
             "type": "pimcore-bundle",
             "extra": {
-                "branch-alias": {
-                    "1.x-dev": "1.6.x-dev"
-                },
                 "pimcore": {
                     "bundles": [
                         "Pimcore\\Bundle\\AdminBundle\\PimcoreAdminBundle"
                     ]
+                },
+                "branch-alias": {
+                    "1.x-dev": "1.6.x-dev"
                 }
             },
             "autoload": {

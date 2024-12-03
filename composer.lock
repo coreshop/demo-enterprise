@@ -8613,16 +8613,16 @@
         },
         {
             "name": "pimcore/admin-ui-classic-bundle",
-            "version": "v1.7.0",
+            "version": "v1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/admin-ui-classic-bundle.git",
-                "reference": "26b8ea6f46f6c2976cad310c3afeaf35806fa856"
+                "reference": "252e17cf9d8c20a1a1bfe56baf26e8350f41cb5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/26b8ea6f46f6c2976cad310c3afeaf35806fa856",
-                "reference": "26b8ea6f46f6c2976cad310c3afeaf35806fa856",
+                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/252e17cf9d8c20a1a1bfe56baf26e8350f41cb5e",
+                "reference": "252e17cf9d8c20a1a1bfe56baf26e8350f41cb5e",
                 "shasum": ""
             },
             "require": {
@@ -8664,9 +8664,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pimcore/admin-ui-classic-bundle/issues",
-                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.7.0"
+                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.7.1"
             },
-            "time": "2024-12-02T09:23:15+00:00"
+            "time": "2024-12-03T12:15:06+00:00"
         },
         {
             "name": "pimcore/compatibility-bridge-v10",
@@ -8859,16 +8859,16 @@
         },
         {
             "name": "pimcore/pimcore",
-            "version": "v11.5.0-RC1",
+            "version": "v11.5.0-RC2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/pimcore.git",
-                "reference": "679e2f23243c8544e754b3cde3da59b7b07c5ce9"
+                "reference": "1b6a56251ce3b4e888070ba49a2ecd96c645fce9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/679e2f23243c8544e754b3cde3da59b7b07c5ce9",
-                "reference": "679e2f23243c8544e754b3cde3da59b7b07c5ce9",
+                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/1b6a56251ce3b4e888070ba49a2ecd96c645fce9",
+                "reference": "1b6a56251ce3b4e888070ba49a2ecd96c645fce9",
                 "shasum": ""
             },
             "require": {
@@ -9074,7 +9074,7 @@
                 "source": "https://github.com/pimcore/pimcore",
                 "wiki": "https://pimcore.com/docs/latest/"
             },
-            "time": "2024-12-02T09:55:36+00:00"
+            "time": "2024-12-03T09:15:41+00:00"
         },
         {
             "name": "pimcore/web-to-print-bundle",
@@ -10781,16 +10781,16 @@
         },
         {
             "name": "symfony-cmf/routing",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/Routing.git",
-                "reference": "4d6e40f8f91f5729e00e5a023640eb13fb359cbd"
+                "reference": "86c3e36a94f8e47a94f7b92ce09877ba3a0809fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/Routing/zipball/4d6e40f8f91f5729e00e5a023640eb13fb359cbd",
-                "reference": "4d6e40f8f91f5729e00e5a023640eb13fb359cbd",
+                "url": "https://api.github.com/repos/symfony-cmf/Routing/zipball/86c3e36a94f8e47a94f7b92ce09877ba3a0809fb",
+                "reference": "86c3e36a94f8e47a94f7b92ce09877ba3a0809fb",
                 "shasum": ""
             },
             "require": {
@@ -10832,9 +10832,9 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony-cmf/Routing/issues",
-                "source": "https://github.com/symfony-cmf/Routing/tree/3.0.3"
+                "source": "https://github.com/symfony-cmf/Routing/tree/3.0.4"
             },
-            "time": "2024-02-19T02:00:24+00:00"
+            "time": "2024-12-02T22:52:12+00:00"
         },
         {
             "name": "symfony-cmf/routing-bundle",

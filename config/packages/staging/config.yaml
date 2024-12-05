@@ -1,3 +1,4 @@
 imports:
     - { resource: ../../config.yaml }
     - { resource: ../../k8s.yaml }
+    - { resource: ../../sentry.yaml }

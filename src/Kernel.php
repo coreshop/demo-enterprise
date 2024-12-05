@@ -17,6 +17,7 @@ namespace App;
 
 use Pimcore\HttpKernel\BundleCollection\BundleCollection;
 use Pimcore\Kernel as PimcoreKernel;
+use Sentry\SentryBundle\SentryBundle;
 
 class Kernel extends PimcoreKernel
 {
@@ -38,5 +39,6 @@ class Kernel extends PimcoreKernel
         $collection->addBundle(new \CoreShop\Bundle\QuickOrderBundle\CoreShopQuickOrderBundle());
         $collection->addBundle(new \CoreShop\Bundle\TicketingBundle\CoreShopTicketingBundle());
         $collection->addBundle(new \Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle());
+        $collection->addBundle(new SentryBundle(), 0, ['staging', 'prod']);
     }
 }

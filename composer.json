@@ -30,6 +30,7 @@
     "pimcore/data-hub": "^1.8",
     "pimcore/pimcore": "^11.4",
     "rybakit/twig-deferred-extension": "^3.0",
+    "sentry/sentry-symfony": "^5.1",
     "symfony/validator": "6.4.6"
   },
   "autoload": {

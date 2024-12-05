@@ -9,4 +9,10 @@ INSERT INTO object_localized_data_cs_order_item (`ooo_id`,`language`,`name`) VAL
 (234,'fr',NULL), 
 (235,'de',NULL), 
 (235,'en','Full Pimcore Experience'), 
-(235,'fr',NULL);
+(235,'fr',NULL), 
+(259,'de',NULL), 
+(259,'en','Pimcore Community Con'), 
+(259,'fr',NULL), 
+(260,'de','Aerodynamisch Stahl Brieftasche'), 
+(260,'en','Aerodynamic Steel Wallet'), 
+(260,'fr','Aerodynamic Steel Wallet');

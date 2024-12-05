@@ -315,4 +315,12 @@ INSERT INTO dependencies (`id`,`sourcetype`,`sourceid`,`targettype`,`targetid`) 
 (387,'object',255,'object',231), 
 (388,'object',255,'object',235), 
 (390,'object',256,'object',222), 
-(391,'object',256,'object',245);
+(391,'object',256,'object',245), 
+(392,'object',257,'object',115), 
+(393,'object',257,'object',117), 
+(396,'object',257,'object',259), 
+(399,'object',257,'object',260), 
+(394,'object',259,'object',220), 
+(395,'object',259,'object',257), 
+(397,'object',260,'object',41), 
+(398,'object',260,'object',257);

@@ -178,4 +178,8 @@ INSERT INTO objects (`id`,`parentId`,`type`,`key`,`path`,`index`,`published`,`cr
 (253,252,'object','1.671a38a7c9d121.74473863','/coreshop/orders/2024/10/24/O8/items/2.671a38a73b87e7.83377162/tickets/',0,1,1729771687,1729771810,0,2,'cs_event_ticket','CoreShopEventTicket',NULL,NULL,3), 
 (254,235,'folder','tickets','/coreshop/orders/2024/10/24/O8/items/3.671a38a73d3ea0.66716588/',0,1,1729771687,1729771687,1,0,NULL,NULL,NULL,NULL,1), 
 (255,254,'object','1.671a38a7cc1132.24691136','/coreshop/orders/2024/10/24/O8/items/3.671a38a73d3ea0.66716588/tickets/',0,1,1729771687,1729771810,0,2,'cs_event_ticket','CoreShopEventTicket',NULL,NULL,3), 
-(256,245,'object','CoreShopCon CjqG1DOETDac4VhaN6zSXNH693EVqvTv','/coreshop/orders/2024/10/24/O8/items/1.671a38a739adf4.83187486/tickets/1.671a38a7bae886.44355002/',0,1,1729773977,1729773977,0,0,'cs_event_ticket_scan','CoreShopEventTicketScan',NULL,NULL,2);
+(256,245,'object','CoreShopCon CjqG1DOETDac4VhaN6zSXNH693EVqvTv','/coreshop/orders/2024/10/24/O8/items/1.671a38a739adf4.83187486/tickets/1.671a38a7bae886.44355002/',0,1,1729773977,1729773977,0,0,'cs_event_ticket_scan','CoreShopEventTicketScan',NULL,NULL,2), 
+(257,230,'object','cart671a441e8d7919.11794055','/coreshop/carts/2024/10/24/',0,1,1729774623,1729774627,0,0,'cs_order','CoreShopOrder',NULL,NULL,0), 
+(258,257,'folder','items','/coreshop/carts/2024/10/24/cart671a441e8d7919.11794055/',0,1,1729774623,1729774623,1,0,NULL,NULL,NULL,NULL,0), 
+(259,258,'object','1.671a44233d86a3.33906122','/coreshop/carts/2024/10/24/cart671a441e8d7919.11794055/items/',0,1,1729774623,1729774627,0,0,'cs_order_item','CoreShopOrderItem',NULL,NULL,0), 
+(260,258,'object','2.671a44233f9cb5.72661580','/coreshop/carts/2024/10/24/cart671a441e8d7919.11794055/items/',0,1,1729774627,1729774627,0,0,'cs_order_item','CoreShopOrderItem',NULL,NULL,0);

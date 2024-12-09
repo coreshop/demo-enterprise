@@ -1172,8 +1172,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/c96a8136395b3c744f09e9ed7c7237d3b80f851a.zip",
-                "reference": "c96a8136395b3c744f09e9ed7c7237d3b80f851a",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/0e55915c1a18fc8b89d8f77944316338530d8132.zip",
+                "reference": "0e55915c1a18fc8b89d8f77944316338530d8132",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1214,7 +1214,7 @@
                     "role": "TEAM"
                 }
             ],
-            "description": "CoreShop - Loyality Bundle",
+            "description": "CoreShop - Loyalty Bundle",
             "homepage": "https://www.coreshop.org",
             "keywords": [
                 "coreshop",
@@ -1226,7 +1226,8 @@
                 "source": "https://github.com/coreshop/loyalty-bundle/tree/main",
                 "issues": "https://github.com/coreshop/loyalty-bundle/issues"
             },
-            "time": "2024-09-30T19:56:44+00:00"
+            "abandoned": "coreshop/loyalty-bundle",
+            "time": "2024-12-09T10:20:07+00:00"
         },
         {
             "name": "coreshop/payum-credit-bundle",
@@ -4130,16 +4131,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.384.0",
+            "version": "v0.385.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "fcb190bb02cea2c939e67867bf9122fd8d02c351"
+                "reference": "d6a89ec1883ecd1de145179d44cb274cf4927da9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/fcb190bb02cea2c939e67867bf9122fd8d02c351",
-                "reference": "fcb190bb02cea2c939e67867bf9122fd8d02c351",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/d6a89ec1883ecd1de145179d44cb274cf4927da9",
+                "reference": "d6a89ec1883ecd1de145179d44cb274cf4927da9",
                 "shasum": ""
             },
             "require": {
@@ -4168,9 +4169,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.384.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.385.0"
             },
-            "time": "2024-11-27T01:08:46+00:00"
+            "time": "2024-12-09T01:08:31+00:00"
         },
         {
             "name": "google/auth",
@@ -8866,21 +8867,23 @@
         },
         {
             "name": "pimcore/newsletter-bundle",
-            "version": "v1.1.5",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/newsletter-bundle.git",
-                "reference": "4e49467df6353eb1f6e86b9fccf9273520f4428e"
+                "reference": "0338ea481fcdc58883a33f50980954d644c3d7e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/newsletter-bundle/zipball/4e49467df6353eb1f6e86b9fccf9273520f4428e",
-                "reference": "4e49467df6353eb1f6e86b9fccf9273520f4428e",
+                "url": "https://api.github.com/repos/pimcore/newsletter-bundle/zipball/0338ea481fcdc58883a33f50980954d644c3d7e3",
+                "reference": "0338ea481fcdc58883a33f50980954d644c3d7e3",
                 "shasum": ""
             },
             "require": {
+                "doctrine/dbal": "^3.6",
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
                 "pimcore/admin-ui-classic-bundle": "^1.1",
-                "pimcore/pimcore": "^11.0"
+                "pimcore/pimcore": "^11.2"
             },
             "require-dev": {
                 "phpstan/phpstan": "^1.10.5",
@@ -8906,9 +8909,9 @@
             "description": "Pimcore Newsletter Bundle",
             "support": {
                 "issues": "https://github.com/pimcore/newsletter-bundle/issues",
-                "source": "https://github.com/pimcore/newsletter-bundle/tree/v1.1.5"
+                "source": "https://github.com/pimcore/newsletter-bundle/tree/v1.2.0"
             },
-            "time": "2024-11-22T07:02:43+00:00"
+            "time": "2024-12-02T12:57:55+00:00"
         },
         {
             "name": "pimcore/pimcore",
@@ -13972,8 +13975,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -14048,8 +14051,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -14293,8 +14296,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -14519,8 +14522,8 @@
             "type": "metapackage",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -14584,8 +14587,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -14664,8 +14667,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -14746,8 +14749,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {

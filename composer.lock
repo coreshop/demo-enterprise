@@ -2188,16 +2188,16 @@
         },
         {
             "name": "doctrine/data-fixtures",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "d2ff5046b263868baf6e9b06cf4918f60096c0d0"
+                "reference": "a367a09b7a2b4f63ed57f391bf5713e3e46c7c7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/d2ff5046b263868baf6e9b06cf4918f60096c0d0",
-                "reference": "d2ff5046b263868baf6e9b06cf4918f60096c0d0",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/a367a09b7a2b4f63ed57f391bf5713e3e46c7c7b",
+                "reference": "a367a09b7a2b4f63ed57f391bf5713e3e46c7c7b",
                 "shasum": ""
             },
             "require": {
@@ -2254,7 +2254,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/data-fixtures/issues",
-                "source": "https://github.com/doctrine/data-fixtures/tree/1.8.0"
+                "source": "https://github.com/doctrine/data-fixtures/tree/1.8.1"
             },
             "funding": [
                 {
@@ -2270,7 +2270,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-04T22:36:12+00:00"
+            "time": "2024-12-10T07:00:20+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -8667,16 +8667,16 @@
         },
         {
             "name": "pimcore/admin-ui-classic-bundle",
-            "version": "v1.7.1",
+            "version": "v1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/admin-ui-classic-bundle.git",
-                "reference": "252e17cf9d8c20a1a1bfe56baf26e8350f41cb5e"
+                "reference": "18a62d3b042c0045410d18ed38e58d282b923647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/252e17cf9d8c20a1a1bfe56baf26e8350f41cb5e",
-                "reference": "252e17cf9d8c20a1a1bfe56baf26e8350f41cb5e",
+                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/18a62d3b042c0045410d18ed38e58d282b923647",
+                "reference": "18a62d3b042c0045410d18ed38e58d282b923647",
                 "shasum": ""
             },
             "require": {
@@ -8718,9 +8718,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pimcore/admin-ui-classic-bundle/issues",
-                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.7.1"
+                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.7.2"
             },
-            "time": "2024-12-03T12:15:06+00:00"
+            "time": "2024-12-10T09:36:46+00:00"
         },
         {
             "name": "pimcore/compatibility-bridge-v10",
@@ -8758,16 +8758,16 @@
         },
         {
             "name": "pimcore/data-hub",
-            "version": "v1.8.4",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/data-hub.git",
-                "reference": "7bd6287ba6de475b525e5bebef0a3b97be45c24a"
+                "reference": "f88cb83f15da1b0aa86dcf5a46c2e1f8fd07e8ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/7bd6287ba6de475b525e5bebef0a3b97be45c24a",
-                "reference": "7bd6287ba6de475b525e5bebef0a3b97be45c24a",
+                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/f88cb83f15da1b0aa86dcf5a46c2e1f8fd07e8ac",
+                "reference": "f88cb83f15da1b0aa86dcf5a46c2e1f8fd07e8ac",
                 "shasum": ""
             },
             "require": {
@@ -8809,9 +8809,9 @@
             "description": "Pimcore Datahub",
             "support": {
                 "issues": "https://github.com/pimcore/data-hub/issues",
-                "source": "https://github.com/pimcore/data-hub/tree/v1.8.4"
+                "source": "https://github.com/pimcore/data-hub/tree/v1.9.0"
             },
-            "time": "2024-12-02T07:58:30+00:00"
+            "time": "2024-12-02T07:59:37+00:00"
         },
         {
             "name": "pimcore/google-marketing-bundle",
@@ -8915,16 +8915,16 @@
         },
         {
             "name": "pimcore/pimcore",
-            "version": "v11.5.0-RC2",
+            "version": "v11.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/pimcore.git",
-                "reference": "1b6a56251ce3b4e888070ba49a2ecd96c645fce9"
+                "reference": "b8f7406927e3ca36ad9022b3154bb09f9d3a1af1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/1b6a56251ce3b4e888070ba49a2ecd96c645fce9",
-                "reference": "1b6a56251ce3b4e888070ba49a2ecd96c645fce9",
+                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/b8f7406927e3ca36ad9022b3154bb09f9d3a1af1",
+                "reference": "b8f7406927e3ca36ad9022b3154bb09f9d3a1af1",
                 "shasum": ""
             },
             "require": {
@@ -9130,27 +9130,27 @@
                 "source": "https://github.com/pimcore/pimcore",
                 "wiki": "https://pimcore.com/docs/latest/"
             },
-            "time": "2024-12-03T09:15:41+00:00"
+            "time": "2024-12-10T08:57:51+00:00"
         },
         {
             "name": "pimcore/web-to-print-bundle",
-            "version": "v1.3.2",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/web-to-print-bundle.git",
-                "reference": "0d6a21506f2aef1170348a654477095872418739"
+                "reference": "500df07ca3055e300ab6fd9cc8254a405dd3e84f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/web-to-print-bundle/zipball/0d6a21506f2aef1170348a654477095872418739",
-                "reference": "0d6a21506f2aef1170348a654477095872418739",
+                "url": "https://api.github.com/repos/pimcore/web-to-print-bundle/zipball/500df07ca3055e300ab6fd9cc8254a405dd3e84f",
+                "reference": "500df07ca3055e300ab6fd9cc8254a405dd3e84f",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^3.6",
                 "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
                 "pimcore/admin-ui-classic-bundle": "^1.1",
-                "pimcore/pimcore": "^11.0"
+                "pimcore/pimcore": "^11.2"
             },
             "require-dev": {
                 "chrome-php/chrome": "^1.8",
@@ -9185,9 +9185,9 @@
             "description": "Pimcore WebToPrint Bundle",
             "support": {
                 "issues": "https://github.com/pimcore/web-to-print-bundle/issues",
-                "source": "https://github.com/pimcore/web-to-print-bundle/tree/v1.3.2"
+                "source": "https://github.com/pimcore/web-to-print-bundle/tree/v1.4.0"
             },
-            "time": "2024-11-18T07:32:49+00:00"
+            "time": "2024-11-19T11:17:29+00:00"
         },
         {
             "name": "presta/sitemap-bundle",
@@ -14214,8 +14214,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -14380,8 +14380,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -17075,7 +17075,7 @@
         },
         {
             "name": "twig/extra-bundle",
-            "version": "v3.16.0",
+            "version": "v3.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/twig-extra-bundle.git",
@@ -17133,7 +17133,7 @@
                 "twig"
             ],
             "support": {
-                "source": "https://github.com/twigphp/twig-extra-bundle/tree/v3.16.0"
+                "source": "https://github.com/twigphp/twig-extra-bundle/tree/v3.17.0"
             },
             "funding": [
                 {

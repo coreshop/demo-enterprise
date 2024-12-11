@@ -4175,25 +4175,26 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.44.0",
+            "version": "v1.45.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "5670e56307d7a2eac931f677c0e59a4f8abb2e43"
+                "reference": "cfcb93162341ed5022fa976e621f0fa2b05ba6ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/5670e56307d7a2eac931f677c0e59a4f8abb2e43",
-                "reference": "5670e56307d7a2eac931f677c0e59a4f8abb2e43",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/cfcb93162341ed5022fa976e621f0fa2b05ba6ad",
+                "reference": "cfcb93162341ed5022fa976e621f0fa2b05ba6ad",
                 "shasum": ""
             },
             "require": {
                 "firebase/php-jwt": "^6.0",
                 "guzzlehttp/guzzle": "^7.4.5",
                 "guzzlehttp/psr7": "^2.4.5",
-                "php": "^8.1",
+                "php": "^8.0",
                 "psr/cache": "^2.0||^3.0",
-                "psr/http-message": "^1.1||^2.0"
+                "psr/http-message": "^1.1||^2.0",
+                "psr/log": "^3.0"
             },
             "require-dev": {
                 "guzzlehttp/promises": "^2.0",
@@ -4229,9 +4230,9 @@
             "support": {
                 "docs": "https://googleapis.github.io/google-auth-library-php/main/",
                 "issues": "https://github.com/googleapis/google-auth-library-php/issues",
-                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.44.0"
+                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.45.0"
             },
-            "time": "2024-12-04T15:34:58+00:00"
+            "time": "2024-12-11T02:10:48+00:00"
         },
         {
             "name": "gotenberg/gotenberg-php",
@@ -11577,16 +11578,16 @@
         },
         {
             "name": "symfony/contracts",
-            "version": "v3.5.1",
+            "version": "v3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/contracts.git",
-                "reference": "dcd099d876d3a82b857d7f4ea0893e132e63d0fe"
+                "reference": "a1a717e017c8c30e5c339807ca47d7da1a19489f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/dcd099d876d3a82b857d7f4ea0893e132e63d0fe",
-                "reference": "dcd099d876d3a82b857d7f4ea0893e132e63d0fe",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/a1a717e017c8c30e5c339807ca47d7da1a19489f",
+                "reference": "a1a717e017c8c30e5c339807ca47d7da1a19489f",
                 "shasum": ""
             },
             "require": {
@@ -11652,7 +11653,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/contracts/tree/v3.5.1"
+                "source": "https://github.com/symfony/contracts/tree/v3.5.2"
             },
             "funding": [
                 {
@@ -11668,7 +11669,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-25T12:02:18+00:00"
+            "time": "2024-12-07T08:49:48+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -14942,16 +14943,16 @@
         },
         {
             "name": "symfony/property-info",
-            "version": "v7.2.0",
+            "version": "v7.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-info.git",
-                "reference": "b00580d9d7c9654e1df95df85105d0da67418b3f"
+                "reference": "65fb9be15380f949d72ff405473cce733364b8b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-info/zipball/b00580d9d7c9654e1df95df85105d0da67418b3f",
-                "reference": "b00580d9d7c9654e1df95df85105d0da67418b3f",
+                "url": "https://api.github.com/repos/symfony/property-info/zipball/65fb9be15380f949d72ff405473cce733364b8b4",
+                "reference": "65fb9be15380f949d72ff405473cce733364b8b4",
                 "shasum": ""
             },
             "require": {
@@ -15005,7 +15006,7 @@
                 "validator"
             ],
             "support": {
-                "source": "https://github.com/symfony/property-info/tree/v7.2.0"
+                "source": "https://github.com/symfony/property-info/tree/v7.2.1"
             },
             "funding": [
                 {
@@ -15021,7 +15022,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-27T09:50:52+00:00"
+            "time": "2024-12-07T08:50:44+00:00"
         },
         {
             "name": "symfony/psr-http-message-bridge",
@@ -16297,29 +16298,24 @@
         },
         {
             "name": "symfony/type-info",
-            "version": "v7.2.0",
+            "version": "v7.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/type-info.git",
-                "reference": "e0bfd95bceb3886c59487828537691aecb7d9c6b"
+                "reference": "4f402070b08ad0b87e9cadbb07b87fb36061e6e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/type-info/zipball/e0bfd95bceb3886c59487828537691aecb7d9c6b",
-                "reference": "e0bfd95bceb3886c59487828537691aecb7d9c6b",
+                "url": "https://api.github.com/repos/symfony/type-info/zipball/4f402070b08ad0b87e9cadbb07b87fb36061e6e4",
+                "reference": "4f402070b08ad0b87e9cadbb07b87fb36061e6e4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
                 "psr/container": "^1.1|^2.0"
             },
-            "conflict": {
-                "phpstan/phpdoc-parser": "<1.0",
-                "symfony/dependency-injection": "<6.4"
-            },
             "require-dev": {
-                "phpstan/phpdoc-parser": "^1.0|^2.0",
-                "symfony/dependency-injection": "^6.4|^7.0"
+                "phpstan/phpdoc-parser": "^1.0|^2.0"
             },
             "type": "library",
             "autoload": {
@@ -16357,7 +16353,7 @@
                 "type"
             ],
             "support": {
-                "source": "https://github.com/symfony/type-info/tree/v7.2.0"
+                "source": "https://github.com/symfony/type-info/tree/v7.2.1"
             },
             "funding": [
                 {
@@ -16373,7 +16369,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-18T09:51:31+00:00"
+            "time": "2024-12-11T07:49:41+00:00"
         },
         {
             "name": "symfony/uid",

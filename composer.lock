@@ -4062,16 +4062,16 @@
         },
         {
             "name": "google/apiclient",
-            "version": "v2.18.1",
+            "version": "v2.18.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client.git",
-                "reference": "3f6cb1a970fe2d210823a79de8d5dbae405a9616"
+                "reference": "d8d201ba8a189a3cd7fb34e4da569f2ed440eee7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/3f6cb1a970fe2d210823a79de8d5dbae405a9616",
-                "reference": "3f6cb1a970fe2d210823a79de8d5dbae405a9616",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/d8d201ba8a189a3cd7fb34e4da569f2ed440eee7",
+                "reference": "d8d201ba8a189a3cd7fb34e4da569f2ed440eee7",
                 "shasum": ""
             },
             "require": {
@@ -4125,9 +4125,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client/issues",
-                "source": "https://github.com/googleapis/google-api-php-client/tree/v2.18.1"
+                "source": "https://github.com/googleapis/google-api-php-client/tree/v2.18.2"
             },
-            "time": "2024-11-24T13:21:03+00:00"
+            "time": "2024-12-16T22:52:40+00:00"
         },
         {
             "name": "google/apiclient-services",
@@ -7318,16 +7318,16 @@
         },
         {
             "name": "openspout/openspout",
-            "version": "v4.28.2",
+            "version": "v4.28.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openspout/openspout.git",
-                "reference": "d6dd654b5db502f28c5773edfa785b516745a142"
+                "reference": "12b5eddcc230a97a9a67a722ad75c247e1a16750"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openspout/openspout/zipball/d6dd654b5db502f28c5773edfa785b516745a142",
-                "reference": "d6dd654b5db502f28c5773edfa785b516745a142",
+                "url": "https://api.github.com/repos/openspout/openspout/zipball/12b5eddcc230a97a9a67a722ad75c247e1a16750",
+                "reference": "12b5eddcc230a97a9a67a722ad75c247e1a16750",
                 "shasum": ""
             },
             "require": {
@@ -7347,7 +7347,7 @@
                 "phpstan/phpstan": "^2.0.3",
                 "phpstan/phpstan-phpunit": "^2.0.1",
                 "phpstan/phpstan-strict-rules": "^2",
-                "phpunit/phpunit": "^11.4.4"
+                "phpunit/phpunit": "^11.5.0"
             },
             "suggest": {
                 "ext-iconv": "To handle non UTF-8 CSV files (if \"php-mbstring\" is not already installed or is too limited)",
@@ -7395,7 +7395,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openspout/openspout/issues",
-                "source": "https://github.com/openspout/openspout/tree/v4.28.2"
+                "source": "https://github.com/openspout/openspout/tree/v4.28.3"
             },
             "funding": [
                 {
@@ -7407,7 +7407,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-06T06:17:37+00:00"
+            "time": "2024-12-17T11:28:11+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -8668,16 +8668,16 @@
         },
         {
             "name": "pimcore/admin-ui-classic-bundle",
-            "version": "v1.7.2",
+            "version": "v1.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/admin-ui-classic-bundle.git",
-                "reference": "18a62d3b042c0045410d18ed38e58d282b923647"
+                "reference": "01789a3269d608db35e3215968634f2271ba6bf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/18a62d3b042c0045410d18ed38e58d282b923647",
-                "reference": "18a62d3b042c0045410d18ed38e58d282b923647",
+                "url": "https://api.github.com/repos/pimcore/admin-ui-classic-bundle/zipball/01789a3269d608db35e3215968634f2271ba6bf4",
+                "reference": "01789a3269d608db35e3215968634f2271ba6bf4",
                 "shasum": ""
             },
             "require": {
@@ -8719,9 +8719,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pimcore/admin-ui-classic-bundle/issues",
-                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.7.2"
+                "source": "https://github.com/pimcore/admin-ui-classic-bundle/tree/v1.7.3"
             },
-            "time": "2024-12-10T09:36:46+00:00"
+            "time": "2024-12-17T14:33:15+00:00"
         },
         {
             "name": "pimcore/compatibility-bridge-v10",
@@ -8759,16 +8759,16 @@
         },
         {
             "name": "pimcore/data-hub",
-            "version": "v1.9.0",
+            "version": "v1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/data-hub.git",
-                "reference": "f88cb83f15da1b0aa86dcf5a46c2e1f8fd07e8ac"
+                "reference": "2c120fda31902a3e6170923ab429a48d7d094b8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/f88cb83f15da1b0aa86dcf5a46c2e1f8fd07e8ac",
-                "reference": "f88cb83f15da1b0aa86dcf5a46c2e1f8fd07e8ac",
+                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/2c120fda31902a3e6170923ab429a48d7d094b8e",
+                "reference": "2c120fda31902a3e6170923ab429a48d7d094b8e",
                 "shasum": ""
             },
             "require": {
@@ -8810,9 +8810,9 @@
             "description": "Pimcore Datahub",
             "support": {
                 "issues": "https://github.com/pimcore/data-hub/issues",
-                "source": "https://github.com/pimcore/data-hub/tree/v1.9.0"
+                "source": "https://github.com/pimcore/data-hub/tree/v1.9.1"
             },
-            "time": "2024-12-02T07:59:37+00:00"
+            "time": "2024-12-16T11:52:10+00:00"
         },
         {
             "name": "pimcore/google-marketing-bundle",
@@ -8916,16 +8916,16 @@
         },
         {
             "name": "pimcore/pimcore",
-            "version": "v11.5.0",
+            "version": "v11.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/pimcore.git",
-                "reference": "b8f7406927e3ca36ad9022b3154bb09f9d3a1af1"
+                "reference": "78a015d0d0b982433c10f2703b9cd812900c7cc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/b8f7406927e3ca36ad9022b3154bb09f9d3a1af1",
-                "reference": "b8f7406927e3ca36ad9022b3154bb09f9d3a1af1",
+                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/78a015d0d0b982433c10f2703b9cd812900c7cc1",
+                "reference": "78a015d0d0b982433c10f2703b9cd812900c7cc1",
                 "shasum": ""
             },
             "require": {
@@ -9131,7 +9131,7 @@
                 "source": "https://github.com/pimcore/pimcore",
                 "wiki": "https://pimcore.com/docs/latest/"
             },
-            "time": "2024-12-10T08:57:51+00:00"
+            "time": "2024-12-17T10:13:30+00:00"
         },
         {
             "name": "pimcore/web-to-print-bundle",

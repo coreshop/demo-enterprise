@@ -5096,16 +5096,16 @@
         },
         {
             "name": "knplabs/knp-menu",
-            "version": "v3.5.0",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "c39403f7c427d1b72cc56f38df0a075b4b9191fe"
+                "reference": "ac96b711cf7b4178747b0ecde79d7e5e05dbcd28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/c39403f7c427d1b72cc56f38df0a075b4b9191fe",
-                "reference": "c39403f7c427d1b72cc56f38df0a075b4b9191fe",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/ac96b711cf7b4178747b0ecde79d7e5e05dbcd28",
+                "reference": "ac96b711cf7b4178747b0ecde79d7e5e05dbcd28",
                 "shasum": ""
             },
             "require": {
@@ -5163,9 +5163,9 @@
             ],
             "support": {
                 "issues": "https://github.com/KnpLabs/KnpMenu/issues",
-                "source": "https://github.com/KnpLabs/KnpMenu/tree/v3.5.0"
+                "source": "https://github.com/KnpLabs/KnpMenu/tree/v3.6.0"
             },
-            "time": "2024-03-23T15:35:09+00:00"
+            "time": "2024-12-20T10:10:51+00:00"
         },
         {
             "name": "knplabs/knp-menu-bundle",

@@ -5169,20 +5169,20 @@
         },
         {
             "name": "knplabs/knp-menu-bundle",
-            "version": "v3.4.2",
+            "version": "v3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "6a1e3e1f4131f9a5a967e36717a1fe680c183637"
+                "reference": "5f85a4908343c3d6a6009c2f8a74c2d102c0aa80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/6a1e3e1f4131f9a5a967e36717a1fe680c183637",
-                "reference": "6a1e3e1f4131f9a5a967e36717a1fe680c183637",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/5f85a4908343c3d6a6009c2f8a74c2d102c0aa80",
+                "reference": "5f85a4908343c3d6a6009c2f8a74c2d102c0aa80",
                 "shasum": ""
             },
             "require": {
-                "knplabs/knp-menu": "^3.3",
+                "knplabs/knp-menu": "^3.6",
                 "php": "^8.1",
                 "symfony/deprecation-contracts": "^2.5 | ^3.3",
                 "symfony/framework-bundle": "^5.4 | ^6.0 | ^7.0"
@@ -5228,9 +5228,9 @@
             ],
             "support": {
                 "issues": "https://github.com/KnpLabs/KnpMenuBundle/issues",
-                "source": "https://github.com/KnpLabs/KnpMenuBundle/tree/v3.4.2"
+                "source": "https://github.com/KnpLabs/KnpMenuBundle/tree/v3.5.0"
             },
-            "time": "2024-06-03T08:48:36+00:00"
+            "time": "2024-12-25T16:34:19+00:00"
         },
         {
             "name": "knplabs/knp-paginator-bundle",
@@ -7735,16 +7735,16 @@
         },
         {
             "name": "payum/payum-bundle",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Payum/PayumBundle.git",
-                "reference": "e2a3ffee369efdd414c9cb13cd2bd09eb93beaa8"
+                "reference": "3d393ec81e0baa337fd26b3cd8b2f7e55ae9e5db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Payum/PayumBundle/zipball/e2a3ffee369efdd414c9cb13cd2bd09eb93beaa8",
-                "reference": "e2a3ffee369efdd414c9cb13cd2bd09eb93beaa8",
+                "url": "https://api.github.com/repos/Payum/PayumBundle/zipball/3d393ec81e0baa337fd26b3cd8b2f7e55ae9e5db",
+                "reference": "3d393ec81e0baa337fd26b3cd8b2f7e55ae9e5db",
                 "shasum": ""
             },
             "require": {
@@ -7834,9 +7834,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Payum/PayumBundle/issues",
-                "source": "https://github.com/Payum/PayumBundle/tree/2.6.0"
+                "source": "https://github.com/Payum/PayumBundle/tree/2.6.1"
             },
-            "time": "2024-05-01T16:54:01+00:00"
+            "time": "2024-12-28T06:15:05+00:00"
         },
         {
             "name": "pear/net_url2",

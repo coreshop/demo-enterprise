@@ -36,4 +36,5 @@ INSERT INTO properties (`cid`,`ctype`,`cpath`,`name`,`type`,`data`,`inheritable`
 (56,'document','/en/shop/ticketing','navigation_relation','text','',0), 
 (56,'document','/en/shop/ticketing','navigation_tabindex','text','',0), 
 (56,'document','/en/shop/ticketing','navigation_target','text',NULL,0), 
-(56,'document','/en/shop/ticketing','navigation_title','text','',0);
+(56,'document','/en/shop/ticketing','navigation_title','text','',0), 
+(58,'document','/b2b/fr','language','text','fr',1);

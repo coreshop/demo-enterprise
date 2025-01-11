@@ -1477,7 +1477,7 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=1901 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1927 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -2383,6 +2383,7 @@ CREATE TABLE `object_query_cs_event_pass` (
   `minimumQuantityToOrder` bigint DEFAULT NULL,
   `maximumQuantityToOrder` bigint DEFAULT NULL,
   `taxRule` int DEFAULT NULL,
+  `personalized` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_event_pass__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2406,6 +2407,7 @@ CREATE TABLE `object_query_cs_event_ticket` (
   `ticketableVariant__type` enum('document','asset','object') DEFAULT NULL,
   `state` varchar(190) DEFAULT NULL,
   `token` varchar(190) DEFAULT NULL,
+  `personalizedName` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_event_ticket__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3488,6 +3490,7 @@ CREATE TABLE `object_store_cs_event_pass` (
   `minimumQuantityToOrder` bigint DEFAULT NULL,
   `maximumQuantityToOrder` bigint DEFAULT NULL,
   `taxRule` int DEFAULT NULL,
+  `personalized` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_event_pass__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3502,6 +3505,7 @@ CREATE TABLE `object_store_cs_event_ticket` (
   `state` varchar(190) DEFAULT NULL,
   `token` varchar(190) DEFAULT NULL,
   `passKey` longblob,
+  `personalizedName` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_event_ticket__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

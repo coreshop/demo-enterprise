@@ -24,6 +24,8 @@ INSERT INTO migration_versions (`version`,`executed_at`,`execution_time`) VALUES
 ('CoreShop\\Bundle\\IndexBundle\\Migrations\\Version20200224161101','2024-04-30 22:18:14',1), 
 ('CoreShop\\Bundle\\IndexBundle\\Migrations\\Version20220121154623','2024-04-30 22:18:14',5), 
 ('CoreShop\\Bundle\\MessengerBundle\\Migrations\\Version20240421093216','2024-04-30 22:17:50',9), 
+('CoreShop\\Bundle\\TicketingBundle\\Migrations\\Version20250106174621','2025-01-11 16:04:19',826), 
+('CoreShop\\Bundle\\TicketingBundle\\Migrations\\Version20250106174623','2025-01-11 16:04:20',257), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20201007000000',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20201008082752',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20201008091131',NULL,NULL), 
@@ -98,10 +100,10 @@ INSERT INTO migration_versions (`version`,`executed_at`,`execution_time`) VALUES
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20221220152444',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20221222134837',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20221222181745',NULL,NULL), 
-('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20221228101109',NULL,NULL), 
-('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230107224432',NULL,NULL), 
-('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230110130748',NULL,NULL);
-INSERT INTO migration_versions (`version`,`executed_at`,`execution_time`) VALUES ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230111074323',NULL,NULL), 
+('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20221228101109',NULL,NULL);
+INSERT INTO migration_versions (`version`,`executed_at`,`execution_time`) VALUES ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230107224432',NULL,NULL), 
+('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230110130748',NULL,NULL), 
+('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230111074323',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230113165612',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230120111111',NULL,NULL), 
 ('Pimcore\\Bundle\\CoreBundle\\Migrations\\Version20230124120641',NULL,NULL), 

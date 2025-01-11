@@ -14,4 +14,6 @@ INSERT INTO documents_page (`id`,`controller`,`template`,`title`,`description`,`
 (54,'App\\Controller\\DefaultController::bricksAction',NULL,'locations','',NULL,NULL,'',NULL,0,NULL), 
 (55,'App\\Controller\\DefaultController::bricksAction',NULL,'locations','',NULL,NULL,'',NULL,0,NULL), 
 (56,'App\\Controller\\TicketingController::defaultAction',NULL,'Ticketing','',NULL,NULL,'',NULL,0,NULL), 
-(57,'App\\Controller\\TicketingController::defaultAction',NULL,'Ticketing','',NULL,NULL,'',NULL,0,NULL);
+(57,'App\\Controller\\TicketingController::defaultAction',NULL,'Ticketing','',NULL,NULL,'',NULL,0,NULL), 
+(58,'App\\Controller\\DefaultController::defaultAction',NULL,'','',NULL,NULL,'',NULL,NULL,NULL), 
+(59,'CoreShop\\Bundle\\FrontendBundle\\Controller\\IndexController::indexAction',NULL,'','',NULL,NULL,'',0,NULL,NULL);

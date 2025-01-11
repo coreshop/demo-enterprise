@@ -423,16 +423,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.4",
+            "version": "1.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "bc0593537a463e55cadf45fd938d23b75095b7e1"
+                "reference": "08c50d5ec4c6ced7d0271d2862dec8c1033283e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/bc0593537a463e55cadf45fd938d23b75095b7e1",
-                "reference": "bc0593537a463e55cadf45fd938d23b75095b7e1",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/08c50d5ec4c6ced7d0271d2862dec8c1033283e6",
+                "reference": "08c50d5ec4c6ced7d0271d2862dec8c1033283e6",
                 "shasum": ""
             },
             "require": {
@@ -479,7 +479,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.5.4"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.5"
             },
             "funding": [
                 {
@@ -495,15 +495,15 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-27T15:35:25+00:00"
+            "time": "2025-01-08T16:17:16+00:00"
         },
         {
             "name": "coreshop/batch-messenger-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/batch-messenger-bundle/dev-main/935e942977d3f10665edac62fbb8b1a81f07ec56.zip",
-                "reference": "935e942977d3f10665edac62fbb8b1a81f07ec56",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/batch-messenger-bundle/dev-main/be317edc6e00ea0d5bb19eb88ef510a24f45ecab.zip",
+                "reference": "be317edc6e00ea0d5bb19eb88ef510a24f45ecab",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -519,7 +519,7 @@
             },
             "require-dev": {
                 "coreshop/test-setup": "1.0.x-dev",
-                "symfony/runtime": "^7.2"
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -539,18 +539,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Batch Messenger Bundle",
-            "homepage": "https://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -561,7 +561,7 @@
                 "source": "https://github.com/coreshop/batch-messenger-bundle/tree/main",
                 "issues": "https://github.com/coreshop/batch-messenger-bundle/issues"
             },
-            "time": "2025-01-06T19:01:11+00:00"
+            "time": "2025-01-06T19:47:55+00:00"
         },
         {
             "name": "coreshop/core-shop",
@@ -569,12 +569,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "448de1c4c3358ae821e25d872b54a3fe6dccbc2e"
+                "reference": "79cd8a2c5f35c6decf6840a00be030d9e3e20f90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/448de1c4c3358ae821e25d872b54a3fe6dccbc2e",
-                "reference": "448de1c4c3358ae821e25d872b54a3fe6dccbc2e",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/79cd8a2c5f35c6decf6840a00be030d9e3e20f90",
+                "reference": "79cd8a2c5f35c6decf6840a00be030d9e3e20f90",
                 "shasum": ""
             },
             "require": {
@@ -755,15 +755,15 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-19T09:41:16+00:00"
+            "time": "2025-01-07T08:39:42+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/customer-cluster-bundle/dev-main/4572a3bf4dc71f5c5a957ce32d26bb4c1ef5ab7a.zip",
-                "reference": "4572a3bf4dc71f5c5a957ce32d26bb4c1ef5ab7a",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/customer-cluster-bundle/dev-main/9a735e034522d801ba2cca3127c28ab49c944fc0.zip",
+                "reference": "9a735e034522d801ba2cca3127c28ab49c944fc0",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -775,7 +775,8 @@
                 "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -795,18 +796,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Customer Cluster Bundle",
-            "homepage": "https://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -817,15 +818,15 @@
                 "source": "https://github.com/coreshop/customer-cluster-bundle/tree/main",
                 "issues": "https://github.com/coreshop/customer-cluster-bundle/issues"
             },
-            "time": "2024-10-09T12:22:10+00:00"
+            "time": "2025-01-06T19:47:50+00:00"
         },
         {
             "name": "coreshop/deposit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/ebc49be0780a0fe2d9980de7499930729d3d1d67.zip",
-                "reference": "ebc49be0780a0fe2d9980de7499930729d3d1d67",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/deposit-bundle/dev-main/adfaff47538a2b01184213ff31d10b7cdb6ff7f1.zip",
+                "reference": "adfaff47538a2b01184213ff31d10b7cdb6ff7f1",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -837,7 +838,8 @@
                 "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -856,18 +858,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Deposit Bundle",
-            "homepage": "https://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -878,15 +880,15 @@
                 "source": "https://github.com/coreshop/deposit-bundle/tree/main",
                 "issues": "https://github.com/coreshop/deposit-bundle/issues"
             },
-            "time": "2024-10-09T12:21:34+00:00"
+            "time": "2025-01-06T19:48:01+00:00"
         },
         {
             "name": "coreshop/document-route-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/document-route-bundle/dev-main/450aaa221f5457fe32774d5f77f87219df007749.zip",
-                "reference": "450aaa221f5457fe32774d5f77f87219df007749",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/document-route-bundle/dev-main/2dd2af55926bd97c0bc7746757335ac787f855fd.zip",
+                "reference": "2dd2af55926bd97c0bc7746757335ac787f855fd",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -899,7 +901,8 @@
                 "coreshop/resource-bundle": "^4.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -923,18 +926,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Document Route Bundle",
-            "homepage": "http://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -944,15 +947,15 @@
                 "source": "https://github.com/coreshop/document-route-bundle/tree/main",
                 "issues": "https://github.com/coreshop/document-route-bundle/issues"
             },
-            "time": "2024-09-30T19:49:03+00:00"
+            "time": "2025-01-06T19:48:29+00:00"
         },
         {
             "name": "coreshop/headless-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/aa6edbffcd89ff1d34badcd5a9fefa6975ece256.zip",
-                "reference": "aa6edbffcd89ff1d34badcd5a9fefa6975ece256",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/8263795e7f00481a68f3c171fed954a6b7de0dc2.zip",
+                "reference": "8263795e7f00481a68f3c171fed954a6b7de0dc2",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -965,14 +968,14 @@
                 "lexik/jwt-authentication-bundle": "^2.19",
                 "nelmio/cors-bundle": "^2.3",
                 "payum/payum-bundle": "^2.5",
-                "pimcore/data-hub": "^1.6",
-                "symfony/runtime": "^6.4"
+                "pimcore/data-hub": "^1.6"
             },
             "conflict": {
                 "twig/twig": "^3.9.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -1007,13 +1010,13 @@
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Headless Bundle",
-            "homepage": "https://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "credit",
@@ -1024,15 +1027,15 @@
                 "source": "https://github.com/coreshop/headless-bundle/tree/main",
                 "issues": "https://github.com/coreshop/headless-bundle/issues"
             },
-            "time": "2024-10-09T12:21:25+00:00"
+            "time": "2025-01-11T15:02:17+00:00"
         },
         {
             "name": "coreshop/inbound-email-rules-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/inbound-email-rules-bundle/dev-main/2ffe0ee71dc2cdacfd513f7277e4144aabe41aea.zip",
-                "reference": "2ffe0ee71dc2cdacfd513f7277e4144aabe41aea",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/inbound-email-rules-bundle/dev-main/f7f8b929929edf5a29980447401507e1a0abd347.zip",
+                "reference": "f7f8b929929edf5a29980447401507e1a0abd347",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1049,7 +1052,8 @@
                 "pimcore/pimcore": "^11.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -1075,7 +1079,7 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -1086,7 +1090,7 @@
                 }
             ],
             "description": "CoreShop - Inbound Email Rules Bundle",
-            "homepage": "http://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -1096,15 +1100,15 @@
                 "source": "https://github.com/coreshop/inbound-email-rules-bundle/tree/main",
                 "issues": "https://github.com/coreshop/inbound-email-rules-bundle/issues"
             },
-            "time": "2024-09-30T19:52:25+00:00"
+            "time": "2025-01-06T19:48:35+00:00"
         },
         {
             "name": "coreshop/index-geo-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/index-geo-bundle/dev-main/27b1da437012d687b05ecaa838e864ba78f933cf.zip",
-                "reference": "27b1da437012d687b05ecaa838e864ba78f933cf",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/index-geo-bundle/dev-main/769766718b5aa456f2b4df68491082077bd35089.zip",
+                "reference": "769766718b5aa456f2b4df68491082077bd35089",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1121,7 +1125,8 @@
                 "willdurand/geocoder-bundle": "^5.7"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -1145,18 +1150,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Index GEO Bundle",
-            "homepage": "http://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -1166,15 +1171,15 @@
                 "source": "https://github.com/coreshop/index-geo-bundle/tree/main",
                 "issues": "https://github.com/coreshop/index-geo-bundle/issues"
             },
-            "time": "2024-11-14T15:47:58+00:00"
+            "time": "2025-01-06T19:48:18+00:00"
         },
         {
             "name": "coreshop/loyality-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/0e55915c1a18fc8b89d8f77944316338530d8132.zip",
-                "reference": "0e55915c1a18fc8b89d8f77944316338530d8132",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/loyality-bundle/dev-main/9ee5ab338932290d793ca931bf6b47d6b3a68fa1.zip",
+                "reference": "9ee5ab338932290d793ca931bf6b47d6b3a68fa1",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1186,7 +1191,8 @@
                 "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -1205,18 +1211,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Loyalty Bundle",
-            "homepage": "https://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -1228,15 +1234,15 @@
                 "issues": "https://github.com/coreshop/loyalty-bundle/issues"
             },
             "abandoned": "coreshop/loyalty-bundle",
-            "time": "2024-12-09T10:20:07+00:00"
+            "time": "2025-01-06T19:48:07+00:00"
         },
         {
             "name": "coreshop/payum-credit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/payum-credit-bundle/dev-main/a6e980853bfcf0476e776210aefcac2ecccd6a91.zip",
-                "reference": "a6e980853bfcf0476e776210aefcac2ecccd6a91",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/payum-credit-bundle/dev-main/061d786620ff21fa414b4ef6a8f804db61031c90.zip",
+                "reference": "061d786620ff21fa414b4ef6a8f804db61031c90",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1248,7 +1254,8 @@
                 "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -1272,13 +1279,13 @@
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Credit Bundle",
-            "homepage": "http://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "credit",
@@ -1289,15 +1296,15 @@
                 "source": "https://github.com/coreshop/credit-bundle/tree/main",
                 "issues": "https://github.com/coreshop/credit-bundle/issues"
             },
-            "time": "2025-01-06T18:26:57+00:00"
+            "time": "2025-01-06T19:48:44+00:00"
         },
         {
             "name": "coreshop/quick-order-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/703674cef7b6cb33c3ca932220ce9471a651eec7.zip",
-                "reference": "703674cef7b6cb33c3ca932220ce9471a651eec7",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/5df884da0f81fb2310af12f345710e3ce663e4d2.zip",
+                "reference": "5df884da0f81fb2310af12f345710e3ce663e4d2",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1311,7 +1318,8 @@
                 "openspout/openspout": "^4.24"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -1331,18 +1339,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Quick Order Bundle",
-            "homepage": "https://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -1353,15 +1361,15 @@
                 "source": "https://github.com/coreshop/quick-order-bundle/tree/main",
                 "issues": "https://github.com/coreshop/quick-order-bundle/issues"
             },
-            "time": "2024-10-29T10:17:10+00:00"
+            "time": "2025-01-06T19:47:35+00:00"
         },
         {
             "name": "coreshop/ticketing-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/dff8bc7b81de737d45b542861da7f99c853eff68.zip",
-                "reference": "dff8bc7b81de737d45b542861da7f99c853eff68",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/82b6ee24681a1a46be64cc675e15210783f4c7a3.zip",
+                "reference": "82b6ee24681a1a46be64cc675e15210783f4c7a3",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1376,7 +1384,7 @@
             },
             "require-dev": {
                 "coreshop/test-setup": "1.0.x-dev",
-                "symfony/runtime": "^7.2"
+                "symfony/runtime": "^6.4"
             },
             "suggest": {
                 "pkpass/pkpass": "To generate Apple Wallet passes"
@@ -1422,15 +1430,15 @@
                 "source": "https://github.com/coreshop/ticketing-bundle/tree/main",
                 "issues": "https://github.com/coreshop/ticketing-bundle/issues"
             },
-            "time": "2025-01-06T19:02:19+00:00"
+            "time": "2025-01-06T19:47:28+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/voucher-credit-bundle/dev-main/917ac78d4c465bbf02db972f90637a51c1cb378a.zip",
-                "reference": "917ac78d4c465bbf02db972f90637a51c1cb378a",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/voucher-credit-bundle/dev-main/a33364d2052c911233b88a7aa8d6bcadb1cbfe28.zip",
+                "reference": "a33364d2052c911233b88a7aa8d6bcadb1cbfe28",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1442,7 +1450,8 @@
                 "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -1471,18 +1480,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Voucher Credit Bundle",
-            "homepage": "http://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -1492,15 +1501,15 @@
                 "source": "https://github.com/coreshop/voucher-credit-bundle/tree/main",
                 "issues": "https://github.com/coreshop/voucher-credit-bundle/issues"
             },
-            "time": "2024-10-09T12:21:43+00:00"
+            "time": "2025-01-06T19:48:23+00:00"
         },
         {
             "name": "coreshop/warehouse-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-main/d69a2e2de420f034d63f75122cdf31daf15efdd8.zip",
-                "reference": "d69a2e2de420f034d63f75122cdf31daf15efdd8",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-main/d153c25f5408a44d1e58ceac3f898057b25323d6.zip",
+                "reference": "d153c25f5408a44d1e58ceac3f898057b25323d6",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1512,7 +1521,8 @@
                 "coreshop/core-shop": "^4.0.0"
             },
             "require-dev": {
-                "coreshop/test-setup": "1.0.x-dev"
+                "coreshop/test-setup": "1.0.x-dev",
+                "symfony/runtime": "^6.4"
             },
             "default-branch": true,
             "type": "pimcore-bundle",
@@ -1531,18 +1541,18 @@
             },
             "notification-url": "https://cors.repo.packagist.com/cs-enterprise-demo/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "CoreShop GmbH",
-                    "email": "info@coreshop.org",
-                    "homepage": "https://www.coreshop.org/",
+                    "email": "info@coreshop.com",
+                    "homepage": "https://www.coreshop.com/",
                     "role": "TEAM"
                 }
             ],
             "description": "CoreShop - Warehouse Bundle",
-            "homepage": "https://www.coreshop.org",
+            "homepage": "https://www.coreshop.com",
             "keywords": [
                 "coreshop",
                 "ecommerce",
@@ -1553,7 +1563,7 @@
                 "source": "https://github.com/coreshop/warehouse-bundle/tree/main",
                 "issues": "https://github.com/coreshop/warehouse-bundle/issues"
             },
-            "time": "2024-10-09T12:21:38+00:00"
+            "time": "2025-01-06T19:48:12+00:00"
         },
         {
             "name": "creof/geo-parser",
@@ -4237,16 +4247,16 @@
         },
         {
             "name": "gotenberg/gotenberg-php",
-            "version": "v2.11.0",
+            "version": "v2.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gotenberg/gotenberg-php.git",
-                "reference": "dbbb6c09f19c2d522930d77c0924a50e7ecd9675"
+                "reference": "5b6c5ee7531822690622a199c15c3ebbbccd78ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gotenberg/gotenberg-php/zipball/dbbb6c09f19c2d522930d77c0924a50e7ecd9675",
-                "reference": "dbbb6c09f19c2d522930d77c0924a50e7ecd9675",
+                "url": "https://api.github.com/repos/gotenberg/gotenberg-php/zipball/5b6c5ee7531822690622a199c15c3ebbbccd78ab",
+                "reference": "5b6c5ee7531822690622a199c15c3ebbbccd78ab",
                 "shasum": ""
             },
             "require": {
@@ -4306,7 +4316,7 @@
             ],
             "support": {
                 "issues": "https://github.com/gotenberg/gotenberg-php/issues",
-                "source": "https://github.com/gotenberg/gotenberg-php/tree/v2.11.0"
+                "source": "https://github.com/gotenberg/gotenberg-php/tree/v2.11.1"
             },
             "funding": [
                 {
@@ -4314,7 +4324,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-22T15:08:47+00:00"
+            "time": "2025-01-10T12:09:53+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -5569,16 +5579,16 @@
         },
         {
             "name": "league/csv",
-            "version": "9.20.1",
+            "version": "9.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "491d1e79e973a7370c7571dc0fe4a7241f4936ee"
+                "reference": "72196d11ebba22d868954cb39c0c7346207430cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/491d1e79e973a7370c7571dc0fe4a7241f4936ee",
-                "reference": "491d1e79e973a7370c7571dc0fe4a7241f4936ee",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/72196d11ebba22d868954cb39c0c7346207430cc",
+                "reference": "72196d11ebba22d868954cb39c0c7346207430cc",
                 "shasum": ""
             },
             "require": {
@@ -5652,7 +5662,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-18T10:11:15+00:00"
+            "time": "2025-01-08T19:27:58+00:00"
         },
         {
             "name": "league/flysystem",
@@ -7153,12 +7163,12 @@
             "version": "2.72.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/briannesbitt/Carbon.git",
+                "url": "https://github.com/CarbonPHP/carbon.git",
                 "reference": "1e9d50601e7035a4c61441a208cb5bed73e108c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/1e9d50601e7035a4c61441a208cb5bed73e108c5",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/1e9d50601e7035a4c61441a208cb5bed73e108c5",
                 "reference": "1e9d50601e7035a4c61441a208cb5bed73e108c5",
                 "shasum": ""
             },
@@ -7321,16 +7331,16 @@
         },
         {
             "name": "openspout/openspout",
-            "version": "v4.28.3",
+            "version": "v4.28.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openspout/openspout.git",
-                "reference": "12b5eddcc230a97a9a67a722ad75c247e1a16750"
+                "reference": "68d58235c7c1164b3d231b798975b9b0b2b79b15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openspout/openspout/zipball/12b5eddcc230a97a9a67a722ad75c247e1a16750",
-                "reference": "12b5eddcc230a97a9a67a722ad75c247e1a16750",
+                "url": "https://api.github.com/repos/openspout/openspout/zipball/68d58235c7c1164b3d231b798975b9b0b2b79b15",
+                "reference": "68d58235c7c1164b3d231b798975b9b0b2b79b15",
                 "shasum": ""
             },
             "require": {
@@ -7344,13 +7354,13 @@
             },
             "require-dev": {
                 "ext-zlib": "*",
-                "friendsofphp/php-cs-fixer": "^3.65.0",
-                "infection/infection": "^0.29.8",
+                "friendsofphp/php-cs-fixer": "^3.66.1",
+                "infection/infection": "^0.29.10",
                 "phpbench/phpbench": "^1.3.1",
-                "phpstan/phpstan": "^2.0.3",
-                "phpstan/phpstan-phpunit": "^2.0.1",
+                "phpstan/phpstan": "^2.1.1",
+                "phpstan/phpstan-phpunit": "^2.0.3",
                 "phpstan/phpstan-strict-rules": "^2",
-                "phpunit/phpunit": "^11.5.0"
+                "phpunit/phpunit": "^11.5.2"
             },
             "suggest": {
                 "ext-iconv": "To handle non UTF-8 CSV files (if \"php-mbstring\" is not already installed or is too limited)",
@@ -7398,7 +7408,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openspout/openspout/issues",
-                "source": "https://github.com/openspout/openspout/tree/v4.28.3"
+                "source": "https://github.com/openspout/openspout/tree/v4.28.4"
             },
             "funding": [
                 {
@@ -7410,7 +7420,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-17T11:28:11+00:00"
+            "time": "2025-01-07T11:48:34+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -10866,16 +10876,16 @@
         },
         {
             "name": "stof/doctrine-extensions-bundle",
-            "version": "v1.12.0",
+            "version": "v1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stof/StofDoctrineExtensionsBundle.git",
-                "reference": "473ae65598fa4160654c350e139e20ee75d9a91a"
+                "reference": "bf00701bff3f2b7c4bf6d963101c9ea6968d694f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/473ae65598fa4160654c350e139e20ee75d9a91a",
-                "reference": "473ae65598fa4160654c350e139e20ee75d9a91a",
+                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/bf00701bff3f2b7c4bf6d963101c9ea6968d694f",
+                "reference": "bf00701bff3f2b7c4bf6d963101c9ea6968d694f",
                 "shasum": ""
             },
             "require": {
@@ -10940,9 +10950,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stof/StofDoctrineExtensionsBundle/issues",
-                "source": "https://github.com/stof/StofDoctrineExtensionsBundle/tree/v1.12.0"
+                "source": "https://github.com/stof/StofDoctrineExtensionsBundle/tree/v1.13.0"
             },
-            "time": "2024-06-10T12:27:27+00:00"
+            "time": "2025-01-07T08:10:54+00:00"
         },
         {
             "name": "sylius/theme-bundle",
@@ -15263,85 +15273,6 @@
                 }
             ],
             "time": "2024-11-13T15:31:34+00:00"
-        },
-        {
-            "name": "symfony/runtime",
-            "version": "v6.4.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/runtime.git",
-                "reference": "4facd4174f45cd37c65860403412b67c7381136a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/runtime/zipball/4facd4174f45cd37c65860403412b67c7381136a",
-                "reference": "4facd4174f45cd37c65860403412b67c7381136a",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0|^2.0",
-                "php": ">=8.1"
-            },
-            "conflict": {
-                "symfony/dotenv": "<5.4"
-            },
-            "require-dev": {
-                "composer/composer": "^1.0.2|^2.0",
-                "symfony/console": "^5.4.9|^6.0.9|^7.0",
-                "symfony/dotenv": "^5.4|^6.0|^7.0",
-                "symfony/http-foundation": "^5.4|^6.0|^7.0",
-                "symfony/http-kernel": "^5.4|^6.0|^7.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Symfony\\Component\\Runtime\\Internal\\ComposerPlugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Runtime\\": "",
-                    "Symfony\\Runtime\\Symfony\\Component\\": "Internal/"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Enables decoupling PHP applications from global state",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "runtime"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/runtime/tree/v6.4.14"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-11-05T16:39:55+00:00"
         },
         {
             "name": "symfony/security-bundle",

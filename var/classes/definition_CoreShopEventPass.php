@@ -15,6 +15,7 @@
  * - active [checkbox]
  * - manufacturer [coreShopRelation]
  * - stores [coreShopStoreMultiselect]
+ * - personalized [checkbox]
  * - validForEvents [coreShopRelations]
  * - mainVariant [coreShopRelation]
  * - allowedAttributeGroups [coreShopRelations]
@@ -39,7 +40,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769898,
+   'modificationDate' => 1736607859,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Bundle\\TicketingBundle\\Model\\EventPass',
@@ -489,6 +490,28 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'optionsProviderType' => NULL,
                      'optionsProviderClass' => NULL,
                      'optionsProviderData' => NULL,
+                  )),
+                  4 => 
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
+                     'name' => 'personalized',
+                     'title' => 'Personalized',
+                     'tooltip' => 'Define if the Pass is personalized, if so, the user has to enter the full name for every item in the cart',
+                     'mandatory' => false,
+                     'noteditable' => false,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => '',
+                     'permissions' => NULL,
+                     'fieldtype' => '',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'defaultValue' => NULL,
+                     'defaultValueGenerator' => '',
                   )),
                 ),
                  'locked' => false,

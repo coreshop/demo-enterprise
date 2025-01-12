@@ -569,12 +569,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "79cd8a2c5f35c6decf6840a00be030d9e3e20f90"
+                "reference": "521b129baa75d190a9b5163c0b17526eab61c6ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/79cd8a2c5f35c6decf6840a00be030d9e3e20f90",
-                "reference": "79cd8a2c5f35c6decf6840a00be030d9e3e20f90",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/521b129baa75d190a9b5163c0b17526eab61c6ce",
+                "reference": "521b129baa75d190a9b5163c0b17526eab61c6ce",
                 "shasum": ""
             },
             "require": {
@@ -697,6 +697,7 @@
                 "symplify/easy-coding-standard": "^11.1",
                 "vimeo/psalm": "^5.23"
             },
+            "default-branch": true,
             "type": "pimcore-bundle",
             "extra": {
                 "branch-alias": {
@@ -755,7 +756,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-07T08:39:42+00:00"
+            "time": "2025-01-12T16:04:38+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -8420,16 +8421,16 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "3.7.0",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "2fc12fdc58d39297c7b8c72d65b37a1a25d65ab5"
+                "reference": "949c799c3538f3158bcf6c5f4d8a403027be0fbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/2fc12fdc58d39297c7b8c72d65b37a1a25d65ab5",
-                "reference": "2fc12fdc58d39297c7b8c72d65b37a1a25d65ab5",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/949c799c3538f3158bcf6c5f4d8a403027be0fbd",
+                "reference": "949c799c3538f3158bcf6c5f4d8a403027be0fbd",
                 "shasum": ""
             },
             "require": {
@@ -8518,9 +8519,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
-                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/3.7.0"
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/3.8.0"
             },
-            "time": "2024-12-27T05:34:47+00:00"
+            "time": "2025-01-12T03:48:58+00:00"
         },
         {
             "name": "phpseclib/phpseclib",

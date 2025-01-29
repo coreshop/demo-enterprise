@@ -799,10 +799,10 @@ DROP TABLE IF EXISTS `coreshop_payment_provider_rule_translation`;
 CREATE TABLE `coreshop_payment_provider_rule_translation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `translatable_id` int NOT NULL,
-  `label` varchar(256) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `label` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
-  `locale` varchar(5) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `locale` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `translatable_id_locale` (`translatable_id`,`locale`),
   KEY `translatable_id` (`translatable_id`),
@@ -1027,7 +1027,7 @@ CREATE TABLE `coreshop_product_store_values` (
   `product` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
   `price` bigint NOT NULL COMMENT '(DC2Type:bigintInteger)',
   `taxRuleId` int DEFAULT NULL,
-  `fieldName` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `fieldName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `product_store` (`product`,`store`,`fieldName`),
   KEY `IDX_9EED0E97FF575877` (`store`),
@@ -2632,6 +2632,7 @@ CREATE TABLE `object_query_cs_order_item` (
   `totalDepositGross` bigint DEFAULT NULL,
   `depositPercentage` double DEFAULT NULL,
   `deposit` tinyint(1) DEFAULT NULL,
+  `personalizedName` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_order_item__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3698,6 +3699,7 @@ CREATE TABLE `object_store_cs_order_item` (
   `totalDepositGross` bigint DEFAULT NULL,
   `depositPercentage` double DEFAULT NULL,
   `deposit` tinyint(1) DEFAULT NULL,
+  `personalizedName` varchar(190) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_order_item__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

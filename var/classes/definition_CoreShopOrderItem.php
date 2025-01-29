@@ -27,6 +27,7 @@
  * - depositPercentage [numeric]
  * - deposit [checkbox]
  * - immutable [booleanSelect]
+ * - personalizedName [input]
  * - itemWholesalePrice [coreShopMoney]
  * - customItemPrice [coreShopMoney]
  * - itemDiscountNet [coreShopMoney]
@@ -76,11 +77,11 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769901,
+   'modificationDate' => 1738133847,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\OrderItem',
-   'implementsInterfaces' => '\\CoreShop\\Bundle\\WarehouseBundle\\Model\\AllocationAwareInterface,\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositItemAwareInterface',
+   'implementsInterfaces' => '\\CoreShop\\Bundle\\WarehouseBundle\\Model\\AllocationAwareInterface,\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositItemAwareInterface,\\CoreShop\\Bundle\\TicketingBundle\\Model\\OrderItemTicketingAwareInterface',
    'listingParentClass' => '',
    'useTraits' => '\\CoreShop\\Bundle\\DepositBundle\\Model\\DepositItemAwareTrait',
    'listingUseTraits' => '',
@@ -817,6 +818,36 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                       ),
                     ),
                      'width' => '',
+                  )),
+                  21 => 
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                     'name' => 'personalizedName',
+                     'title' => 'coreshop_ticketing.order.personalized_name',
+                     'tooltip' => NULL,
+                     'mandatory' => false,
+                     'noteditable' => true,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => NULL,
+                     'permissions' => NULL,
+                     'fieldtype' => '',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'defaultValue' => NULL,
+                     'columnLength' => 190,
+                     'regex' => '',
+                     'regexFlags' => 
+                    array (
+                    ),
+                     'unique' => false,
+                     'showCharCount' => false,
+                     'width' => NULL,
+                     'defaultValueGenerator' => '',
                   )),
                 ),
                  'locked' => false,

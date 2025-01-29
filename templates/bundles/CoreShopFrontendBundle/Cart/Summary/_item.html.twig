@@ -26,18 +26,22 @@
                 <span class="unit-definition unit-name">{{ item.unitDefinition.unit.name }}</span>
             {% endif %}
         {% else %}
-            <div class="input-group">
-                {{ form_widget(form.quantity, coreshop_test_form_attribute('cart-item-quantity-input', item.name)) }}
-                {% if item.hasUnitDefinition %}
-                    <div class="input-group-append">
+            {% if form.quantity is defined %}
+                <div class="input-group">
+                    {{ form_widget(form.quantity, coreshop_test_form_attribute('cart-item-quantity-input', item.name)) }}
+                    {% if item.hasUnitDefinition %}
+                        <div class="input-group-append">
                         <span class="input-group-text" {{ coreshop_test_html_attribute('cart-item-unit-' ~ item.unitDefinition.id, item.name) }}>
                             {{ item.unitDefinition.unit.name }}
                         </span>
-                    </div>
-                {% endif %}
+                        </div>
+                    {% endif %}
 
-                {{ form_errors(form.quantity) }}
-            </div>
+                    {{ form_errors(form.quantity) }}
+                </div>
+            {% elseif form.personalizedName is defined %}
+                {{ form_row(form.personalizedName, {label: 'Name'}) }}
+            {% endif %}
         {% endif %}
     </td>
     <td class="text-right cart-item-price">

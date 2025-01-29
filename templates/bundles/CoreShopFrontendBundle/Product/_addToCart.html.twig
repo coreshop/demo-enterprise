@@ -5,7 +5,10 @@
 
     <div class="input-group">
         {% set relation_id = random() %}
-        {{ form_row(form.cartItem.quantity, coreshop_test_form_attribute('quantity')|coreshop_merge_recursive({label: false, attr: {class: 'form-control cart-item-quantity cs-unit-input', 'data-cs-unit-identifier': relation_id }})) }}
+
+        {% if form.cartItem.quantity is defined %}
+            {{ form_row(form.cartItem.quantity, coreshop_test_form_attribute('quantity')|coreshop_merge_recursive({label: false, attr: {class: 'form-control cart-item-quantity cs-unit-input', 'data-cs-unit-identifier': relation_id }})) }}
+        {% endif %}
 
         {% if form.cartItem.unitDefinition is defined %}
             {{ form_row(form.cartItem.unitDefinition, coreshop_test_form_attribute('unit')|coreshop_merge_recursive({label: false, row_attr: {class: 'ml-1'}, attr: {class: 'form-control cs-unit-selector', 'data-cs-unit-identifier': relation_id}})) }}

@@ -648,12 +648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "7ddffd3202a531d29a7efb4b6ce604cb1949130b"
+                "reference": "63a919d93f595ec3454727fec30a623694a279a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/7ddffd3202a531d29a7efb4b6ce604cb1949130b",
-                "reference": "7ddffd3202a531d29a7efb4b6ce604cb1949130b",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/63a919d93f595ec3454727fec30a623694a279a9",
+                "reference": "63a919d93f595ec3454727fec30a623694a279a9",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-31T07:15:59+00:00"
+            "time": "2025-02-06T09:10:03+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -8853,16 +8853,16 @@
         },
         {
             "name": "pimcore/data-hub",
-            "version": "v1.9.1",
+            "version": "v1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/data-hub.git",
-                "reference": "2c120fda31902a3e6170923ab429a48d7d094b8e"
+                "reference": "01ec55c75701886111783b6eee455be75e8083f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/2c120fda31902a3e6170923ab429a48d7d094b8e",
-                "reference": "2c120fda31902a3e6170923ab429a48d7d094b8e",
+                "url": "https://api.github.com/repos/pimcore/data-hub/zipball/01ec55c75701886111783b6eee455be75e8083f3",
+                "reference": "01ec55c75701886111783b6eee455be75e8083f3",
                 "shasum": ""
             },
             "require": {
@@ -8904,9 +8904,9 @@
             "description": "Pimcore Datahub",
             "support": {
                 "issues": "https://github.com/pimcore/data-hub/issues",
-                "source": "https://github.com/pimcore/data-hub/tree/v1.9.1"
+                "source": "https://github.com/pimcore/data-hub/tree/v1.9.2"
             },
-            "time": "2024-12-16T11:52:10+00:00"
+            "time": "2025-01-31T12:22:08+00:00"
         },
         {
             "name": "pimcore/google-marketing-bundle",

@@ -1383,8 +1383,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/5df884da0f81fb2310af12f345710e3ce663e4d2.zip",
-                "reference": "5df884da0f81fb2310af12f345710e3ce663e4d2",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/quick-order-bundle/dev-main/b5257423bcc312d4f952bdd376787f7e0b78d125.zip",
+                "reference": "b5257423bcc312d4f952bdd376787f7e0b78d125",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1441,7 +1441,7 @@
                 "source": "https://github.com/coreshop/quick-order-bundle/tree/main",
                 "issues": "https://github.com/coreshop/quick-order-bundle/issues"
             },
-            "time": "2025-01-06T19:47:35+00:00"
+            "time": "2025-02-08T15:39:19+00:00"
         },
         {
             "name": "coreshop/ticketing-bundle",

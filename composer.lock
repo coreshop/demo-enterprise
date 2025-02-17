@@ -648,12 +648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "15f38dbddc8c981eee781a39f55c7ebad8be90d8"
+                "reference": "97b7cccf411fa70fb40359cb940565a4720a1707"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/15f38dbddc8c981eee781a39f55c7ebad8be90d8",
-                "reference": "15f38dbddc8c981eee781a39f55c7ebad8be90d8",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/97b7cccf411fa70fb40359cb940565a4720a1707",
+                "reference": "97b7cccf411fa70fb40359cb940565a4720a1707",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-10T09:46:19+00:00"
+            "time": "2025-02-17T13:55:29+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -1448,8 +1448,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/82b6ee24681a1a46be64cc675e15210783f4c7a3.zip",
-                "reference": "82b6ee24681a1a46be64cc675e15210783f4c7a3",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/376771b43bdaf8b8a8ef6539946b21ca8499f444.zip",
+                "reference": "376771b43bdaf8b8a8ef6539946b21ca8499f444",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1510,7 +1510,7 @@
                 "source": "https://github.com/coreshop/ticketing-bundle/tree/main",
                 "issues": "https://github.com/coreshop/ticketing-bundle/issues"
             },
-            "time": "2025-01-06T19:47:28+00:00"
+            "time": "2025-02-17T15:37:02+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",
@@ -4214,16 +4214,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.394.0",
+            "version": "v0.395.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "17fa8210d62c02c398fb4985ed4bc461d18989c1"
+                "reference": "e023429c6dc53e9e6e3b751f3957fd3118ed1568"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/17fa8210d62c02c398fb4985ed4bc461d18989c1",
-                "reference": "17fa8210d62c02c398fb4985ed4bc461d18989c1",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/e023429c6dc53e9e6e3b751f3957fd3118ed1568",
+                "reference": "e023429c6dc53e9e6e3b751f3957fd3118ed1568",
                 "shasum": ""
             },
             "require": {
@@ -4252,9 +4252,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.394.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.395.0"
             },
-            "time": "2025-02-10T01:06:23+00:00"
+            "time": "2025-02-17T01:08:24+00:00"
         },
         {
             "name": "google/auth",

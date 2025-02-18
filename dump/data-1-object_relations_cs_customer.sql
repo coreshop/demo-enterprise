@@ -6,4 +6,6 @@ INSERT INTO object_relations_cs_customer (`id`,`src_id`,`dest_id`,`type`,`fieldn
 (6,115,117,'object','defaultAddress',0,'object','','0'), 
 (10,205,209,'object','user',0,'object','','0'), 
 (11,205,207,'object','addresses',1,'object','','0'), 
-(12,205,207,'object','defaultAddress',0,'object','','0');
+(12,205,207,'object','defaultAddress',0,'object','','0'), 
+(13,269,271,'object','addresses',1,'object','','0'), 
+(14,269,271,'object','defaultAddress',0,'object','','0');

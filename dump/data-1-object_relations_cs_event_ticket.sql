@@ -36,4 +36,8 @@ INSERT INTO object_relations_cs_event_ticket (`id`,`src_id`,`dest_id`,`type`,`fi
 (33,255,231,'object','order',0,'object','','0'), 
 (34,255,235,'object','orderItem',0,'object','','0'), 
 (35,255,221,'object','ticketable',0,'object','','0'), 
-(36,255,221,'object','ticketableVariant',0,'object','','0');
+(36,255,221,'object','ticketableVariant',0,'object','','0'), 
+(37,281,264,'object','order',0,'object','','0'), 
+(38,281,266,'object','orderItem',0,'object','','0'), 
+(39,281,221,'object','ticketable',0,'object','','0'), 
+(40,281,221,'object','ticketableVariant',0,'object','','0');

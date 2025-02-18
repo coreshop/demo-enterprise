@@ -43,4 +43,9 @@ INSERT INTO notes (`id`,`type`,`cid`,`ctype`,`date`,`user`,`title`,`description`
 (40,'history_state_change',231,'object',1729771810,2,'coreshop_history_change','Order Ticketing: State changed from New to Issued',1), 
 (41,'history_state_change',231,'object',1729771810,2,'coreshop_history_change','Payment State: State changed from New to Completed',1), 
 (42,'history_state_change',231,'object',1729773977,NULL,'coreshop_history_change','Event Ticket Scan: State changed from Initialized to Scanned',1), 
-(43,'history_state_change',256,'object',1729773977,NULL,'coreshop_history_change','Event Ticket Scan: State changed from Initialized to Scanned',1);
+(43,'history_state_change',256,'object',1729773977,NULL,'coreshop_history_change','Event Ticket Scan: State changed from Initialized to Scanned',1), 
+(44,'history_state_change',264,'object',1738134068,NULL,'coreshop_history_change','State: State changed from Initialized to New',1), 
+(45,'history_state_change',264,'object',1738134068,NULL,'coreshop_history_change','Type: State changed from Cart to Order',1), 
+(46,'history_state_change',264,'object',1738134069,NULL,'coreshop_history_change','Event Ticket: State changed from Initialized to New',1), 
+(47,'history_state_change',281,'object',1738134069,NULL,'coreshop_history_change','Event Ticket: State changed from Initialized to New',1), 
+(48,'history_state_change',264,'object',1738134069,NULL,'coreshop_history_change','State: State changed from New to Confirmed',1);

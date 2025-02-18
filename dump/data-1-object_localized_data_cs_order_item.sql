@@ -15,4 +15,7 @@ INSERT INTO object_localized_data_cs_order_item (`ooo_id`,`language`,`name`) VAL
 (259,'fr',NULL), 
 (260,'de','Aerodynamisch Stahl Brieftasche'), 
 (260,'en','Aerodynamic Steel Wallet'), 
-(260,'fr','Aerodynamic Steel Wallet');
+(260,'fr','Aerodynamic Steel Wallet'), 
+(266,'de',NULL), 
+(266,'en','Full Pimcore Experience'), 
+(266,'fr',NULL);

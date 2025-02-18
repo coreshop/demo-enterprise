@@ -86,4 +86,14 @@ INSERT INTO notes_data (`auto_id`,`id`,`name`,`type`,`data`) VALUES (1,1,'workfl
 (83,42,'workflow','text','coreshop_ticketing_event_ticket_scan'), 
 (84,42,'transition','text','scan'), 
 (85,43,'workflow','text','coreshop_ticketing_event_ticket_scan'), 
-(86,43,'transition','text','scan');
+(86,43,'transition','text','scan'), 
+(87,44,'workflow','text','coreshop_order'), 
+(88,44,'transition','text','create'), 
+(89,45,'workflow','text','coreshop_order_sales_type'), 
+(90,45,'transition','text','order'), 
+(91,46,'workflow','text','coreshop_ticketing_event_ticket'), 
+(92,46,'transition','text','create'), 
+(93,47,'workflow','text','coreshop_ticketing_event_ticket'), 
+(94,47,'transition','text','create'), 
+(95,48,'workflow','text','coreshop_order'), 
+(96,48,'transition','text','confirm');

@@ -569,7 +569,7 @@ CREATE TABLE `coreshop_loyalty_points_account` (
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -641,7 +641,7 @@ CREATE TABLE `coreshop_loyalty_points_transaction` (
   PRIMARY KEY (`id`),
   KEY `IDX_144F7D5D11F7BE17` (`loyalty_account`),
   CONSTRAINT `FK_144F7D5D11F7BE17` FOREIGN KEY (`loyalty_account`) REFERENCES `coreshop_loyalty_points_account` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -706,7 +706,7 @@ CREATE TABLE `coreshop_payment` (
   KEY `IDX_E797E8B338248176` (`currency_id`),
   CONSTRAINT `FK_E797E8B338248176` FOREIGN KEY (`currency_id`) REFERENCES `coreshop_currency` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_E797E8B3FCDF7870` FOREIGN KEY (`payment_provider_id`) REFERENCES `coreshop_payment_provider` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1477,7 +1477,7 @@ CREATE TABLE `messenger_messages` (
   KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
   KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
   KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=1927 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1994 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -2355,6 +2355,7 @@ CREATE TABLE `object_query_cs_event` (
   `minimumQuantityToOrder` bigint DEFAULT NULL,
   `maximumQuantityToOrder` bigint DEFAULT NULL,
   `taxRule` int DEFAULT NULL,
+  `digitalProduct` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_event__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2384,6 +2385,7 @@ CREATE TABLE `object_query_cs_event_pass` (
   `maximumQuantityToOrder` bigint DEFAULT NULL,
   `taxRule` int DEFAULT NULL,
   `personalized` tinyint(1) DEFAULT NULL,
+  `digitalProduct` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_event_pass__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2963,7 +2965,7 @@ CREATE TABLE `object_relations_cs_customer` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_customer__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -3043,7 +3045,7 @@ CREATE TABLE `object_relations_cs_event_ticket` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_event_ticket__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -3123,7 +3125,7 @@ CREATE TABLE `object_relations_cs_order` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_order__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=252 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=258 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -3183,7 +3185,7 @@ CREATE TABLE `object_relations_cs_order_item` (
   KEY `reverse_lookup` (`dest_id`,`type`),
   KEY `fieldname` (`fieldname`),
   CONSTRAINT `fk_object_relations_cs_order_item__src_id` FOREIGN KEY (`src_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=259 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=261 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -3474,6 +3476,7 @@ CREATE TABLE `object_store_cs_event` (
   `minimumQuantityToOrder` bigint DEFAULT NULL,
   `maximumQuantityToOrder` bigint DEFAULT NULL,
   `taxRule` int DEFAULT NULL,
+  `digitalProduct` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_event__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3492,6 +3495,7 @@ CREATE TABLE `object_store_cs_event_pass` (
   `maximumQuantityToOrder` bigint DEFAULT NULL,
   `taxRule` int DEFAULT NULL,
   `personalized` tinyint(1) DEFAULT NULL,
+  `digitalProduct` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_event_pass__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

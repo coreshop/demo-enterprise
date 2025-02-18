@@ -9,4 +9,5 @@ INSERT INTO object_query_cs_event_ticket (`oo_id`,`oo_classId`,`oo_className`,`d
 (250,'cs_event_ticket','CoreShopEventTicket','2024-10-24','O8-1-6',231,'object',233,'object',222,'object',222,'object','valid','IihA5a8C7eKSRcUCLG0M5OAlvxh4P95Y',NULL), 
 (251,'cs_event_ticket','CoreShopEventTicket','2024-10-24','O8-1-7',231,'object',233,'object',222,'object',222,'object','valid','Vtdv1LnWEGasjDxRLlvbaW16diMGm01S',NULL), 
 (253,'cs_event_ticket','CoreShopEventTicket','2024-10-24','O8-2-1',231,'object',234,'object',220,'object',220,'object','valid','vk98vZ1tgPuCANXebvcOsqW3gggLzYCs',NULL), 
-(255,'cs_event_ticket','CoreShopEventTicket','2024-10-24','O8-3-1',231,'object',235,'object',221,'object',221,'object','valid','LEeLA14l7pBC3uXrRdCax9x3bKNwlfES',NULL);
+(255,'cs_event_ticket','CoreShopEventTicket','2024-10-24','O8-3-1',231,'object',235,'object',221,'object',221,'object','valid','LEeLA14l7pBC3uXrRdCax9x3bKNwlfES',NULL), 
+(281,'cs_event_ticket','CoreShopEventTicket','2025-01-29','O9-1-1',264,'object',266,'object',221,'object',221,'object','new','szgVQbMC82M9PdHxrBic8yXn5ybRlfwa',NULL);

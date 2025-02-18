@@ -15,6 +15,7 @@
  * - active [checkbox]
  * - manufacturer [coreShopRelation]
  * - stores [coreShopStoreMultiselect]
+ * - digitalProduct [booleanSelect]
  * - personalized [checkbox]
  * - validForEvents [coreShopRelations]
  * - mainVariant [coreShopRelation]
@@ -40,7 +41,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1736607859,
+   'modificationDate' => 1739859129,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Bundle\\TicketingBundle\\Model\\EventPass',
@@ -492,6 +493,48 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'optionsProviderData' => NULL,
                   )),
                   4 => 
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
+                     'name' => 'digitalProduct',
+                     'title' => 'coreshop.product.digital_product',
+                     'tooltip' => '',
+                     'mandatory' => false,
+                     'noteditable' => false,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => '',
+                     'permissions' => NULL,
+                     'fieldtype' => '',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'yesLabel' => 'yes',
+                     'noLabel' => 'no',
+                     'emptyLabel' => 'empty',
+                     'options' => 
+                    array (
+                      0 => 
+                      array (
+                        'key' => 'empty',
+                        'value' => 0,
+                      ),
+                      1 => 
+                      array (
+                        'key' => 'yes',
+                        'value' => 1,
+                      ),
+                      2 => 
+                      array (
+                        'key' => 'no',
+                        'value' => -1,
+                      ),
+                    ),
+                     'width' => '',
+                  )),
+                  5 => 
                   \Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
                      'name' => 'personalized',
                      'title' => 'Personalized',

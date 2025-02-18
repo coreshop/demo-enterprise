@@ -648,12 +648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "97b7cccf411fa70fb40359cb940565a4720a1707"
+                "reference": "5d4dd176de3065aedd30ee307e487f1a12847889"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/97b7cccf411fa70fb40359cb940565a4720a1707",
-                "reference": "97b7cccf411fa70fb40359cb940565a4720a1707",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/5d4dd176de3065aedd30ee307e487f1a12847889",
+                "reference": "5d4dd176de3065aedd30ee307e487f1a12847889",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-17T13:55:29+00:00"
+            "time": "2025-02-18T12:21:34+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",

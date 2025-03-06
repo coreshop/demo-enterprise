@@ -423,16 +423,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.5",
+            "version": "1.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "08c50d5ec4c6ced7d0271d2862dec8c1033283e6"
+                "reference": "f65c239c970e7f072f067ab78646e9f0b2935175"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/08c50d5ec4c6ced7d0271d2862dec8c1033283e6",
-                "reference": "08c50d5ec4c6ced7d0271d2862dec8c1033283e6",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/f65c239c970e7f072f067ab78646e9f0b2935175",
+                "reference": "f65c239c970e7f072f067ab78646e9f0b2935175",
                 "shasum": ""
             },
             "require": {
@@ -479,7 +479,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.5.5"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.6"
             },
             "funding": [
                 {
@@ -495,7 +495,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-08T16:17:16+00:00"
+            "time": "2025-03-06T14:30:56+00:00"
         },
         {
             "name": "composer/pcre",
@@ -648,12 +648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "2103cf93e4bfcd9682b3346cf78e6949d74c6aa6"
+                "reference": "0ade81312eb396eccb6ec08d926c25f2ebc49726"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/2103cf93e4bfcd9682b3346cf78e6949d74c6aa6",
-                "reference": "2103cf93e4bfcd9682b3346cf78e6949d74c6aa6",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/0ade81312eb396eccb6ec08d926c25f2ebc49726",
+                "reference": "0ade81312eb396eccb6ec08d926c25f2ebc49726",
                 "shasum": ""
             },
             "require": {
@@ -827,7 +827,7 @@
             ],
             "support": {
                 "issues": "https://github.com/coreshop/CoreShop/issues",
-                "source": "https://github.com/coreshop/CoreShop/tree/4.1"
+                "source": "https://github.com/coreshop/CoreShop/tree/4.1.1"
             },
             "funding": [
                 {
@@ -835,7 +835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-03T09:47:57+00:00"
+            "time": "2025-03-06T15:40:24+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",

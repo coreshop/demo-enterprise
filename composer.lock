@@ -8966,26 +8966,26 @@
         },
         {
             "name": "pimcore/newsletter-bundle",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/newsletter-bundle.git",
-                "reference": "0338ea481fcdc58883a33f50980954d644c3d7e3"
+                "reference": "b1f1c881a5a70387ecfdcc5812b4a37843d52943"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/newsletter-bundle/zipball/0338ea481fcdc58883a33f50980954d644c3d7e3",
-                "reference": "0338ea481fcdc58883a33f50980954d644c3d7e3",
+                "url": "https://api.github.com/repos/pimcore/newsletter-bundle/zipball/b1f1c881a5a70387ecfdcc5812b4a37843d52943",
+                "reference": "b1f1c881a5a70387ecfdcc5812b4a37843d52943",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^3.6",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
-                "pimcore/admin-ui-classic-bundle": "^1.1",
-                "pimcore/pimcore": "^11.2"
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+                "pimcore/admin-ui-classic-bundle": "^1.1 || ^2.0",
+                "pimcore/pimcore": "^11.2 || ^12.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^1.10.5",
+                "phpstan/phpstan": "^1.12.15",
                 "phpstan/phpstan-symfony": "^1.2.20"
             },
             "type": "pimcore-bundle",
@@ -9008,9 +9008,9 @@
             "description": "Pimcore Newsletter Bundle",
             "support": {
                 "issues": "https://github.com/pimcore/newsletter-bundle/issues",
-                "source": "https://github.com/pimcore/newsletter-bundle/tree/v1.2.0"
+                "source": "https://github.com/pimcore/newsletter-bundle/tree/v1.3.0"
             },
-            "time": "2024-12-02T12:57:55+00:00"
+            "time": "2025-02-27T09:31:13+00:00"
         },
         {
             "name": "pimcore/pimcore",

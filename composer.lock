@@ -1448,8 +1448,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/f7432ac212a1b1997de564f8892e74cdf3f74ec9.zip",
-                "reference": "f7432ac212a1b1997de564f8892e74cdf3f74ec9",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/20cff3672c89b9b279c99962e344d4ad0038b620.zip",
+                "reference": "20cff3672c89b9b279c99962e344d4ad0038b620",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1510,7 +1510,7 @@
                 "source": "https://github.com/coreshop/ticketing-bundle/tree/main",
                 "issues": "https://github.com/coreshop/ticketing-bundle/issues"
             },
-            "time": "2025-02-18T06:11:43+00:00"
+            "time": "2025-03-14T09:05:04+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",

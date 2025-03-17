@@ -1448,8 +1448,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/20cff3672c89b9b279c99962e344d4ad0038b620.zip",
-                "reference": "20cff3672c89b9b279c99962e344d4ad0038b620",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/ac80e992d141121e62c54e8c7b7fadeeb48c0e77.zip",
+                "reference": "ac80e992d141121e62c54e8c7b7fadeeb48c0e77",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1510,7 +1510,7 @@
                 "source": "https://github.com/coreshop/ticketing-bundle/tree/main",
                 "issues": "https://github.com/coreshop/ticketing-bundle/issues"
             },
-            "time": "2025-03-14T09:05:04+00:00"
+            "time": "2025-03-17T18:59:26+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",
@@ -1588,8 +1588,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-main/d153c25f5408a44d1e58ceac3f898057b25323d6.zip",
-                "reference": "d153c25f5408a44d1e58ceac3f898057b25323d6",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/warehouse-bundle/dev-main/be5f3a55e32de20531f9c01b21ab46514bdc35e2.zip",
+                "reference": "be5f3a55e32de20531f9c01b21ab46514bdc35e2",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1643,7 +1643,7 @@
                 "source": "https://github.com/coreshop/warehouse-bundle/tree/main",
                 "issues": "https://github.com/coreshop/warehouse-bundle/issues"
             },
-            "time": "2025-01-06T19:48:12+00:00"
+            "time": "2025-03-17T16:25:28+00:00"
         },
         {
             "name": "creof/geo-parser",
@@ -4319,16 +4319,16 @@
         },
         {
             "name": "gotenberg/gotenberg-php",
-            "version": "v2.12.1",
+            "version": "v2.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gotenberg/gotenberg-php.git",
-                "reference": "e7f36afe4be38998cd2ca121353ae8c253161f55"
+                "reference": "edb5b91321c60c3da8c87e1d821f844b7e5c0c2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gotenberg/gotenberg-php/zipball/e7f36afe4be38998cd2ca121353ae8c253161f55",
-                "reference": "e7f36afe4be38998cd2ca121353ae8c253161f55",
+                "url": "https://api.github.com/repos/gotenberg/gotenberg-php/zipball/edb5b91321c60c3da8c87e1d821f844b7e5c0c2c",
+                "reference": "edb5b91321c60c3da8c87e1d821f844b7e5c0c2c",
                 "shasum": ""
             },
             "require": {
@@ -4388,7 +4388,7 @@
             ],
             "support": {
                 "issues": "https://github.com/gotenberg/gotenberg-php/issues",
-                "source": "https://github.com/gotenberg/gotenberg-php/tree/v2.12.1"
+                "source": "https://github.com/gotenberg/gotenberg-php/tree/v2.13.0"
             },
             "funding": [
                 {
@@ -4396,7 +4396,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-12T09:48:37+00:00"
+            "time": "2025-03-17T13:57:01+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

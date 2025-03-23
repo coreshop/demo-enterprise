@@ -10456,16 +10456,16 @@
         },
         {
             "name": "scheb/2fa-bundle",
-            "version": "v7.6.0",
+            "version": "v7.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-bundle.git",
-                "reference": "3011e0b8242e12cdcd64ed12a95ddb2e5899ba37"
+                "reference": "6fbb15ca8e62b1272e398dde21d1216b1ad59dab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-bundle/zipball/3011e0b8242e12cdcd64ed12a95ddb2e5899ba37",
-                "reference": "3011e0b8242e12cdcd64ed12a95ddb2e5899ba37",
+                "url": "https://api.github.com/repos/scheb/2fa-bundle/zipball/6fbb15ca8e62b1272e398dde21d1216b1ad59dab",
+                "reference": "6fbb15ca8e62b1272e398dde21d1216b1ad59dab",
                 "shasum": ""
             },
             "require": {
@@ -10479,6 +10479,7 @@
                 "symfony/http-kernel": "^6.4 || ^7.0",
                 "symfony/property-access": "^6.4 || ^7.0",
                 "symfony/security-bundle": "^6.4 || ^7.0",
+                "symfony/service-contracts": "^2.5|^3",
                 "symfony/twig-bundle": "^6.4 || ^7.0"
             },
             "conflict": {
@@ -10517,22 +10518,22 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-bundle/tree/v7.6.0"
+                "source": "https://github.com/scheb/2fa-bundle/tree/v7.7.0"
             },
-            "time": "2024-10-20T10:14:58+00:00"
+            "time": "2025-03-23T09:49:33+00:00"
         },
         {
             "name": "scheb/2fa-google-authenticator",
-            "version": "v7.6.0",
+            "version": "v7.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-google-authenticator.git",
-                "reference": "c9a06ea7c4450b695a2ccfa43d2e344ce6d6ba0a"
+                "reference": "1d67aa4585c706046c7bedef3c6955d85664364c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-google-authenticator/zipball/c9a06ea7c4450b695a2ccfa43d2e344ce6d6ba0a",
-                "reference": "c9a06ea7c4450b695a2ccfa43d2e344ce6d6ba0a",
+                "url": "https://api.github.com/repos/scheb/2fa-google-authenticator/zipball/1d67aa4585c706046c7bedef3c6955d85664364c",
+                "reference": "1d67aa4585c706046c7bedef3c6955d85664364c",
                 "shasum": ""
             },
             "require": {
@@ -10567,9 +10568,9 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-google-authenticator/tree/v7.6.0"
+                "source": "https://github.com/scheb/2fa-google-authenticator/tree/v7.7.0"
             },
-            "time": "2024-10-20T10:14:58+00:00"
+            "time": "2025-03-20T08:56:30+00:00"
         },
         {
             "name": "sebastian/diff",

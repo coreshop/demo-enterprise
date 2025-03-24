@@ -6843,16 +6843,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "3.8.1",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4"
+                "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/10d85740180ecba7896c87e06a166e0c95a0e3b6",
+                "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6",
                 "shasum": ""
             },
             "require": {
@@ -6930,7 +6930,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/3.8.1"
+                "source": "https://github.com/Seldaek/monolog/tree/3.9.0"
             },
             "funding": [
                 {
@@ -6942,7 +6942,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-05T17:15:07+00:00"
+            "time": "2025-03-24T10:02:05+00:00"
         },
         {
             "name": "mpratt/embera",
@@ -10456,16 +10456,16 @@
         },
         {
             "name": "scheb/2fa-bundle",
-            "version": "v7.7.0",
+            "version": "v7.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-bundle.git",
-                "reference": "6fbb15ca8e62b1272e398dde21d1216b1ad59dab"
+                "reference": "9b241074d140c54e0f81742bc089edd8a0efd62b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-bundle/zipball/6fbb15ca8e62b1272e398dde21d1216b1ad59dab",
-                "reference": "6fbb15ca8e62b1272e398dde21d1216b1ad59dab",
+                "url": "https://api.github.com/repos/scheb/2fa-bundle/zipball/9b241074d140c54e0f81742bc089edd8a0efd62b",
+                "reference": "9b241074d140c54e0f81742bc089edd8a0efd62b",
                 "shasum": ""
             },
             "require": {
@@ -10518,13 +10518,13 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-bundle/tree/v7.7.0"
+                "source": "https://github.com/scheb/2fa-bundle/tree/v7.7.1"
             },
-            "time": "2025-03-23T09:49:33+00:00"
+            "time": "2025-03-24T10:50:27+00:00"
         },
         {
             "name": "scheb/2fa-google-authenticator",
-            "version": "v7.7.0",
+            "version": "v7.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-google-authenticator.git",
@@ -10568,7 +10568,7 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-google-authenticator/tree/v7.7.0"
+                "source": "https://github.com/scheb/2fa-google-authenticator/tree/v7.7.1"
             },
             "time": "2025-03-20T08:56:30+00:00"
         },

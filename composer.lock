@@ -11198,16 +11198,16 @@
         },
         {
             "name": "symfony-cmf/routing-bundle",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/routing-bundle.git",
-                "reference": "4a3d31d27050d5f4fd808dc68377050f72b99979"
+                "reference": "7aab681c812e93a41d70349f560976b93da049ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/routing-bundle/zipball/4a3d31d27050d5f4fd808dc68377050f72b99979",
-                "reference": "4a3d31d27050d5f4fd808dc68377050f72b99979",
+                "url": "https://api.github.com/repos/symfony-cmf/routing-bundle/zipball/7aab681c812e93a41d70349f560976b93da049ca",
+                "reference": "7aab681c812e93a41d70349f560976b93da049ca",
                 "shasum": ""
             },
             "require": {
@@ -11225,7 +11225,7 @@
             "require-dev": {
                 "doctrine/data-fixtures": "^1.0.0",
                 "doctrine/doctrine-bundle": "^2.8",
-                "doctrine/orm": "^2.9 || ^3.0",
+                "doctrine/orm": "^2.9 || ^3.0.1",
                 "doctrine/phpcr-bundle": "^3.0",
                 "doctrine/phpcr-odm": "^2.0",
                 "jackalope/jackalope-doctrine-dbal": "^2.0",
@@ -11276,9 +11276,9 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony-cmf/routing-bundle/issues",
-                "source": "https://github.com/symfony-cmf/routing-bundle/tree/3.1.0"
+                "source": "https://github.com/symfony-cmf/routing-bundle/tree/3.1.1"
             },
-            "time": "2024-04-07T08:17:51+00:00"
+            "time": "2025-03-31T07:12:15+00:00"
         },
         {
             "name": "symfony/asset",

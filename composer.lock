@@ -648,12 +648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "e7bb6a3d9989e035d380364a4d999d7ffed7609a"
+                "reference": "14fd60d7217b372b93401f839fc7e543b9e23b50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/e7bb6a3d9989e035d380364a4d999d7ffed7609a",
-                "reference": "e7bb6a3d9989e035d380364a4d999d7ffed7609a",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/14fd60d7217b372b93401f839fc7e543b9e23b50",
+                "reference": "14fd60d7217b372b93401f839fc7e543b9e23b50",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-15T06:42:09+00:00"
+            "time": "2025-04-17T06:40:41+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -1448,8 +1448,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/ac80e992d141121e62c54e8c7b7fadeeb48c0e77.zip",
-                "reference": "ac80e992d141121e62c54e8c7b7fadeeb48c0e77",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/ticketing-bundle/dev-main/a6c1bd777995be387cd649c751f76bbd53f13f12.zip",
+                "reference": "a6c1bd777995be387cd649c751f76bbd53f13f12",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1510,7 +1510,7 @@
                 "source": "https://github.com/coreshop/ticketing-bundle/tree/main",
                 "issues": "https://github.com/coreshop/ticketing-bundle/issues"
             },
-            "time": "2025-03-17T18:59:26+00:00"
+            "time": "2025-04-17T10:50:42+00:00"
         },
         {
             "name": "coreshop/voucher-credit-bundle",
@@ -10288,16 +10288,16 @@
         },
         {
             "name": "sabre/vobject",
-            "version": "4.5.6",
+            "version": "4.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabre-io/vobject.git",
-                "reference": "900266bb3bd448a9f7f41f82344ad0aba237cb27"
+                "reference": "ff22611a53782e90c97be0d0bc4a5f98a5c0a12c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabre-io/vobject/zipball/900266bb3bd448a9f7f41f82344ad0aba237cb27",
-                "reference": "900266bb3bd448a9f7f41f82344ad0aba237cb27",
+                "url": "https://api.github.com/repos/sabre-io/vobject/zipball/ff22611a53782e90c97be0d0bc4a5f98a5c0a12c",
+                "reference": "ff22611a53782e90c97be0d0bc4a5f98a5c0a12c",
                 "shasum": ""
             },
             "require": {
@@ -10307,7 +10307,7 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "~2.17.1",
-                "phpstan/phpstan": "^0.12 || ^1.11",
+                "phpstan/phpstan": "^0.12 || ^1.12 || ^2.0",
                 "phpunit/php-invoker": "^2.0 || ^3.1",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6"
             },
@@ -10388,7 +10388,7 @@
                 "issues": "https://github.com/sabre-io/vobject/issues",
                 "source": "https://github.com/fruux/sabre-vobject"
             },
-            "time": "2024-10-14T11:53:54+00:00"
+            "time": "2025-04-17T09:22:48+00:00"
         },
         {
             "name": "sabre/xml",

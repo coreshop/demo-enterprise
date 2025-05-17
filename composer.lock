@@ -4086,24 +4086,24 @@
         },
         {
             "name": "geocoder-php/plugin",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/geocoder-php/plugin.git",
-                "reference": "ecda7277f9c3742cd6cf4eeea01b69065a8c2d28"
+                "reference": "0b2ba7536a32f8281222fe8a4e2330ba9547e4df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/geocoder-php/plugin/zipball/ecda7277f9c3742cd6cf4eeea01b69065a8c2d28",
-                "reference": "ecda7277f9c3742cd6cf4eeea01b69065a8c2d28",
+                "url": "https://api.github.com/repos/geocoder-php/plugin/zipball/0b2ba7536a32f8281222fe8a4e2330ba9547e4df",
+                "reference": "0b2ba7536a32f8281222fe8a4e2330ba9547e4df",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 || ^8.0",
+                "php": "^8.0",
                 "php-http/promise": "^1.0",
                 "psr/log": "^1.0|^2.0|^3.0",
                 "psr/simple-cache": "^1.0|^2.0|^3.0",
-                "willdurand/geocoder": "^4.0"
+                "willdurand/geocoder": "^4.0|^5.0"
             },
             "require-dev": {
                 "cache/void-adapter": "^1.0",
@@ -4139,9 +4139,9 @@
                 "geocoder plugin"
             ],
             "support": {
-                "source": "https://github.com/geocoder-php/plugin/tree/1.5.0"
+                "source": "https://github.com/geocoder-php/plugin/tree/1.6.0"
             },
-            "time": "2022-07-30T13:42:14+00:00"
+            "time": "2025-05-17T08:52:11+00:00"
         },
         {
             "name": "google/apiclient",
@@ -17590,25 +17590,25 @@
         },
         {
             "name": "willdurand/geocoder",
-            "version": "4.6.0",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/geocoder-php/php-common.git",
-                "reference": "be3d9ed0fddf8c698ee079d8a07ae9520b4a49a1"
+                "reference": "a749e00819d2929bd0ec40fb79853956332970ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/geocoder-php/php-common/zipball/be3d9ed0fddf8c698ee079d8a07ae9520b4a49a1",
-                "reference": "be3d9ed0fddf8c698ee079d8a07ae9520b4a49a1",
+                "url": "https://api.github.com/repos/geocoder-php/php-common/zipball/a749e00819d2929bd0ec40fb79853956332970ba",
+                "reference": "a749e00819d2929bd0ec40fb79853956332970ba",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 || ^8.0"
+                "php": ">=8.2"
             },
             "require-dev": {
                 "nyholm/nsa": "^1.1",
                 "phpunit/phpunit": "^9.5",
-                "symfony/stopwatch": "~2.5"
+                "symfony/stopwatch": "~2.5 || ~5.0"
             },
             "suggest": {
                 "symfony/stopwatch": "If you want to use the TimedGeocoder"
@@ -17616,7 +17616,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -17646,9 +17646,9 @@
                 "geoip"
             ],
             "support": {
-                "source": "https://github.com/geocoder-php/php-common/tree/4.6.0"
+                "source": "https://github.com/geocoder-php/php-common/tree/5.0.0"
             },
-            "time": "2022-07-30T11:09:43+00:00"
+            "time": "2025-01-01T15:52:42+00:00"
         },
         {
             "name": "willdurand/geocoder-bundle",

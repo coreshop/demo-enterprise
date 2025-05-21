@@ -4319,16 +4319,16 @@
         },
         {
             "name": "gotenberg/gotenberg-php",
-            "version": "v2.13.0",
+            "version": "v2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gotenberg/gotenberg-php.git",
-                "reference": "edb5b91321c60c3da8c87e1d821f844b7e5c0c2c"
+                "reference": "748efe0a981b3e8eb676593246a75925448324ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gotenberg/gotenberg-php/zipball/edb5b91321c60c3da8c87e1d821f844b7e5c0c2c",
-                "reference": "edb5b91321c60c3da8c87e1d821f844b7e5c0c2c",
+                "url": "https://api.github.com/repos/gotenberg/gotenberg-php/zipball/748efe0a981b3e8eb676593246a75925448324ad",
+                "reference": "748efe0a981b3e8eb676593246a75925448324ad",
                 "shasum": ""
             },
             "require": {
@@ -4388,7 +4388,7 @@
             ],
             "support": {
                 "issues": "https://github.com/gotenberg/gotenberg-php/issues",
-                "source": "https://github.com/gotenberg/gotenberg-php/tree/v2.13.0"
+                "source": "https://github.com/gotenberg/gotenberg-php/tree/v2.14.0"
             },
             "funding": [
                 {
@@ -4396,7 +4396,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-17T13:57:01+00:00"
+            "time": "2025-05-20T10:00:34+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

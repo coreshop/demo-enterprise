@@ -649,12 +649,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "724e7f9129857f6656a8c136f3a00521d156292f"
+                "reference": "d1822b1103b00c8cb88ad23e5ecdc82430cd14e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/724e7f9129857f6656a8c136f3a00521d156292f",
-                "reference": "724e7f9129857f6656a8c136f3a00521d156292f",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/d1822b1103b00c8cb88ad23e5ecdc82430cd14e2",
+                "reference": "d1822b1103b00c8cb88ad23e5ecdc82430cd14e2",
                 "shasum": ""
             },
             "require": {
@@ -836,7 +836,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-13T08:53:19+00:00"
+            "time": "2025-05-28T07:17:47+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -1035,8 +1035,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "zip",
-                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/37d4362d4b25298395bb89e1c62cdadc38e59c7d.zip",
-                "reference": "37d4362d4b25298395bb89e1c62cdadc38e59c7d",
+                "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/coreshop/headless-bundle/dev-main/9138d811255d8e6944f7d767500090c5339e51a2.zip",
+                "reference": "9138d811255d8e6944f7d767500090c5339e51a2",
                 "mirrors": [
                     {
                         "url": "https://cors.repo.packagist.com/cs-enterprise-demo/dists/%package%/%version%/r%reference%.%type%",
@@ -1105,7 +1105,7 @@
                 "source": "https://github.com/coreshop/headless-bundle/tree/main",
                 "issues": "https://github.com/coreshop/headless-bundle/issues"
             },
-            "time": "2025-05-08T12:47:52+00:00"
+            "time": "2025-05-28T07:18:52+00:00"
         },
         {
             "name": "coreshop/inbound-email-rules-bundle",

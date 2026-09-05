@@ -1,7 +1,8 @@
 
 SET NAMES utf8mb4;
 
-INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('application_logging','Pimcore Application Logger Bundle'), 
+INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('admin_translations','Pimcore Admin Bundle'), 
+('application_logging','Pimcore Application Logger Bundle'), 
 ('asset_metadata',''), 
 ('assets',''), 
 ('classes',''), 
@@ -58,6 +59,9 @@ INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('application
 ('documents',''), 
 ('emails',''), 
 ('fieldcollections',''), 
+('gdpr_data_extractor','Pimcore Admin Bundle'), 
+('gee_job_run_permission','Pimcore Generic Execution Engine'), 
+('gee_see_all_job_runs_permission','Pimcore Generic Execution Engine'), 
 ('http_errors','Pimcore Seo Bundle'), 
 ('newsletters','Pimcore Newsletter Bundle'), 
 ('notes_events',''), 
@@ -82,6 +86,9 @@ INSERT INTO users_permission_definitions (`key`,`category`) VALUES ('application
 ('seo_document_editor','Pimcore Seo Bundle'), 
 ('share_configurations',''), 
 ('sites',''), 
+('studio_perspective_editor','Pimcore Studio Backend Bundle'), 
+('studio_perspective_widget_editor','Pimcore Studio Backend Bundle'), 
+('system_appearance_settings','Pimcore Admin Bundle'), 
 ('system_settings',''), 
 ('tags_assignment',''), 
 ('tags_configuration',''), 

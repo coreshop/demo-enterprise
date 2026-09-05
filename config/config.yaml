@@ -2,6 +2,15 @@ imports:
     - { resource: services.yaml }
     - { resource: 'local/' }
 
+pimcore:
+    # generate with vendor/bin/generate-defuse-key; the demo registration (license.pimcore.com/register) is
+    # bound to the identifier + secret pair, so all three values travel together
+    encryption:
+        secret: '%env(PIMCORE_ENCRYPTION_SECRET)%'
+    product_registration:
+        instance_identifier: '%env(PIMCORE_INSTANCE_IDENTIFIER)%'
+        product_key: '%env(PIMCORE_PRODUCT_KEY)%'
+
 lexik_jwt_authentication:
     secret_key: '%env(resolve:JWT_SECRET_KEY)%' # required for token creation
     public_key: '%env(resolve:JWT_PUBLIC_KEY)%' # required for token verification
@@ -19,21 +28,14 @@ doctrine:
         mappings:
             app:
                 is_bundle: false
-                type: annotation
+                type: attribute
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
                 alias: App
-    dbal:
-        connections:
-            default:
-                user: '%env(DATABASE_USER)%'
-                password: '%env(DATABASE_PASSWORD)%'
-                dbname: '%env(DATABASE_NAME)%'
-                host: '%env(DATABASE_HOST)%'
-                port: '%env(DATABASE_PORT)%'
-                server_version: '%env(DATABASE_VERSION)%'
 
-core_shop_customer_cluster:
-    pimcore_admin:
-        js:
-            store_extension: '/bundles/coreshopcustomercluster/pimcore/static/js/store/item.js'
+
+pimcore_studio_backend:
+    mercure_settings:
+        jwt_key: '%env(MERCURE_JWT_KEY)%'
+        hub_url_client: '%env(MERCURE_URL)%'
+        hub_url_server: '%env(MERCURE_SERVER_URL)%'

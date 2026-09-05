@@ -27,6 +27,129 @@ CREATE TABLE `application_logs` (
 
 
 
+DROP TABLE IF EXISTS `bundle_studio_execution_engine_hidden_job_run`;
+CREATE TABLE `bundle_studio_execution_engine_hidden_job_run` (
+  `jobRunId` int unsigned NOT NULL,
+  PRIMARY KEY (`jobRunId`),
+  CONSTRAINT `fk_bundle_studio_execution_engine_hidden_job_run_jobRunIds` FOREIGN KEY (`jobRunId`) REFERENCES `generic_execution_engine_job_run` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `bundle_studio_grid_configuration_favorites`;
+CREATE TABLE `bundle_studio_grid_configuration_favorites` (
+  `user` int unsigned NOT NULL,
+  `configuration` int unsigned NOT NULL,
+  `folder` int unsigned NOT NULL,
+  `classId` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`user`,`configuration`,`folder`),
+  KEY `IDX_44820D508D93D649` (`user`),
+  KEY `IDX_44820D50A5E2A5D7` (`configuration`),
+  CONSTRAINT `fk_bundle_studio_grid_configuration_favorites_configurations` FOREIGN KEY (`configuration`) REFERENCES `bundle_studio_grid_configurations` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_bundle_studio_grid_configuration_favorites_users` FOREIGN KEY (`user`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `bundle_studio_grid_configuration_shares`;
+CREATE TABLE `bundle_studio_grid_configuration_shares` (
+  `user` int unsigned NOT NULL,
+  `configuration` int unsigned NOT NULL,
+  PRIMARY KEY (`user`,`configuration`),
+  KEY `IDX_6BB1F7A88D93D649` (`user`),
+  KEY `IDX_6BB1F7A8A5E2A5D7` (`configuration`),
+  CONSTRAINT `fk_bundle_studio_grid_configuration_shares_configurations` FOREIGN KEY (`configuration`) REFERENCES `bundle_studio_grid_configurations` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_bundle_studio_grid_configuration_shares_users` FOREIGN KEY (`user`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `bundle_studio_grid_configurations`;
+CREATE TABLE `bundle_studio_grid_configurations` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `assetFolderId` int unsigned DEFAULT NULL,
+  `classId` varchar(50) DEFAULT NULL,
+  `owner` int unsigned DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` longtext,
+  `pageSize` int unsigned NOT NULL,
+  `shareGlobal` tinyint NOT NULL,
+  `saveFilter` tinyint NOT NULL,
+  `columns` json NOT NULL,
+  `filter` json DEFAULT NULL,
+  `creationDate` datetime NOT NULL,
+  `modificationDate` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_47E0AF8DCF60E67C` (`owner`),
+  KEY `IDX_47E0AF8DC3E57C8A` (`assetFolderId`),
+  CONSTRAINT `fk_bundle_studio_grid_configurations_assetFolderId_id` FOREIGN KEY (`assetFolderId`) REFERENCES `assets` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_bundle_studio_grid_configurations_owner_users` FOREIGN KEY (`owner`) REFERENCES `users` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `bundle_studio_mcp_access_token`;
+CREATE TABLE `bundle_studio_mcp_access_token` (
+  `token_hash` varchar(64) NOT NULL,
+  `user_id` int unsigned NOT NULL,
+  `reference` varchar(255) NOT NULL,
+  `expires_at` bigint unsigned NOT NULL,
+  `created_at` bigint unsigned NOT NULL,
+  PRIMARY KEY (`token_hash`),
+  KEY `idx_mcp_token_reference` (`reference`),
+  KEY `idx_mcp_token_user` (`user_id`),
+  KEY `idx_mcp_token_expires` (`expires_at`),
+  CONSTRAINT `fk_bundle_studio_mcp_access_token_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `bundle_studio_perspectives_user_perspectives`;
+CREATE TABLE `bundle_studio_perspectives_user_perspectives` (
+  `user` int unsigned NOT NULL,
+  `perspectives` longtext,
+  `activePerspective` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`user`),
+  CONSTRAINT `fk_bundle_studio_perspectives_user_perspectives_users` FOREIGN KEY (`user`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `bundle_studio_saved_search_configurations`;
+CREATE TABLE `bundle_studio_saved_search_configurations` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `owner` int unsigned DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` longtext,
+  `classId` varchar(50) DEFAULT NULL,
+  `shareGlobal` tinyint NOT NULL,
+  `createMenuShortcut` tinyint NOT NULL,
+  `menuShortcutGroup` varchar(255) DEFAULT NULL,
+  `columns` json NOT NULL,
+  `filter` json DEFAULT NULL,
+  `creationDate` datetime NOT NULL,
+  `modificationDate` datetime NOT NULL,
+  `elementType` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_FBE616ACCF60E67C` (`owner`),
+  CONSTRAINT `fk_bundle_studio_saved_search_configurations_owner_users` FOREIGN KEY (`owner`) REFERENCES `users` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `bundle_studio_saved_search_shares`;
+CREATE TABLE `bundle_studio_saved_search_shares` (
+  `user` int unsigned NOT NULL,
+  `configuration` int unsigned NOT NULL,
+  PRIMARY KEY (`user`,`configuration`),
+  KEY `IDX_F1F6109D8D93D649` (`user`),
+  KEY `IDX_F1F6109DA5E2A5D7` (`configuration`),
+  CONSTRAINT `fk_bundle_studio_saved_search_shares_configurations` FOREIGN KEY (`configuration`) REFERENCES `bundle_studio_saved_search_configurations` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_bundle_studio_saved_search_shares_users` FOREIGN KEY (`user`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
 DROP TABLE IF EXISTS `cache_items`;
 CREATE TABLE `cache_items` (
   `item_id` varbinary(255) NOT NULL,
@@ -46,7 +169,7 @@ CREATE TABLE `coreshop_address_identifier` (
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -228,7 +351,7 @@ CREATE TABLE `coreshop_configuration` (
   `id` int NOT NULL AUTO_INCREMENT,
   `store_id` int DEFAULT NULL,
   `configKey` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:object)',
+  `data` json NOT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -286,7 +409,7 @@ CREATE TABLE `coreshop_currency` (
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `isoCode` (`isoCode`)
-) ENGINE=InnoDB AUTO_INCREMENT=157 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=159 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -306,7 +429,7 @@ DROP TABLE IF EXISTS `coreshop_deposit_store_values`;
 CREATE TABLE `coreshop_deposit_store_values` (
   `id` int NOT NULL AUTO_INCREMENT,
   `store` int DEFAULT NULL,
-  `product` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
+  `product` int NOT NULL,
   `allowDeposit` tinyint(1) NOT NULL,
   `depositPercentage` int NOT NULL,
   PRIMARY KEY (`id`),
@@ -394,7 +517,7 @@ CREATE TABLE `coreshop_filter_condition` (
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `label` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `quantityUnit` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `configuration` json DEFAULT NULL,
   `sort` int DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -487,7 +610,7 @@ CREATE TABLE `coreshop_index` (
   `class` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `worker` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '(DC2Type:array)',
+  `configuration` json NOT NULL,
   `indexLastVersion` tinyint(1) NOT NULL DEFAULT '0',
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
@@ -505,10 +628,10 @@ CREATE TABLE `coreshop_index_column` (
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `getter` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `columnType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `getterConfig` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `getterConfig` json DEFAULT NULL,
   `interpreter` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `interpreterConfig` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
-  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `interpreterConfig` json DEFAULT NULL,
+  `configuration` json DEFAULT NULL,
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   `indexId` int DEFAULT NULL,
@@ -633,7 +756,7 @@ CREATE TABLE `coreshop_loyalty_points_transaction` (
   `id` int NOT NULL AUTO_INCREMENT,
   `loyalty_account` int DEFAULT NULL,
   `pointsValue` int NOT NULL,
-  `type` enum('income','expense') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `type` enum('income','expense') COLLATE utf8mb4_general_ci DEFAULT NULL,
   `details` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `detailParams` json NOT NULL,
   `creationDate` datetime NOT NULL,
@@ -1119,7 +1242,7 @@ CREATE TABLE `coreshop_rule_action` (
   `id` int NOT NULL AUTO_INCREMENT,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `sort` int DEFAULT NULL,
-  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `configuration` json DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -1130,7 +1253,7 @@ CREATE TABLE `coreshop_rule_condition` (
   `id` int NOT NULL AUTO_INCREMENT,
   `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `sort` int DEFAULT NULL,
-  `configuration` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT '(DC2Type:array)',
+  `configuration` json DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -1214,7 +1337,7 @@ CREATE TABLE `coreshop_state` (
   PRIMARY KEY (`id`),
   KEY `IDX_66791990FBA2A6B4` (`countryId`),
   CONSTRAINT `FK_66791990FBA2A6B4` FOREIGN KEY (`countryId`) REFERENCES `coreshop_country` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1230,7 +1353,7 @@ CREATE TABLE `coreshop_state_translation` (
   UNIQUE KEY `coreshop_state_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_7695D9BF2C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_7695D9BF2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `coreshop_state` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1362,7 +1485,7 @@ CREATE TABLE `coreshop_warehouse_location` (
 DROP TABLE IF EXISTS `coreshop_warehouse_stock_item`;
 CREATE TABLE `coreshop_warehouse_stock_item` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `stockable` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
+  `stockable` int NOT NULL,
   `quantity` int NOT NULL,
   `rack` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `shelf` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -1380,7 +1503,7 @@ CREATE TABLE `coreshop_warehouse_stock_item` (
 DROP TABLE IF EXISTS `coreshop_warehouse_stock_movement`;
 CREATE TABLE `coreshop_warehouse_stock_movement` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `stockable` int NOT NULL COMMENT '(DC2Type:pimcoreObject)',
+  `stockable` int NOT NULL,
   `quantity` int NOT NULL,
   `comment` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `ingoing` tinyint(1) NOT NULL,
@@ -1405,7 +1528,7 @@ CREATE TABLE `coreshop_zone` (
   `creationDate` datetime NOT NULL,
   `modificationDate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
@@ -1444,23 +1567,56 @@ CREATE TABLE `documents_printpage` (
 
 
 
-DROP TABLE IF EXISTS `http_error_log`;
-CREATE TABLE `http_error_log` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `uri` varchar(1024) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
-  `code` int DEFAULT NULL,
-  `parametersGet` longtext,
-  `parametersPost` longtext,
-  `cookies` longtext,
-  `serverVars` longtext,
-  `date` int unsigned DEFAULT NULL,
-  `count` bigint unsigned DEFAULT NULL,
+DROP TABLE IF EXISTS `generic_data_index_queue`;
+CREATE TABLE `generic_data_index_queue` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `elementId` int unsigned NOT NULL,
+  `elementType` varchar(20) NOT NULL,
+  `elementIndexName` varchar(255) NOT NULL,
+  `operation` varchar(20) NOT NULL,
+  `operationTime` bigint unsigned NOT NULL,
+  `dispatched` bigint unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `uri` (`uri`),
-  KEY `code` (`code`),
-  KEY `date` (`date`),
-  KEY `count` (`count`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+  UNIQUE KEY `generic_data_index_queue_element_id_type` (`elementId`,`elementType`),
+  KEY `generic_data_index_queue_dispatched` (`dispatched`),
+  KEY `generic_data_index_queue_operation_time` (`operationTime`)
+) ENGINE=InnoDB AUTO_INCREMENT=483 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `generic_execution_engine_error_log`;
+CREATE TABLE `generic_execution_engine_error_log` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `jobRunId` int unsigned NOT NULL,
+  `stepNumber` int unsigned NOT NULL,
+  `elementId` int unsigned DEFAULT NULL,
+  `errorMessage` text,
+  PRIMARY KEY (`id`),
+  KEY `IDX_5728FD412BD48A65` (`jobRunId`),
+  CONSTRAINT `fk_generic_job_execution_log_jobs` FOREIGN KEY (`jobRunId`) REFERENCES `generic_execution_engine_job_run` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `generic_execution_engine_job_run`;
+CREATE TABLE `generic_execution_engine_job_run` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `ownerId` int unsigned DEFAULT NULL,
+  `state` varchar(100) NOT NULL,
+  `currentStep` int unsigned DEFAULT NULL,
+  `currentMessage` text,
+  `log` text,
+  `serializedJob` longtext,
+  `context` longtext,
+  `creationDate` int DEFAULT NULL,
+  `modificationDate` int DEFAULT NULL,
+  `executionContext` varchar(255) DEFAULT 'default',
+  `totalElements` int unsigned NOT NULL,
+  `processedElementsForStep` int unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_AA22B461E05EFD25` (`ownerId`),
+  CONSTRAINT `fk_generic_job_execution_owner_users` FOREIGN KEY (`ownerId`) REFERENCES `users` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
 
@@ -1470,20 +1626,18 @@ CREATE TABLE `messenger_messages` (
   `body` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `headers` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `queue_name` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
-  `available_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
-  `delivered_at` datetime DEFAULT NULL COMMENT '(DC2Type:datetime_immutable)',
+  `created_at` datetime NOT NULL,
+  `available_at` datetime NOT NULL,
+  `delivered_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
-  KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
-  KEY `IDX_75EA56E016BA31DB` (`delivered_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=1994 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  KEY `IDX_75EA56E0FB7336F0E3BD61CE16BA31DBBF396750` (`queue_name`,`available_at`,`delivered_at`,`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2074 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 
 DROP TABLE IF EXISTS `migration_versions`;
 CREATE TABLE `migration_versions` (
-  `version` varchar(1024) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `version` varchar(255) COLLATE utf8mb3_unicode_ci NOT NULL,
   `executed_at` datetime DEFAULT NULL,
   `execution_time` int DEFAULT NULL,
   PRIMARY KEY (`version`)
@@ -2520,7 +2674,9 @@ CREATE TABLE `object_query_cs_order` (
   `hasDepositItem` tinyint(1) DEFAULT NULL,
   `name` varchar(190) DEFAULT NULL,
   `ticketingState` varchar(190) DEFAULT NULL,
+  `lastActivatedAt` bigint DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
+  KEY `p_index_lastActivatedAt` (`lastActivatedAt`),
   CONSTRAINT `fk_object_query_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -2729,6 +2885,7 @@ CREATE TABLE `object_query_cs_user` (
   `passwordResetHash` varchar(190) DEFAULT NULL,
   `customer__id` int DEFAULT NULL,
   `customer__type` enum('document','asset','object') DEFAULT NULL,
+  `passwordResetHashCreatedAt` bigint DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_query_cs_user__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3603,6 +3760,7 @@ CREATE TABLE `object_store_cs_order` (
   `hasDepositItem` tinyint(1) DEFAULT NULL,
   `name` varchar(190) DEFAULT NULL,
   `ticketingState` varchar(190) DEFAULT NULL,
+  `lastActivatedAt` bigint DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   UNIQUE KEY `u_index_token` (`token`),
   CONSTRAINT `fk_object_store_cs_order__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
@@ -3775,6 +3933,7 @@ CREATE TABLE `object_store_cs_user` (
   `loginIdentifier` varchar(190) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `passwordResetHash` varchar(190) DEFAULT NULL,
+  `passwordResetHashCreatedAt` bigint DEFAULT NULL,
   PRIMARY KEY (`oo_id`),
   CONSTRAINT `fk_object_store_cs_user__oo_id` FOREIGN KEY (`oo_id`) REFERENCES `objects` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -3890,6 +4049,35 @@ CREATE TABLE `redirects` (
 
 
 
+DROP TABLE IF EXISTS `search_backend_data`;
+CREATE TABLE `search_backend_data` (
+  `id` int NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT '',
+  `index` int unsigned DEFAULT '0',
+  `fullpath` varchar(765) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `maintype` varchar(8) NOT NULL DEFAULT '',
+  `type` varchar(20) DEFAULT NULL,
+  `subtype` varchar(190) DEFAULT NULL,
+  `published` tinyint unsigned DEFAULT NULL,
+  `creationDate` int unsigned DEFAULT NULL,
+  `modificationDate` int unsigned DEFAULT NULL,
+  `userOwner` int DEFAULT NULL,
+  `userModification` int DEFAULT NULL,
+  `data` longtext,
+  `properties` text,
+  PRIMARY KEY (`id`,`maintype`),
+  KEY `key` (`key`),
+  KEY `index` (`index`),
+  KEY `fullpath` (`fullpath`),
+  KEY `maintype` (`maintype`),
+  KEY `type` (`type`),
+  KEY `subtype` (`subtype`),
+  KEY `published` (`published`),
+  FULLTEXT KEY `fulltext` (`data`,`properties`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+
+
 DROP TABLE IF EXISTS `translations_admin`;
 CREATE TABLE `translations_admin` (
   `key` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
@@ -3902,5 +4090,21 @@ CREATE TABLE `translations_admin` (
   `userModification` int unsigned DEFAULT NULL,
   PRIMARY KEY (`key`,`language`),
   KEY `language` (`language`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `translations_studio`;
+CREATE TABLE `translations_studio` (
+  `key` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `type` varchar(15) NOT NULL,
+  `language` varchar(10) NOT NULL,
+  `text` longtext NOT NULL,
+  `creationDate` int unsigned NOT NULL,
+  `modificationDate` int unsigned NOT NULL,
+  `userOwner` int unsigned NOT NULL,
+  `userModification` int unsigned NOT NULL,
+  PRIMARY KEY (`key`,`language`),
+  KEY `idx_language` (`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

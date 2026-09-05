@@ -27,7 +27,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 class DownloadController extends FrontendController
@@ -41,9 +41,8 @@ class DownloadController extends FrontendController
 
     /**
      * Prepare mass download as zip archive.
-     *
-     * @Route("/{_locale}/batch-messenger", name="batch_messenger_mass_downloader", methods={"GET"})
      */
+    #[Route("/{_locale}/batch-messenger", name: "batch_messenger_mass_downloader", methods: ["GET"])]
     public function downloadsAction()
     {
         $images = new Asset\Listing();
@@ -61,9 +60,8 @@ class DownloadController extends FrontendController
 
     /**
      * Prepare mass download as zip archive.
-     *
-     * @Route("/api/prepare_download", name="coreshop_batch_messenger_prepare_download", methods={"GET"})
      */
+    #[Route("/api/prepare_download", name: "coreshop_batch_messenger_prepare_download", methods: ["GET"])]
     public function prepareMassDownloadAction(
         Request $request,
         ZipAssetJobCreator $zipAssetJobCreator,
@@ -126,9 +124,8 @@ class DownloadController extends FrontendController
 
     /**
      * Check status of mass download task.
-     *
-     * @Route("/api/check_download", name="coreshop_batch_messenger_check_download", methods={"GET"})
      */
+    #[Route("/api/check_download", name: "coreshop_batch_messenger_check_download", methods: ["GET"])]
     public function checkMassDownloadAction(
         Request $request,
     ): Response {
@@ -162,9 +159,8 @@ class DownloadController extends FrontendController
 
     /**
      * Download zip.
-     *
-     * @Route("/api/download", name="coreshop_batch_messenger_download", methods={"GET"})
      */
+    #[Route("/api/download", name: "coreshop_batch_messenger_download", methods: ["GET"])]
     public function massDownloadAction(
         Request $request,
     ): Response {

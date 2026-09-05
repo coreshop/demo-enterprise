@@ -1,9 +1,23 @@
 _pimcore:
     resource: "@PimcoreCoreBundle/config/routing.yaml"
 
+# Storefront routes: Pimcore 2026 dropped static routes, CoreShop ships them as Symfony routes
+# that every application imports explicitly (they replace var/config/staticroutes of CoreShop 4).
+coreshop_frontend:
+    resource: "@CoreShopFrontendBundle/Resources/config/routes.yaml"
+
+coreshop_voucher_credit:
+    resource: "@CoreShopVoucherCreditBundle/Resources/config/routes.yaml"
+
+coreshop_loyalty_frontend:
+    resource: "@CoreShopLoyaltyBundle/Controller/LoyaltyVouchersController.php"
+    type: attribute
+    prefix: /{_locale}/shop
+    requirements: { _locale: '[a-z]{2}(_[A-Z]{2})?' }
+
 _coreshop_quick_order:
     resource: "@CoreShopQuickOrderBundle/Resources/config/routing.yml"
 
 app:
     resource: "../src/Controller/"
-    type: annotation
+    type: attribute

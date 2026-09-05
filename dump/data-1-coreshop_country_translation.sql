@@ -104,7 +104,7 @@ INSERT INTO coreshop_country_translation (`id`,`translatable_id`,`name`,`creatio
 INSERT INTO coreshop_country_translation (`id`,`translatable_id`,`name`,`creationDate`,`modificationDate`,`locale`) VALUES (101,34,'Botswana','2023-12-14 09:38:50','2023-12-14 09:38:50','de'), 
 (102,34,'Botswana','2023-12-14 09:38:50','2023-12-14 09:38:50','fr'), 
 (103,35,'Belarus','2023-12-14 09:38:50','2023-12-14 09:38:50','en'), 
-(104,35,'Weißrussland','2023-12-14 09:38:50','2023-12-14 09:38:50','de'), 
+(104,35,'Belarus','2023-12-14 09:38:50','2026-09-05 15:42:34','de'), 
 (105,35,'Biélorussie','2023-12-14 09:38:50','2023-12-14 09:38:50','fr'), 
 (106,36,'Belize','2023-12-14 09:38:50','2023-12-14 09:38:50','en'), 
 (107,36,'Belize','2023-12-14 09:38:50','2023-12-14 09:38:50','de'), 

@@ -1,70 +1,77 @@
 {
-  "name": "pimcore/skeleton",
-  "type": "project",
-  "license": "GPL-3.0-or-later",
-  "config": {
-    "optimize-autoloader": true,
-    "sort-packages": true,
-    "process-timeout": 0,
-    "allow-plugins": {
-      "symfony/runtime": true,
-      "php-http/discovery": true
-    }
-  },
-  "require": {
-    "coreshop/batch-messenger-bundle": "dev-main",
-    "coreshop/core-shop": "^4.1",
-    "coreshop/customer-cluster-bundle": "dev-main",
-    "coreshop/deposit-bundle": "dev-main",
-    "coreshop/document-route-bundle": "dev-main",
-    "coreshop/headless-bundle": "dev-main",
-    "coreshop/inbound-email-rules-bundle": "3.0.x-dev",
-    "coreshop/index-geo-bundle": "dev-main",
-    "coreshop/loyality-bundle": "dev-main",
-    "coreshop/payum-credit-bundle": "dev-main",
-    "coreshop/quick-order-bundle": "dev-main",
-    "coreshop/ticketing-bundle": "dev-main",
-    "coreshop/voucher-credit-bundle": "dev-main",
-    "coreshop/warehouse-bundle": "dev-main",
-    "gotenberg/gotenberg-php": "^2.8",
-    "pimcore/data-hub": "^1.8",
-    "pimcore/pimcore": "^11.4",
-    "rybakit/twig-deferred-extension": "^3.0",
-    "sentry/sentry-symfony": "^5.1",
-    "symfony/validator": "6.4.6"
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "src/",
-      "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+    "name": "pimcore/skeleton",
+    "description": "CoreShop Enterprise Demo: Pimcore 2026 + CoreShop 2026 with the CoreShop enterprise bundles",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "process-timeout": 0,
+        "allow-plugins": {
+            "symfony/runtime": true,
+            "php-http/discovery": true
+        }
     },
-    "classmap": [
-      "src/Kernel.php"
-    ]
-  },
-  "repositories": {
-    "private-packagist": {
-      "type": "composer",
-      "url": "https://cors.repo.packagist.com/cs-enterprise-demo/"
+    "require": {
+        "coreshop/batch-messenger-bundle": "^2026.2",
+        "coreshop/core-shop": "^2026.2.1",
+        "coreshop/customer-cluster-bundle": "^2026.2",
+        "coreshop/deposit-bundle": "^2026.2",
+        "coreshop/document-route-bundle": "^2026.2",
+        "coreshop/headless-bundle": "^2026.2",
+        "coreshop/inbound-email-rules-bundle": "^2026.2",
+        "coreshop/index-geo-bundle": "^2026.2",
+        "coreshop/loyalty-bundle": "^2026.2",
+        "coreshop/payum-credit-bundle": "^2026.2",
+        "coreshop/quick-order-bundle": "^2026.2",
+        "coreshop/ticketing-bundle": "^2026.2",
+        "coreshop/voucher-credit-bundle": "^2026.2",
+        "coreshop/warehouse-bundle": "^2026.2",
+        "gotenberg/gotenberg-php": "^2.8",
+        "php": "~8.4.0 || ~8.5.0",
+        "pimcore/data-hub": "^2026.2",
+        "pimcore/pimcore": "^2026.2",
+        "pimcore/quill-bundle": "^2026.1",
+        "pimcore/studio-backend-bundle": "^2026.2",
+        "pimcore/studio-ui-bundle": "^2026.2",
+        "rybakit/twig-deferred-extension": "^3.0",
+        "sentry/sentry-symfony": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+        },
+        "classmap": [
+            "src/Kernel.php"
+        ]
+    },
+    "repositories": {
+        "private-packagist": {
+            "type": "composer",
+            "url": "https://cors.repo.packagist.com/cs-enterprise-demo/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": "Pimcore\\Composer::postCreateProject",
+        "post-install-cmd": [
+            "Pimcore\\Composer::postInstall",
+            "@pimcore-scripts"
+        ],
+        "post-update-cmd": [
+            "Pimcore\\Composer::postUpdate",
+            "@pimcore-scripts",
+            "Pimcore\\Composer::executeMigrationsUp",
+            "@pimcore-scripts"
+        ],
+        "pimcore-scripts": [
+            "Pimcore\\Composer::clearCache",
+            "Pimcore\\Composer::installAssets"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "phpstan/phpstan": "^2.2"
     }
-  },
-  "scripts": {
-    "post-create-project-cmd": "Pimcore\\Composer::postCreateProject",
-    "post-install-cmd": [
-      "Pimcore\\Composer::postInstall",
-      "@pimcore-scripts"
-    ],
-    "post-update-cmd": [
-      "Pimcore\\Composer::postUpdate",
-      "@pimcore-scripts",
-      "Pimcore\\Composer::executeMigrationsUp",
-      "@pimcore-scripts"
-    ],
-    "pimcore-scripts": [
-      "Pimcore\\Composer::clearCache",
-      "Pimcore\\Composer::installAssets"
-    ]
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
 }

@@ -23,3 +23,13 @@ services:
         resource: '../src/EventListener/'
 
     Twig\DeferredExtension\DeferredExtension: ~
+    # coreshop/enterprise-subscription-bundle 2026.2.0 registers its Studio build provider without the
+    # BuildArchiveExtractor setter call (autowire is off in its studio.yaml), which breaks every
+    # /pimcore-studio request. Re-declare the service here until the bundle ships the fix.
+    CoreShop\Bundle\EnterpriseSubscriptionBundle\Studio\WebpackEntryPointProvider:
+        autowire: false
+        autoconfigure: false
+        calls:
+            - [setBuildArchiveExtractor, ['@Pimcore\Bundle\StudioUiBundle\Build\BuildArchiveExtractor']]
+        tags:
+            - { name: pimcore_studio_ui.webpack_entry_point_provider }

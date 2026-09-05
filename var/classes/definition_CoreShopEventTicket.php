@@ -24,7 +24,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1736607860,
+   'modificationDate' => 1788615208,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Bundle\\TicketingBundle\\Model\\EventTicket',

@@ -1,0 +1,40 @@
+name: Static Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  static:
+    name: PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ["8.4", "8.5"]
+    env:
+      APP_ENV: dev
+      COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
+      DATABASE_URL: "mysql://pimcore:pimcore@127.0.0.1:3306/pimcore?serverVersion=8.0.26"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: intl, gd, simpleXML, dom, exif, fileinfo, iconv, mbstring, mysqli, pdo_mysql, zip, zlib, imagick
+      - name: Composer cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.composer/cache
+          key: composer-${{ matrix.php }}-${{ hashFiles('composer.lock') }}
+          restore-keys: composer-${{ matrix.php }}-
+      - run: composer validate --strict
+      - run: composer install --no-interaction --no-progress --no-scripts --ignore-platform-req=ext-imap
+      # Without a database the kernel only boots in "needs install" state; with an empty
+      # encryption secret Pimcore then skips the product registration check.
+      - run: mkdir -p var/config && touch var/config/needs-install.lock
+      - run: bin/console lint:yaml config
+      - run: bin/console lint:twig templates
+      - run: bin/console lint:container
+      - run: vendor/bin/phpstan analyse --no-progress

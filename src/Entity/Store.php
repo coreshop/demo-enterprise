@@ -17,11 +17,8 @@ use CoreShop\Bundle\CustomerClusterBundle\Model\CustomerClusterAwareInterface;
 use CoreShop\Bundle\CustomerClusterBundle\Model\CustomerClusterAwareTrait;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity
- *
- * @ORM\Table(name="coreshop_store")
- */
+#[ORM\Entity]
+#[ORM\Table(name: 'coreshop_store')]
 class Store extends \CoreShop\Component\Core\Model\Store implements CustomerClusterAwareInterface
 {
     use CustomerClusterAwareTrait;

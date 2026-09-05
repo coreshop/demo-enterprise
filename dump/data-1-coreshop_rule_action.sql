@@ -1,17 +1,17 @@
 
 SET NAMES utf8mb4;
 
-INSERT INTO coreshop_rule_action (`id`,`type`,`sort`,`configuration`) VALUES (1,'user.mail',NULL,'a:2:{s:5:\"mails\";a:2:{s:2:\"de\";s:2:\"12\";s:2:\"en\";s:2:\"11\";}s:30:\"doNotSendToDesignatedRecipient\";b:0;}'), 
-(2,'user.mail',NULL,'a:2:{s:5:\"mails\";a:2:{s:2:\"de\";s:2:\"15\";s:2:\"en\";s:2:\"14\";}s:30:\"doNotSendToDesignatedRecipient\";b:0;}'), 
-(3,'user.mail',NULL,'a:2:{s:5:\"mails\";a:2:{s:2:\"de\";s:2:\"18\";s:2:\"en\";s:2:\"17\";}s:30:\"doNotSendToDesignatedRecipient\";b:0;}'), 
-(4,'user.mail',NULL,'a:2:{s:5:\"mails\";a:2:{s:2:\"de\";s:2:\"21\";s:2:\"en\";s:2:\"20\";}s:30:\"doNotSendToDesignatedRecipient\";b:0;}'), 
-(5,'order.orderMail',NULL,'a:4:{s:5:\"mails\";a:2:{s:2:\"de\";s:2:\"27\";s:2:\"en\";s:2:\"26\";}s:12:\"sendInvoices\";b:0;s:13:\"sendShipments\";b:0;s:30:\"doNotSendToDesignatedRecipient\";b:0;}'), 
-(6,'order.mail',NULL,'a:2:{s:5:\"mails\";a:2:{s:2:\"de\";s:2:\"24\";s:2:\"en\";s:2:\"23\";}s:30:\"doNotSendToDesignatedRecipient\";b:0;}'), 
-(7,'order.orderMail',NULL,'a:4:{s:5:\"mails\";a:2:{s:2:\"de\";s:2:\"30\";s:2:\"en\";s:2:\"29\";}s:12:\"sendInvoices\";b:0;s:13:\"sendShipments\";b:0;s:30:\"doNotSendToDesignatedRecipient\";b:0;}'), 
-(8,'price',NULL,'a:2:{s:5:\"price\";i:500;s:8:\"currency\";i:1;}'), 
-(9,'price',NULL,'a:2:{s:5:\"price\";i:1000;s:8:\"currency\";i:1;}'), 
-(10,'price',NULL,'a:2:{s:5:\"price\";i:2000;s:8:\"currency\";i:1;}'), 
-(11,'pointsPerAmount',1,'a:2:{s:15:\"pointsPerAmount\";d:1;s:8:\"currency\";i:1;}'), 
-(12,'discountAmount',1,'a:4:{s:6:\"amount\";i:1000;s:5:\"gross\";b:0;s:7:\"applyOn\";s:5:\"total\";s:8:\"currency\";i:1;}'), 
-(13,'voucherCredit',1,'N;'), 
-(14,'saveAttachmentToAsset',1,'N;');
+INSERT INTO coreshop_rule_action (`id`,`type`,`sort`,`configuration`) VALUES (1,'user.mail',NULL,'{\"mails\": {\"de\": \"12\", \"en\": \"11\"}, \"doNotSendToDesignatedRecipient\": false}'), 
+(2,'user.mail',NULL,'{\"mails\": {\"de\": \"15\", \"en\": \"14\"}, \"doNotSendToDesignatedRecipient\": false}'), 
+(3,'user.mail',NULL,'{\"mails\": {\"de\": \"18\", \"en\": \"17\"}, \"doNotSendToDesignatedRecipient\": false}'), 
+(4,'user.mail',NULL,'{\"mails\": {\"de\": \"21\", \"en\": \"20\"}, \"doNotSendToDesignatedRecipient\": false}'), 
+(5,'order.orderMail',NULL,'{\"mails\": {\"de\": \"27\", \"en\": \"26\"}, \"sendInvoices\": false, \"sendShipments\": false, \"doNotSendToDesignatedRecipient\": false}'), 
+(6,'order.mail',NULL,'{\"mails\": {\"de\": \"24\", \"en\": \"23\"}, \"doNotSendToDesignatedRecipient\": false}'), 
+(7,'order.orderMail',NULL,'{\"mails\": {\"de\": \"30\", \"en\": \"29\"}, \"sendInvoices\": false, \"sendShipments\": false, \"doNotSendToDesignatedRecipient\": false}'), 
+(8,'price',NULL,'{\"price\": 500, \"currency\": 1}'), 
+(9,'price',NULL,'{\"price\": 1000, \"currency\": 1}'), 
+(10,'price',NULL,'{\"price\": 2000, \"currency\": 1}'), 
+(11,'pointsPerAmount',1,'{\"currency\": 1, \"pointsPerAmount\": 1}'), 
+(12,'discountAmount',1,'{\"gross\": false, \"amount\": 1000, \"applyOn\": \"total\", \"currency\": 1}'), 
+(13,'voucherCredit',1,NULL), 
+(14,'saveAttachmentToAsset',1,NULL);

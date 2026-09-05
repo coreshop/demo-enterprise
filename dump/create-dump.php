@@ -78,6 +78,11 @@ $tableBlacklist = [
     'assets_image_thumbnail_cache',
     'cache_items',
     'messenger_messages',
+    // Pimcore 2026 installer bookkeeping, must never travel with the dump
+    '_pimcore_installer_data_source_applied',
+    'generic_execution_engine_job_run',
+    'generic_execution_engine_job_run_error_log',
+    'generic_data_index_queue',
 ];
 
 // dump data

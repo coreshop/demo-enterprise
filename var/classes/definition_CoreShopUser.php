@@ -8,6 +8,7 @@
  * - loginIdentifier [input]
  * - password [password]
  * - passwordResetHash [input]
+ * - passwordResetHashCreatedAt [datetime]
  * - customer [coreShopRelation]
  */
 
@@ -18,7 +19,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1738133849,
+   'modificationDate' => 1788615673,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\User',
@@ -124,9 +125,6 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'algorithm' => 'password_hash',
-                 'salt' => '',
-                 'saltlocation' => 'back',
                  'minimumLength' => NULL,
                  'width' => '',
               )),
@@ -161,6 +159,31 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               3 => 
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
+                 'name' => 'passwordResetHashCreatedAt',
+                 'title' => 'Reset Password Hash Created At',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => true,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => '',
+                 'relationType' => false,
+                 'invisible' => true,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'defaultValue' => NULL,
+                 'useCurrentDate' => false,
+                 'respectTimezone' => true,
+                 'columnType' => 'bigint',
+                 'defaultValueGenerator' => '',
+              )),
+              4 => 
               \CoreShop\Bundle\ResourceBundle\CoreExtension\CoreShopRelation::__set_state(array(
                  'name' => 'customer',
                  'title' => 'Customer',

@@ -12,6 +12,7 @@
  * - token [input]
  * - backendCreated [checkbox]
  * - orderDate [datetime]
+ * - lastActivatedAt [datetime]
  * - localeCode [language]
  * - carrier [coreShopCarrier]
  * - store [coreShopStore]
@@ -73,7 +74,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1738133846,
+   'modificationDate' => 1788615670,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Order',
@@ -328,6 +329,31 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               7 => 
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
+                 'name' => 'lastActivatedAt',
+                 'title' => 'Last Activated At',
+                 'tooltip' => 'Timestamp the cart was last selected/activated by its customer; used to restore the last-opened cart across sessions.',
+                 'mandatory' => false,
+                 'noteditable' => true,
+                 'index' => true,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => '',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'defaultValue' => NULL,
+                 'useCurrentDate' => false,
+                 'respectTimezone' => true,
+                 'columnType' => 'bigint(20)',
+                 'defaultValueGenerator' => '',
+              )),
+              8 => 
               \Pimcore\Model\DataObject\ClassDefinition\Data\Language::__set_state(array(
                  'name' => 'localeCode',
                  'title' => 'coreshop.order.locale',
@@ -350,6 +376,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValue' => NULL,
                  'columnLength' => 190,
                  'dynamicOptions' => false,
+                 'enforceValidation' => false,
                  'defaultValueGenerator' => '',
                  'width' => '',
                  'optionsProviderType' => NULL,
@@ -357,7 +384,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderData' => NULL,
                  'onlySystemLanguages' => false,
               )),
-              8 => 
+              9 => 
               \CoreShop\Bundle\ShippingBundle\CoreExtension\Carrier::__set_state(array(
                  'name' => 'carrier',
                  'title' => 'coreshop.order.carrier',
@@ -378,7 +405,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'allowEmpty' => false,
               )),
-              9 => 
+              10 => 
               \CoreShop\Bundle\StoreBundle\CoreExtension\Store::__set_state(array(
                  'name' => 'store',
                  'title' => 'coreshop.order.store',
@@ -403,7 +430,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'optionsProviderClass' => '@CoreShop\\Bundle\\StoreBundle\\CoreExtension\\StoreOptionProvider',
               )),
-              10 => 
+              11 => 
               \CoreShop\Bundle\PaymentBundle\CoreExtension\PaymentProvider::__set_state(array(
                  'name' => 'paymentProvider',
                  'title' => 'coreshop.order.payment_provider',
@@ -424,7 +451,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'allowEmpty' => false,
               )),
-              11 => 
+              12 => 
               \CoreShop\Bundle\PimcoreBundle\CoreExtension\SerializedData::__set_state(array(
                  'name' => 'paymentSettings',
                  'title' => 'coreshop.order.payment_settings',
@@ -445,7 +472,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'phpdocType' => '',
               )),
-              12 => 
+              13 => 
               \Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
                  'name' => 'comment',
                  'title' => 'coreshop.order.comment',
@@ -470,7 +497,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'height' => '',
                  'width' => 350,
               )),
-              13 => 
+              14 => 
               \Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
                  'name' => 'additionalData',
                  'title' => 'coreshop.order.additional_data',
@@ -495,7 +522,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'border' => false,
               )),
-              14 => 
+              15 => 
               \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'totalPaymentLaterNet',
                  'title' => 'Total Payment Later Net',
@@ -521,7 +548,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxValue' => NULL,
                  'nullable' => false,
               )),
-              15 => 
+              16 => 
               \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'totalPaymentLaterGross',
                  'title' => 'Total Payment Later Gross',
@@ -547,7 +574,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxValue' => NULL,
                  'nullable' => false,
               )),
-              16 => 
+              17 => 
               \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'totalPaymentNowNet',
                  'title' => 'Total Payment Now Net',
@@ -573,7 +600,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxValue' => NULL,
                  'nullable' => false,
               )),
-              17 => 
+              18 => 
               \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'totalPaymentNowGross',
                  'title' => 'Total Payment Now Gross',
@@ -599,7 +626,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxValue' => NULL,
                  'nullable' => false,
               )),
-              18 => 
+              19 => 
               \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'totalDepositNet',
                  'title' => 'Total Deposit Net',
@@ -625,7 +652,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxValue' => NULL,
                  'nullable' => false,
               )),
-              19 => 
+              20 => 
               \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'totalDepositGross',
                  'title' => 'Total Deposit Gross',
@@ -651,7 +678,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxValue' => NULL,
                  'nullable' => false,
               )),
-              20 => 
+              21 => 
               \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'subtotalDepositNet',
                  'title' => 'Subtotal Deposit Net',
@@ -677,7 +704,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxValue' => NULL,
                  'nullable' => false,
               )),
-              21 => 
+              22 => 
               \CoreShop\Bundle\MoneyBundle\CoreExtension\Money::__set_state(array(
                  'name' => 'subtotalDepositGross',
                  'title' => 'Subtotal Deposit Gross',
@@ -703,7 +730,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxValue' => NULL,
                  'nullable' => false,
               )),
-              22 => 
+              23 => 
               \Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
                  'name' => 'hasDepositItem',
                  'title' => 'hasDepositItem',
@@ -725,7 +752,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValue' => NULL,
                  'defaultValueGenerator' => '',
               )),
-              23 => 
+              24 => 
               \Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
                  'name' => 'immutable',
                  'title' => 'coreshop.order.immutable',
@@ -767,7 +794,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'width' => '',
               )),
-              24 => 
+              25 => 
               \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'loyaltyPoints',
                  'title' => 'Loyalty Points',

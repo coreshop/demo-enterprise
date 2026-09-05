@@ -33,3 +33,22 @@ services:
             - [setBuildArchiveExtractor, ['@Pimcore\Bundle\StudioUiBundle\Build\BuildArchiveExtractor']]
         tags:
             - { name: pimcore_studio_ui.webpack_entry_point_provider }
+
+    # coreshop/headless-bundle 2026.2.0 type-hints the concrete CartItemQuantityModifier, which
+    # coreshop/ticketing-bundle decorates with an interface-only class; see the class for details.
+    App\Order\Modifier\DecoratedCartItemQuantityModifier:
+        arguments:
+            - '@coreshop.cart_item.quantity_modifier'
+
+    CoreShop\Bundle\HeadlessBundle\CommandHandler\UpdateOrderItemHandler:
+        autowire: false
+        autoconfigure: false
+        arguments:
+            - '@coreshop.repository.order'
+            - '@coreshop.repository.order_item'
+            - '@App\Order\Modifier\DecoratedCartItemQuantityModifier'
+            - '@CoreShop\Component\Order\Manager\CartManagerInterface'
+            - '@validator'
+            - '@CoreShop\Bundle\HeadlessBundle\Query\ExtensionHandler'
+        tags:
+            - { name: messenger.message_handler, bus: coreshop_headless.bus }

@@ -71,4 +71,6 @@ bin/console cache:warmup
 # The cache warmed above must not be reused by php-fpm; a failure to remove it
 # (e.g. a bind mount that keeps directory entries) is not fatal.
 rm -rf var/cache || true
-[ "${ENV_LOCAL_WRITTEN:-}" = 1 ] && rm -f .env.local
+if [ "${ENV_LOCAL_WRITTEN:-}" = 1 ]; then
+  rm -f .env.local
+fi

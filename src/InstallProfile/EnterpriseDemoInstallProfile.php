@@ -145,7 +145,7 @@ final readonly class EnterpriseDemoInstallProfile implements InstallProfileInter
                 'pimcore:thumbnails:image',
                 'Pre-generate the CoreShop product thumbnails',
                 50,
-                ['--thumbnails', 'coreshop_productGrid,coreshop_productList,coreshop_productDetail,coreshop_productDetailThumbnail,coreshop_productCart,coreshop_productCartPreview', '--skip-high-res'],
+                ['--thumbnails=coreshop_productGrid,coreshop_productList,coreshop_productDetail,coreshop_productDetailThumbnail,coreshop_productCart,coreshop_productCartPreview', '--skip-high-res'],
             ),
         ];
     }

@@ -49,7 +49,7 @@ services:
         networks:
             - coreshop4_enterprise_demo
         environment:
-            COMPOSER_AUTH: '{"http-basic": {"cors.repo.packagist.com": {"username": "token", "password": "REDACTED" }}}'
+            COMPOSER_AUTH: '${COMPOSER_AUTH:-}'
         depends_on:
             - db
         volumes:
@@ -68,7 +68,7 @@ services:
             - .:/var/www/html:cached
         environment:
             PHP_IDE_CONFIG: "serverName=localhost"
-            COMPOSER_AUTH: '{"http-basic": {"cors.repo.packagist.com": {"username": "token", "password": "REDACTED" }}}'
+            COMPOSER_AUTH: '${COMPOSER_AUTH:-}'
             XDEBUG_HOST: 198.29.248.254
             XDEBUG_TRIGGER: PHPSTORM
 

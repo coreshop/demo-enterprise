@@ -21,7 +21,7 @@ services:
       context: ./
       target: cors_php
       args:
-        COMPOSER_AUTH: '{"http-basic": {"cors.repo.packagist.com": {"username": "token", "password": "REDACTED" }}}'
+        COMPOSER_AUTH: '${COMPOSER_AUTH:-}'
     container_name: coreshop-enterprise-demo-php
     networks:
       - cors_dev
@@ -43,7 +43,7 @@ services:
       context: ./
       target: cors_nginx
       args:
-          COMPOSER_AUTH: '{"http-basic": {"cors.repo.packagist.com": {"username": "token", "password": "REDACTED" }}}'
+          COMPOSER_AUTH: '${COMPOSER_AUTH:-}'
     container_name: coreshop-enterprise-nginx
     depends_on:
         - php

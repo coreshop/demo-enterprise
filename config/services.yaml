@@ -1,5 +1,5 @@
 parameters:
-    secret: REDACTED
+    secret: '%env(APP_SECRET)%'
 
 services:
     _defaults:

@@ -124,15 +124,49 @@ the image, the GitHub runners lack it, so the workflows pass `--ignore-platform-
 
 | Workflow | Trigger | What it does |
 |---|---|---|
-| `build.yml` | push to `main`, PR | builds the images `php-fpm`, `php-supervisord`, `nginx`; on `main` pushes them to `ghcr.io/coreshop/demo-enterprise/{php-fpm,php-supervisord,nginx}` tagged `main-<sha>` and `latest` and bumps the tags in [coreshop/demo-enterprise-manifest](https://github.com/coreshop/demo-enterprise-manifest) |
+| `build.yml` | push to `main`, PR | builds the images `php-fpm`, `php-supervisord`, `nginx`; on `main` pushes them to `ghcr.io/coreshop/demo-enterprise/{php-fpm,php-supervisord,nginx}` tagged `main-<sha>` and `latest`, bakes the installed state (see below) and bumps the tags in [coreshop/demo-enterprise-manifest](https://github.com/coreshop/demo-enterprise-manifest) |
 | `static.yml` | push, PR | `composer validate`, YAML/Twig/container lint, phpstan level 1 on `src/` |
 | `composer-update.yml` | daily 03:00, manual | `composer update` as a pull request |
+
+### Baked installation
+
+A pod of the demo has no volume, so every start (daily reset, image update) would run the complete
+install: Pimcore, CoreShop, the enterprise bundles, the dump, the search index and the thumbnails,
+many minutes during which the demo is offline. The `bake` job of `build.yml` therefore runs the
+install once per build ([`.docker/bake/bake.sh`](.docker/bake/bake.sh), against throw-away MySQL and
+OpenSearch containers) and exports the result into two more images:
+
+| Image | Content |
+|---|---|
+| `ghcr.io/coreshop/demo-enterprise/mysql:main-<sha>` | `mysql:8` plus the dump of the installed database in `/docker-entrypoint-initdb.d/`; imported on the first start of the container ([`.docker/mysql/Dockerfile`](.docker/mysql/Dockerfile)) |
+| `ghcr.io/coreshop/demo-enterprise/php-fpm-installed:main-<sha>` | `php-fpm` plus the files the install generates: thumbnails in `public/var/tmp`, `var/config` ([`.docker/php/Dockerfile.installed`](.docker/php/Dockerfile.installed)) |
+
+The manifest runs the mysql sidecar and the php container from these images. On start the install
+script finds the installation in the database, runs pending migrations and recreates the
+OpenSearch indices; the `pimcore_generic_data_index_queue` worker of the supervisord container fills
+them in the background. `MYSQL_*` (user, password, database) still come from the deployment; the
+dump is imported into that database.
+
+The bake needs the registration of the deployed demo, because the installed database belongs to that
+instance: repository secrets `DEMO_PIMCORE_ENCRYPTION_SECRET`, `DEMO_PIMCORE_INSTANCE_IDENTIFIER` and
+`DEMO_PIMCORE_PRODUCT_KEY`, equal to `pimcore.encryptionSecret`, `pimcore.instanceIdentifier` and
+`pimcore.productKey` in the manifest.
+
+Local check of the bake (needs the three `PIMCORE_*` values in the environment):
+
+```bash
+PHP_IMAGE=ghcr.io/coreshop/demo-enterprise/php-fpm:latest .docker/bake/bake.sh bake
+docker build -t demo-mysql bake/mysql
+docker build --build-arg BASE_IMAGE=ghcr.io/coreshop/demo-enterprise/php-fpm:latest -t demo-php bake/php
+```
 
 Required secrets:
 
 - `COMPOSER_AUTH` (repository secret): Private Packagist credentials, used by `composer install` in the
   workflows and passed to `docker build` as a build secret (never stored in an image layer)
 - `GITHUB_TOKEN` (automatic, `packages: write`): pushes the images to the GitHub Container Registry
+- `DEMO_PIMCORE_ENCRYPTION_SECRET`, `DEMO_PIMCORE_INSTANCE_IDENTIFIER`, `DEMO_PIMCORE_PRODUCT_KEY` (repository
+  secrets): registration of the deployed demo for the bake job, see above
 - `GH_APP_ID`, `GH_APP_PRIVATE_KEY` (org secrets): the coreshop GitHub App mints the token for the manifest
   push; the app must be installed on `coreshop/demo-enterprise-manifest` with `contents: write`
 

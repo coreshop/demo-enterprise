@@ -1,9 +1,13 @@
 name: Build
 
 # Builds the three images of the demo and, on pushes to main, pushes them to the
-# GitHub Container Registry (ghcr.io/coreshop/demo-enterprise/*) and bumps the image tags in the
-# manifest repository. Secrets: GITHUB_TOKEN (packages: write) for the registry, COMPOSER_AUTH
-# (Private Packagist credentials of the enterprise bundles, passed to docker build as a secret) and
+# GitHub Container Registry (ghcr.io/coreshop/demo-enterprise/*), bakes the installed state
+# (job "bake": runs the install once, produces the mysql image with the demo database and the
+# php-fpm-installed image with the generated files, see .docker/bake/bake.sh) and bumps the image
+# tags in the manifest repository. Secrets: GITHUB_TOKEN (packages: write) for the registry,
+# COMPOSER_AUTH (Private Packagist credentials of the enterprise bundles, passed to docker build as
+# a secret), DEMO_PIMCORE_ENCRYPTION_SECRET / DEMO_PIMCORE_INSTANCE_IDENTIFIER /
+# DEMO_PIMCORE_PRODUCT_KEY (registration of the deployed demo, must equal the manifest values) and
 # the org secrets GH_APP_ID / GH_APP_PRIVATE_KEY of the coreshop GitHub App, which must be
 # installed on the manifest repository with contents: write.
 
@@ -68,9 +72,63 @@ jobs:
           cache-from: type=gha,scope=${{ matrix.image.name }}
           cache-to: type=gha,mode=max,scope=${{ matrix.image.name }}
 
+  bake:
+    name: Bake the installed state
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Image tag
+        id: tag
+        run: echo "tag=main-$(git rev-parse --short=8 HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run the install once and export database and generated files
+        env:
+          PHP_IMAGE: ${{ env.IMAGE_BASE }}/php-fpm:${{ steps.tag.outputs.tag }}
+          PIMCORE_ENCRYPTION_SECRET: ${{ secrets.DEMO_PIMCORE_ENCRYPTION_SECRET }}
+          PIMCORE_INSTANCE_IDENTIFIER: ${{ secrets.DEMO_PIMCORE_INSTANCE_IDENTIFIER }}
+          PIMCORE_PRODUCT_KEY: ${{ secrets.DEMO_PIMCORE_PRODUCT_KEY }}
+        run: |
+          docker pull "$PHP_IMAGE"
+          .docker/bake/bake.sh bake
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build and push the mysql image
+        uses: docker/build-push-action@v6
+        with:
+          context: bake/mysql
+          push: true
+          tags: |
+            ${{ env.IMAGE_BASE }}/mysql:${{ steps.tag.outputs.tag }}
+            ${{ env.IMAGE_BASE }}/mysql:latest
+
+      - name: Build and push the installed php-fpm image
+        uses: docker/build-push-action@v6
+        with:
+          context: bake/php
+          push: true
+          build-args: |
+            BASE_IMAGE=${{ env.IMAGE_BASE }}/php-fpm:${{ steps.tag.outputs.tag }}
+          tags: |
+            ${{ env.IMAGE_BASE }}/php-fpm-installed:${{ steps.tag.outputs.tag }}
+            ${{ env.IMAGE_BASE }}/php-fpm-installed:latest
+
   manifest:
     name: Update manifest
-    needs: build
+    needs: [build, bake]
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
@@ -100,7 +158,7 @@ jobs:
           TAG: ${{ steps.tag.outputs.tag }}
         run: |
           yq -i '.appVersion = strenv(TAG)' Chart.yaml
-          yq -i '.php.image.tag = strenv(TAG) | .php.supervisord.image.tag = strenv(TAG) | .nginx.image.tag = strenv(TAG)' values.yaml
+          yq -i '.php.image.tag = strenv(TAG) | .php.supervisord.image.tag = strenv(TAG) | .nginx.image.tag = strenv(TAG) | .mysql.image.tag = strenv(TAG)' values.yaml
           git config user.name "demo-enterprise-ci"
           git config user.email "demo-enterprise-ci@cors.gmbh"
           git commit -am "update image tag to $TAG" || echo "nothing to commit"

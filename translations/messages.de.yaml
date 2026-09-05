@@ -6,3 +6,21 @@ demo:
                 radius: "Radius"
                 post_code: "PLZ"
             country_choose: "Land auswählen"
+    menu:
+        index_geo: "Händlersuche"
+        ticketing: "Ticketing"
+        mass_download: "Massendownload"
+    deposit:
+        secure_with: "Dieses Produkt mit einer Anzahlung sichern von"
+    document_route:
+        hint: "Document-Route-Demo:"
+coreshop.ui.order_deposit: "Restzahlung"
+coreshop.ui.deposit_confirmation: "Restzahlung erhalten"
+coreshop.ui.order_deposit_successful: "Danke, die Restzahlung zu Ihrer Bestellung ist eingegangen."
+coreshop.form.order.deposit.submit_payment: "Restbetrag bezahlen"
+coreshop_loyalty.ui.overview: "Treuepunkte"
+coreshop_loyalty.ui.points: "Treuepunkte"
+coreshop_loyalty.ui.date: "Datum"
+coreshop_loyalty.ui.type: "Typ"
+coreshop_loyalty.ui.description: "Beschreibung"
+coreshop_ticketing.ui.personalized_name: "Name auf dem Ticket"

@@ -28,6 +28,10 @@ bin/console lexik:jwt:generate-keypair --skip-if-exists --no-interaction || true
 if php -r 'require "vendor/autoload.php"; (new Symfony\Component\Dotenv\Dotenv())->bootEnv(".env"); $u = parse_url($_ENV["DATABASE_URL"] ?? ""); $pdo = new PDO(sprintf("mysql:host=%s;port=%d;dbname=%s", $u["host"], $u["port"] ?? 3306, ltrim($u["path"], "/")), $u["user"], $u["pass"]); exit($pdo->query("SHOW TABLES LIKE \"users\"")->rowCount() > 0 ? 0 : 1);' 2>/dev/null; then
   echo "Pimcore is already installed, running pending database migrations"
   bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration
+  # A pod that starts from the baked mysql image (.docker/bake/bake.sh) has the database but an
+  # empty OpenSearch: recreate the indices and queue every element, the supervisord worker
+  # (pimcore_generic_data_index_queue) fills them in the background.
+  bin/console generic-data-index:update:index --recreate_index
   exit 0
 fi
 

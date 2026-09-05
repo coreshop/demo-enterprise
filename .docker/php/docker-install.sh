@@ -35,6 +35,26 @@ export PIMCORE_ADMIN_USER="$PIMCORE_INSTALL_ADMIN_USERNAME"
 export PIMCORE_ADMIN_PASSWORD="$PIMCORE_INSTALL_ADMIN_PASSWORD"
 
 echo "Install Pimcore, CoreShop and the enterprise demo data (dump/)"
+# The installer re-loads .env with override before it boots the application kernel
+# (Installer::bootRealKernel), so the placeholders in .env (empty registration values,
+# DATABASE_HOST=db) would replace the runtime environment. Write the runtime values to
+# .env.local, which is loaded after .env. docker compose ships its own .env.local, that one
+# is left untouched.
+if [ ! -f .env.local ]; then
+  : > .env.local
+  for var in APP_ENV APP_DEBUG APP_SECRET \
+             DATABASE_USER DATABASE_PASSWORD DATABASE_NAME DATABASE_HOST DATABASE_PORT DATABASE_VERSION DATABASE_URL \
+             PIMCORE_ENCRYPTION_SECRET PIMCORE_INSTANCE_IDENTIFIER PIMCORE_PRODUCT_KEY \
+             PIMCORE_OPENSEARCH_DSN PIMCORE_MESSENGER_TRANSPORT_DSN_PREFIX \
+             MERCURE_JWT_KEY MERCURE_URL MERCURE_SERVER_URL SENTRY_DSN; do
+    value=$(printenv "$var") || continue
+    # double-quoted dotenv value: escape backslash, double quote and dollar
+    escaped=$(printf '%s' "$value" | sed -e 's/[\\"$]/\\&/g')
+    printf '%s="%s"\n' "$var" "$escaped" >> .env.local
+  done
+  ENV_LOCAL_WRITTEN=1
+fi
+
 vendor/bin/pimcore-install \
   --install-profile 'App\InstallProfile\EnterpriseDemoInstallProfile' \
   --skip-validation \
@@ -51,3 +71,4 @@ bin/console cache:warmup
 # The cache warmed above must not be reused by php-fpm; a failure to remove it
 # (e.g. a bind mount that keeps directory entries) is not fatal.
 rm -rf var/cache || true
+[ "${ENV_LOCAL_WRITTEN:-}" = 1 ] && rm -f .env.local

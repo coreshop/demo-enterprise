@@ -22,7 +22,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1738133848,
+   'modificationDate' => 1788615673,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\OrderShipmentItem',

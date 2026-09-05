@@ -39,7 +39,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1739859128,
+   'modificationDate' => 1788615207,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Bundle\\TicketingBundle\\Model\\Event',
@@ -481,6 +481,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'options' => NULL,
                      'maxItems' => NULL,
                      'renderType' => NULL,
+                     'enforceValidation' => false,
                      'dynamicOptions' => false,
                      'defaultValue' => NULL,
                      'height' => '',
@@ -855,6 +856,10 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
+                  0 => 
+                  array (
+                    'classes' => 'CoreShopAttributeGroup',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -896,6 +901,14 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
+                  0 => 
+                  array (
+                    'classes' => 'CoreShopAttributeValue',
+                  ),
+                  1 => 
+                  array (
+                    'classes' => 'CoreShopAttributeColor',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',
@@ -963,6 +976,10 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'classes' => 
                 array (
+                  0 => 
+                  array (
+                    'classes' => 'CoreShopCategory',
+                  ),
                 ),
                  'displayMode' => NULL,
                  'pathFormatterClass' => '',

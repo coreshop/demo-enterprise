@@ -11,8 +11,8 @@
  * - company [coreShopRelation]
  * - email [email]
  * - customerCluster [coreShopCustomerCluster]
- * - newsletterActive [newsletterActive]
- * - newsletterConfirmed [newsletterConfirmed]
+ * - newsletterActive [checkbox]
+ * - newsletterConfirmed [checkbox]
  * - newsletterToken [input]
  * - gender [gender]
  * - localeCode [input]
@@ -31,7 +31,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1738133847,
+   'modificationDate' => 1788615671,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Core\\Model\\Customer',
@@ -273,7 +273,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'allowEmpty' => false,
               )),
               6 => 
-              \Pimcore\Bundle\NewsletterBundle\Model\DataObject\ClassDefinition\Data\NewsletterActive::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
                  'name' => 'newsletterActive',
                  'title' => 'coreshop.customer.newsletter_active',
                  'tooltip' => '',
@@ -295,7 +295,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               7 => 
-              \Pimcore\Bundle\NewsletterBundle\Model\DataObject\ClassDefinition\Data\NewsletterConfirmed::__set_state(array(
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Checkbox::__set_state(array(
                  'name' => 'newsletterConfirmed',
                  'title' => 'coreshop.customer.newsletter_confirmed',
                  'tooltip' => '',
@@ -369,6 +369,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValue' => NULL,
                  'columnLength' => 190,
                  'dynamicOptions' => false,
+                 'enforceValidation' => false,
                  'defaultValueGenerator' => '',
                  'width' => '',
                  'optionsProviderType' => NULL,
@@ -490,10 +491,10 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'options' => NULL,
                  'defaultValue' => 'own_only',
                  'columnLength' => 190,
                  'dynamicOptions' => false,
+                 'enforceValidation' => false,
                  'defaultValueGenerator' => '',
                  'width' => '',
                  'optionsProviderType' => NULL,

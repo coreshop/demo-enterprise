@@ -17,7 +17,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769580,
+   'modificationDate' => 1788615213,
    'userOwner' => 0,
    'userModification' => 2,
    'parentClass' => 'CoreShop\\Bundle\\VoucherCreditBundle\\Model\\VoucherProduct',

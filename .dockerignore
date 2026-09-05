@@ -1,4 +1,5 @@
 .git
+.github
 var/log
 var/cache
 public/build
@@ -6,3 +7,4 @@ public/bundles
 vendor/
 .env.local
 node_modules
+docker-compose*.yml

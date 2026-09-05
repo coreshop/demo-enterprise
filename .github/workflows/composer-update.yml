@@ -1,0 +1,33 @@
+name: Composer update
+
+# Daily dependency update as a pull request (the GitLab pipeline pushed straight to main).
+# COMPOSER_AUTH holds the Private Packagist credentials for the CoreShop enterprise bundles.
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          extensions: intl, gd, simpleXML, dom, exif, fileinfo, iconv, mbstring, mysqli, pdo_mysql, zip, zlib, imagick
+      - run: composer update --no-interaction --no-progress --no-scripts --ignore-platform-req=ext-imap
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: chore/composer-update
+          title: "Update composer.lock"
+          commit-message: "Update composer.lock"
+          body: "Scheduled `composer update`."
+          delete-branch: true

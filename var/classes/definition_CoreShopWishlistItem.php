@@ -17,7 +17,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1729769580,
+   'modificationDate' => 1788615213,
    'userOwner' => 0,
    'userModification' => 0,
    'parentClass' => 'CoreShop\\Component\\Wishlist\\Model\\WishlistItem',
@@ -84,6 +84,14 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
               0 => 
               array (
                 'classes' => 'CoreShopProduct',
+              ),
+              1 => 
+              array (
+                'classes' => 'CoreShopEvent',
+              ),
+              2 => 
+              array (
+                'classes' => 'CoreShopEventPass',
               ),
             ),
              'displayMode' => NULL,

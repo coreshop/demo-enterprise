@@ -1,5 +1,5 @@
 sentry:
-    dsn: "https://ea0548b35e7744132204737382c067e9@o1074902.ingest.us.sentry.io/4508415926337536"
+    dsn: '%env(SENTRY_DSN)%'
     tracing:
         dbal:
             enabled: false

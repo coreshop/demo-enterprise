@@ -30,7 +30,15 @@ if php -r 'require "vendor/autoload.php"; (new Symfony\Component\Dotenv\Dotenv()
   bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration
   # A pod that starts from the baked mysql image (.docker/bake/bake.sh) has the database but an
   # empty OpenSearch: recreate the indices and queue every element, the supervisord worker
-  # (pimcore_generic_data_index_queue) fills them in the background.
+  # (pimcore_generic_data_index_queue) fills them in the background. OpenSearch is a sidecar
+  # that boots in parallel, wait for it (at most two minutes) before creating the indices.
+  opensearch_url=$(printenv PIMCORE_OPENSEARCH_DSN | sed -e 's#^opensearch://#http://#' -e 's#[?].*$##')
+  if [ -n "$opensearch_url" ]; then
+    i=0
+    until curl -sf -o /dev/null "$opensearch_url" || [ $i -ge 60 ]; do
+      echo "Waiting for OpenSearch at $opensearch_url ..."; i=$((i + 1)); sleep 2
+    done
+  fi
   bin/console generic-data-index:update:index --recreate_index
   exit 0
 fi

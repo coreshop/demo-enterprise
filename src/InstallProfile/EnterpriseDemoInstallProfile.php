@@ -139,6 +139,14 @@ final readonly class EnterpriseDemoInstallProfile implements InstallProfileInter
                 ['--recreate_index'],
             ),
             new PostInstallCommand('coreshop:index', 'Rebuild the CoreShop product index', 60),
+            // the dump ships the assets without thumbnails; the storefronts request several sizes per
+            // product image, which otherwise takes 15-35 s on the first visit of every category
+            new PostInstallCommand(
+                'pimcore:thumbnails:image',
+                'Pre-generate the CoreShop product thumbnails',
+                50,
+                ['--thumbnails=coreshop_productGrid,coreshop_productList,coreshop_productDetail,coreshop_productDetailThumbnail,coreshop_productCart,coreshop_productCartPreview', '--skip-high-res'],
+            ),
         ];
     }
 }

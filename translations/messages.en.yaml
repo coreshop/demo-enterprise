@@ -6,4 +6,21 @@ demo:
                 radius: "Radius"
                 post_code: "Post code"
             country_choose: "Choose country"
-
+    menu:
+        index_geo: "Dealer locator"
+        ticketing: "Ticketing"
+        mass_download: "Mass download"
+    deposit:
+        secure_with: "Secure this product with a deposit of"
+    document_route:
+        hint: "Document route demo:"
+coreshop.ui.order_deposit: "Final payment"
+coreshop.ui.deposit_confirmation: "Final payment received"
+coreshop.ui.order_deposit_successful: "Thank you, the final payment for your order has been received."
+coreshop.form.order.deposit.submit_payment: "Pay the remaining amount"
+coreshop_loyalty.ui.overview: "Loyalty"
+coreshop_loyalty.ui.points: "Loyalty points"
+coreshop_loyalty.ui.date: "Date"
+coreshop_loyalty.ui.type: "Type"
+coreshop_loyalty.ui.description: "Description"
+coreshop_ticketing.ui.personalized_name: "Name on the ticket"

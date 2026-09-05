@@ -1,13 +1,12 @@
 {% extends '@CoreShopFrontend/layout-column.html.twig' %}
 
 {% block center %}
-    <div class="mb-3">
-        {% set doc = document_route_document('homepage') %}
-
-        {% if doc %}
-            Document Route Demo ({{ '{{ path(\'homepage\') }}' }}): {{ path('homepage') }} (ID: {{ doc.id }})
-        {% endif %}
-    </div>
+    {% set doc = document_route_document('homepage') %}
+    {% if doc %}
+        <div class="alert alert-light border mb-3">
+            {{ 'demo.document_route.hint'|trans }} <code>{{ '{{ path(\'homepage\') }}' }}</code> &rarr; <code>{{ path('homepage') }}</code> (ID {{ doc.id }})
+        </div>
+    {% endif %}
 
     {{ render(controller('CoreShop\\Bundle\\FrontendBundle\\Controller\\ProductController::latestAction')) }}
 {% endblock %}

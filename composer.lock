@@ -71,17 +71,16 @@
         {
             "name": "bacon/bacon-qr-code",
             "version": "v3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Bacon/BaconQrCode.git",
+                "reference": "4da2233e72eeecd9be3b62e0dc2cc9ed8e2e31c2"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/4da2233e72eeecd9be3b62e0dc2cc9ed8e2e31c2",
                 "reference": "4da2233e72eeecd9be3b62e0dc2cc9ed8e2e31c2",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "dasprid/enum": "^1.0.3",
@@ -104,7 +103,7 @@
                     "BaconQrCode\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
             ],
@@ -1624,17 +1623,16 @@
         {
             "name": "dasprid/enum",
             "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DASPRiD/Enum.git",
+                "reference": "b5874fa9ed0043116c72162ec7f4fb50e02e7cce"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/b5874fa9ed0043116c72162ec7f4fb50e02e7cce",
                 "reference": "b5874fa9ed0043116c72162ec7f4fb50e02e7cce",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.1 <9.0"
@@ -1649,7 +1647,7 @@
                     "DASPRiD\\Enum\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
             ],
@@ -3223,17 +3221,16 @@
         {
             "name": "endroid/qr-code",
             "version": "6.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endroid/qr-code.git",
+                "reference": "5fa534856ed95649d67c0eab0cabc03ab1d8e0e2"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/endroid/qr-code/zipball/5fa534856ed95649d67c0eab0cabc03ab1d8e0e2",
                 "reference": "5fa534856ed95649d67c0eab0cabc03ab1d8e0e2",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "bacon/bacon-qr-code": "^3.0",
@@ -3262,7 +3259,7 @@
                     "Endroid\\QrCode\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3764,17 +3761,16 @@
         {
             "name": "geocoder-php/common-http",
             "version": "4.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/php-common-http.git",
+                "reference": "4209be6c31946ed5a658f6240ab21faaf5413f61"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/geocoder-php/php-common-http/zipball/4209be6c31946ed5a658f6240ab21faaf5413f61",
                 "reference": "4209be6c31946ed5a658f6240ab21faaf5413f61",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": "^8.0",
@@ -3804,7 +3800,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3827,17 +3823,16 @@
         {
             "name": "geocoder-php/nominatim-provider",
             "version": "5.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/nominatim-provider.git",
+                "reference": "1b6852d33e9b558a13d98510fff66e76f4aed9b2"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/geocoder-php/nominatim-provider/zipball/1b6852d33e9b558a13d98510fff66e76f4aed9b2",
                 "reference": "1b6852d33e9b558a13d98510fff66e76f4aed9b2",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "geocoder-php/common-http": "^4.1",
@@ -3866,7 +3861,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3886,17 +3881,16 @@
         {
             "name": "geocoder-php/plugin",
             "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/plugin.git",
+                "reference": "0b2ba7536a32f8281222fe8a4e2330ba9547e4df"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/geocoder-php/plugin/zipball/0b2ba7536a32f8281222fe8a4e2330ba9547e4df",
                 "reference": "0b2ba7536a32f8281222fe8a4e2330ba9547e4df",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": "^8.0",
@@ -3923,7 +3917,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4416,17 +4410,16 @@
         {
             "name": "jean85/pretty-package-versions",
             "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jean85/pretty-package-versions.git",
+                "reference": "4d7aa5dab42e2a76d99559706022885de0e18e1a"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/4d7aa5dab42e2a76d99559706022885de0e18e1a",
                 "reference": "4d7aa5dab42e2a76d99559706022885de0e18e1a",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.1.0",
@@ -4451,7 +4444,7 @@
                     "Jean85\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5878,17 +5871,16 @@
         {
             "name": "lexik/jwt-authentication-bundle",
             "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lexik/LexikJWTAuthenticationBundle.git",
+                "reference": "60df75dc70ee6f597929cb2f0812adda591dfa4b"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/60df75dc70ee6f597929cb2f0812adda591dfa4b",
                 "reference": "60df75dc70ee6f597929cb2f0812adda591dfa4b",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "ext-openssl": "*",
@@ -5930,7 +5922,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5995,17 +5987,16 @@
         {
             "name": "longitude-one/doctrine-spatial",
             "version": "5.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/doctrine-spatial.git",
+                "reference": "26f0a800d452b6a6c3b0d6b2577860309bc00df3"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/longitude-one/doctrine-spatial/zipball/26f0a800d452b6a6c3b0d6b2577860309bc00df3",
                 "reference": "26f0a800d452b6a6c3b0d6b2577860309bc00df3",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "doctrine/orm": "^2.19|^3.1",
@@ -6034,7 +6025,7 @@
                     "LongitudeOne\\Spatial\\Tests": "tests/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6073,17 +6064,16 @@
         {
             "name": "longitude-one/geo-parser",
             "version": "3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/geo-parser.git",
+                "reference": "80edec79bc3cab7195a0833b1e94569de09ccc6b"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/longitude-one/geo-parser/zipball/80edec79bc3cab7195a0833b1e94569de09ccc6b",
                 "reference": "80edec79bc3cab7195a0833b1e94569de09ccc6b",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "^2.1|^3.0",
@@ -6098,7 +6088,7 @@
                     "LongitudeOne\\Geo\\String": "lib/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6133,17 +6123,16 @@
         {
             "name": "longitude-one/wkb-parser",
             "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/wkb-parser.git",
+                "reference": "86bfca8ec4e94190f5107c0dbb1b98f7ea27a2ae"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/longitude-one/wkb-parser/zipball/86bfca8ec4e94190f5107c0dbb1b98f7ea27a2ae",
                 "reference": "86bfca8ec4e94190f5107c0dbb1b98f7ea27a2ae",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": "^8.1"
@@ -6157,7 +6146,7 @@
                     "LongitudeOne\\Geo\\WKB": "lib/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6191,17 +6180,16 @@
         {
             "name": "longitude-one/wkt-parser",
             "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/wkt-parser.git",
+                "reference": "5041030874404f9b0ac708001310ba98e3571854"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/longitude-one/wkt-parser/zipball/5041030874404f9b0ac708001310ba98e3571854",
                 "reference": "5041030874404f9b0ac708001310ba98e3571854",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "^2.1|^3.0",
@@ -6220,7 +6208,7 @@
                     "LongitudeOne\\Geo\\WKT\\Tests": "tests/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6911,17 +6899,16 @@
         {
             "name": "nelmio/cors-bundle",
             "version": "2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nelmio/NelmioCorsBundle.git",
+                "reference": "3d80dbcd5d1eb5f8b20ed5199e1778d44c2e4d1c"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/nelmio/NelmioCorsBundle/zipball/3d80dbcd5d1eb5f8b20ed5199e1778d44c2e4d1c",
                 "reference": "3d80dbcd5d1eb5f8b20ed5199e1778d44c2e4d1c",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "psr/log": "^1.0 || ^2.0 || ^3.0",
@@ -6948,7 +6935,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7400,17 +7387,16 @@
         {
             "name": "openspout/openspout",
             "version": "v4.32.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openspout/openspout.git",
+                "reference": "41f045c1f632e1474e15d4c7bc3abcb4a153563d"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/openspout/openspout/zipball/41f045c1f632e1474e15d4c7bc3abcb4a153563d",
                 "reference": "41f045c1f632e1474e15d4c7bc3abcb4a153563d",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
@@ -7446,7 +7432,7 @@
                     "OpenSpout\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8370,17 +8356,16 @@
         {
             "name": "php-imap/php-imap",
             "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barbushin/php-imap.git",
+                "reference": "f16c7a4e7a0288723d74acf97034265360362e29"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/barbushin/php-imap/zipball/f16c7a4e7a0288723d74acf97034265360362e29",
                 "reference": "f16c7a4e7a0288723d74acf97034265360362e29",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "ext-fileinfo": "*",
@@ -8411,7 +8396,7 @@
                     "PhpImap\\": "src/PhpImap"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8773,17 +8758,16 @@
         {
             "name": "pimcore/data-hub",
             "version": "v2026.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pimcore/data-hub.git",
+                "reference": "2c7ea81512cdf0a7122ec7f70aa14ff50284d6ce"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/pimcore/data-hub/zipball/2c7ea81512cdf0a7122ec7f70aa14ff50284d6ce",
                 "reference": "2c7ea81512cdf0a7122ec7f70aa14ff50284d6ce",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "nesbot/carbon": "^2.72 || ^3.8.4",
@@ -8821,7 +8805,7 @@
                     "Pimcore\\Bundle\\DataHubBundle\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -9222,17 +9206,16 @@
         {
             "name": "pimcore/quill-bundle",
             "version": "v2026.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pimcore/quill-bundle.git",
+                "reference": "23e6077c426512451d4dc1758868fd783c797cd3"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/pimcore/quill-bundle/zipball/23e6077c426512451d4dc1758868fd783c797cd3",
                 "reference": "23e6077c426512451d4dc1758868fd783c797cd3",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": "~8.4.0 || ~8.5.0",
@@ -9263,7 +9246,7 @@
                     "Pimcore\\Bundle\\QuillBundle\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -10257,17 +10240,16 @@
         {
             "name": "rybakit/twig-deferred-extension",
             "version": "v3.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rybakit/twig-deferred-extension.git",
+                "reference": "3e5d00ccd27863f25e87f2af05a1430f3039e480"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/rybakit/twig-deferred-extension/zipball/3e5d00ccd27863f25e87f2af05a1430f3039e480",
                 "reference": "3e5d00ccd27863f25e87f2af05a1430f3039e480",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "twig/twig": "^3.0"
@@ -10282,7 +10264,7 @@
                     "Twig\\DeferredExtension\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -10948,17 +10930,16 @@
         {
             "name": "sentry/sentry",
             "version": "4.31.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/getsentry/sentry-php.git",
+                "reference": "39d9f86bd56c6cc6ae7b64c2b849f7f046d38394"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/39d9f86bd56c6cc6ae7b64c2b849f7f046d38394",
                 "reference": "39d9f86bd56c6cc6ae7b64c2b849f7f046d38394",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
@@ -11003,7 +10984,7 @@
                     "Sentry\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -11045,17 +11026,16 @@
         {
             "name": "sentry/sentry-symfony",
             "version": "5.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/getsentry/sentry-symfony.git",
+                "reference": "788345e0b80bab5aa8eaa693b178ae0b8eecf918"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/getsentry/sentry-symfony/zipball/788345e0b80bab5aa8eaa693b178ae0b8eecf918",
                 "reference": "788345e0b80bab5aa8eaa693b178ae0b8eecf918",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "guzzlehttp/psr7": "^2.1.1|^3.0",
@@ -11111,7 +11091,7 @@
                     "Sentry\\SentryBundle\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -18568,17 +18548,16 @@
         {
             "name": "webonyx/graphql-php",
             "version": "v15.37.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webonyx/graphql-php.git",
+                "reference": "f2a5d802213eb231d17a21badbda22b01435f177"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/f2a5d802213eb231d17a21badbda22b01435f177",
                 "reference": "f2a5d802213eb231d17a21badbda22b01435f177",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "ext-json": "*",
@@ -18620,7 +18599,7 @@
                     "GraphQL\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -18649,17 +18628,16 @@
         {
             "name": "willdurand/geocoder",
             "version": "5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/php-common.git",
+                "reference": "a749e00819d2929bd0ec40fb79853956332970ba"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/geocoder-php/php-common/zipball/a749e00819d2929bd0ec40fb79853956332970ba",
                 "reference": "a749e00819d2929bd0ec40fb79853956332970ba",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "php": ">=8.2"
@@ -18686,7 +18664,7 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -18712,17 +18690,16 @@
         {
             "name": "willdurand/geocoder-bundle",
             "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/BazingaGeocoderBundle.git",
+                "reference": "c463452d84ace7482ce676ae1269ffe6e53405a9"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/geocoder-php/BazingaGeocoderBundle/zipball/c463452d84ace7482ce676ae1269ffe6e53405a9",
                 "reference": "c463452d84ace7482ce676ae1269ffe6e53405a9",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://repo.packagist.com/cors/dists/%package%/%version%/r%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "geocoder-php/plugin": "^1.6",
@@ -18789,7 +18766,7 @@
                     "Bazinga\\GeocoderBundle\\": "src/"
                 }
             },
-            "notification-url": "https://repo.packagist.com/cors/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -19017,5 +18994,5 @@
         "php": "~8.4.0 || ~8.5.0"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

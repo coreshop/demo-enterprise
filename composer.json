@@ -2,7 +2,7 @@
     "name": "pimcore/skeleton",
     "description": "CoreShop Enterprise Demo: Pimcore 2026 + CoreShop 2026 with the CoreShop enterprise bundles",
     "type": "project",
-    "license": "GPL-3.0-or-later",
+    "license": "proprietary",
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true,

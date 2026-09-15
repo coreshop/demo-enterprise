@@ -49,3 +49,6 @@ nbproject
 # temp
 .temp
 /config/jwt/*.pem
+
+# output of .docker/bake/bake.sh
+/bake/

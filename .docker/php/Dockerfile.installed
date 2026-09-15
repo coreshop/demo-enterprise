@@ -1,0 +1,7 @@
+# php-fpm image plus the files the install generates (thumbnails, var/config), produced by
+# .docker/bake/bake.sh. Runs with the mysql image of the same tag, whose database already holds
+# the installation, so the entrypoint only executes pending migrations on start.
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+
+COPY --chown=www-data:www-data state/ /var/www/html/

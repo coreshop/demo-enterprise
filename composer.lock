@@ -487,16 +487,16 @@
         },
         {
             "name": "coreshop/core-shop",
-            "version": "2026.2.1",
+            "version": "2026.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/coreshop/CoreShop.git",
-                "reference": "c25de16f43f9f2e8237de82076e99e70d9096824"
+                "reference": "a9c3fcefa0e79b83bcb9aa48234cbd9637c5f19d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/c25de16f43f9f2e8237de82076e99e70d9096824",
-                "reference": "c25de16f43f9f2e8237de82076e99e70d9096824",
+                "url": "https://api.github.com/repos/coreshop/CoreShop/zipball/a9c3fcefa0e79b83bcb9aa48234cbd9637c5f19d",
+                "reference": "a9c3fcefa0e79b83bcb9aa48234cbd9637c5f19d",
                 "shasum": ""
             },
             "require": {
@@ -687,7 +687,7 @@
             ],
             "support": {
                 "issues": "https://github.com/coreshop/CoreShop/issues",
-                "source": "https://github.com/coreshop/CoreShop/tree/2026.2.1"
+                "source": "https://github.com/coreshop/CoreShop/tree/2026.2.2"
             },
             "funding": [
                 {
@@ -695,7 +695,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-04T18:32:38+00:00"
+            "time": "2026-09-17T18:59:24+00:00"
         },
         {
             "name": "coreshop/customer-cluster-bundle",
@@ -8609,16 +8609,16 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "5.9.0",
+            "version": "5.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "05e99ebf61238a70227b4d9cc02d0030d34f6339"
+                "reference": "eb18727acf6b1f4cc67145a52ab04f9fd4c28d53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/05e99ebf61238a70227b4d9cc02d0030d34f6339",
-                "reference": "05e99ebf61238a70227b4d9cc02d0030d34f6339",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/eb18727acf6b1f4cc67145a52ab04f9fd4c28d53",
+                "reference": "eb18727acf6b1f4cc67145a52ab04f9fd4c28d53",
                 "shasum": ""
             },
             "require": {
@@ -8647,6 +8647,7 @@
                 "dealerdirect/phpcodesniffer-composer-installer": "dev-main",
                 "dompdf/dompdf": "^2.0 || ^3.0",
                 "ext-intl": "*",
+                "ext-openssl": "*",
                 "friendsofphp/php-cs-fixer": "^3.2",
                 "mitoteam/jpgraph": "^10.5",
                 "mpdf/mpdf": "^8.1.1",
@@ -8656,11 +8657,12 @@
                 "phpstan/phpstan-phpunit": "^1.0 || ^2.0",
                 "phpunit/phpunit": "^10.5 || ^11.0",
                 "squizlabs/php_codesniffer": "^3.7",
-                "tecnickcom/tcpdf": "^6.5"
+                "tecnickcom/tcpdf": ">=6.8.0 <7.0.0"
             },
             "suggest": {
                 "dompdf/dompdf": "Option for rendering PDF with PDF Writer",
                 "ext-intl": "PHP Internationalization Functions, required for NumberFormat Wizard and StringHelper::setLocale()",
+                "ext-openssl": "Handline Agile-encrypted Xlsx spreadsheets",
                 "mitoteam/jpgraph": "Option for rendering charts, or including charts with PDF or HTML Writers",
                 "mpdf/mpdf": "Option for rendering PDF with PDF Writer",
                 "tecnickcom/tcpdf": "Option for rendering PDF with PDF Writer"
@@ -8712,9 +8714,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
-                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/5.9.0"
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/5.10.0"
             },
-            "time": "2026-07-12T19:17:39+00:00"
+            "time": "2026-09-17T03:54:50+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -8997,16 +8999,16 @@
         },
         {
             "name": "pimcore/pimcore",
-            "version": "v2026.2.12",
+            "version": "v2026.2.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/pimcore.git",
-                "reference": "0815f142f8a63a509e80048b27e1ee24853781dc"
+                "reference": "03d86954e45131dc96c4413906c178575d78bd7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/0815f142f8a63a509e80048b27e1ee24853781dc",
-                "reference": "0815f142f8a63a509e80048b27e1ee24853781dc",
+                "url": "https://api.github.com/repos/pimcore/pimcore/zipball/03d86954e45131dc96c4413906c178575d78bd7f",
+                "reference": "03d86954e45131dc96c4413906c178575d78bd7f",
                 "shasum": ""
             },
             "require": {
@@ -9209,7 +9211,7 @@
                 "source": "https://github.com/pimcore/pimcore",
                 "wiki": "https://pimcore.com/docs/latest/"
             },
-            "time": "2026-09-08T12:07:45+00:00"
+            "time": "2026-09-15T06:50:12+00:00"
         },
         {
             "name": "pimcore/quill-bundle",
@@ -9321,16 +9323,16 @@
         },
         {
             "name": "pimcore/studio-backend-bundle",
-            "version": "v2026.2.9",
+            "version": "v2026.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/studio-backend-bundle.git",
-                "reference": "57d539d02cc636e79936385e386f6d266665392f"
+                "reference": "be26d23215af7abd23c134ee8b48e250c817ffe9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/studio-backend-bundle/zipball/57d539d02cc636e79936385e386f6d266665392f",
-                "reference": "57d539d02cc636e79936385e386f6d266665392f",
+                "url": "https://api.github.com/repos/pimcore/studio-backend-bundle/zipball/be26d23215af7abd23c134ee8b48e250c817ffe9",
+                "reference": "be26d23215af7abd23c134ee8b48e250c817ffe9",
                 "shasum": ""
             },
             "require": {
@@ -9395,22 +9397,22 @@
             "description": "Pimcore Studio Backend Bundle",
             "support": {
                 "issues": "https://github.com/pimcore/studio-backend-bundle/issues",
-                "source": "https://github.com/pimcore/studio-backend-bundle/tree/v2026.2.9"
+                "source": "https://github.com/pimcore/studio-backend-bundle/tree/v2026.2.10"
             },
-            "time": "2026-09-04T08:29:57+00:00"
+            "time": "2026-09-14T14:50:00+00:00"
         },
         {
             "name": "pimcore/studio-ui-bundle",
-            "version": "v2026.2.9",
+            "version": "v2026.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pimcore/studio-ui-bundle.git",
-                "reference": "6770eb7b92a1a605908f1237c04cd5c5d2a97b6e"
+                "reference": "0604da45a6ec9d36c928f86dbffc3f28300910cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pimcore/studio-ui-bundle/zipball/6770eb7b92a1a605908f1237c04cd5c5d2a97b6e",
-                "reference": "6770eb7b92a1a605908f1237c04cd5c5d2a97b6e",
+                "url": "https://api.github.com/repos/pimcore/studio-ui-bundle/zipball/0604da45a6ec9d36c928f86dbffc3f28300910cc",
+                "reference": "0604da45a6ec9d36c928f86dbffc3f28300910cc",
                 "shasum": ""
             },
             "require": {
@@ -9457,9 +9459,9 @@
             "description": "Pimcore Studio Ui Bundle",
             "support": {
                 "issues": "https://github.com/pimcore/studio-ui-bundle/issues",
-                "source": "https://github.com/pimcore/studio-ui-bundle/tree/v2026.2.9"
+                "source": "https://github.com/pimcore/studio-ui-bundle/tree/v2026.2.10"
             },
-            "time": "2026-09-04T15:11:27+00:00"
+            "time": "2026-09-14T14:55:50+00:00"
         },
         {
             "name": "presta/sitemap-bundle",
@@ -17858,16 +17860,16 @@
         },
         {
             "name": "symfony/webpack-encore-bundle",
-            "version": "v2.4.1",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/webpack-encore-bundle.git",
-                "reference": "cac8d6c722999c8add9272f9de6e8079628df4f5"
+                "reference": "0cbc3485f127cd9f85e395f8177607ef00535634"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/webpack-encore-bundle/zipball/cac8d6c722999c8add9272f9de6e8079628df4f5",
-                "reference": "cac8d6c722999c8add9272f9de6e8079628df4f5",
+                "url": "https://api.github.com/repos/symfony/webpack-encore-bundle/zipball/0cbc3485f127cd9f85e395f8177607ef00535634",
+                "reference": "0cbc3485f127cd9f85e395f8177607ef00535634",
                 "shasum": ""
             },
             "require": {
@@ -17910,7 +17912,7 @@
             "description": "Integration of your Symfony app with Webpack Encore",
             "support": {
                 "issues": "https://github.com/symfony/webpack-encore-bundle/issues",
-                "source": "https://github.com/symfony/webpack-encore-bundle/tree/v2.4.1"
+                "source": "https://github.com/symfony/webpack-encore-bundle/tree/2.4.2"
             },
             "funding": [
                 {
@@ -17930,7 +17932,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-06-24T07:21:58+00:00"
+            "time": "2026-09-17T12:45:02+00:00"
         },
         {
             "name": "symfony/workflow",
@@ -18159,16 +18161,16 @@
         },
         {
             "name": "twig/extra-bundle",
-            "version": "v3.24.0",
+            "version": "v3.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/twig-extra-bundle.git",
-                "reference": "6a621fcb1f28aa9ea7b34a99047ae0cdf5b834c9"
+                "reference": "aaa2993e19293a99240c4c61aa461d743b0dd569"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/twig-extra-bundle/zipball/6a621fcb1f28aa9ea7b34a99047ae0cdf5b834c9",
-                "reference": "6a621fcb1f28aa9ea7b34a99047ae0cdf5b834c9",
+                "url": "https://api.github.com/repos/twigphp/twig-extra-bundle/zipball/aaa2993e19293a99240c4c61aa461d743b0dd569",
+                "reference": "aaa2993e19293a99240c4c61aa461d743b0dd569",
                 "shasum": ""
             },
             "require": {
@@ -18217,7 +18219,7 @@
                 "twig"
             ],
             "support": {
-                "source": "https://github.com/twigphp/twig-extra-bundle/tree/v3.24.0"
+                "source": "https://github.com/twigphp/twig-extra-bundle/tree/v3.29.0"
             },
             "funding": [
                 {
@@ -18229,20 +18231,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-07T08:07:38+00:00"
+            "time": "2026-09-11T08:59:50+00:00"
         },
         {
             "name": "twig/intl-extra",
-            "version": "v3.26.0",
+            "version": "v3.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/intl-extra.git",
-                "reference": "98f5ad5bff13230fcd2d834d9e79b50adf3ccda9"
+                "reference": "51c52470aca59f3a9715c88f6fe505133b88c752"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/intl-extra/zipball/98f5ad5bff13230fcd2d834d9e79b50adf3ccda9",
-                "reference": "98f5ad5bff13230fcd2d834d9e79b50adf3ccda9",
+                "url": "https://api.github.com/repos/twigphp/intl-extra/zipball/51c52470aca59f3a9715c88f6fe505133b88c752",
+                "reference": "51c52470aca59f3a9715c88f6fe505133b88c752",
                 "shasum": ""
             },
             "require": {
@@ -18281,7 +18283,7 @@
                 "twig"
             ],
             "support": {
-                "source": "https://github.com/twigphp/intl-extra/tree/v3.26.0"
+                "source": "https://github.com/twigphp/intl-extra/tree/v3.29.0"
             },
             "funding": [
                 {
@@ -18293,7 +18295,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-19T20:44:48+00:00"
+            "time": "2026-09-06T20:35:36+00:00"
         },
         {
             "name": "twig/string-extra",
@@ -18364,16 +18366,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.28.0",
+            "version": "v3.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "597c12ed286fb9d1701a36684ce6e0cbe28ebc8b"
+                "reference": "45a3c6e9224c3377a39c7b150bb29d5d97d2c75d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/597c12ed286fb9d1701a36684ce6e0cbe28ebc8b",
-                "reference": "597c12ed286fb9d1701a36684ce6e0cbe28ebc8b",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/45a3c6e9224c3377a39c7b150bb29d5d97d2c75d",
+                "reference": "45a3c6e9224c3377a39c7b150bb29d5d97d2c75d",
                 "shasum": ""
             },
             "require": {
@@ -18428,7 +18430,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.28.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.29.0"
             },
             "funding": [
                 {
@@ -18440,7 +18442,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-03T20:44:34+00:00"
+            "time": "2026-09-18T09:10:14+00:00"
         },
         {
             "name": "umpirsky/country-list",

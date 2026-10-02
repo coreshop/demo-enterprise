@@ -28,6 +28,18 @@ bin/console lexik:jwt:generate-keypair --skip-if-exists --no-interaction || true
 if php -r 'require "vendor/autoload.php"; (new Symfony\Component\Dotenv\Dotenv())->bootEnv(".env"); $u = parse_url($_ENV["DATABASE_URL"] ?? ""); $pdo = new PDO(sprintf("mysql:host=%s;port=%d;dbname=%s", $u["host"], $u["port"] ?? 3306, ltrim($u["path"], "/")), $u["user"], $u["pass"]); exit($pdo->query("SHOW TABLES LIKE \"users\"")->rowCount() > 0 ? 0 : 1);' 2>/dev/null; then
   echo "Pimcore is already installed, running pending database migrations"
   bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration
+  # A pod that starts from the baked mysql image (.docker/bake/bake.sh) has the database but an
+  # empty OpenSearch: recreate the indices and queue every element, the supervisord worker
+  # (pimcore_generic_data_index_queue) fills them in the background. OpenSearch is a sidecar
+  # that boots in parallel, wait for it (at most two minutes) before creating the indices.
+  opensearch_url=$(printenv PIMCORE_OPENSEARCH_DSN | sed -e 's#^opensearch://#http://#' -e 's#[?].*$##')
+  if [ -n "$opensearch_url" ]; then
+    i=0
+    until curl -sf -o /dev/null "$opensearch_url" || [ $i -ge 60 ]; do
+      echo "Waiting for OpenSearch at $opensearch_url ..."; i=$((i + 1)); sleep 2
+    done
+  fi
+  bin/console generic-data-index:update:index --recreate_index
   exit 0
 fi
 

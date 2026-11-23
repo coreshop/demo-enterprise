@@ -42,7 +42,7 @@ services:
             - traefik.docker.network=cors_dev
 
     php:
-        image: ghcr.io/cors-gmbh/pimcore-docker/php-fpm:8.4-alpine3.21-7.1.11
+        image: ghcr.io/cors-gmbh/pimcore-docker/php-fpm:8.4-alpine3.23-8.1.29
         networks:
             - default
         environment:
@@ -56,7 +56,7 @@ services:
             - .:/var/www/html:cached
 
     php-debug:
-        image: ghcr.io/cors-gmbh/pimcore-docker/php-fpm-debug:8.4-alpine3.21-7.1.11
+        image: ghcr.io/cors-gmbh/pimcore-docker/php-fpm-debug:8.4-alpine3.23-8.1.29
         networks:
             - default
         depends_on:
@@ -71,7 +71,7 @@ services:
             MERCURE_URL: https://coreshop-enterprise-demo.localhost/hub
 
     supervisord:
-        image: ghcr.io/cors-gmbh/pimcore-docker/php-supervisord:8.4-alpine3.21-7.1.11
+        image: ghcr.io/cors-gmbh/pimcore-docker/php-supervisord:8.4-alpine3.23-8.1.29
         depends_on:
             - db
             - opensearch

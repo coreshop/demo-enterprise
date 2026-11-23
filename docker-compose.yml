@@ -102,7 +102,7 @@ services:
             - opensearch-data:/usr/share/opensearch/data
 
     mercure:
-        image: dunglas/mercure:latest
+        image: dunglas/mercure:v0.23
         networks:
             - default
         environment:
